@@ -1,5 +1,6 @@
-import { MapContainer, TileLayer, Marker, Popup/*, Polyline */} from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Polygon/*, Polyline */} from 'react-leaflet';
 import {LatLngTuple, LatLngBoundsExpression/*, LatLngExpression*/} from 'leaflet';
+import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 
@@ -16,6 +17,26 @@ function Map()
         [28.590814194772776, -81.20725051378662], // Southwest corner
         [28.611654822136117, -81.18757949435675]  // Northeast corner
       ];
+      
+
+      const outsideBoundsArea : any = [
+
+        [
+          [28.64840202840334, -81.26488475758394],
+          [28.52485540175175, -81.26488475758394],
+          [28.52485540175175, -81.11457124982738],
+          [28.64840202840334, -81.11457124982738],
+          [28.64840202840334, -81.26488475758394]
+        ],
+        [
+          [28.590814194772776, -81.20725051378662], // SW
+          [28.611654822136117, -81.20725051378662], // NW
+          [28.611654822136117, -81.18757949435675], // NE
+          [28.590814194772776, -81.18757949435675], // SE
+          [28.590814194772776, -81.20725051378662]  // SW again to close
+        ]
+
+      ];
 
       return (
         <div className="h-full w-full rounded shadow-lg">
@@ -29,6 +50,14 @@ function Map()
               <Popup>UCF!</Popup>
             </Marker>
             {/* <Polyline positions={path} color="blue" /> */}
+            <Polygon
+              positions={outsideBoundsArea}
+              color="grey"
+              weight={1}
+              fillColor="grey"
+              fillOpacity={0.5}
+            />
+            
           </MapContainer>
         </div>
       );
