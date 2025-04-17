@@ -1,6 +1,5 @@
 import { MapContainer, TileLayer, Marker, Popup, Polygon/*, Polyline */} from 'react-leaflet';
 import {LatLngTuple, LatLngBoundsExpression/*, LatLngExpression*/} from 'leaflet';
-import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 
@@ -33,15 +32,15 @@ function Map()
           [28.611654822136117, -81.20725051378662], // NW
           [28.611654822136117, -81.18757949435675], // NE
           [28.590814194772776, -81.18757949435675], // SE
-          [28.590814194772776, -81.20725051378662]  // SW again to close
+          [28.590814194772776, -81.20725051378662]  // SW
         ]
 
       ];
 
       return (
-        <div className="h-full w-full rounded shadow-lg">
+        <div className="h-full w-full rounded-md shadow-lg">
           <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
-            maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full z-0">
+            maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-md z-0">
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

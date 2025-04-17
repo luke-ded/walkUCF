@@ -11,7 +11,7 @@ function HomePage()
                 <div className="w-2/5 h-4/5 mr-20">
                     <h1 className="text-black text-6xl font-bold">Coming soon... an interactive walking map of UCF.</h1>
                 </div>
-                <div className="w-2/5 h-4/5">
+                <div className="w-2/5 h-4/5 border-2 border-[#ffca09] rounded-md">
                     <Map />
                 </div>
             </div>
