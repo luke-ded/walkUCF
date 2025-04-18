@@ -21,7 +21,13 @@ const renderItem = (item: Item): React.ReactNode =>
                 <span className="text-neutral-700 font-semibold text-md">{item.Name}</span>
                 <span className="text-[#ffca09] text-xs">{item.Abbreviation}</span>
             </div>
-            <p className="self-start text-neutral-700">{item.key}</p>
+            
+            <div className="flex justify-between items-center my-[1vh]">
+                <p className="text-neutral-700">{item.key}</p>
+                <div>
+                    <button className = "rounded-sm inline-block h-fit w-fit p-[10px] pt-[5px] pb-[7px] bg-transparent border border-[#ffca09] text-center text-neutral-700 text-[1.8vh] hover:bg-neutral-700/20 hover:border-neutral-200/80 cursor-pointer">Add to Route</button>
+                </div>
+            </div>
         </div>
     );
 };
