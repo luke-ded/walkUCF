@@ -15,7 +15,6 @@ interface PropsType
 
 const renderItem = (item: Item): React.ReactNode => 
 {
-
     return (
         <div>
             <div className="flex justify-between items-center">
@@ -95,7 +94,7 @@ function SearchBar()
         {key: "53", Name: "UTILITY BUILDING 5", Abbreviation: "UB5"},
         {key: "54", Name: "LABORATORY & ENVIRONMENTAL SUPPORT", Abbreviation: "LES"},
         {key: "55", Name: "EMERGENCY OPERATION CENTER", Abbreviation: "EOC"},
-        {key: "56", Name: "UCF ARENA", Abbreviation: "ARNA"},
+        {key: "56", Name: "ADDITION ARENA", Abbreviation: "ARNA"},
         {key: "57", Name: "VISUAL ARTS BUILDING", Abbreviation: "VAB"},
         {key: "58", Name: "STUDENT UNION", Abbreviation: "STUN"},
         {key: "59", Name: "CREOL BUILDING", Abbreviation: "CROL"},
@@ -166,7 +165,13 @@ function SearchBar()
         {key: "124", Name: "NEPTUNE BUILDING 118", Abbreviation: "NEP118"},
         {key: "125", Name: "NEPTUNE BUILDING 119", Abbreviation: "NEP119"},
         {key: "126", Name: "NEPTUNE BUILDING 120", Abbreviation: "NEP120"},
-        {key: "127", Name: "NEPTUNE BUILDING 121", Abbreviation: "NEP121"}
+        {key: "127", Name: "NEPTUNE BUILDING 121", Abbreviation: "NEP121"},
+        {key: "128", Name: "L3HARRIS ENGINEERING CENTER", Abbreviation: "?"},
+        {key: "129", Name: "RESEARCH BUILDING I", Abbreviation: "?"},
+        {key: "130", Name: "Tower 1", Abbreviation: "?"},
+        {key: "131", Name: "Tower 2", Abbreviation: "?"},
+        {key: "132", Name: "Tower 3", Abbreviation: "?"},
+        {key: "133", Name: "Tower 4", Abbreviation: "?"}
     ]
 
     var props: PropsType = {
