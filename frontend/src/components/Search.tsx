@@ -25,7 +25,7 @@ const renderItem = (item: Item): React.ReactNode =>
             <div className="flex justify-between items-center my-[1vh]">
                 <p className="text-neutral-300">{item.key}</p>
                 <div>
-                    <button className = "rounded-sm inline-block h-fit w-fit p-[6px] pt-[4px] pb-[6px] bg-transparent border border-[#ffca09] text-center text-neutral-200 hover:text-neutral-50 text-[1.8vh] hover:bg-white/30 hover:border-[#ffe68c] cursor-pointer">Add to Route</button>
+                    <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border border-[#ffca09] text-center text-neutral-700 hover:text-neutral-50 text-lg font-bold hover:bg-white/30 hover:border-[#ffe68c] cursor-pointer">+</button>
                 </div>
             </div>
         </div>
@@ -188,10 +188,10 @@ function SearchBar()
     return (
         <div className="h-1/2 w-full">
             <div className="h-1/8 flex w-full justify-center items-center">
-                <input className="w-full h-full text-lg text-neutral-700 p-1 border-2 border-neutral-600 placeholder-neutral-500 rounded-md bg-white/45 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}></input>
+                <input className="w-full h-full text-lg text-neutral-700 p-1 border-2 border-[#ffca09] placeholder-neutral-500 rounded-md bg-white/45 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}></input>
             </div>
             
-            <div className="mt-5 overflow-y-scroll h-13/16 border-1 border-[#ffca09] rounded-sm bg-black/20">
+            <div className="mt-5 overflow-y-scroll h-13/16 border-2 border-[#ffca09] rounded-sm bg-black/20">
                 <ul className="shadow divide-y divide-[#ffe68c] min-h-0">
                     {props.items.filter((item) => item.Name.toLowerCase().includes(searchTerm.toLowerCase())).map((item) => {
                     return <li onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b border-[#ffe68c]/50 hover:bg-neutral-600/15">{props.renderer(item)}</li>;
