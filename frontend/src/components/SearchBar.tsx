@@ -1,4 +1,3 @@
-import SearchGlass from "../assets/searchglass.png";
 import { useState } from "react";
 
 interface Item 
@@ -30,7 +29,9 @@ const renderItem = (item: Item): React.ReactNode =>
 
 function SearchBar()
 {
-    const [selectedItem, setSelectedItem] = useState("-1");
+    const [selectedItem, setSelectedItem] = useState("");
+    const [searchTerm, setSearchTerm] = useState('');
+
     console.log(selectedItem);
     function handleItemChange(item : Item)
     {
@@ -174,15 +175,14 @@ function SearchBar()
     };
 
     return (
-        <div className="h-1/2 w-full bg-red-400/50">
+        <div className="h-1/2 w-full">
             <div className="h-1/8 flex w-full justify-center items-center">
-                <input className="w-9/10 h-full text-lg text-neutral-700 p-1 border-2 border-neutral-600 placeholder-neutral-500 rounded-md bg-white/45 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70" placeholder="Search"></input>
-                <img className="w-auto h-full ml-[2.5%] p-1 border-2 border-neutral-600 hover:border-neutral-700 rounded-md bg-white/25 hover:bg-white/45 hover:ring-1 hover:ring-[#ffca09]/70" src={SearchGlass}></img>
+                <input className="w-full h-full text-lg text-neutral-700 p-1 border-2 border-neutral-600 placeholder-neutral-500 rounded-md bg-white/45 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}></input>
             </div>
             
             <div className="mt-5 overflow-y-scroll h-13/16 border-1 border-[#ffca09] rounded-sm bg-white/25">
                 <ul className="shadow divide-y divide-neutral-600 min-h-0">
-                {props.items.map((item) => {
+                    {props.items.filter((item) => item.Name.toLowerCase().includes(searchTerm.toLowerCase())).map((item) => {
                     return <li onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b border-neutral-600">{props.renderer(item)}</li>;
                 })}
                 </ul>
