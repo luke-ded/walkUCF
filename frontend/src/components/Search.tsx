@@ -188,10 +188,10 @@ function SearchBar()
     return (
         <div className="h-1/2 w-full">
             <div className="h-1/8 flex w-full justify-center items-center">
-                <input className="w-full h-full text-lg text-neutral-200 p-1 border-2 border-[#ffca09] placeholder-neutral-200 rounded-md bg-black/20 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}></input>
+                <input className="w-full h-full text-lg text-neutral-200 p-1 border-2 border-[#ffca09] placeholder-neutral-200 rounded-md bg-black/20 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}></input>
             </div>
             
-            <div className="mt-5 overflow-y-scroll h-13/16 border-2 border-[#ffca09] rounded-sm bg-black/20">
+            <div className="mt-5 overflow-y-scroll h-13/16 border-2 border-[#ffca09] rounded-sm bg-black/20 shadow-lg">
                 <ul className="shadow divide-y divide-[#ffe68c] min-h-0">
                     {props.items.filter((item) => item.Name.toLowerCase().includes(searchTerm.toLowerCase())).map((item) => {
                     return <li onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b border-[#ffe68c]/50 hover:bg-neutral-100/15">{props.renderer(item)}</li>;

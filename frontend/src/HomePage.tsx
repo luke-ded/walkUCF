@@ -13,7 +13,7 @@ function HomePage()
                     <Search />
                     <RouteList />
                 </div>
-                <div className="w-2/5 h-4/5 border-2 border-[#ffca09] rounded-md">
+                <div className="w-2/5 h-4/5 border-2 border-[#ffca09] rounded-md shadow-lg">
                     <Map />
                 </div>
             </div>

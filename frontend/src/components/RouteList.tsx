@@ -56,7 +56,7 @@ function RouteList()
     };
 
     return(
-        <div className="mt-5 h-1/2 w-full">
+        <div className="mt-5 h-1/2 w-full shadow-lg">
             <h1 className="text-xl h-2/16 text-neutral-200 font-bold">Route</h1>
             <div className="overflow-y-scroll h-14/16 w-full border-2 border-[#ffca09] rounded-sm bg-black/25">
                 <ul className="shadow divide-y divide-[#ffe68c] min-h-0">

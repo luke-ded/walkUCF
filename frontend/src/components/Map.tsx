@@ -38,7 +38,7 @@ function Map()
       ];
 
       return (
-        <div className="h-full w-full rounded-md shadow-lg">
+        <div className="h-full w-full rounded-md">
           <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
             maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-md z-0">
             <TileLayer
