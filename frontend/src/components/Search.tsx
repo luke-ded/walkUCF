@@ -25,7 +25,7 @@ const renderItem = (item: Item): React.ReactNode =>
             <div className="flex justify-between items-center my-[1vh]">
                 <p className="text-neutral-300">{item.key}</p>
                 <div>
-                    <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-neutral-200 text-lg font-bold hover:bg-[#ffca09]/60 hover:border-[#ffe68c] cursor-pointer">+</button>
+                    <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer">+</button>
                 </div>
             </div>
         </div>
