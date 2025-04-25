@@ -24,7 +24,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
     console.log(selectedItem);
 
     const itemsList = getStops();
-    
+
     const renderItem = (item: Item): React.ReactNode => 
     {
         return (
@@ -145,9 +145,11 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
     };
 
     return(
-        <div className="mt-5 h-1/2 w-full shadow-lg">
-            <h1 className="text-xl h-2/16 text-neutral-200 font-bold">Route</h1>
-            <div className="overflow-y-scroll h-14/16 w-full border-2 border-[#ffca09] rounded-sm bg-black/25">
+        <div className="mt-5 h-1/2 w-full border-2 border-[#ffca09] bg-black/25 rounded-sm shadow-lg">
+            <div className="flex-col items-center h-1/8 border-b-2 border-[#ffca09]">
+                <h1 className="ml-2 mt-1 text-xl h-2/16 text-neutral-200 font-bold">Route</h1>
+            </div>
+            <div className="overflow-y-scroll h-14/16 w-full">
                 <ul className="shadow divide-y divide-[#ffe68c] min-h-0">
                     {props.items.map((item) => {
                     return <li onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b border-[#ffe68c]/50 hover:bg-neutral-100/15">{props.renderer(item)}</li>;
