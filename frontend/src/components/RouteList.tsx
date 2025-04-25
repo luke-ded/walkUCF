@@ -36,7 +36,8 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
                 <div className="flex justify-between mt-2 items-center">
                     <p className="text-[#ffca09] text-sm">{item.Abbreviation}</p>
                     <div>
-                        <button className = "mr-3 rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer">▼</button> 
+                        <button className = "mr-3 rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                        onClick={() => swapDown(item)}>▼</button> 
                         <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer">▲</button> 
                     </div>
                 </div>
@@ -74,6 +75,34 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
         }
 
         itemsList.splice(index, 1);
+
+        localStorage.setItem('stoplist', JSON.stringify(itemsList));
+
+        // This will rerender the map
+        triggerRerender();
+    }
+
+    function swap(index1 : any, index2 : any) 
+    {
+        var temp = itemsList[index1];
+        itemsList[index1] = itemsList[index2];
+        itemsList[index2] = temp;
+    }
+
+    function swapDown(item : Item)
+    {
+        var index = itemsList.indexOf(item);
+
+        if(index < 0)
+        {
+            console.log("Item not found in swapDown.\n");
+            return;  
+        }
+
+        if(itemsList.length - 1 == itemsList.indexOf(item))
+            return;
+
+        swap(index, index + 1);
 
         localStorage.setItem('stoplist', JSON.stringify(itemsList));
 
