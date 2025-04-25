@@ -2,15 +2,23 @@ import NavBar from "./components/NavBar";
 import Map from "./components/Map.tsx";
 import Search from "./components/Search.tsx";
 import RouteList from "./components/RouteList.tsx";
+import { useState } from "react";
 
 function HomePage()
 {
+    const [count, setCount] = useState(0);
+
+    const triggerRerender = () => 
+    {
+        setCount(count + 1);
+    };
+
     return(
         <div className="flex-col h-screen w-screen items-center justify-center">
             <NavBar />
             <div className="flex w-screen h-13/14 items-center justify-center bg-gradient-to-b from-black/60 to-transparent">
                 <div className="flex flex-col items-center justify-start w-2/5 h-4/5 mr-20">
-                    <Search />
+                    <Search triggerRerender={triggerRerender} />
                     <RouteList />
                 </div>
                 <div className="flex flex-col justify-between w-2/5 h-4/5 border-2 border-[#ffca09] rounded-md shadow-lg">
