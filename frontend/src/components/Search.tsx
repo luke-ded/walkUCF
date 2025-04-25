@@ -42,7 +42,7 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
         return (
             <div>
                 <div className="flex justify-between items-center">
-                    <span className="text-neutral-200 font-semibold text-md">{item.Name}</span>
+                    <span className="text-neutral-200 font-semibold text-md max-w-9/10">{item.Name}</span>
                     <span className="text-[#ffca09] text-xs">{item.Abbreviation}</span>
                 </div>
             
