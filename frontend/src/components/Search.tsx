@@ -13,6 +13,21 @@ interface PropsType
     renderer: (item: Item) => React.ReactNode;
 }
 
+function addItem(item: Item)
+{
+    var temp = localStorage.getItem('stoplist');
+    var stoplist : Item [] = [];
+
+    if(temp != undefined && temp != null)
+    {
+        stoplist = JSON.parse(temp);
+    }
+
+    stoplist.push(item);
+
+    localStorage.setItem('stoplist', JSON.stringify(stoplist));        
+}
+
 const renderItem = (item: Item): React.ReactNode => 
 {
     return (
@@ -25,7 +40,8 @@ const renderItem = (item: Item): React.ReactNode =>
             <div className="flex justify-between items-center my-[1vh]">
                 <p className="text-neutral-300">{item.key}</p>
                 <div>
-                    <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer">+</button>
+                    <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                    onClick={() => addItem(item)}>+</button>
                 </div>
             </div>
         </div>

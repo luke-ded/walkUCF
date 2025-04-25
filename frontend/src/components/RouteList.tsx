@@ -35,14 +35,24 @@ const renderItem = (item: Item): React.ReactNode =>
     );
 };
 
+function getStops()
+{
+    var temp = localStorage.getItem('stoplist');
+    var stoplist : Item [] = [];
+
+    if(temp != undefined && temp != null)
+    {
+        stoplist = JSON.parse(temp);
+    }
+
+    return stoplist;      
+}
+
 function RouteList()
 {
     const [selectedItem, setSelectedItem] = useState("");
 
-    const itemsList = [
-        {key: "1", Name: "MILLICAN HALL", Abbreviation: "MH"},
-        {key: "2", Name: "JOHN C. HITT LIBRARY", Abbreviation: "LIB"}
-    ]
+    const itemsList = getStops();
 
     console.log(selectedItem);
     function handleItemChange(item : Item)
