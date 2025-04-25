@@ -19,6 +19,12 @@ interface PropsType
 
 const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
 {
+    // This is for highlighting on map later
+    const [selectedItem, setSelectedItem] = useState("");
+    console.log(selectedItem);
+
+    const itemsList = getStops();
+    
     const renderItem = (item: Item): React.ReactNode => 
     {
         return (
@@ -26,7 +32,6 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
                 <div className="flex justify-between items-center">
                         <div className="flex justify-start max-w-7/10 items-center">
                             <span className="text-neutral-200 font-semibold text-md">{item.Name}</span>
-                        
                         </div>
                         <div>
                             <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
@@ -34,7 +39,10 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
                         </div> 
                 </div>
                 <div className="flex justify-between mt-2 items-center">
-                    <p className="text-[#ffca09] text-sm">{item.Abbreviation}</p>
+                    <div className="flex justify-start">
+                        <p className="text-[#ffca09] text-sm">{item.Abbreviation}</p>
+                        <p className="text-neutral-200 text-sm">&nbsp;| Stop {itemsList.indexOf(item) + 1}</p>
+                    </div>
                     <div>
                         <button className = "mr-3 rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
                         onClick={() => swapDown(item)}>▼</button> 
@@ -58,12 +66,6 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
 
         return stoplist;      
     }
-
-    // This is for highlighting on map later
-    const [selectedItem, setSelectedItem] = useState("");
-    console.log(selectedItem);
-
-    const itemsList = getStops();
 
     function removeStop(item : Item)
     {
