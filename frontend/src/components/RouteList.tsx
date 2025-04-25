@@ -29,7 +29,8 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
                         
                         </div>
                         <div>
-                            <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer">x</button>   
+                            <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                            onClick={() => removeStop(item)}>x</button>   
                         </div> 
                 </div>
                 <div className="flex justify-between mt-2 items-center">
@@ -56,11 +57,30 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
         return stoplist;      
     }
 
+    // This is for highlighting on map later
     const [selectedItem, setSelectedItem] = useState("");
+    console.log(selectedItem);
 
     const itemsList = getStops();
 
-    console.log(selectedItem);
+    function removeStop(item : Item)
+    {
+        var index = itemsList.indexOf(item);
+
+        if(index < 0)
+        {
+            console.log("Item not found in removeStop.\n");
+            return;
+        }
+
+        itemsList.splice(index, 1);
+
+        localStorage.setItem('stoplist', JSON.stringify(itemsList));
+
+        // This will rerender the map
+        triggerRerender();
+    }
+
     function handleItemChange(item : Item)
     {
         setSelectedItem(item.key);
