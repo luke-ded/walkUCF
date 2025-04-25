@@ -145,7 +145,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
     };
 
     return(
-        <div className="mt-5 h-1/2 w-full border-2 border-[#ffca09] bg-black/25 rounded-sm shadow-lg">
+        <div className="mt-5 h-1/2 w-full border-2 border-[#ffca09] bg-black/40 rounded-sm shadow-lg">
             <div className="flex-col items-center h-1/8 border-b-2 border-[#ffca09]">
                 <h1 className="ml-2 mt-1 text-xl h-2/16 text-neutral-200 font-bold">Route</h1>
             </div>
