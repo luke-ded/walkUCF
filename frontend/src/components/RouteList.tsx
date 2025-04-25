@@ -13,43 +13,45 @@ interface PropsType
     renderer: (item: Item) => React.ReactNode;
 }
 
-const renderItem = (item: Item): React.ReactNode => 
-{
-    return (
-        <div>
-            <div className="flex justify-between items-center">
-                <div className="flex justify-between items-center">
-                    <div className="flex justify-start items-center">
-                        <span className="text-neutral-200 font-semibold text-md">{item.Name} &nbsp;|&nbsp;</span>
-                        <p className="text-[#ffca09] text-sm">{item.Abbreviation}</p>
-                    </div>
-                </div>
-
-                <div className="flex justify-between w-9/40">
-                    <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer">▼</button> 
-                    <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer">▲</button> 
-                    <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer">+</button>   
-                </div>
-            </div>
-        </div>
-    );
-};
-
-function getStops()
-{
-    var temp = localStorage.getItem('stoplist');
-    var stoplist : Item [] = [];
-
-    if(temp != undefined && temp != null)
-    {
-        stoplist = JSON.parse(temp);
-    }
-
-    return stoplist;      
-}
-
 function RouteList()
 {
+    const renderItem = (item: Item): React.ReactNode => 
+    {
+        return (
+            <div className="flex-col">
+                <div className="flex justify-between items-center">
+                        <div className="flex justify-start max-w-7/10 items-center">
+                            <span className="text-neutral-200 font-semibold text-md">{item.Name}</span>
+                        
+                        </div>
+                        <div>
+                            <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer">x</button>   
+                        </div> 
+                </div>
+                <div className="flex justify-between mt-2 items-center">
+                    <p className="text-[#ffca09] text-sm">{item.Abbreviation}</p>
+                    <div>
+                        <button className = "mr-3 rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer">▼</button> 
+                        <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer">▲</button> 
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
+    function getStops()
+    {
+        var temp = localStorage.getItem('stoplist');
+        var stoplist : Item [] = [];
+
+        if(temp != undefined && temp != null)
+        {
+            stoplist = JSON.parse(temp);
+        }
+
+        return stoplist;      
+    }
+
     const [selectedItem, setSelectedItem] = useState("");
 
     const itemsList = getStops();
