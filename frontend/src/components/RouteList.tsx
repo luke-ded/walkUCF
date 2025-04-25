@@ -7,13 +7,17 @@ interface Item
     Abbreviation: string;
 }
 
+interface ChildProps {
+    triggerRerender: () => void;
+}
+
 interface PropsType 
 {
     items: Item[];
     renderer: (item: Item) => React.ReactNode;
 }
 
-function RouteList()
+const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
 {
     const renderItem = (item: Item): React.ReactNode => 
     {
