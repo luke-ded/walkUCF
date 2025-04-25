@@ -38,7 +38,8 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
                     <div>
                         <button className = "mr-3 rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
                         onClick={() => swapDown(item)}>▼</button> 
-                        <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer">▲</button> 
+                        <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                        onClick={() => swapUp(item)}>▲</button> 
                     </div>
                 </div>
             </div>
@@ -103,6 +104,27 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
             return;
 
         swap(index, index + 1);
+
+        localStorage.setItem('stoplist', JSON.stringify(itemsList));
+
+        // This will rerender the map
+        triggerRerender();
+    }
+
+    function swapUp(item : Item)
+    {
+        var index = itemsList.indexOf(item);
+
+        if(index < 0)
+        {
+            console.log("Item not found in swapUp.\n");
+            return;  
+        }
+
+        if(0 == itemsList.indexOf(item))
+            return;
+
+        swap(index - 1, index);
 
         localStorage.setItem('stoplist', JSON.stringify(itemsList));
 
