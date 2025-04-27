@@ -18,8 +18,8 @@ function NavBar()
                 <h1 className="text-3xl text-[#ffca09] font-semibold ml-3">walkUCF</h1>
             </div>
             <div className="flex items-center mr-3">
-            <button className="cursor-pointer hover:bg-[#ffe68c]/20 p-2 border-1 border-[#ffe68c]/30 rounded-xl" onClick={()=> darkModeHandler()}>
-                Dark Mode</button>
+            <button className="cursor-pointer hover:bg-[#ffe68c]/20 p-2 mr-3 border-1 border-[#ffe68c]/30 rounded-xl" onClick={()=> darkModeHandler()}>
+                Color Mode</button>
                 <button className="cursor-pointer hover:bg-[#ffe68c]/20 p-2 border-1 border-[#ffe68c]/30 rounded-xl">About</button>
             </div>
         </div>
