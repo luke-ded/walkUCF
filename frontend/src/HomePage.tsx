@@ -19,7 +19,7 @@ function HomePage()
         <div className="flex-col h-screen w-screen items-center justify-center dark:text-neutral-200 text-neutral-700">
             <NavBar toggleAbout={toggleAbout} about={about} />
             <div className="flex w-screen h-13/14 items-center justify-center bg-gradient-to-b dark:from-black/60 from-[#d6d4d4]/60 to-transparent">
-                <div className="flex flex-col items-center justify-start w-2/5 h-4/5 mr-20">
+                <div className="flex flex-col items-center justify-between w-2/5 h-4/5 max-h-4/5 mr-20">
                     <Search triggerRerender={triggerRerender} />
                     <RouteList triggerRerender={triggerRerender} />
                 </div>

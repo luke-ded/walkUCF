@@ -145,11 +145,11 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
     };
 
     return(
-        <div className="flex-col justify-start mt-5 h-1/2 w-full border-2 dark:border-[#ffca09] border-[#a48100] dark:bg-black/40 bg-[#d6d4d4]/60 rounded-sm shadow-lg">
-            <div className="flex items-center h-1/8 border-b-2 dark:border-[#ffca09] border-[#a48100]">
+        <div className="flex-col justify-start mt-5 h-11/16 max-h-11/16 w-full border-2 dark:border-[#ffca09] border-[#a48100] dark:bg-black/40 bg-[#d6d4d4]/60 rounded-sm shadow-lg">
+            <div className="flex items-center h-3/32 border-b-2 dark:border-[#ffca09] border-[#a48100]">
                 <h1 className="ml-2 text-xl dark:text-neutral-200 text-neutral-700 font-bold">Route</h1>
             </div>
-            <div className="overflow-y-scroll h-14/16 w-full">
+            <div className="overflow-y-scroll h-29/32 w-full">
                 <ul className="shadow divide-y dark:divide-[#ffe68c] min-h-0">
                     {props.items.map((item) => {
                     return <li onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15">{props.renderer(item)}</li>;
