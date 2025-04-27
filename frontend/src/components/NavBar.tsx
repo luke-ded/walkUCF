@@ -1,7 +1,15 @@
 import src from "../assets/logo.png"
+import { useState } from "react";
 
 function NavBar()
 {
+    const [dark, setDark] = useState(false);
+
+    const darkModeHandler = () => 
+        {
+        setDark(!dark);
+        document.body.classList.toggle("dark");
+    }
 
     return(
         <div className="flex h-1/14 bg-black/90 border-b justify-between border-[#ffcc00]">
@@ -10,6 +18,8 @@ function NavBar()
                 <h1 className="text-3xl text-[#ffca09] font-semibold ml-3">walkUCF</h1>
             </div>
             <div className="flex items-center mr-3">
+            <button className="cursor-pointer hover:bg-[#ffe68c]/20 p-2 border-1 border-[#ffe68c]/30 rounded-xl" onClick={()=> darkModeHandler()}>
+                Dark Mode</button>
                 <button className="cursor-pointer hover:bg-[#ffe68c]/20 p-2 border-1 border-[#ffe68c]/30 rounded-xl">About</button>
             </div>
         </div>

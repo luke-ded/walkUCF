@@ -42,12 +42,12 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
         return (
             <div>
                 <div className="flex justify-between items-center">
-                    <span className="text-neutral-200 font-semibold text-md max-w-9/10">{item.Name}</span>
-                    <span className="text-[#ffca09] text-xs">{item.Abbreviation}</span>
+                    <span className="dark:text-neutral-200 text-neutral-700 font-semibold text-md max-w-9/10">{item.Name}</span>
+                    <span className="dark:text-[#ffca09] text-[#a48100] text-xs">{item.Abbreviation}</span>
                 </div>
             
                 <div className="flex justify-between items-center my-[1vh]">
-                    <p className="text-neutral-300">{item.key}</p>
+                    <p className="dark:text-neutral-300 text-neutral-600">{item.key}</p>
                     <div>
                         <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
                         onClick={() => addItem(item)}>+</button>
@@ -211,13 +211,13 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
     return (
         <div className="h-1/2 w-full">
             <div className="h-1/8 flex w-full justify-center items-center">
-                <input className="w-full h-full text-lg text-neutral-200 p-1 border-2 border-[#ffca09] placeholder-neutral-200 rounded-md bg-black/25 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}></input>
+                <input className="w-full h-full text-lg dark:text-neutral-200 text-neutral-700 p-1 pl-5 border-2 dark:border-[#ffca09] border-[#a48100] dark:placeholder-neutral-200 placeholder-neutral-700 rounded-md dark:bg-black/25 bg-[#d6d4d4]/80 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}></input>
             </div>
             
-            <div className="mt-5 overflow-y-scroll h-13/16 border-2 border-[#ffca09] rounded-sm bg-black/35 shadow-lg">
-                <ul className="shadow divide-y divide-[#ffca09] min-h-0">
+            <div className="mt-5 overflow-y-scroll h-13/16 border-2 dark:border-[#ffca09] border-[#a48100] rounded-sm dark:bg-black/35 bg-[#d6d4d4]/50 shadow-lg">
+                <ul className="shadow divide-y dark:divide-[#ffca09] divide:[#d6d4d4] min-h-0">
                     {props.items.filter((item) => item.Name.toLowerCase().includes(searchTerm.toLowerCase())).map((item) => {
-                    return <li onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b border-[#ffe68c]/50 hover:bg-neutral-100/15">{props.renderer(item)}</li>;
+                    return <li onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15">{props.renderer(item)}</li>;
                 })}
                 </ul>
             </div>

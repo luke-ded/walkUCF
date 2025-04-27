@@ -31,7 +31,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
             <div className="flex-col">
                 <div className="flex justify-between items-center">
                         <div className="flex justify-start max-w-7/10 items-center">
-                            <span className="text-neutral-200 font-semibold text-md">{item.Name}</span>
+                            <span className="dark:text-neutral-200 text-neutral-700 font-semibold text-md">{item.Name}</span>
                         </div>
                         <div>
                             <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
@@ -40,8 +40,8 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
                 </div>
                 <div className="flex justify-between mt-2 items-center">
                     <div className="flex justify-start">
-                        <p className="text-[#ffca09] text-sm">{item.Abbreviation}</p>
-                        <p className="text-neutral-200 text-sm">&nbsp;| Stop {itemsList.indexOf(item) + 1}</p>
+                        <p className="dark:text-[#ffca09] text-[#a48100] text-sm">{item.Abbreviation}</p>
+                        <p className="dark:text-neutral-200 text-neutral-700 text-sm">&nbsp;| Stop {itemsList.indexOf(item) + 1}</p>
                     </div>
                     <div>
                         <button className = "mr-3 rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
@@ -145,14 +145,14 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
     };
 
     return(
-        <div className="flex-col justify-start mt-5 h-1/2 w-full border-2 border-[#ffca09] bg-black/40 rounded-sm shadow-lg">
-            <div className="flex items-center h-1/8 border-b-2 border-[#ffca09]">
-                <h1 className="ml-2 text-xl text-neutral-200 font-bold">Route</h1>
+        <div className="flex-col justify-start mt-5 h-1/2 w-full border-2 dark:border-[#ffca09] border-[#a48100] dark:bg-black/40 bg-[#d6d4d4]/60 rounded-sm shadow-lg">
+            <div className="flex items-center h-1/8 border-b-2 dark:border-[#ffca09] border-[#a48100]">
+                <h1 className="ml-5 text-xl dark:text-neutral-200 text-neutral-700 font-bold">Route</h1>
             </div>
             <div className="overflow-y-scroll h-14/16 w-full">
-                <ul className="shadow divide-y divide-[#ffe68c] min-h-0">
+                <ul className="shadow divide-y dark:divide-[#ffe68c] min-h-0">
                     {props.items.map((item) => {
-                    return <li onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b border-[#ffe68c]/50 hover:bg-neutral-100/15">{props.renderer(item)}</li>;
+                    return <li onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15">{props.renderer(item)}</li>;
                     })}
                 </ul>
             </div>
