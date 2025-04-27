@@ -1,7 +1,13 @@
 import src from "../assets/logo.png"
 import { useState } from "react";
 
-function NavBar()
+interface ChildProps 
+{
+    toggleAbout: (about:any) => void;
+    about: any;
+}
+
+const NavBar: React.FC<ChildProps> = ({ toggleAbout, about }) =>
 {
     const [dark, setDark] = useState(false);
 
@@ -20,7 +26,8 @@ function NavBar()
             <div className="flex items-center mr-3">
             <button className="cursor-pointer hover:bg-[#ffe68c]/20 p-2 mr-3 border-1 border-[#ffe68c]/30 rounded-xl" onClick={()=> darkModeHandler()}>
                 Color Mode</button>
-                <button className="cursor-pointer hover:bg-[#ffe68c]/20 p-2 border-1 border-[#ffe68c]/30 rounded-xl">About</button>
+                <button className="cursor-pointer hover:bg-[#ffe68c]/20 p-2 border-1 border-[#ffe68c]/30 rounded-xl"
+                onClick={() => toggleAbout(!about)}>About</button>
             </div>
         </div>
     );

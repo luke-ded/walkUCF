@@ -1,12 +1,14 @@
 import NavBar from "./components/NavBar";
 import Map from "./components/Map.tsx";
 import Search from "./components/Search.tsx";
+import About from "./components/About.tsx";
 import RouteList from "./components/RouteList.tsx";
 import { useState } from "react";
 
 function HomePage()
 {
     const [count, setCount] = useState(0);
+    const [about, toggleAbout] = useState(false);
 
     const triggerRerender = () => 
     {
@@ -15,7 +17,7 @@ function HomePage()
 
     return(
         <div className="flex-col h-screen w-screen items-center justify-center dark:text-neutral-200 text-neutral-700">
-            <NavBar />
+            <NavBar toggleAbout={toggleAbout} about={about} />
             <div className="flex w-screen h-13/14 items-center justify-center bg-gradient-to-b dark:from-black/60 from-[#d6d4d4]/60 to-transparent">
                 <div className="flex flex-col items-center justify-start w-2/5 h-4/5 mr-20">
                     <Search triggerRerender={triggerRerender} />
@@ -34,6 +36,7 @@ function HomePage()
                         <h1 className="ml-1">Across grass</h1>
                     </div>
                 </div>
+                {about && (<About />)}
             </div>
         </div>
     );
