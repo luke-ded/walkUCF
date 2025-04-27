@@ -51,10 +51,11 @@ function Map()
             {/* <Polyline positions={path} color="blue" /> */}
             <Polygon
               positions={outsideBoundsArea}
-              color="grey"
-              weight={1}
-              fillColor="grey"
-              fillOpacity={0.5}
+              color="#ffca09"
+              opacity={.75}
+              weight={2}
+              fillColor="black"
+              fillOpacity={0.4}
             />
             
           </MapContainer>
