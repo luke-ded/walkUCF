@@ -27,11 +27,11 @@ function HomePage()
                     </div>
                     <div className="flex w-full h-2/40 bg-black/50 justify-center items-center">
                         <input type="checkbox" value="" className="w-5 h-5 bg-neutral-100 border-neutral-300 rounded-lg" checked/>
-                        <h1 className="ml-1 test-neutral-200">Cutting through buildings</h1>
+                        <h1 className="ml-1">Through buildings</h1>
                         <input type="checkbox" value="" className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
-                        <h1 className="ml-1 test-neutral-200">Jaywalking</h1>
+                        <h1 className="ml-1">Jaywalking</h1>
                         <input type="checkbox" value="" className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
-                        <h1 className="ml-1 test-neutral-200">Cutting across grass</h1>
+                        <h1 className="ml-1">Across grass</h1>
                     </div>
                 </div>
             </div>
