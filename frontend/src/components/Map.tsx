@@ -38,9 +38,9 @@ function Map()
       ];
 
       return (
-        <div className="h-full w-full rounded-md">
+        <div className="h-full w-full rounded-t-sm">
           <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
-            maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-md z-0">
+            maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-t-sm z-0">
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
