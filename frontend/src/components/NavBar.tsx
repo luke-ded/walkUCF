@@ -1,4 +1,6 @@
 import src from "../assets/logo.png"
+import { CiDark } from "react-icons/ci";
+import { CiLight } from "react-icons/ci";
 import { useState } from "react";
 
 interface ChildProps 
@@ -9,10 +11,10 @@ interface ChildProps
 
 const NavBar: React.FC<ChildProps> = ({ toggleAbout, about }) =>
 {
-    const [dark, setDark] = useState(false);
+    const [dark, setDark] = useState(true);
 
     const darkModeHandler = () => 
-        {
+    {
         setDark(!dark);
         document.body.classList.toggle("dark");
     }
@@ -24,9 +26,17 @@ const NavBar: React.FC<ChildProps> = ({ toggleAbout, about }) =>
                 <h1 className="text-3xl text-neutral-200 font-semibold ml-3">walkUCF</h1>
             </div>
             <div className="flex items-center mr-3 text-neutral-200">
-                <button className="cursor-pointer hover:bg-[#ffe68c]/20 px-2 mr-3 py-1.5 border-2 border-[#ffe68c]/30 rounded-xl" onClick={()=> darkModeHandler()}>
-                Color Mode</button>
-                <button className="cursor-pointer hover:bg-[#ffe68c]/20 px-2 py-1.5 border-2 border-[#ffe68c]/30 rounded-xl"
+                {dark &&(
+                    <div className="flex items-center justify-center cursor-pointer h-10 w-10 hover:bg-[#ffe68c]/20 mr-3 border-2 border-[#ffe68c]/30 rounded-xl" onClick={()=> darkModeHandler()}>
+                        <CiDark size={26} />
+                    </div>
+                )}
+                {!dark &&(
+                    <div className="flex items-center justify-center cursor-pointer h-10 w-10 hover:bg-[#ffe68c]/20 mr-3 border-2 border-[#ffe68c]/30 rounded-xl" onClick={()=> darkModeHandler()}>
+                        <CiLight size={26} />
+                    </div>
+                )}
+                <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 px-2 py-1.5 border-2 border-[#ffe68c]/30 rounded-xl"
                 onClick={() => toggleAbout(!about)}>About</button>
             </div>
         </div>
