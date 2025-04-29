@@ -49,7 +49,7 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
                 <div className="flex justify-between items-center my-[1vh]">
                     <p className="dark:text-neutral-300 text-neutral-600">{item.key}</p>
                     <div>
-                        <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                        <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
                         onClick={() => addItem(item)}>+</button>
                     </div>
                 </div>
@@ -211,10 +211,10 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
     return (
         <div className="h-1/4 w-full">
             <div className="h-2/8 flex w-full justify-center items-center">
-                <input className="w-full h-full text-lg dark:text-neutral-200 text-neutral-700 p-1 pl-2 border-2 dark:border-[#ffca09] border-[#a48100] dark:placeholder-neutral-200 placeholder-neutral-700 rounded-md dark:bg-black/25 bg-[#d6d4d4]/80 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}></input>
+                <input className="w-full h-full text-lg dark:text-neutral-200 text-neutral-700 p-1 pl-2 border-2 dark:border-[#ffca09] border-[#a48100] dark:placeholder-neutral-200 placeholder-neutral-700 rounded-md dark:bg-black/25 bg-white/70 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}></input>
             </div>
             
-            <div className="mt-5 overflow-y-auto h-11/16 border-2 dark:border-[#ffca09] border-[#a48100] rounded-sm dark:bg-black/35 bg-[#d6d4d4]/50 shadow-lg">
+            <div className="mt-5 overflow-y-auto h-11/16 border-2 dark:border-[#ffca09] border-[#a48100] rounded-sm dark:bg-black/35 bg-white/65 shadow-lg">
                 <ul className="shadow divide-y dark:divide-[#ffca09] divide:[#d6d4d4] min-h-0">
                     {props.items.filter((item) => item.Name.toLowerCase().includes(searchTerm.toLowerCase())).map((item) => {
                     return <li onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15">{props.renderer(item)}</li>;
