@@ -24,17 +24,7 @@ function HomePage()
                     <RouteList triggerRerender={triggerRerender} />
                 </div>
                 <div className="flex flex-col justify-between w-2/5 h-4/5 border-2 dark:border-[#ffca09] border-[#a48100] rounded-md shadow-lg">
-                    <div className="w-full h-38/40 self-start border-b-2 dark:border-[#ffca09] border-[#a48100]">
-                        <Map />
-                    </div>
-                    <div className="flex w-full h-2/40 dark:bg-black/50 bg-white/50 font-bold justify-center rounded-b-md items-center">
-                        <input type="checkbox" value="" className="w-5 h-5 bg-neutral-100 border-neutral-300 rounded-lg" checked/>
-                        <h1 className="ml-1">Through buildings</h1>
-                        <input type="checkbox" value="" className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
-                        <h1 className="ml-1">Jaywalking</h1>
-                        <input type="checkbox" value="" className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
-                        <h1 className="ml-1">Across grass</h1>
-                    </div>
+                    <Map />
                 </div>
                 {about && (<About />)}
             </div>

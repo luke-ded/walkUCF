@@ -38,27 +38,39 @@ function Map()
       ];
 
       return (
-        <div className="h-full w-full rounded-t-sm">
-          <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
-            maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-t-sm z-0">
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={position}>
-              <Popup>UCF!</Popup>
-            </Marker>
-            {/* <Polyline positions={path} color="blue" /> */}
-            <Polygon
-              positions={outsideBoundsArea}
-              color="#ffca09"
-              opacity={.75}
-              weight={2}
-              fillColor="black"
-              fillOpacity={0.4}
-            />
-            
-          </MapContainer>
+        <div className="w-full h-full">
+          <div className="w-full h-38/40 self-start border-b-2 dark:border-[#ffca09] border-[#a48100]">
+            <div className="h-full w-full rounded-t-sm">
+              <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
+                maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-t-sm z-0">
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={position}>
+                  <Popup>UCF!</Popup>
+                </Marker>
+                {/* <Polyline positions={path} color="blue" /> */}
+                <Polygon
+                  positions={outsideBoundsArea}
+                  color="#ffca09"
+                  opacity={.75}
+                  weight={2}
+                  fillColor="black"
+                  fillOpacity={0.4}
+                />
+                
+              </MapContainer>
+            </div>
+          </div>
+          <div className="flex w-full h-2/40 dark:bg-black/50 bg-white/50 font-bold justify-center rounded-b-md items-center">
+              <input type="checkbox" value="" className="w-5 h-5 bg-neutral-100 border-neutral-300 rounded-lg" checked/>
+              <h1 className="ml-1">Through buildings</h1>
+              <input type="checkbox" value="" className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
+              <h1 className="ml-1">Jaywalking</h1>
+              <input type="checkbox" value="" className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
+              <h1 className="ml-1">Across grass</h1>
+          </div>
         </div>
       );
 }
