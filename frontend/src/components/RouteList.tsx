@@ -34,7 +34,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
                             <span className="dark:text-neutral-200 text-neutral-700 font-semibold text-md">{item.Name}</span>
                         </div>
                         <div>
-                            <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                            <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
                             onClick={() => removeStop(item)}>x</button>   
                         </div> 
                 </div>
@@ -44,9 +44,9 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
                         <p className="dark:text-neutral-200 text-neutral-700 text-sm">&nbsp;| Stop {itemsList.indexOf(item) + 1}</p>
                     </div>
                     <div>
-                        <button className = "mr-3 rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                        <button className = "mr-3 rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
                         onClick={() => swapDown(item)}>▼</button> 
-                        <button className = "rounded-sm inline-block h-fit w-fit px-2 bg-[#ffca09] border-2 border-[#ffca09] text-center text-neutral-700 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                        <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
                         onClick={() => swapUp(item)}>▲</button> 
                     </div>
                 </div>
