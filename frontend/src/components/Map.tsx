@@ -3,6 +3,15 @@ import {LatLngTuple, LatLngBoundsExpression/*, LatLngExpression*/} from 'leaflet
 import 'leaflet/dist/leaflet.css';
 import { useState } from 'react';
 
+interface Item 
+{
+    key:string;
+    Name: string;
+    Abbreviation: string;
+    lat: number;
+    long: number;
+}
+
 interface PropsType 
 {
     items: any[];
@@ -20,7 +29,7 @@ function Map()
   function getStops()
   {
       var temp = localStorage.getItem('stoplist');
-      var stopList : any [] = [];
+      var stopList : Item [] = [];
       
       if(temp != undefined && temp != null)
       {
@@ -28,6 +37,21 @@ function Map()
       }
 
       return stopList;      
+  }
+
+  function getSelected()
+  {
+      var temp = localStorage.getItem('selectedPoint');
+
+      if(temp != undefined && temp != null)
+      {
+        var parsedItem : Item = JSON.parse(temp);
+        var selectedPoint : LatLngTuple = [parsedItem.lat, parsedItem.long];
+      }
+      else
+        var selectedPoint : LatLngTuple = [100, 100];
+
+      return selectedPoint;      
   }
 
   const renderPoint = (point : any): React.ReactNode => 
@@ -53,12 +77,7 @@ function Map()
     renderer: renderPoint
   };
 
-  const position : LatLngTuple = [28.6016, -81.2005];
-    /* const path : LatLngExpression[] = [
-      [51.505, -0.09],
-      [51.51, -0.1],
-      [51.52, -0.12],
-    ]; */
+  const position : LatLngTuple = getSelected();
 
     const bounds: LatLngBoundsExpression = 
     [
@@ -97,7 +116,7 @@ function Map()
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
               <Marker position={position}>
-                <Popup>UCF!</Popup>
+                <Popup>This is the selected point!!</Popup>
               </Marker>
               {props.items.map((point) => {
               return <div>{props.renderer(point)}</div>;

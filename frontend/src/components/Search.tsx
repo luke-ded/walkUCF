@@ -65,7 +65,10 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
     console.log(selectedItem);
     function handleItemChange(item : Item)
     {
-        setSelectedItem(item.key);
+      setSelectedItem(item.key);
+    
+      localStorage.setItem("selectedPoint", JSON.stringify(item));
+      triggerRerender();
     }
 
     // Temporary? List of UCF buildings
