@@ -5,6 +5,8 @@ interface Item
     key:string;
     Name: string;
     Abbreviation: string;
+    lat?: number;
+    long?: number;
 }
 
 interface ChildProps {
@@ -68,75 +70,440 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
 
     // Temporary? List of UCF buildings
     const itemsList = [
-        {key: "1", Name: "MILLICAN HALL", Abbreviation: "MH"},
-        {key: "2", Name: "JOHN C. HITT LIBRARY", Abbreviation: "LIB"},
-        {key: "3", Name: "LIBRARY AUTOMATED RETRIEVAL CENTER (ARC)", Abbreviation: "LARC"},
-        {key: "4", Name: "UTILITY BUILDING I", Abbreviation: "UB1"},
-        {key: "5", Name: "STORM WATER RESEARCH LAB", Abbreviation: "SWL"},
-        {key: "6", Name: "CHEMISTRY BUILDING", Abbreviation: "CHEM"},
-        {key: "7", Name: "THEATRE", Abbreviation: "TH"},
-        {key: "8", Name: "JIMMIE A. FERRELL STUDENT SERVICES COMMONS", Abbreviation: "FC"},
-        {key: "9", Name: "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - A", Abbreviation: "FC-A"},
-        {key: "10", Name: "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - B", Abbreviation: "FC-B"},
-        {key: "11", Name: "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - C", Abbreviation: "FC-C"},
-        {key: "12", Name: "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - D", Abbreviation: "FC-D"},
-        {key: "13", Name: "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - E", Abbreviation: "FC-E"},
-        {key: "14", Name: "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - F", Abbreviation: "FC-F"},
-        {key: "15", Name: "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - G", Abbreviation: "FC-G"},
-        {key: "16", Name: "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - H", Abbreviation: "FC-H"},
-        {key: "17", Name: "VOLUSIA HALL", Abbreviation: "VOL"},
-        {key: "18", Name: "LAKE HALL", Abbreviation: "LAK"},
-        {key: "19", Name: "OSCEOLA HALL", Abbreviation: "OSC"},
-        {key: "20", Name: "POLK HALL", Abbreviation: "POL"},
-        {key: "21", Name: "MATHEMATICAL SCIENCES BUILDING", Abbreviation: "MSB"},
-        {key: "22", Name: "TECHNOLOGY COMMONS I", Abbreviation: "TC1"},
-        {key: "23", Name: "HOWARD PHILLIPS HALL", Abbreviation: "HPH"},
-        {key: "24", Name: "FACILITIES & SAFETY - A", Abbreviation: "FSC-A"},
-        {key: "25", Name: "FACILITIES & SAFETY - B", Abbreviation: "FSC-B"},
-        {key: "26", Name: "FACILITIES & SAFETY - C", Abbreviation: "FSC-C"},
-        {key: "27", Name: "FACILITIES & SAFETY - D", Abbreviation: "FSC-D"},
-        {key: "28", Name: "FACILITIES & SAFETY - E", Abbreviation: "FSC-E"},
-        {key: "29", Name: "FACILITIES & SAFETY - F", Abbreviation: "FSC-F"},
-        {key: "30", Name: "COLBOURN HALL", Abbreviation: "CNH"},
-        {key: "31", Name: "REHEARSAL HALL", Abbreviation: "RH"},
-        {key: "32", Name: "BIOLOGICAL SCIENCES BUILDING", Abbreviation: "BIO"},
-        {key: "33", Name: "EDUCATIONAL COMPLEX & GYM", Abbreviation: "ED"},
-        {key: "34", Name: "PRINT SHOP", Abbreviation: "PRNT"},
-        {key: "35", Name: "CREATIVE SCHOOL FOR CHILDREN 1", Abbreviation: "CSC1"},
-        {key: "36", Name: "RECREATION SUPPORT BUILDING", Abbreviation: "RSB"},
-        {key: "37", Name: "JOHN T. WASHINGTON CENTER", Abbreviation: "JTWC"},
-        {key: "38", Name: "COUNSELING & PSYCHOLOGICAL SERVICES", Abbreviation: "CAPS"},
-        {key: "39", Name: "CREATIVE SCHOOL II", Abbreviation: "CS2"},
-        {key: "40", Name: "TECHNOLOGY COMMONS II", Abbreviation: "TC2"},
-        {key: "41", Name: "BREVARD HALL", Abbreviation: "BRE"},
-        {key: "42", Name: "ORANGE HALL", Abbreviation: "ORG"},
-        {key: "43", Name: "SEMINOLE HALL", Abbreviation: "SEM"},
-        {key: "44", Name: "LIBRA COMMUNITY CENTER", Abbreviation: "LCC"},
-        {key: "45", Name: "BIKE STORAGE 1", Abbreviation: "BK"},
-        {key: "46", Name: "OUTDOOR STUDY PAVILION", Abbreviation: "STDY"},
-        {key: "47", Name: "WAYNE DENSCH 1", Abbreviation: "WD1"},
-        {key: "48", Name: "WAYNE DENSCH 2", Abbreviation: "WD2"},
-        {key: "49", Name: "ENGINEERING I", Abbreviation: "ENG1"},
-        {key: "50", Name: "UTILITY BUILDING 4", Abbreviation: "UB4"},
-        {key: "51", Name: "SIEMENS ENERGY CENTER", Abbreviation: "SEC"},
-        {key: "52", Name: "BUSINESS ADMINISTRATION I", Abbreviation: "BA1"},
-        {key: "53", Name: "UTILITY BUILDING 5", Abbreviation: "UB5"},
-        {key: "54", Name: "LABORATORY & ENVIRONMENTAL SUPPORT", Abbreviation: "LES"},
-        {key: "55", Name: "EMERGENCY OPERATION CENTER", Abbreviation: "EOC"},
-        {key: "56", Name: "ADDITION ARENA", Abbreviation: "ARNA"},
-        {key: "57", Name: "VISUAL ARTS BUILDING", Abbreviation: "VAB"},
-        {key: "58", Name: "STUDENT UNION", Abbreviation: "STUN"},
-        {key: "59", Name: "CREOL BUILDING", Abbreviation: "CROL"},
-        {key: "60", Name: "COLLEGE OF SCIENCES BUILDING", Abbreviation: "CSB"},
-        {key: "61", Name: "LAKE CLAIRE BUILDING 55", Abbreviation: "LC55"},
-        {key: "62", Name: "LAKE CLAIRE BUILDING 56", Abbreviation: "LC56"},
-        {key: "63", Name: "LAKE CLAIRE BUILDING 57", Abbreviation: "LC57"},
-        {key: "64", Name: "LAKE CLAIRE BUILDING 58", Abbreviation: "LC58"},
-        {key: "65", Name: "LAKE CLAIRE BUILDING 59", Abbreviation: "LC59"},
-        {key: "66", Name: "LAKE CLAIRE BUILDING 60", Abbreviation: "LC60"},
-        {key: "67", Name: "LAKE CLAIRE BUILDING 61", Abbreviation: "LC61"},
-        {key: "68", Name: "LAKE CLAIRE BUILDING 62", Abbreviation: "LC62"},
-        {key: "69", Name: "LAKE CLAIRE BUILDING 63", Abbreviation: "LC63"},
+        {
+          "key": "1",
+          "Name": "MILLICAN HALL",
+          "Abbreviation": "MH",
+          "lat": 28.6024,
+          "long": -81.2006
+        },
+        {
+          "key": "2",
+          "Name": "JOHN C. HITT LIBRARY",
+          "Abbreviation": "LIB",
+          "lat": 28.6019,
+          "long": -81.2036
+        },
+        {
+          "key": "3",
+          "Name": "LIBRARY AUTOMATED RETRIEVAL CENTER (ARC)",
+          "Abbreviation": "LARC",
+          "lat": 28.6033,
+          "long": -81.2054
+        },
+        {
+          "key": "4",
+          "Name": "UTILITY BUILDING I",
+          "Abbreviation": "UB1",
+          "lat": 28.6045,
+          "long": -81.2061
+        },
+        {
+          "key": "5",
+          "Name": "STORM WATER RESEARCH LAB",
+          "Abbreviation": "SWL",
+          "lat": 28.6057,
+          "long": -81.2077
+        },
+        {
+          "key": "6",
+          "Name": "CHEMISTRY BUILDING",
+          "Abbreviation": "CHEM",
+          "lat": 28.6003,
+          "long": -81.2014
+        },
+        {
+          "key": "7",
+          "Name": "THEATRE",
+          "Abbreviation": "TH",
+          "lat": 28.5993,
+          "long": -81.2003
+        },
+        {
+          "key": "8",
+          "Name": "JIMMIE A. FERRELL STUDENT SERVICES COMMONS",
+          "Abbreviation": "FC",
+          "lat": 28.5987,
+          "long": -81.1992
+        },
+        {
+          "key": "9",
+          "Name": "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - A",
+          "Abbreviation": "FC-A",
+          "lat": 28.5985,
+          "long": -81.1995
+        },
+        {
+          "key": "10",
+          "Name": "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - B",
+          "Abbreviation": "FC-B",
+          "lat": 28.5984,
+          "long": -81.1997
+        },
+        {
+          "key": "11",
+          "Name": "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - C",
+          "Abbreviation": "FC-C",
+          "lat": 28.5983,
+          "long": -81.1999
+        },
+        {
+          "key": "12",
+          "Name": "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - D",
+          "Abbreviation": "FC-D",
+          "lat": 28.5982,
+          "long": -81.2001
+        },
+        {
+          "key": "13",
+          "Name": "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - E",
+          "Abbreviation": "FC-E",
+          "lat": 28.5981,
+          "long": -81.2003
+        },
+        {
+          "key": "14",
+          "Name": "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - F",
+          "Abbreviation": "FC-F",
+          "lat": 28.5980,
+          "long": -81.2005
+        },
+        {
+          "key": "15",
+          "Name": "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - G",
+          "Abbreviation": "FC-G",
+          "lat": 28.5979,
+          "long": -81.2007
+        },
+        {
+          "key": "16",
+          "Name": "JIMMIE A. FERRELL STUDENT SERVICES COMMONS - H",
+          "Abbreviation": "FC-H",
+          "lat": 28.5978,
+          "long": -81.2009
+        },
+        {
+          "key": "17",
+          "Name": "VOLUSIA HALL",
+          "Abbreviation": "VOL",
+          "lat": 28.5973,
+          "long": -81.2016
+        },
+        {
+          "key": "18",
+          "Name": "LAKE HALL",
+          "Abbreviation": "LAK",
+          "lat": 28.5972,
+          "long": -81.2024
+        },
+        {
+          "key": "19",
+          "Name": "OSCEOLA HALL",
+          "Abbreviation": "OSC",
+          "lat": 28.5971,
+          "long": -81.2031
+        },
+        {
+          "key": "20",
+          "Name": "POLK HALL",
+          "Abbreviation": "POL",
+          "lat": 28.5970,
+          "long": -81.2039
+        },
+        {
+          "key": "21",
+          "Name": "MATHEMATICAL SCIENCES BUILDING",
+          "Abbreviation": "MSB",
+          "lat": 28.6008,
+          "long": -81.2026
+        },
+        {
+          "key": "22",
+          "Name": "TECHNOLOGY COMMONS I",
+          "Abbreviation": "TC1",
+          "lat": 28.6015,
+          "long": -81.2069
+        },
+        {
+          "key": "23",
+          "Name": "HOWARD PHILLIPS HALL",
+          "Abbreviation": "HPH",
+          "lat": 28.5997,
+          "long": -81.2053
+        },
+        {
+          "key": "24",
+          "Name": "FACILITIES & SAFETY - A",
+          "Abbreviation": "FSC-A",
+          "lat": 28.5953,
+          "long": -81.2081
+        },
+        {
+          "key": "25",
+          "Name": "FACILITIES & SAFETY - B",
+          "Abbreviation": "FSC-B",
+          "lat": 28.5950,
+          "long": -81.2084
+        },
+        {
+          "key": "26",
+          "Name": "FACILITIES & SAFETY - C",
+          "Abbreviation": "FSC-C",
+          "lat": 28.5948,
+          "long": -81.2086
+        },
+        {
+          "key": "27",
+          "Name": "FACILITIES & SAFETY - D",
+          "Abbreviation": "FSC-D",
+          "lat": 28.5946,
+          "long": -81.2089
+        },
+        {
+          "key": "28",
+          "Name": "FACILITIES & SAFETY - E",
+          "Abbreviation": "FSC-E",
+          "lat": 28.5944,
+          "long": -81.2091
+        },
+        {
+          "key": "29",
+          "Name": "FACILITIES & SAFETY - F",
+          "Abbreviation": "FSC-F",
+          "lat": 28.5942,
+          "long": -81.2093
+        },
+        {
+          "key": "30",
+          "Name": "COLBOURN HALL",
+          "Abbreviation": "CNH",
+          "lat": 28.6009,
+          "long": -81.2043
+        },
+        {
+          "key": "31",
+          "Name": "REHEARSAL HALL",
+          "Abbreviation": "RH",
+          "lat": 28.5991,
+          "long": -81.1996
+        },
+        {
+          "key": "32",
+          "Name": "BIOLOGICAL SCIENCES BUILDING",
+          "Abbreviation": "BIO",
+          "lat": 28.5998,
+          "long": -81.2032
+        },
+        {
+          "key": "33",
+          "Name": "EDUCATIONAL COMPLEX & GYM",
+          "Abbreviation": "ED",
+          "lat": 28.5988,
+          "long": -81.2046
+        },
+        {
+          "key": "34",
+          "Name": "PRINT SHOP",
+          "Abbreviation": "PRNT",
+          "lat": 28.5961,
+          "long": -81.2075
+        },
+        {
+          "key": "35",
+          "Name": "CREATIVE SCHOOL FOR CHILDREN 1",
+          "Abbreviation": "CSC1",
+          "lat": 28.5957,
+          "long": -81.2068
+        },
+        {
+          "key": "36",
+          "Name": "RECREATION SUPPORT BUILDING",
+          "Abbreviation": "RSB",
+          "lat": 28.5965,
+          "long": -81.2099
+        },
+        {
+          "key": "37",
+          "Name": "JOHN T. WASHINGTON CENTER",
+          "Abbreviation": "JTWC",
+          "lat": 28.5968,
+          "long": -81.2052
+        },
+        {
+          "key": "38",
+          "Name": "COUNSELING & PSYCHOLOGICAL SERVICES",
+          "Abbreviation": "CAPS",
+          "lat": 28.5966,
+          "long": -81.2058
+        },
+        {
+          "key": "39",
+          "Name": "CREATIVE SCHOOL II",
+          "Abbreviation": "CS2",
+          "lat": 28.5955,
+          "long": -81.2071
+        },
+        {
+          "key": "40",
+          "Name": "TECHNOLOGY COMMONS II",
+          "Abbreviation": "TC2",
+          "lat": 28.6018,
+          "long": -81.2078
+        },
+        {
+          "key": "41",
+          "Name": "BREVARD HALL",
+          "Abbreviation": "BRE",
+          "lat": 28.5965,
+          "long": -81.2020
+        },
+        {
+          "key": "42",
+          "Name": "ORANGE HALL",
+          "Abbreviation": "ORG",
+          "lat": 28.5964,
+          "long": -81.2027
+        },
+        {
+          "key": "43",
+          "Name": "SEMINOLE HALL",
+          "Abbreviation": "SEM",
+          "lat": 28.5963,
+          "long": -81.2034
+        },
+        {
+          "key": "44",
+          "Name": "LIBRA COMMUNITY CENTER",
+          "Abbreviation": "LCC",
+          "lat": 28.5959,
+          "long": -81.2041
+        },
+        {
+          "key": "45",
+          "Name": "BIKE STORAGE 1",
+          "Abbreviation": "BK",
+          "lat": 28.6013,
+          "long": -81.2048
+        },
+        {
+          "key": "46",
+          "Name": "OUTDOOR STUDY PAVILION",
+          "Abbreviation": "STDY",
+          "lat": 28.6011,
+          "long": -81.2051
+        },
+        {
+          "key": "47",
+          "Name": "WAYNE DENSCH 1",
+          "Abbreviation": "WD1",
+          "lat": 28.5982,
+          "long": -81.2063
+        },
+        {
+          "key": "48",
+          "Name": "WAYNE DENSCH 2",
+          "Abbreviation": "WD2",
+          "lat": 28.5980,
+          "long": -81.2066
+        },
+        {
+          "key": "49",
+          "Name": "ENGINEERING I",
+          "Abbreviation": "ENG1",
+          "lat": 28.6034,
+          "long": -81.2021
+        },
+        {
+          "key": "50",
+          "Name": "UTILITY BUILDING 4",
+          "Abbreviation": "UB4",
+          "lat": 28.6039,
+          "long": -81.2015
+        },
+        {
+          "key": "51",
+          "Name": "SIEMENS ENERGY CENTER",
+          "Abbreviation": "SEC",
+          "lat": 28.6044,
+          "long": -81.2009
+        },
+        {
+          "key": "52",
+          "Name": "BUSINESS ADMINISTRATION I",
+          "Abbreviation": "BA1",
+          "lat": 28.6041,
+          "long": -81.1997
+        },
+        {
+          "key": "53",
+          "Name": "UTILITY BUILDING 5",
+          "Abbreviation": "UB5",
+          "lat": 28.6048,
+          "long": -81.1991
+        },
+        {
+          "key": "54",
+          "Name": "LABORATORY & ENVIRONMENTAL SUPPORT",
+          "Abbreviation": "LES",
+          "lat": 28.6053,
+          "long": -81.1985
+        },
+        {
+          "key": "55",
+          "Name": "EMERGENCY OPERATION CENTER",
+          "Abbreviation": "EOC",
+          "lat": 28.6058,
+          "long": -81.1979
+        },
+        {
+          "key": "56",
+          "Name": "ADDITION ARENA",
+          "Abbreviation": "ARNA",
+          "lat": 28.6027,
+          "long": -81.2097
+        },
+        {
+          "key": "57",
+          "Name": "VISUAL ARTS BUILDING",
+          "Abbreviation": "VAB",
+          "lat": 28.6016,
+          "long": -81.2091
+        },
+        {
+          "key": "58",
+          "Name": "STUDENT UNION",
+          "Abbreviation": "STUN",
+          "lat": 28.6005,
+          "long": -81.2081
+        },
+        {
+          "key": "59",
+          "Name": "CREOL BUILDING",
+          "Abbreviation": "CROL",
+          "lat": 28.6031,
+          "long": -81.2014
+        },
+        {
+          "key": "60",
+          "Name": "COLLEGE OF SCIENCES BUILDING",
+          "Abbreviation": "CSB",
+          "lat": 28.6025,
+          "long": -81.2018
+        },
+        {
+          "key": "61",
+          "Name": "LAKE CLAIRE BUILDING 55",
+          "Abbreviation": "LC55",
+          "lat": 28.6069,
+          "long": -81.1965
+        },
+        {
+          "key": "62",
+          "Name": "LAKE CLAIRE BUILDING 56",
+          "Abbreviation": "LC56",
+          "lat": 28.6071,
+          "long": -81.1968
+        }/*,
         {key: "70", Name: "LAKE CLAIRE BUILDING 64", Abbreviation: "LC64"},
         {key: "71", Name: "LAKE CLAIRE BUILDING 65", Abbreviation: "LC65"},
         {key: "72", Name: "LAKE CLAIRE BUILDING 66", Abbreviation: "LC66"},
@@ -200,7 +567,7 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
         {key: "130", Name: "Tower 1", Abbreviation: "?"},
         {key: "131", Name: "Tower 2", Abbreviation: "?"},
         {key: "132", Name: "Tower 3", Abbreviation: "?"},
-        {key: "133", Name: "Tower 4", Abbreviation: "?"}
+        {key: "133", Name: "Tower 4", Abbreviation: "?"}*/
     ]
 
     var props: PropsType = {

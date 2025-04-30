@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker, Popup, Polygon, useMap/*, Polyline */} from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Polygon/*, Polyline */} from 'react-leaflet';
 import {LatLngTuple, LatLngBoundsExpression/*, LatLngExpression*/} from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useState } from 'react';
@@ -15,34 +15,41 @@ function Map()
   const [jaywalking, setJaywalking] = useState(false);
   const [grass, setGrass] = useState(false);
   
-  var pts = 
-  [
-    {id: 1 , lat:           28.60672867347779 , lon:           -81.19661320210739 },
-    {id: 2 , lat:           28.606779519897174 , lon:           -81.19673962664857 },
-    {id: 3 , lat:           28.60680511136134 , lon:           -81.19677788589577 },
-    {id: 4 , lat:           28.60675072949296 , lon:           -81.19676877655114 },
-    {id: 5 , lat:           28.606744331624398 , lon:           -81.19684256224278 },
-    {id: 6 , lat:           28.60688428491332 , lon:           -81.19695369624708 },
-    {id: 7 , lat:           28.6067739217642 , lon:           -81.19703659128291 },
-    {id: 8 , lat:           28.60668435158601 , lon:           -81.19711037697408 },
-    {id: 9 , lat:           28.60700184553272 , lon:           -81.19687717775223 },
-    {id: 10 , lat:           28.606709562988883 , lon:           -81.196870944916 }
-  ]
+  var stopPoints = getStops();
+
+  function getStops()
+  {
+      var temp = localStorage.getItem('stoplist');
+      var stopList : any [] = [];
+      
+      if(temp != undefined && temp != null)
+      {
+          stopList = JSON.parse(temp);
+      }
+
+      return stopList;      
+  }
 
   const renderPoint = (point : any): React.ReactNode => 
   {
-    var pointPosition : LatLngTuple = [point.lat, point.lon];
+    var pointPosition : LatLngTuple = [point.lat, point.long];
 
+    if(point.lat == undefined || point.long == undefined)
+    {
+      console.error("Invalid point in stop list point rendering.\n")
+      return(<div></div>);
+    }
+      
     return(
     <Marker position={pointPosition}>
-      <Popup>UCF!</Popup>
+      <Popup>{point.Name}</Popup>
     </Marker>
     );
   }
 
   var props: PropsType = 
   {
-    items: pts,
+    items: stopPoints,
     renderer: renderPoint
   };
 
