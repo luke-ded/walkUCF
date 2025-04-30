@@ -139,6 +139,9 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
     function handleItemChange(item : Item)
     {
         setSelectedItem(item.key);
+
+        localStorage.setItem("selectedPoint", JSON.stringify(item));
+        triggerRerender();
     }
 
     var props: PropsType = {
