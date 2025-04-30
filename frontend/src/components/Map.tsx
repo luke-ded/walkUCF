@@ -1,15 +1,50 @@
-import { MapContainer, TileLayer, Marker, Popup, Polygon/*, Polyline */} from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Polygon, useMap/*, Polyline */} from 'react-leaflet';
 import {LatLngTuple, LatLngBoundsExpression/*, LatLngExpression*/} from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useState } from 'react';
 
+interface PropsType 
+{
+    items: any[];
+    renderer: (point: any) => React.ReactNode;
+}
 
 function Map()
 {
   const [buildings, setBuilding] = useState(true);
   const [jaywalking, setJaywalking] = useState(false);
   const [grass, setGrass] = useState(false);
+  
+  var pts = 
+  [
+    {id: 1 , lat:           28.60672867347779 , lon:           -81.19661320210739 },
+    {id: 2 , lat:           28.606779519897174 , lon:           -81.19673962664857 },
+    {id: 3 , lat:           28.60680511136134 , lon:           -81.19677788589577 },
+    {id: 4 , lat:           28.60675072949296 , lon:           -81.19676877655114 },
+    {id: 5 , lat:           28.606744331624398 , lon:           -81.19684256224278 },
+    {id: 6 , lat:           28.60688428491332 , lon:           -81.19695369624708 },
+    {id: 7 , lat:           28.6067739217642 , lon:           -81.19703659128291 },
+    {id: 8 , lat:           28.60668435158601 , lon:           -81.19711037697408 },
+    {id: 9 , lat:           28.60700184553272 , lon:           -81.19687717775223 },
+    {id: 10 , lat:           28.606709562988883 , lon:           -81.196870944916 }
+  ]
 
+  const renderPoint = (point : any): React.ReactNode => 
+  {
+    var pointPosition : LatLngTuple = [point.lat, point.lon];
+
+    return(
+    <Marker position={pointPosition}>
+      <Popup>UCF!</Popup>
+    </Marker>
+    );
+  }
+
+  var props: PropsType = 
+  {
+    items: pts,
+    renderer: renderPoint
+  };
 
   const position : LatLngTuple = [28.6016, -81.2005];
     /* const path : LatLngExpression[] = [
@@ -43,11 +78,11 @@ function Map()
       ]
 
     ];
-
+    
     return (
       <div className="w-full h-full">
         <div className="w-full h-38/40 self-start border-b-2 dark:border-[#ffca09] border-[#a48100]">
-          <div className="h-full w-full rounded-t-sm">
+          <div id="map" className="h-full w-full rounded-t-sm">
             <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
               maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-t-sm z-0">
               <TileLayer
@@ -57,6 +92,9 @@ function Map()
               <Marker position={position}>
                 <Popup>UCF!</Popup>
               </Marker>
+              {props.items.map((point) => {
+              return <div>{props.renderer(point)}</div>;
+              })}
               {/* <Polyline positions={path} color="blue" /> */}
               <Polygon
                 positions={outsideBoundsArea}
