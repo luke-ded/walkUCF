@@ -63,12 +63,28 @@ function Map()
       console.error("Invalid point in stop list point rendering.\n")
       return(<div></div>);
     }
-      
-    return(
-    <Marker position={pointPosition}>
-      <Popup>{point.Name}</Popup>
-    </Marker>
-    );
+    
+    var stopPosition = stopPoints.indexOf(point) + 1;
+    console.log(point.Name + ": " + stopPosition);
+
+    if(stopPosition == 1)
+      return(
+        <Marker position={pointPosition}>
+          <Popup>Start: {point.Name}</Popup>
+        </Marker>
+      );
+    else if(stopPosition == stopPoints.length)
+      return(
+        <Marker position={pointPosition}>
+          <Popup>End: {point.Name}</Popup>
+        </Marker>
+      );
+    else
+      return(
+        <Marker position={pointPosition}>
+          <Popup>Stop {stopPosition}: {point.Name}</Popup>
+        </Marker>
+      );
   }
 
   var props: PropsType = 
@@ -111,10 +127,10 @@ function Map()
           <div id="map" className="h-full w-full rounded-t-sm">
             <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
               maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-t-sm z-0">
-              <TileLayer
+              {/* <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
+              /> */}
               <Marker position={position}>
                 <Popup>This is the selected point!!</Popup>
               </Marker>
