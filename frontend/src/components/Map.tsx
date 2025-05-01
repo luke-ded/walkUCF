@@ -20,11 +20,15 @@ interface PropsType
 
 function Map()
 {
+  var initPoint : LatLngTuple = [10, 10];
+
   const [buildings, setBuilding] = useState(true);
   const [jaywalking, setJaywalking] = useState(false);
   const [grass, setGrass] = useState(false);
+  const [selectedPoint, setSelectedPoint] = useState(initPoint);
   
   var stopPoints = getStops();
+  
 
   function getStops()
   {
@@ -42,16 +46,21 @@ function Map()
   function getSelected()
   {
       var temp = localStorage.getItem('selectedPoint');
+      var tempSelectedPoint : LatLngTuple = [100, 100];
 
       if(temp != undefined && temp != null)
       {
         var parsedItem : Item = JSON.parse(temp);
-        var selectedPoint : LatLngTuple = [parsedItem.lat, parsedItem.long];
+        tempSelectedPoint = [parsedItem.lat, parsedItem.long];
       }
       else
-        var selectedPoint : LatLngTuple = [100, 100];
+        tempSelectedPoint = [100, 100];
 
-      return selectedPoint;      
+      if(tempSelectedPoint[0] != selectedPoint[0] || tempSelectedPoint[1] != selectedPoint[1])
+      {
+        //console.log(tempSelectedPoint[0] + "=?" + selectedPoint[0]);
+        setSelectedPoint(tempSelectedPoint);  
+      }    
   }
 
   const renderPoint = (point : any): React.ReactNode => 
@@ -87,79 +96,94 @@ function Map()
       );
   }
 
+  function handleDeselect()
+  {
+    var tempSelectedPoint : LatLngTuple = [100, 100];
+    localStorage.setItem("selectedPoint", JSON.stringify(tempSelectedPoint));
+    setSelectedPoint(tempSelectedPoint);
+    console.log(selectedPoint);
+  }
+
   var props: PropsType = 
   {
     items: stopPoints,
     renderer: renderPoint
   };
 
-  const position : LatLngTuple = getSelected();
+  getSelected();
 
-    const bounds: LatLngBoundsExpression = 
+  const position : LatLngTuple = [28.6016, -81.2005];
+
+  const bounds: LatLngBoundsExpression = 
+  [
+    [28.590814194772776, -81.20725051378662], // Southwest corner
+    [28.611654822136117, -81.18757949435675]  // Northeast corner
+  ];
+  
+
+  const outsideBoundsArea : any = 
+  [
     [
-      [28.590814194772776, -81.20725051378662], // Southwest corner
-      [28.611654822136117, -81.18757949435675]  // Northeast corner
-    ];
-    
-
-    const outsideBoundsArea : any = 
+      [28.64840202840334, -81.26488475758394],
+      [28.52485540175175, -81.26488475758394],
+      [28.52485540175175, -81.11457124982738],
+      [28.64840202840334, -81.11457124982738],
+      [28.64840202840334, -81.26488475758394]
+    ],
     [
-      [
-        [28.64840202840334, -81.26488475758394],
-        [28.52485540175175, -81.26488475758394],
-        [28.52485540175175, -81.11457124982738],
-        [28.64840202840334, -81.11457124982738],
-        [28.64840202840334, -81.26488475758394]
-      ],
-      [
-        [28.590814194772776, -81.20725051378662], // SW
-        [28.611654822136117, -81.20725051378662], // NW
-        [28.611654822136117, -81.18757949435675], // NE
-        [28.590814194772776, -81.18757949435675], // SE
-        [28.590814194772776, -81.20725051378662]  // SW
-      ]
+      [28.590814194772776, -81.20725051378662], // SW
+      [28.611654822136117, -81.20725051378662], // NW
+      [28.611654822136117, -81.18757949435675], // NE
+      [28.590814194772776, -81.18757949435675], // SE
+      [28.590814194772776, -81.20725051378662]  // SW
+    ]
 
-    ];
-    
-    return (
-      <div className="w-full h-full">
-        <div className="w-full h-38/40 self-start border-b-2 dark:border-[#ffca09] border-[#a48100]">
-          <div id="map" className="h-full w-full rounded-t-sm">
-            <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
-              maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-t-sm z-0">
-              <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-              <Marker position={position}>
+  ];
+  
+  return (
+    <div className="w-full h-full">
+      <div className="flex w-full h-38/40 self-start border-b-2 dark:border-[#ffca09] border-[#a48100]">
+        <div id="map" className="h-full w-full rounded-t-sm">
+        <button className="absolute z-10 mt-20 ml-3 border-[2px] border-black/30 text-black rounded-[2px] bg-[#ffffff] hover:bg-[#f4f4f4] w-[32px] h-[32px] text-[18px] font-bold cursor-pointer"
+        onClick={handleDeselect}>D</button>
+          <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
+            maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-t-sm z-0">
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
+              <Marker position={selectedPoint}>
                 <Popup>This is the selected point!!</Popup>
               </Marker>
-              {props.items.map((point) => {
-              return <div>{props.renderer(point)}</div>;
-              })}
-              {/* <Polyline positions={path} color="blue" /> */}
-              <Polygon
-                positions={outsideBoundsArea}
-                color="#ffca09"
-                opacity={.75}
-                weight={2}
-                fillColor="black"
-                fillOpacity={0.4}
-              />
-              
-            </MapContainer>
-          </div>
-        </div>
-        <div className="flex w-full h-2/40 dark:bg-black/50 bg-white/50 font-bold justify-center rounded-b-md items-center">
-            <input type="checkbox" value="" checked={buildings} onClick={() => setBuilding(!buildings)} className="w-5 h-5 bg-neutral-100 border-neutral-300 rounded-lg" />
-            <h1 className="ml-1">Through buildings</h1>
-            <input type="checkbox" value="" checked={jaywalking} onClick={() => setJaywalking(!jaywalking)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
-            <h1 className="ml-1">Jaywalking</h1>
-            <input type="checkbox" value="" checked={grass} onClick={() => setGrass(!grass)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
-            <h1 className="ml-1">Across grass</h1>
+            )}
+            
+            {props.items.map((point) => {
+            return <div>{props.renderer(point)}</div>;
+            })}
+            {/* <Polyline positions={path} color="blue" /> */}
+            <Polygon
+              positions={outsideBoundsArea}
+              color="#ffca09"
+              opacity={.75}
+              weight={2}
+              fillColor="black"
+              fillOpacity={0.4}
+            />
+            
+          </MapContainer>
         </div>
       </div>
-    );
+      <div className="flex w-full h-2/40 dark:bg-black/50 bg-white/50 font-bold justify-center rounded-b-md items-center">
+          <input type="checkbox" value="" checked={buildings} onClick={() => setBuilding(!buildings)} className="w-5 h-5 bg-neutral-100 border-neutral-300 rounded-lg" />
+          <h1 className="ml-1">Through buildings</h1>
+          <input type="checkbox" value="" checked={jaywalking} onClick={() => setJaywalking(!jaywalking)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
+          <h1 className="ml-1">Jaywalking</h1>
+          <input type="checkbox" value="" checked={grass} onClick={() => setGrass(!grass)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
+          <h1 className="ml-1">Across grass</h1>
+      </div>
+    </div>
+  );
 }
 
 export default Map;
