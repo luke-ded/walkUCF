@@ -75,7 +75,7 @@ function Map()
     }
     
     var stopPosition = stopPoints.indexOf(point) + 1;
-    console.log(point.Name + ": " + stopPosition);
+    //console.log(point.Name + ": " + stopPosition);
 
     if(stopPosition == 1)
       return(
@@ -102,7 +102,7 @@ function Map()
     var tempSelectedPoint : LatLngTuple = [100, 100];
     localStorage.setItem("selectedPoint", JSON.stringify(tempSelectedPoint));
     setSelectedPoint(tempSelectedPoint);
-    console.log(selectedPoint);
+    //console.log(selectedPoint);
   }
 
   var props: PropsType = 
@@ -145,44 +145,46 @@ function Map()
     <div className="w-full h-full">
       <div className="flex w-full h-38/40 self-start border-b-2 dark:border-[#ffca09] border-[#a48100]">
         <div id="map" className="h-full w-full rounded-t-sm">
-          <div className="flex items-center justify-center absolute z-10 mt-20 ml-3 border-[2px] border-black/30 text-black rounded-[2px] bg-[#ffffff] hover:bg-[#f4f4f4] w-[32px] h-[32px] text-[18px] font-bold cursor-pointer"
+          <div className="flex items-center justify-center absolute z-10 mt-20 ml-[11px] bg-black/20 text-black rounded-[4px] w-[33px] h-[33px] text-[18px] font-bold cursor-pointer"
           onClick={handleDeselect}>
-            <img className="h-9/10 w-auto" src={deselectImage} alt="Deselect marker icon"></img>
+            <div className="flex items-center justify-center w-[29px] h-[29px] rounded-[2px] bg-[#ffffff] hover:bg-[#f4f4f4]">
+              <img className="h-17/20 w-auto" src={deselectImage} alt="Deselect marker icon"></img>
+            </div>
           </div>
           <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
             maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-t-sm z-0">
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
-              <Marker position={selectedPoint}>
-                <Popup>This is the selected point!!</Popup>
-              </Marker>
-            )}
-            
-            {props.items.map((point) => {
-            return <div>{props.renderer(point)}</div>;
-            })}
-            {/* <Polyline positions={path} color="blue" /> */}
-            <Polygon
-              positions={outsideBoundsArea}
-              color="#ffca09"
-              opacity={.75}
-              weight={2}
-              fillColor="black"
-              fillOpacity={0.4}
-            />
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
+            <Marker position={selectedPoint}>
+              <Popup>This is the selected point!!</Popup>
+            </Marker>
+          )}
+          
+          {props.items.map((point) => {
+          return <div>{props.renderer(point)}</div>;
+          })}
+          {/* <Polyline positions={path} color="blue" /> */}
+          <Polygon
+            positions={outsideBoundsArea}
+            color="#ffca09"
+            opacity={.75}
+            weight={2}
+            fillColor="black"
+            fillOpacity={0.4}
+          />
             
           </MapContainer>
         </div>
       </div>
       <div className="flex w-full h-2/40 dark:bg-black/50 bg-white/50 font-bold justify-center rounded-b-md items-center">
-          <input type="checkbox" value="" checked={buildings} onClick={() => setBuilding(!buildings)} className="w-5 h-5 bg-neutral-100 border-neutral-300 rounded-lg" />
+          <input type="checkbox" value="" checked={buildings} onChange={() => setBuilding(!buildings)} className="w-5 h-5 bg-neutral-100 border-neutral-300 rounded-lg" />
           <h1 className="ml-1">Through buildings</h1>
-          <input type="checkbox" value="" checked={jaywalking} onClick={() => setJaywalking(!jaywalking)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
+          <input type="checkbox" value="" checked={jaywalking} onChange={() => setJaywalking(!jaywalking)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
           <h1 className="ml-1">Jaywalking</h1>
-          <input type="checkbox" value="" checked={grass} onClick={() => setGrass(!grass)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
+          <input type="checkbox" value="" checked={grass} onChange={() => setGrass(!grass)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
           <h1 className="ml-1">Across grass</h1>
       </div>
     </div>
