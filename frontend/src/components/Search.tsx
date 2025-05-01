@@ -51,7 +51,7 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
                 <div className="flex justify-between items-center my-[1vh]">
                     <p className="dark:text-neutral-300 text-neutral-600">{item.key}</p>
                     <div>
-                        <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 hover:text-[#faefc8] text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                        <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
                         onClick={() => addItem(item)}>+</button>
                     </div>
                 </div>
