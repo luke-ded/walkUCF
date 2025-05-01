@@ -2,6 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup, Polygon/*, Polyline */} from 'r
 import {LatLngTuple, LatLngBoundsExpression/*, LatLngExpression*/} from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useState } from 'react';
+import deselectImage from "../assets/deselect-marker-icon2.png"
 
 interface Item 
 {
@@ -144,8 +145,10 @@ function Map()
     <div className="w-full h-full">
       <div className="flex w-full h-38/40 self-start border-b-2 dark:border-[#ffca09] border-[#a48100]">
         <div id="map" className="h-full w-full rounded-t-sm">
-        <button className="absolute z-10 mt-20 ml-3 border-[2px] border-black/30 text-black rounded-[2px] bg-[#ffffff] hover:bg-[#f4f4f4] w-[32px] h-[32px] text-[18px] font-bold cursor-pointer"
-        onClick={handleDeselect}>D</button>
+          <div className="flex items-center justify-center absolute z-10 mt-20 ml-3 border-[2px] border-black/30 text-black rounded-[2px] bg-[#ffffff] hover:bg-[#f4f4f4] w-[32px] h-[32px] text-[18px] font-bold cursor-pointer"
+          onClick={handleDeselect}>
+            <img className="h-9/10 w-auto" src={deselectImage} alt="Deselect marker icon"></img>
+          </div>
           <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
             maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-t-sm z-0">
             <TileLayer
