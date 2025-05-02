@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
+    "js-priority-queue": "^0.1.5",
     "leaflet": "^1.9.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
+    "@types/js-priority-queue": "^0.0.9",
     "@types/leaflet": "^1.9.17",
     "@types/node": "^22.15.3",
     "@types/react": "^19.0.10",
