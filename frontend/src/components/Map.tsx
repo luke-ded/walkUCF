@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup, Polygon/*, Polyline */} from 'react-leaflet';
 import {LatLngTuple, LatLngBoundsExpression/*, LatLngExpression*/} from 'leaflet';
+import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useState } from 'react';
 import deselectImage from "../assets/deselect-marker-icon2.png"
@@ -18,6 +19,17 @@ interface PropsType
     items: any[];
     renderer: (point: any) => React.ReactNode;
 }
+const createColoredIcon = (color: string) => {
+  // You can customize the size, shape, and content of the div icon
+  // This example creates a simple colored circle
+  return L.divIcon({
+    className: 'colored-marker', // Add a CSS class for styling
+    html: `<div style="background-color: ${color}; width: 20px; height: 20px; border-radius: 50%;"></div>`,
+    iconSize: [20, 20], // Size of the div icon
+    iconAnchor: [10, 10], // Anchor point of the icon (center of the circle)
+    popupAnchor: [0, -10] // Anchor point for the popup (adjust based on icon size)
+  });
+};
 
 function Map()
 {
@@ -30,6 +42,7 @@ function Map()
   
   var stopPoints = getStops();
   
+  const customIcon = createColoredIcon("red");
 
   function getStops()
   {
@@ -158,7 +171,7 @@ function Map()
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
-            <Marker position={selectedPoint}>
+            <Marker position={selectedPoint} icon={customIcon}>
               <Popup>This is the selected point!!</Popup>
             </Marker>
           )}
