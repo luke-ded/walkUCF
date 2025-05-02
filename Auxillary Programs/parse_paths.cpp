@@ -44,7 +44,7 @@ int main(void)
 
     ifstream inputfile("Auxillary Files/coords.txt");
     ifstream osminputfile("Auxillary Files/UCFmap.osm");
-    ofstream outputfile("Auxillary Files/paths.txt");
+    ofstream outputfile("Auxillary Files/paths.json");
     string tempbuffer;
     
     string line;
@@ -91,6 +91,8 @@ int main(void)
     string newline;
     int numpaths = 0;
     double lat1, lat2, lon1, lon2;
+
+    outputfile<<"[";
 
     while(getline(osminputfile, line))
     {
@@ -141,7 +143,7 @@ int main(void)
                             lon2 = pointlist[i - 1].lon;
 
                             //{ point_id1: 1, point_id2: 2, dist: 1234.34254}
-                            outputfile<<setprecision(7)<<fixed<<"{id: "<<id<<" , point_id1: "<<pointlist[i].id<<" , point_id2: "<<pointlist[i - 1].id<<" , dist: "<<haversine(lat1, lon1, lat2, lon2)<<" },\n";
+                            outputfile<<setprecision(7)<<fixed<<"{\"id\": "<<id<<" , \"point_id1\": "<<pointlist[i].id<<" , \"point_id2\": "<<pointlist[i - 1].id<<" , \"dist\": "<<haversine(lat1, lon1, lat2, lon2)<<" },\n";
                         }
                     }
 
@@ -150,8 +152,10 @@ int main(void)
                 }
             }
         }
-    }  
-    
+    }
+
+    outputfile<<"]";
+
     cout<<"Added "<<numpaths<<" paths.\n";
 
     // Close the file

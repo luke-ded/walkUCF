@@ -11,13 +11,13 @@ int main(void)
     cout<<"Program running..."<<endl;
 
     ifstream inputfile("Auxillary Files/UCFmap.osm");
-    ofstream outputfile("Auxillary Files/coords.txt");
+    ofstream outputfile("Auxillary Files/coords.json");
 
     string line, newline;
     long long id;
     double lat, lon;
 
-
+    outputfile<<"[";
     while (getline(inputfile, line)) 
     {
         if(line.find("<node id") != string::npos)
@@ -74,10 +74,12 @@ int main(void)
             cout<<setprecision(7)<<fixed<<id<<", "<<lat<<", "<<lon<<endl;
 
             //{ id: 'A', lat: 37.7749, lon: -122.4194 }
-            outputfile<<setprecision(7)<<fixed<<"{id: "<<id<<" , lat: "<<lat<<" , lon: "<<lon<<" },\n";
+            outputfile<<setprecision(7)<<fixed<<"{\"id\": "<<id<<" , \"lat\": "<<lat<<" , \"lon\": "<<lon<<" },\n";
         }
     }
-      
+
+    outputfile<<"]";
+
     cout<<"Program completed."<<endl;;
 
     inputfile.close();
