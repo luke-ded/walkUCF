@@ -74,7 +74,7 @@ int main(void)
             cout<<setprecision(7)<<fixed<<id<<", "<<lat<<", "<<lon<<endl;
 
             //{ id: 'A', lat: 37.7749, lon: -122.4194 }
-            outputfile<<setprecision(7)<<fixed<<"{id: "<<id<<" , lat: "<<lat<<" , lon: "<<lon<<" }\n";
+            outputfile<<setprecision(7)<<fixed<<"{id: "<<id<<" , lat: "<<lat<<" , lon: "<<lon<<" },\n";
         }
     }
       
