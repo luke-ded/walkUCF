@@ -134,4 +134,24 @@ export function dijkstra(graph : GraphMap, startID : number, endID : number) : R
             }
         }
     }
+
+    // Path reconstruction
+    if(distances.get(endID)! == Infinity)
+    {
+        console.error("End node " + endID + "unreachable from start node " + startID);
+        return {distances: new Map(), path: []};
+    }
+
+    curID = endID;
+
+    var path: number[] = [];
+    while(curID != null)
+    {
+        path.push(curID);
+        curID = previous.get(curID)!;
+    }
+
+    path = path.reverse();
+
+    return {distances, path};
 }
