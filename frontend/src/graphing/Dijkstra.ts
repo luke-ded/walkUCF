@@ -29,17 +29,15 @@ interface QItem
     distance:number;
 }
 
+// Possibly remove - is distances needed?
 interface Result
 {
     distances: Map<number, number>;
     path: number[];
 }
 
-// Refined Graph interface using Map
 interface GraphMap extends Map<number, GraphEdge[]> {}
 
-/* const startPoint;
-const endPoint; */
 
 export function createGraph() : GraphMap
 {
@@ -97,13 +95,11 @@ export function dijkstra (graph : GraphMap, startID : number, endID : number) : 
         distances.set(pointID, Infinity);
         previous.set(pointID, null);
     }
-    // change to infinity?
     distances.set(startID, 0);
     previous.set(startID, null);
 
 
     var pQueue = new PriorityQueue<QItem>({ comparator: function(a: QItem, b: QItem) { return a.distance - b.distance; }});
-
     pQueue.queue({pointID: startID, distance: 0});
 
     // Run algorithm
@@ -113,7 +109,7 @@ export function dijkstra (graph : GraphMap, startID : number, endID : number) : 
         var curID = curItem.pointID;
         var curDistance = curItem.distance;
 
-        // Add optimization here?
+        // Optimization
         if(curDistance > distances.get(curID)!)
             continue;
 
@@ -122,6 +118,7 @@ export function dijkstra (graph : GraphMap, startID : number, endID : number) : 
 
         var adjs = graph.get(curID) || [];
 
+        // Visit all adjacent nodes
         for(var edge of adjs)
         {
             var adjID = edge.node;
