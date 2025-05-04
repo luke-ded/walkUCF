@@ -3,7 +3,8 @@ import {LatLngTuple, LatLngBoundsExpression/*, LatLngExpression*/} from 'leaflet
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useState } from 'react';
-import deselectImage from "../assets/deselect-marker-icon2.png"
+import deselectImage from "../assets/deselect-marker-icon2.png";
+import {createGraph, dijkstra} from '../graphing/Dijkstra.ts';
 
 interface Item 
 {
@@ -19,15 +20,14 @@ interface PropsType
     items: any[];
     renderer: (point: any) => React.ReactNode;
 }
+
 const createColoredIcon = (color: string) => {
-  // You can customize the size, shape, and content of the div icon
-  // This example creates a simple colored circle
   return L.divIcon({
-    className: 'colored-marker', // Add a CSS class for styling
+    className: 'colored-marker', 
     html: `<div style="background-color: ${color}; width: 20px; height: 20px; border-radius: 50%;"></div>`,
-    iconSize: [20, 20], // Size of the div icon
-    iconAnchor: [10, 10], // Anchor point of the icon (center of the circle)
-    popupAnchor: [0, -10] // Anchor point for the popup (adjust based on icon size)
+    iconSize: [20, 20], 
+    iconAnchor: [10, 10],
+    popupAnchor: [0, -10]
   });
 };
 
@@ -43,6 +43,11 @@ function Map()
   var stopPoints = getStops();
   
   const customIcon = createColoredIcon("red");
+
+  var graph = createGraph();
+  var result = dijkstra(graph, 2188618377, 4725148052);
+  console.log("Result: " + result.path);
+
 
   function getStops()
   {
