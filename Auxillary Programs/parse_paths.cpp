@@ -42,7 +42,7 @@ int main(void)
 {
     cout<<"Please wait while the program is set up...\n";
 
-    ifstream inputfile("Auxillary Files/coords.txt");
+    ifstream inputfile("Auxillary Files/coords.json");
     ifstream osminputfile("Auxillary Files/UCFmap.osm");
     ofstream outputfile("Auxillary Files/paths.json");
     string tempbuffer;
@@ -80,12 +80,9 @@ int main(void)
             osminputfile.close();
             outputfile.close();
             return 0;
-        }
-        
-        
+        }   
     }
     
-
     long long id = 0;
     long long ref;
     string newline;
