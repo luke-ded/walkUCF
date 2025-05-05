@@ -21,6 +21,12 @@ interface PropsType
     renderer: (point: any) => React.ReactNode;
 }
 
+interface PathPropsType 
+{
+    items: number[][];
+    renderer: (path: any) => React.ReactNode;
+}
+
 const createColoredIcon = (color: string) => {
   return L.divIcon({
     className: 'colored-marker', 
@@ -34,6 +40,7 @@ const createColoredIcon = (color: string) => {
 function Map()
 {
   var initPoint : LatLngTuple = [10, 10];
+  var paths: number[][] = [];
 
   const [buildings, setBuilding] = useState(true);
   const [jaywalking, setJaywalking] = useState(false);
@@ -47,6 +54,7 @@ function Map()
   var data = createGraph(buildings, jaywalking, grass);
   var result = dijkstra(data.graph, 2188618377, 4725148052);
   var pointMap = data.pointMap;
+  paths.push(result.path);
   console.log("Result: " + result.path);
 
 
@@ -144,6 +152,12 @@ function Map()
     renderer: renderPoint
   };
 
+  var pathProps: PathPropsType = 
+  {
+    items: paths,
+    renderer: renderPath
+  };
+
   getSelected();
 
   const position : LatLngTuple = [28.6016, -81.2005];
@@ -199,6 +213,10 @@ function Map()
           return <div>{props.renderer(point)}</div>;
           })}
           {/* <Polyline positions={path} color="blue" /> */}
+          {pathProps.items.map((path) => {
+          return <div>{pathProps.renderer(path)}</div>;
+          })}
+
           <Polygon
             positions={outsideBoundsArea}
             color="#ffca09"
