@@ -105,6 +105,7 @@ int main(void)
     {
         if(line.find("<way id") != string::npos)
         {
+            pointlist.clear();
             while(getline(osminputfile, line))
             {
                 if(line.find("<nd ref") != string::npos)
@@ -133,32 +134,28 @@ int main(void)
                         return 0;
                     }
                 }
-                else
-                {
-                    if(line.find("<tag k=\"highway\" v=\"footway\"/>")!= string::npos
+                else if(line.find("<tag k=\"highway\" v=\"footway\"/>")!= string::npos
                     || line.find("<tag k=\"highway\" v=\"cycleway\"/>")!= string::npos
                     || line.find("<tag k=\"highway\" v=\"path\"/>")!= string::npos)
+                {
+                    pointset.insert(pointlist[0]);
+                    for(int i = 1; i < pointlist.size(); i++)
                     {
-                        pointset.insert(pointlist[0]);
-                        for(int i = 1; i < pointlist.size(); i++)
-                        {
-                            numpaths++;
-                            id++;
-                            
-                            lat1 = pointlist[i].lat;
-                            lat2 = pointlist[i - 1].lat;
-                            lon1 = pointlist[i].lon;
-                            lon2 = pointlist[i - 1].lon;
+                        numpaths++;
+                        id++;
+                        
+                        lat1 = pointlist[i].lat;
+                        lat2 = pointlist[i - 1].lat;
+                        lon1 = pointlist[i].lon;
+                        lon2 = pointlist[i - 1].lon;
 
-                            pointset.insert(pointlist[i]);
-                            //{ point_id1: 1, point_id2: 2, dist: 1234.34254}
-                            outputfile<<setprecision(7)<<fixed<<"{\"id\": "<<id<<" , \"point_id1\": "<<pointlist[i].id<<" , \"point_id2\": "<<pointlist[i - 1].id<<" , \"dist\": "<<haversine(lat1, lon1, lat2, lon2)<<" },\n";
-                        }
+                        pointset.insert(pointlist[i]);
+                        //{ point_id1: 1, point_id2: 2, dist: 1234.34254}
+                        outputfile<<setprecision(7)<<fixed<<"{\"id\": "<<id<<" , \"point_id1\": "<<pointlist[i].id<<" , \"point_id2\": "<<pointlist[i - 1].id<<" , \"dist\": "<<haversine(lat1, lon1, lat2, lon2)<<" },\n";
                     }
-
-                    pointlist.clear();                             
-                    break;
                 }
+                else if(line.find("</way>")!= string::npos)
+                    break;
             }
         }
     }
