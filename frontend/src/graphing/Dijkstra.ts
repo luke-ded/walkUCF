@@ -36,20 +36,30 @@ interface Result
     path: number[];
 }
 
+interface createResult
+{
+    pointMap: Map<number, Point>;
+    graph: GraphMap;
+}
+
 interface GraphMap extends Map<number, GraphEdge[]> {}
 
 
-export function createGraph(buildings: boolean, jaywalking: boolean, grass: boolean) : GraphMap
+export function createGraph(buildings: boolean, jaywalking: boolean, grass: boolean) : createResult
 {
     // Change these to arguments
     const points: Point[] = pointsData;
     const paths: Path[] = pathsData;
     const graph : GraphMap = new Map();
 
+    var pointMap: Map<number, Point> = new Map();
+
     points.forEach(point => 
     {
         if(!graph.has(point.id))
             graph.set(point.id, []);
+
+        pointMap.set(point.id, point);
     });
     
     paths.forEach(path =>
@@ -67,7 +77,7 @@ export function createGraph(buildings: boolean, jaywalking: boolean, grass: bool
         }
     });
 
-    return graph;
+    return {graph, pointMap};
 }
 
 

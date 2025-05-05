@@ -1,5 +1,5 @@
-import { MapContainer, TileLayer, Marker, Popup, Polygon/*, Polyline */} from 'react-leaflet';
-import {LatLngTuple, LatLngBoundsExpression/*, LatLngExpression*/} from 'leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline} from 'react-leaflet';
+import {LatLngTuple, LatLngBoundsExpression, LatLngExpression} from 'leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useState } from 'react';
@@ -44,8 +44,9 @@ function Map()
   
   const customIcon = createColoredIcon("red");
 
-  var graph = createGraph(buildings, jaywalking, grass);
-  var result = dijkstra(graph, 2188618377, 4725148052);
+  var data = createGraph(buildings, jaywalking, grass);
+  var result = dijkstra(data.graph, 2188618377, 4725148052);
+  var pointMap = data.pointMap;
   console.log("Result: " + result.path);
 
 
@@ -113,6 +114,20 @@ function Map()
           <Popup>Stop {stopPosition}: {point.Name}</Popup>
         </Marker>
       );
+  }
+
+  const renderPath = (path : number[]): React.ReactNode =>
+  {
+    var newPath: LatLngExpression[] = [];
+
+    path.forEach(node => 
+    {
+      newPath.push([(pointMap.get(node)?.lat)!, (pointMap.get(node)?.lon)!])
+    });
+
+    return(
+      <Polyline positions={newPath} color="blue" />
+    );
   }
 
   function handleDeselect()
