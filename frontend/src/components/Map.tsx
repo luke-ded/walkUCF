@@ -46,7 +46,6 @@ function Map()
   const [jaywalking, setJaywalking] = useState(false);
   const [grass, setGrass] = useState(false);
   const [selectedPoint, setSelectedPoint] = useState(initPoint);
-  const [showPopup, setShowPopup] = useState(false);
   
   var stopPoints = getStops();
   
