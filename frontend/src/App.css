@@ -2,3 +2,7 @@
 @import "leaflet/dist/leaflet.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+.leaflet-popup-content {
+    text-align: center;
+  }

@@ -107,7 +107,7 @@ function Map()
     if(stopPosition == 1)
       return(
         <Marker position={pointPosition}>
-          <Popup>Start: {point.Name}</Popup>
+          <Popup closeButton={false}>Start: {point.Name}</Popup>
         </Marker>
       );
     else if(stopPosition == stopPoints.length)
@@ -134,7 +134,9 @@ function Map()
     });
 
     return(
-      <Polyline positions={newPath} color="blue" />
+      <Polyline positions={newPath} color="blue">
+        <Popup closeButton={false}>Leg 1</Popup>
+      </Polyline>
     );
   }
 
