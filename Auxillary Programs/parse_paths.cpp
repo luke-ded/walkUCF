@@ -136,7 +136,8 @@ int main(void)
                 }
                 else if(line.find("<tag k=\"highway\" v=\"footway\"/>")!= string::npos
                     || line.find("<tag k=\"highway\" v=\"cycleway\"/>")!= string::npos
-                    || line.find("<tag k=\"highway\" v=\"path\"/>")!= string::npos)
+                    || line.find("<tag k=\"highway\" v=\"path\"/>")!= string::npos
+                    || line.find("<tag k=\"highway\" v=\"pedestrian\"/>")!= string::npos)
                 {
                     pointset.insert(pointlist[0]);
                     for(int i = 1; i < pointlist.size(); i++)
