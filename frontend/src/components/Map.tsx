@@ -46,6 +46,7 @@ function Map()
   const [jaywalking, setJaywalking] = useState(false);
   const [grass, setGrass] = useState(false);
   const [selectedPoint, setSelectedPoint] = useState(initPoint);
+  const [showPopup, setShowPopup] = useState(false);
   
   var stopPoints = getStops();
   
@@ -134,8 +135,23 @@ function Map()
     });
 
     return(
-      <Polyline positions={newPath} color="blue">
-        <Popup closeButton={false}>Leg 1</Popup>
+      <Polyline positions={newPath} color="blue" eventHandlers={{
+        mouseover: () => 
+        {
+          console.log("hover");
+          setShowPopup(true);
+        },
+        mouseout: () =>
+        {
+          setTimeout(() =>
+          {
+            console.log("unhover");
+            
+            setShowPopup(false);
+          }, 1000); // AMount of time to delay popup close
+        }
+      }}>
+        {showPopup && <Popup closeButton={false}>Leg 1</Popup>}
       </Polyline>
     );
   }
