@@ -7,6 +7,8 @@
 #include<regex>
 #include<cmath>
 #include<iomanip>
+#include<set>
+#include<map>
 
 using namespace std;
 
@@ -15,6 +17,13 @@ typedef struct point
     long long id;
     double lat;
     double lon;
+
+    bool operator<(const point& other) const {
+        if (id != other.id) {
+            return id < other.id;
+        }
+        return lat < other.lat;
+    }
 } point;
 
 // via https://www.geeksforgeeks.org/haversine-formula-to-find-distance-between-two-points-on-a-sphere/
@@ -45,13 +54,14 @@ int main(void)
     ifstream inputfile("Auxillary Files/coords.json");
     ifstream osminputfile("Auxillary Files/UCFmap.osm");
     ofstream outputfile("Auxillary Files/paths.json");
-    string tempbuffer;
+    ofstream pointoutputfile("Auxillary Files/used_points.json");
     
     string line;
     point temp;
 
     map<long long, point> points;
     vector<point> pointlist;
+    set<point> pointset;
 
 
     while (getline(inputfile, line)) 
@@ -129,16 +139,18 @@ int main(void)
                     || line.find("<tag k=\"highway\" v=\"cycleway\"/>")!= string::npos
                     || line.find("<tag k=\"highway\" v=\"path\"/>")!= string::npos)
                     {
+                        pointset.insert(pointlist[0]);
                         for(int i = 1; i < pointlist.size(); i++)
                         {
                             numpaths++;
                             id++;
-
+                            
                             lat1 = pointlist[i].lat;
                             lat2 = pointlist[i - 1].lat;
                             lon1 = pointlist[i].lon;
                             lon2 = pointlist[i - 1].lon;
 
+                            pointset.insert(pointlist[i]);
                             //{ point_id1: 1, point_id2: 2, dist: 1234.34254}
                             outputfile<<setprecision(7)<<fixed<<"{\"id\": "<<id<<" , \"point_id1\": "<<pointlist[i].id<<" , \"point_id2\": "<<pointlist[i - 1].id<<" , \"dist\": "<<haversine(lat1, lon1, lat2, lon2)<<" },\n";
                         }
@@ -155,10 +167,16 @@ int main(void)
 
     cout<<"Added "<<numpaths<<" paths.\n";
 
+    pointoutputfile<<"[";
+    for (point element : pointset) {
+        pointoutputfile<<setprecision(7)<<fixed<<"{\"id\": "<<element.id <<" , \"lat\": "<<element.lat<<" , \"lon\": "<<element.lon<<" },\n";
+    }
+
     // Close the file
     inputfile.close();
     osminputfile.close();
     outputfile.close();
+    pointoutputfile.close();
 
     return 0;
 }
