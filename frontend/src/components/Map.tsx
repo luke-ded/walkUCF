@@ -44,7 +44,7 @@ function Map()
   
   const customIcon = createColoredIcon("red");
 
-  var graph = createGraph();
+  var graph = createGraph(buildings, jaywalking, grass);
   var result = dijkstra(graph, 2188618377, 4725148052);
   console.log("Result: " + result.path);
 

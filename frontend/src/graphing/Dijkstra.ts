@@ -39,7 +39,7 @@ interface Result
 interface GraphMap extends Map<number, GraphEdge[]> {}
 
 
-export function createGraph() : GraphMap
+export function createGraph(buildings: boolean, jaywalking: boolean, grass: boolean) : GraphMap
 {
     // Change these to arguments
     const points: Point[] = pointsData;
@@ -70,6 +70,7 @@ export function createGraph() : GraphMap
     return graph;
 }
 
+
 export function dijkstra (graph : GraphMap, startID : number, endID : number) : Result
 {
     // <nodeID, distance from start node>
@@ -98,7 +99,7 @@ export function dijkstra (graph : GraphMap, startID : number, endID : number) : 
     distances.set(startID, 0);
     previous.set(startID, null);
 
-
+    // npm js-priority-queue
     var pQueue = new PriorityQueue<QItem>({ comparator: function(a: QItem, b: QItem) { return a.distance - b.distance; }});
     pQueue.queue({pointID: startID, distance: 0});
 
