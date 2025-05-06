@@ -27412,7 +27412,7 @@
   <nd ref="1701655705"/>
   <nd ref="1701655666"/>
   <nd ref="1701655660"/>
-  <tag k="highway" v="service"/>
+  <tag k="highway" v="footway"/>
  </way>
  <way id="209747686" visible="true" version="5" changeset="127549234" timestamp="2022-10-14T23:52:14Z" user="0x0000" uid="651903">
   <nd ref="2199385690"/>
@@ -30611,7 +30611,7 @@
   <nd ref="1701706196"/>
   <nd ref="1701706163"/>
   <nd ref="1701706140"/>
-  <tag k="highway" v="service"/>
+  <tag k="highway" v="footway"/>
  </way>
  <way id="305805661" visible="true" version="3" changeset="137825335" timestamp="2023-06-27T09:02:04Z" user="Emey_lyft" uid="10907417">
   <nd ref="1701706140"/>
@@ -30626,7 +30626,7 @@
   <nd ref="3104858748"/>
   <nd ref="2762673590"/>
   <nd ref="1701706300"/>
-  <tag k="highway" v="service"/>
+  <tag k="highway" v="footway"/>
  </way>
  <way id="305805662" visible="true" version="1" changeset="25781129" timestamp="2014-10-01T02:21:46Z" user="Perfal" uid="2240654">
   <nd ref="3104858740"/>
