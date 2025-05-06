@@ -586,7 +586,7 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
             
             <div className="mt-5 overflow-y-auto h-11/16 border-2 dark:border-[#ffca09] border-[#a48100] rounded-sm dark:bg-black/35 bg-white/65 shadow-lg">
                 <ul className="shadow divide-y dark:divide-[#ffca09] divide:[#d6d4d4] min-h-0">
-                    {props.items.filter((item) => item.Name.toLowerCase().includes(searchTerm.toLowerCase())).map((item) => {
+                    {props.items.filter((item) => (item.Name.toLowerCase().includes(searchTerm.toLowerCase())) || item.Abbreviation.toLowerCase().includes(searchTerm.toLowerCase())).map((item) => {
                     return <li onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15">{props.renderer(item)}</li>;
                 })}
                 </ul>
