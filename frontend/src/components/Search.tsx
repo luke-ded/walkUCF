@@ -506,7 +506,7 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
           "Abbreviation": "LC56",
           "lat": 28.6071,
           "long": -81.1968
-        }/*,
+        },/*,
         {key: "70", Name: "LAKE CLAIRE BUILDING 64", Abbreviation: "LC64"},
         {key: "71", Name: "LAKE CLAIRE BUILDING 65", Abbreviation: "LC65"},
         {key: "72", Name: "LAKE CLAIRE BUILDING 66", Abbreviation: "LC66"},
@@ -530,8 +530,8 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
         {key: "90", Name: "SUMTER HALL", Abbreviation: "SUM"},
         {key: "91", Name: "CITRUS HALL", Abbreviation: "CIT"},
         {key: "92", Name: "FLAGLER HALL", Abbreviation: "FLA"},
-        {key: "93", Name: "COLLEGE OF ARTS & HUMANITIES", Abbreviation: "CAH"},
-        {key: "94", Name: "RECREATION & WELLNESS CENTER", Abbreviation: "RWC"},
+        {key: "93", Name: "COLLEGE OF ARTS & HUMANITIES", Abbreviation: "CAH"},*/
+        {key: "94", Name: "RECREATION & WELLNESS CENTER", Abbreviation: "RWC", "lat": 28.5960944, "long": -81.1992800}/*
         {key: "95", Name: "PARKING GARAGE B", Abbreviation: "PGB"},
         {key: "96", Name: "HEALTH & PUBLIC AFFAIRS II", Abbreviation: "HPA2"},
         {key: "97", Name: "ENGINEERING II", Abbreviation: "ENG2"},
