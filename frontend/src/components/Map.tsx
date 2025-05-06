@@ -52,9 +52,9 @@ function Map()
   const customIcon = createColoredIcon("red");
 
   var data = createGraph(buildings, jaywalking, grass);
-  var result = dijkstra(data.graph, 3137058034, 3428873067);
+  var result = dijkstra(data.graph, 5001725302, 3137058034);
   var pointMap = data.pointMap;
-  paths = data.pathnum;
+ // paths = data.pathnum;
   /* if(result.path.length == 0)
     alert("Locations inacessible to each other."); */
 
