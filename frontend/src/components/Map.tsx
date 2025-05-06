@@ -52,8 +52,12 @@ function Map()
   const customIcon = createColoredIcon("red");
 
   var data = createGraph(buildings, jaywalking, grass);
-  var result = dijkstra(data.graph, 2188618377, 4725148052);
+  var result = dijkstra(data.graph, 3137058034, 3428873067);
   var pointMap = data.pointMap;
+  paths = data.pathnum;
+  /* if(result.path.length == 0)
+    alert("Locations inacessible to each other."); */
+
   paths.push(result.path);
   console.log("Result: " + result.path);
 
@@ -134,23 +138,8 @@ function Map()
     });
 
     return(
-      <Polyline positions={newPath} color="blue" eventHandlers={{
-        mouseover: () => 
-        {
-          console.log("hover");
-          setShowPopup(true);
-        },
-        mouseout: () =>
-        {
-          setTimeout(() =>
-          {
-            console.log("unhover");
-            
-            setShowPopup(false);
-          }, 1000); // AMount of time to delay popup close
-        }
-      }}>
-        {showPopup && <Popup closeButton={false}>Leg 1</Popup>}
+      <Polyline positions={newPath} color="blue">
+        <Popup closeButton={false}>Leg 1</Popup>
       </Polyline>
     );
   }
@@ -201,7 +190,6 @@ function Map()
       [28.5908900, -81.1867800], // SE
       [28.5908900, -81.2072900]  // SW
     ]
-
   ];
   
   return (

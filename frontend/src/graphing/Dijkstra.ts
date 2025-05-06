@@ -40,6 +40,7 @@ interface createResult
 {
     pointMap: Map<number, Point>;
     graph: GraphMap;
+    pathnum: any;
 }
 
 interface GraphMap extends Map<number, GraphEdge[]> {}
@@ -50,6 +51,7 @@ export function createGraph(buildings: boolean, jaywalking: boolean, grass: bool
     // Change these to arguments
     const points: Point[] = pointsData;
     const paths: Path[] = pathsData;
+    const pathnum: number[][] = [];
     const graph : GraphMap = new Map();
 
     var pointMap: Map<number, Point> = new Map();
@@ -64,6 +66,7 @@ export function createGraph(buildings: boolean, jaywalking: boolean, grass: bool
     
     paths.forEach(path =>
     {
+        pathnum.push([path.point_id1, path.point_id2]);
         if(graph.has(path.point_id1) && graph.has(path.point_id2))
         {
             graph.get(path.point_id1)!.push({node: path.point_id2, distance: path.dist});
@@ -77,7 +80,7 @@ export function createGraph(buildings: boolean, jaywalking: boolean, grass: bool
         }
     });
 
-    return {graph, pointMap};
+    return {graph, pointMap, pathnum};
 }
 
 
@@ -149,7 +152,7 @@ export function dijkstra (graph : GraphMap, startID : number, endID : number) : 
     // Path reconstruction
     if(distances.get(endID)! == Infinity)
     {
-        console.error("End node " + endID + "unreachable from start node " + startID);
+        console.error("End node " + endID + " unreachable from start node " + startID);
         return {distances: new Map(), path: []};
     }
 
