@@ -45,6 +45,7 @@ function Map()
   const [buildings, setBuilding] = useState(true);
   const [jaywalking, setJaywalking] = useState(false);
   const [grass, setGrass] = useState(false);
+  const [parking, setParking] = useState(false);
   const [selectedPoint, setSelectedPoint] = useState(initPoint);
   
   var stopPoints = getStops();
@@ -241,7 +242,7 @@ function Map()
           <h1 className="ml-1">Jaywalking</h1>
           <input type="checkbox" value="" checked={grass} onChange={() => setGrass(!grass)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
           <h1 className="ml-1">Grass</h1>
-          <input type="checkbox" value="" checked={grass} onChange={() => setGrass(!grass)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
+          <input type="checkbox" value="" checked={parking} onChange={() => setParking(!parking)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
           <h1 className="ml-1">Parking lots</h1>
       </div>
     </div>
