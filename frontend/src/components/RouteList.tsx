@@ -155,6 +155,8 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
         renderer: renderItem
     };
 
+    var settings = JSON.parse(localStorage.getItem("settings")!);
+
     return(
         <div className="flex-col justify-start mt-5 h-11/16 max-h-11/16 w-full border-2 dark:border-[#ffca09] border-[#a48100] dark:bg-black/40 bg-white/60 rounded-sm shadow-lg">
             <div className="flex items-center justify-between h-3/32 border-b-2 dark:border-[#ffca09] border-[#a48100]">
@@ -162,7 +164,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
                 <div className="flex mr-2 dark:text-gray-300 text-gray-700 text-md">
                     <h1>{(graphData?.distanceMi.toFixed(2) / (3/60)).toFixed(1)} min&nbsp;</h1> 
                     <h1 className="dark:text-neutral-200 text-neutral-700 font-bold">|</h1>
-                    <h1>&nbsp;{graphData?.distanceMi.toFixed(2)} mi</h1> {/* Add error checking for this */}
+                    <h1>&nbsp;{settings.units == "imperial" ? graphData?.distanceMi.toFixed(2) + " mi": graphData?.distanceKm.toFixed(2) + " km"}</h1> {/* Add error checking for this */}
                 </div>
             </div>
             <div className="overflow-y-auto h-29/32 w-full">
