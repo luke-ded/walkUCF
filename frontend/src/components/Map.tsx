@@ -52,7 +52,7 @@ function Map()
   
   const customIcon = createColoredIcon("red");
 
-  var data = createGraph(buildings, jaywalking, grass);
+  var data = createGraph(buildings, jaywalking, grass, parking);
   var result = dijkstra(data.graph, 5001725302, 3137058034);
   var pointMap = data.pointMap;
   //paths = data.pathnum;

@@ -46,7 +46,7 @@ interface createResult
 interface GraphMap extends Map<number, GraphEdge[]> {}
 
 
-export function createGraph(buildings: boolean, jaywalking: boolean, grass: boolean) : createResult
+export function createGraph(buildings: boolean, jaywalking: boolean, grass: boolean, parking: boolean) : createResult
 {
     // Change these to arguments
     const points: Point[] = pointsData;
