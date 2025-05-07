@@ -54,7 +54,7 @@ function Map()
   var data = createGraph(buildings, jaywalking, grass);
   var result = dijkstra(data.graph, 5001725302, 3137058034);
   var pointMap = data.pointMap;
- // paths = data.pathnum;
+  //paths = data.pathnum;
   /* if(result.path.length == 0)
     alert("Locations inacessible to each other."); */
 
@@ -240,7 +240,9 @@ function Map()
           <input type="checkbox" value="" checked={jaywalking} onChange={() => setJaywalking(!jaywalking)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
           <h1 className="ml-1">Jaywalking</h1>
           <input type="checkbox" value="" checked={grass} onChange={() => setGrass(!grass)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
-          <h1 className="ml-1">Across grass</h1>
+          <h1 className="ml-1">Grass</h1>
+          <input type="checkbox" value="" checked={grass} onChange={() => setGrass(!grass)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
+          <h1 className="ml-1">Parking lots</h1>
       </div>
     </div>
   );
