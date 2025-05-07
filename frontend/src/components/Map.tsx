@@ -30,9 +30,9 @@ interface PathPropsType
 const createColoredIcon = (color: string) => {
   return L.divIcon({
     className: 'colored-marker', 
-    html: `<div style="background-color: ${color}; width: 20px; height: 20px; border-radius: 50%;"></div>`,
-    iconSize: [20, 20], 
-    iconAnchor: [10, 10],
+    html: `<div style="background-color: ${color}; width: 10px; height: 10px; border-radius: 50%;"></div>`,
+    iconSize: [10, 10], 
+    iconAnchor: [5, 5],
     popupAnchor: [0, -10]
   });
 };
@@ -55,6 +55,12 @@ function Map()
   var data = createGraph(buildings, jaywalking, grass, parking);
   var result = dijkstra(data.graph, 5001725302, 3137058034);
   var pointMap = data.pointMap;
+
+  localStorage.setItem("graphData", JSON.stringify(
+  {
+    distanceMi: (result.distances.get(3137058034)! * .621371),
+    distanceKm : result.distances.get(3137058034)
+  }));
   //paths = data.pathnum;
   /* if(result.path.length == 0)
     alert("Locations inacessible to each other."); */

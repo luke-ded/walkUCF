@@ -26,6 +26,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
     console.log(selectedItem);
 
     const itemsList = getStops();
+    var graphData = JSON.parse(localStorage.getItem("graphData")!);
 
     const renderItem = (item: Item): React.ReactNode => 
     {
@@ -82,6 +83,11 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
         itemsList.splice(index, 1);
 
         localStorage.setItem('stoplist', JSON.stringify(itemsList));
+
+        if(itemsList.length == 0)
+        {
+            localStorage.setItem("graphData", JSON.stringify({distanceMi: 0, distanceKm: 0}));
+        }
 
         // This will rerender the map
         triggerRerender();
@@ -156,7 +162,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
                 <div className="flex mr-2 dark:text-gray-300 text-gray-700 text-md">
                     <h1>15 min&nbsp;</h1> 
                     <h1 className="dark:text-neutral-200 text-neutral-700 font-bold">|</h1>
-                    <h1>&nbsp;1.2 mi</h1>
+                    <h1>&nbsp;{graphData?.distanceMi.toFixed(2)} mi</h1> {/* Add error checking for this */}
                 </div>
             </div>
             <div className="overflow-y-auto h-29/32 w-full">
