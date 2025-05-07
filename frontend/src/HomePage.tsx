@@ -12,6 +12,12 @@ function HomePage()
     const [about, toggleAbout] = useState(false);
     const [settings, toggleSettings] = useState(false);
 
+    var settingsData = localStorage.getItem("settings");
+    if(settingsData == null || settingsData == undefined)
+    {
+        localStorage.setItem("settings", JSON.stringify({"units": "imperial", "walkSpeed": 3, "saveRoute": true}));
+    }
+
     const triggerRerender = () => 
     {
         setCount(count + 1);
