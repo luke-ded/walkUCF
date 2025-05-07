@@ -96,7 +96,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                     </div>
                     <div className="flex items-center w-full mt-5">
                         <h1 className="text-xl mr-2">Walking Speed:</h1>
-                        <input className="w-1/10 h-full text-lg dark:text-neutral-200 text-neutral-700 p-1 border-2 dark:border-[#ffe68c] border-[#a48100] dark:placeholder-neutral-200/75 placeholder-neutral-700/75 placeholder:text-center text-center rounded-md dark:bg-black/25 bg-white/70 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="3.0" 
+                        <input className="w-1/10 h-full w-3/20 text-lg dark:text-neutral-200 text-neutral-700 p-1 border-2 dark:border-[#ffe68c] border-[#a48100] dark:placeholder-neutral-200/75 placeholder-neutral-700/75 placeholder:text-center text-center rounded-md dark:bg-black/25 bg-white/70 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="3.0" 
                         value={newWalkSpeed} onChange={(e) => setWalkSpeedHandler(e.target.value)} onBlur={(e) => setWalkSpeedHandler(e.target.value)}></input>
                         <h1 className="text-lg ml-2">{units == "imperial" ? "mi/hr" : "km/hr"}</h1>
                         <MdInfoOutline size={20} className="ml-2 text-[#ffca09] cursor-pointer hover:text-[#ffe68c]"/>
