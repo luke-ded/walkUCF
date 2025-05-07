@@ -151,8 +151,13 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
 
     return(
         <div className="flex-col justify-start mt-5 h-11/16 max-h-11/16 w-full border-2 dark:border-[#ffca09] border-[#a48100] dark:bg-black/40 bg-white/60 rounded-sm shadow-lg">
-            <div className="flex items-center h-3/32 border-b-2 dark:border-[#ffca09] border-[#a48100]">
+            <div className="flex items-center justify-between h-3/32 border-b-2 dark:border-[#ffca09] border-[#a48100]">
                 <h1 className="ml-2 text-xl dark:text-neutral-200 text-neutral-700 font-bold">Route</h1>
+                <div className="flex mr-2 dark:text-gray-300 text-gray-700 text-md">
+                    <h1>15 min&nbsp;</h1> 
+                    <h1 className="dark:text-neutral-200 text-neutral-700 font-bold">|</h1>
+                    <h1>&nbsp;1.2 mi</h1>
+                </div>
             </div>
             <div className="overflow-y-auto h-29/32 w-full">
                 <ul className="shadow divide-y dark:divide-[#ffe68c] min-h-0">
