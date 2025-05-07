@@ -1,0 +1,163 @@
+[
+    {
+      "key": "1004",
+      "Name": "Soccer Practice Field",
+      "Abbreviation": "N/A",
+      "lat": 28.6094239,
+      "long": -81.1940410
+    },
+    {
+      "key": "82",
+      "Name": "John Euliano Park",
+      "Abbreviation": "JEP",
+      "lat": 28.6093310,
+      "long": -81.1963000
+    },
+    {
+      "key": "135",
+      "Name": "FBC Mortgage Stadium",
+      "Abbreviation": "SS",
+      "lat": 28.6087404,
+      "long": -81.1938340
+    },
+    {
+      "key": "128",
+      "Name": "Nicholson Fieldhouse",
+      "Abbreviation": "NFH",
+      "lat": 28.6069790,
+      "long": -81.1942270
+    },
+    {
+      "key": "77",
+      "Name": "Wayne Densch Sports Center",
+      "Abbreviation": "WDDSC",
+      "lat": 28.6060824,
+      "long": -81.1942290
+    },
+    {
+      "key": "1000",
+      "Name": "Parking Garage E",
+      "Abbreviation": "PGE",
+      "lat": 28.6062724,
+      "long": -81.1956570
+    },
+    {
+        "key": "1001",
+        "Name": "Parking Garage F",
+        "Abbreviation": "PGF",
+        "lat": 28.6089352,
+        "long": -81.1963550
+    },
+    {
+        "key": "1002",
+        "Name": "Parking Garage G",
+        "Abbreviation": "PGG",
+        "lat": 28.6086363,
+        "long": -81.1974100
+    },
+    {
+      "key": "142",
+      "Name": "Track & Soccer Stadium",
+      "Abbreviation": "TSS",
+      "lat": 28.6075965,
+      "long": -81.1960520
+    },
+    {
+      "key": "1003",
+      "Name": "Towers Basketball Court",
+      "Abbreviation": "N/A",
+      "lat": 28.607492179533793,
+      "long": -81.19626963150743
+    },
+    {
+        "key": "136",
+        "Name": "Wayne Densch Center for Student-Athlete Leadership",
+        "Abbreviation": "CSAL",
+        "lat": 28.6080970,
+        "long": -81.1914090
+    },
+    {
+        "key": "50.3",
+        "Name": "The Venue",
+        "Abbreviation": "N/A",
+        "lat": 28.6076054,
+        "long": -81.1964599
+    },
+    {
+    "key": "1005",
+    "Name": "Football Practice Field",
+    "Abbreviation": "N/A",
+    "lat": 28.6069797,
+    "long": -81.1936300
+    },
+    {
+    "key": "2190",
+    "Name": "Knightro's",
+    "Abbreviation": "N/A",
+    "lat": 28.6073737,
+    "long": -81.1966197
+    },
+    {
+    "key": "1006",
+    "Name": "Pop Parlour",
+    "Abbreviation": "N/A",
+    "lat": 28.6071831,
+    "long": -81.1967552
+    },
+    {
+    "key": "2066",
+    "Name": "Jimmy John's",
+    "Abbreviation": "N/A",
+    "lat": 28.6068857,
+    "long": -81.1969584
+    },
+    {
+    "key": "1007",
+    "Name": "Office of Military and Veteran Student Success",
+    "Abbreviation": "N/A",
+    "lat": 28.6067607,
+    "long": -81.1970487
+    },
+    {
+    "key": "1008",
+    "Name": "Barnes & Noble at Knights Plaza",
+    "Abbreviation": "N/A",
+    "lat": 28.6064332,
+    "long": -81.1970458
+    },
+    {
+    "key": "1009",
+    "Name": "Foxtail Coffee Co. at Knights Plaza",
+    "Abbreviation": "N/A",
+    "lat": 28.6066539,
+    "long": -81.1968827
+    },
+    {
+    "key": "1010",
+    "Name": "Wesley at UCF",
+    "Abbreviation": "N/A",
+    "lat": 28.6068972,
+    "long": -81.1967123
+    },
+    {
+    "key": "1011",
+    "Name": "Amazon Pickup and Returns at UCF",
+    "Abbreviation": "N/A",
+    "lat": 28.6069758,
+    "long": -81.1966632
+    },
+    {
+    "key": "2305",
+    "Name": "Burger U",
+    "Abbreviation": "N/A",
+    "lat": 28.6070802,
+    "long": -81.1966142
+    },
+    {
+        "key": "1012",
+        "Name": "Addition Arena Ticket Office",
+        "Abbreviation": "N/A",
+        "lat": 28.6066348,
+        "long": -81.1973180
+    }
+]
