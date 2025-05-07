@@ -1,7 +1,14 @@
 import { MdInfoOutline } from "react-icons/md";
 import { useState } from "react";
 
-function Settings()
+interface ChildProps 
+{
+    triggerRerender: () => void;
+    toggleSettings: (settings:any) => void;
+    settings: any;
+}
+
+const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settings}) =>
 {
     var settingsData = localStorage.getItem("settings");
     if(settingsData == null || settingsData == undefined)
@@ -28,11 +35,13 @@ function Settings()
     function save()
     {
         localStorage.setItem("settings", JSON.stringify({"units": units, "walkSpeed": walkSpeed, "saveRoute": saveRoute}));
+        triggerRerender();
+        toggleSettings(false);
     }  
 
     function cancel()
     {
-
+        toggleSettings(false);
     }
 
     return (

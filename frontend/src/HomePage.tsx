@@ -29,7 +29,7 @@ function HomePage()
                     <Map />
                 </div>
                 {about && (<About />)}
-                {settings && (<Settings />)}
+                {settings && (<Settings triggerRerender={triggerRerender} toggleSettings={toggleSettings} settings={settings}/>)}
             </div>
         </div>
     );
