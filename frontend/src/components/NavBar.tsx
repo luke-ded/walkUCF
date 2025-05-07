@@ -44,12 +44,12 @@ const NavBar: React.FC<ChildProps> = ({ toggleAbout, about, toggleSettings, sett
                 {dark &&(
                     <div className="flex items-center justify-center cursor-pointer h-10 w-10 hover:bg-[#ffe68c]/20 mr-3 border-2 border-[#ffe68c]/30 rounded-xl" 
                     onClick={()=> darkModeHandler()}>
-                        <CiDark size={26} />
+                        <CiLight size={26} />
                     </div>
                 )}
                 {!dark &&(
                     <div className="flex items-center justify-center cursor-pointer h-10 w-10 hover:bg-[#ffe68c]/20 mr-3 border-2 border-[#ffe68c]/30 rounded-xl" onClick={()=> darkModeHandler()}>
-                        <CiLight size={26} />
+                        <CiDark size={26} />
                     </div>
                 )}
                 <div className="flex items-center justify-center cursor-pointer h-10 w-10 hover:bg-[#ffe68c]/20 mr-3 border-2 border-[#ffe68c]/30 rounded-xl" 
