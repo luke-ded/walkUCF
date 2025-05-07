@@ -19,21 +19,51 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
     else
         var settings = JSON.parse(settingsData);
 
+    if(settings.units == "imperial") 
+        var startUnits = String(settings.walkSpeed.toFixed(1));
+    else
+        var startUnits = String((settings.walkSpeed / .621371).toFixed(1));
+
     const [units, setUnits] = useState(settings.units);
     const [walkSpeed, setWalkSpeed] = useState(settings.walkSpeed);
-    const [newWalkSpeed, setNewWalkSpeed] = useState("3.0");
+    const [newWalkSpeed, setNewWalkSpeed] = useState(startUnits);
     const [saveRoute, setSaveRoute] = useState(settings.saveRoute);
-
+    console.log(walkSpeed);
     function setWalkSpeedHandler(inputWalkSpeed: string)
     {
         setNewWalkSpeed(inputWalkSpeed);
 
         if(!isNaN(Number(newWalkSpeed)))
-            setWalkSpeed(Number(newWalkSpeed));
+        {
+            if(units == "imperial")
+                setWalkSpeed(Number(newWalkSpeed));
+            else
+                setWalkSpeed(Number(newWalkSpeed) * 0.621371);
+        }
+    }
+
+    function setUnitsHandler(val: string)
+    {  
+        if(!isNaN(Number(newWalkSpeed)))
+        {
+            if(val == "imperial")
+            {
+                setWalkSpeedHandler(String((Number(newWalkSpeed) * .621371).toFixed(1)));
+            }
+            else
+            {
+                setWalkSpeedHandler(String((Number(newWalkSpeed) / .621371).toFixed(1)));
+            }
+        }
+
+        setUnits(val);
     }
 
     function save()
     {
+        if(walkSpeed <= 0)
+            setWalkSpeed(3);
+
         localStorage.setItem("settings", JSON.stringify({"units": units, "walkSpeed": walkSpeed, "saveRoute": saveRoute}));
         triggerRerender();
         toggleSettings(false);
@@ -55,11 +85,11 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                         <h1 className="text-xl mr-2">Units:</h1>
                         <div className="flex cursor-pointer h-10 w-40 bg-black/40 border-2 border-[#ffe68c] rounded-xl">
                             <div className="flex justify-center items-center w-5/10 h-full border-r-2 border-[#ffe68c] rounded-l-lg"
-                            onClick={() => setUnits("imperial")} style={{backgroundColor: units == "imperial" ? "#ffe68c66" : "transparent"}}>
+                            onClick={() => setUnitsHandler("imperial")} style={{backgroundColor: units == "imperial" ? "#ffe68c66" : "transparent"}}>
                                 <h1>Imperial</h1>
                             </div>
                             <div className="flex justify-center items-center w-5/10 h-full rounded-r-lg"
-                            onClick={() => setUnits("metric")} style={{backgroundColor: units == "metric" ? "#ffe68c66" : "transparent"}}>
+                            onClick={() => setUnitsHandler("metric")} style={{backgroundColor: units == "metric" ? "#ffe68c66" : "transparent"}}>
                                 <h1>Metric</h1>
                             </div>
                         </div>
@@ -67,8 +97,8 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                     <div className="flex items-center w-full mt-5">
                         <h1 className="text-xl mr-2">Walking Speed:</h1>
                         <input className="w-1/10 h-full text-lg dark:text-neutral-200 text-neutral-700 p-1 border-2 dark:border-[#ffe68c] border-[#a48100] dark:placeholder-neutral-200/75 placeholder-neutral-700/75 placeholder:text-center text-center rounded-md dark:bg-black/25 bg-white/70 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="3.0" 
-                        value={newWalkSpeed} onChange={(e) => setWalkSpeedHandler(e.target.value)}></input>
-                        <h1 className="text-lg ml-2">mi/hr</h1>
+                        value={newWalkSpeed} onChange={(e) => setWalkSpeedHandler(e.target.value)} onBlur={(e) => setWalkSpeedHandler(e.target.value)}></input>
+                        <h1 className="text-lg ml-2">{units == "imperial" ? "mi/hr" : "km/hr"}</h1>
                         <MdInfoOutline size={20} className="ml-2 text-[#ffca09] cursor-pointer hover:text-[#ffe68c]"/>
                     </div>
                     <div className="flex items-center w-full mt-5">
