@@ -41,10 +41,6 @@ const NavBar: React.FC<ChildProps> = ({ toggleAbout, about, toggleSettings, sett
                 <h1 className="text-3xl text-neutral-200 font-semibold ml-3">walkUCF</h1>
             </div>
             <div className="flex items-center mr-3 text-neutral-200">
-                <div className="flex items-center justify-center cursor-pointer h-10 w-10 hover:bg-[#ffe68c]/20 mr-3 border-2 border-[#ffe68c]/30 rounded-xl" 
-                onClick={() => settingsHandler()}>
-                    <CiSettings size={26} />
-                </div>
                 {dark &&(
                     <div className="flex items-center justify-center cursor-pointer h-10 w-10 hover:bg-[#ffe68c]/20 mr-3 border-2 border-[#ffe68c]/30 rounded-xl" 
                     onClick={()=> darkModeHandler()}>
@@ -56,6 +52,10 @@ const NavBar: React.FC<ChildProps> = ({ toggleAbout, about, toggleSettings, sett
                         <CiLight size={26} />
                     </div>
                 )}
+                <div className="flex items-center justify-center cursor-pointer h-10 w-10 hover:bg-[#ffe68c]/20 mr-3 border-2 border-[#ffe68c]/30 rounded-xl" 
+                onClick={() => settingsHandler()}>
+                    <CiSettings size={26} />
+                </div>
                 <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 px-2 py-1.5 border-2 border-[#ffe68c]/30 rounded-xl"
                 onClick={() => aboutHandler()}>About</button>
             </div>
