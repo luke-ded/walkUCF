@@ -18,7 +18,7 @@ function HomePage()
     };
 
     return(
-        <div className="flex-col h-screen w-screen items-center justify-center dark:text-neutral-200 text-neutral-700">
+        <div className="flex-col h-screen w-screen items-center justify-center dark:text-neutral-200 text-neutral-700 cursor-default select-none">
             <NavBar toggleAbout={toggleAbout} about={about} toggleSettings={toggleSettings} settings={settings}/>
             <div className="flex w-screen h-13/14 items-center justify-center bg-gradient-to-b from-black/60 to-transparent">
                 <div className="flex flex-col items-center justify-between w-2/5 h-4/5 max-h-4/5 mr-20">
