@@ -22,6 +22,18 @@ const NavBar: React.FC<ChildProps> = ({ toggleAbout, about, toggleSettings, sett
         document.body.classList.toggle("dark");
     }
 
+    const aboutHandler = () =>
+    {
+        toggleSettings(false);
+        toggleAbout(!about);
+    }
+
+    const settingsHandler = () =>
+    {
+        toggleAbout(false);
+        toggleSettings(!settings);
+    }
+
     return(
         <div className="flex h-1/14 bg-black/90 border-b-2 border-[#ffca09] justify-between">
             <div className="flex items-center ml-3">
@@ -30,7 +42,7 @@ const NavBar: React.FC<ChildProps> = ({ toggleAbout, about, toggleSettings, sett
             </div>
             <div className="flex items-center mr-3 text-neutral-200">
                 <div className="flex items-center justify-center cursor-pointer h-10 w-10 hover:bg-[#ffe68c]/20 mr-3 border-2 border-[#ffe68c]/30 rounded-xl" 
-                onClick={() => toggleSettings(!settings)}>
+                onClick={() => settingsHandler()}>
                     <CiSettings size={26} />
                 </div>
                 {dark &&(
@@ -45,7 +57,7 @@ const NavBar: React.FC<ChildProps> = ({ toggleAbout, about, toggleSettings, sett
                     </div>
                 )}
                 <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 px-2 py-1.5 border-2 border-[#ffe68c]/30 rounded-xl"
-                onClick={() => toggleAbout(!about)}>About</button>
+                onClick={() => aboutHandler()}>About</button>
             </div>
         </div>
     );
