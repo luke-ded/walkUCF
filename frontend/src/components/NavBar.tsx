@@ -8,9 +8,11 @@ interface ChildProps
 {
     toggleAbout: (about:any) => void;
     about: any;
+    toggleSettings: (settings:any) => void;
+    settings: any;
 }
 
-const NavBar: React.FC<ChildProps> = ({ toggleAbout, about }) =>
+const NavBar: React.FC<ChildProps> = ({ toggleAbout, about, toggleSettings, settings }) =>
 {
     const [dark, setDark] = useState(true);
 
@@ -28,7 +30,7 @@ const NavBar: React.FC<ChildProps> = ({ toggleAbout, about }) =>
             </div>
             <div className="flex items-center mr-3 text-neutral-200">
                 <div className="flex items-center justify-center cursor-pointer h-10 w-10 hover:bg-[#ffe68c]/20 mr-3 border-2 border-[#ffe68c]/30 rounded-xl" 
-                onClick={()=> darkModeHandler()}>
+                onClick={() => toggleSettings(!settings)}>
                     <CiSettings size={26} />
                 </div>
                 {dark &&(
