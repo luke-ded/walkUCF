@@ -1,6 +1,10 @@
 import PriorityQueue from 'js-priority-queue';
 import pointsData from "./coords.json";
 import pathsData from "./paths.json";
+import buildingPathsData from "./buildingPaths.json";
+import jaywalkingPathsData from "./jaywalkingPaths.json";
+import parkingPathsData from "./parkingPaths.json";
+import grassPathsData from "./grassPaths.json";
 
 interface Point 
 {
@@ -50,7 +54,29 @@ export function createGraph(buildings: boolean, jaywalking: boolean, grass: bool
 {
     // Change these to arguments
     const points: Point[] = pointsData;
-    const paths: Path[] = pathsData;
+    var paths: Path[] = pathsData;
+
+    if(buildings)
+    {
+        var buildingPaths: Path[] = buildingPathsData;
+        paths.concat(buildingPaths);
+    }
+    if(jaywalking)
+    {
+        var jaywalkingPaths: Path[] = jaywalkingPathsData;
+        paths.concat(jaywalkingPaths); 
+    }
+    if(grass)
+    {
+        var grassPaths: Path[] = grassPathsData;
+        paths.concat(grassPaths); 
+    }
+    if(parking)
+    {
+        var parkingPaths: Path[] = parkingPathsData;
+        paths.concat(parkingPaths); 
+    }
+
     const pathnum: number[][] = [];
     const graph : GraphMap = new Map();
 
