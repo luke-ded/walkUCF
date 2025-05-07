@@ -83,7 +83,7 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
     return (
         <div className="h-1/4 w-full">
             <div className="h-2/8 flex w-full justify-center items-center">
-                <input className="w-full h-full text-lg dark:text-neutral-200 text-neutral-700 p-1 pl-2 border-2 dark:border-[#ffca09] border-[#a48100] dark:placeholder-neutral-200 placeholder-neutral-700 rounded-md dark:bg-black/25 bg-white/70 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}></input>
+                <input className="w-full h-full text-lg dark:text-neutral-200 text-neutral-700 p-1 pl-2 border-2 dark:border-[#ffca09] border-[#a48100] dark:placeholder-neutral-200/75 placeholder-neutral-700/75 rounded-md dark:bg-black/25 bg-white/70 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="Search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}></input>
             </div>
             
             <div className="mt-5 overflow-y-auto h-11/16 border-2 dark:border-[#ffca09] border-[#a48100] rounded-sm dark:bg-black/35 bg-white/65 shadow-lg">
