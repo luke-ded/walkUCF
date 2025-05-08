@@ -1,4 +1,5 @@
 import { MdInfoOutline } from "react-icons/md";
+import { IoCloseSharp } from "react-icons/io5";
 import { useState } from "react";
 
 interface ChildProps 
@@ -28,7 +29,8 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
     const [walkSpeed, setWalkSpeed] = useState(settings.walkSpeed);
     const [newWalkSpeed, setNewWalkSpeed] = useState(startUnits);
     const [saveRoute, setSaveRoute] = useState(settings.saveRoute);
-    console.log(walkSpeed);
+    const [info, setInfo] = useState(false);
+
     function setWalkSpeedHandler(inputWalkSpeed: string)
     {
         setNewWalkSpeed(inputWalkSpeed);
@@ -75,7 +77,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
     }
 
     return (
-        <div className="absolute z-10 bg-[url(./assets/backgroundmap2.jpg)] border-2 dark:border-[#ffca09] border-[#a48100] rounded-md w-3/10 h-5/10 shadow-lg">
+        <div className="absolute z-12 bg-[url(./assets/backgroundmap2.jpg)] border-2 dark:border-[#ffca09] border-[#a48100] rounded-md w-3/10 h-5/10 shadow-lg">
             <div className="flex-col justify-center w-full h-full dark:bg-black/80 bg-[#d6d4d4]/80 rounded-sm">
                 <div className="flex justify-center items-center h-1/8 border-b-2 dark:border-[#ffca09] border-[#a48100]">
                     <h1 className="text-2xl dark:text-neutral-200 text-neutral-700 font-bold">Settings</h1>
@@ -99,11 +101,22 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                         <input className="w-1/10 h-full w-3/20 text-lg dark:text-neutral-200 text-neutral-700 p-1 border-2 dark:border-[#ffe68c] border-[#a48100] dark:placeholder-neutral-200/75 placeholder-neutral-700/75 placeholder:text-center text-center rounded-md dark:bg-black/25 bg-white/70 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="3.0" 
                         value={newWalkSpeed} onChange={(e) => setWalkSpeedHandler(e.target.value)} onBlur={(e) => setWalkSpeedHandler(e.target.value)}></input>
                         <h1 className="text-lg ml-2">{units == "imperial" ? "mi/hr" : "km/hr"}</h1>
-                        <MdInfoOutline size={20} className="ml-2 text-[#ffca09] cursor-pointer hover:text-[#ffe68c]"/>
+                        <div className="relative inline-block">
+                            <MdInfoOutline size={20} onClick={() => setInfo(!info)} className="ml-2 text-[#ffca09] cursor-pointer hover:text-[#ffe68c]"/>
+                            {info && (
+                                <div className="flex absolute z-14 w-80 left-5 border-2 dark:border-[#ffca09] border-[#a48100] rounded-lg shardow-lg p-1 bg-black">
+                                    <h1 className="dark:text-neutral-200 text-center text-neutral-700 text-sm ml-2">If you wear a smartwatch, check your health app for the most accurate mesure of this metric. 
+                                    Otherwise, calculate it yourself or leave the default setting of {units == "imperial" ? "3.0 mi/hr" : "4.8 km/hr"}</h1>
+                                    <div className="flex">
+                                        <IoCloseSharp size={15} onClick={() => setInfo(false)} className="hover:text-white"/>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
                     </div>
                     <div className="flex items-center w-full mt-5">
                         <h1 className="text-xl mr-2">Save Route:</h1>
-                        <div className="flex cursor-pointer h-10 w-40 bg-black/40 border-2 border-[#ffe68c] rounded-xl">
+                        <div className="flex cursor-pointer h-10 w-38 bg-black/40 border-2 border-[#ffe68c] rounded-xl">
                             <div className="flex justify-center items-center w-5/10 h-full border-r-2 border-[#ffe68c] rounded-l-lg"
                                 onClick={() => setSaveRoute(true)} style={{backgroundColor: saveRoute ? "#ffe68c66" : "transparent"}}>
                                 <h1>Yes</h1>
