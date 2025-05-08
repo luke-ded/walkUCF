@@ -83,7 +83,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                 <div className="flex-col justify-start h-6/8 dark:text-neutral-200 text-neutral-700 p-5">
                     <div className="flex items-center w-full">
                         <h1 className="text-xl mr-2">Units:</h1>
-                        <div className="flex cursor-pointer h-10 w-40 bg-black/40 border-2 border-[#ffe68c] rounded-xl">
+                        <div className="flex cursor-pointer h-10 w-38 bg-black/40 border-2 border-[#ffe68c] rounded-xl">
                             <div className="flex justify-center items-center w-5/10 h-full border-r-2 border-[#ffe68c] rounded-l-lg"
                             onClick={() => setUnitsHandler("imperial")} style={{backgroundColor: units == "imperial" ? "#ffe68c66" : "transparent"}}>
                                 <h1>Imperial</h1>
