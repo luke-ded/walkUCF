@@ -8,11 +8,10 @@ import {createGraph, dijkstra} from '../graphing/Dijkstra.ts';
 
 interface Item 
 {
-    key:string;
-    Name: string;
-    Abbreviation: string;
-    lat: number;
-    long: number;
+  key:string;
+  Name: string;
+  Abbreviation: string;
+  Entrances: any [];
 }
 
 interface PropsType 
@@ -61,7 +60,7 @@ function Map()
     distanceMi: (result.distances.get(3137058034)! * .621371),
     distanceKm : result.distances.get(3137058034)
   }));
-  //paths = data.pathnum;
+  paths = data.pathnum;
   /* if(result.path.length == 0)
     alert("Locations inacessible to each other."); */
 
@@ -90,7 +89,7 @@ function Map()
       if(temp != undefined && temp != null)
       {
         var parsedItem : Item = JSON.parse(temp);
-        tempSelectedPoint = [parsedItem.lat, parsedItem.long];
+        tempSelectedPoint = [parsedItem.Entrances[0].lat, parsedItem.Entrances[0].lon];
       }
       else
         tempSelectedPoint = [100, 100];
@@ -104,11 +103,12 @@ function Map()
 
   const renderPoint = (point : any): React.ReactNode => 
   {
-    var pointPosition : LatLngTuple = [point.lat, point.long];
+    var pointPosition : LatLngTuple = [point.Entrances[0].lat, point.Entrances[0].lon];
 
-    if(point.lat == undefined || point.long == undefined)
+    if(point.Entrances == undefined)
     {
       console.error("Invalid point in stop list point rendering.\n")
+      console.error(point);
       return(<div></div>);
     }
     

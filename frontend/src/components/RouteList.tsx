@@ -5,8 +5,7 @@ interface Item
     key:string;
     Name: string;
     Abbreviation: string;
-    lat: any;
-    long: any;
+    Entrances: any [];
 }
 
 interface ChildProps {
