@@ -1,0 +1,1026 @@
+[{
+	"key": "1",
+	"Name": "College of Arts &amp; Humanities",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6044014, "lon": -81.2026800}]
+},
+{
+	"key": "2",
+	"Name": "Business Administration I",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6011446, "lon": -81.1987300},
+	{"lat": 28.6007724, "lon": -81.1990600},
+	{"lat": 28.6009940, "lon": -81.1995200},
+	{"lat": 28.6012664, "lon": -81.1992700}]
+},
+{
+	"key": "3",
+	"Name": "CREOL",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6012327, "lon": -81.1974300}]
+},
+{
+	"key": "4",
+	"Name": "College of Sciences",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "5",
+	"Name": "Nicholson School of Communication",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6038906, "lon": -81.2032900}]
+},
+{
+	"key": "6",
+	"Name": "Technology Commons II",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6006415, "lon": -81.2005500},
+	{"lat": 28.6005652, "lon": -81.2003100}]
+},
+{
+	"key": "7",
+	"Name": "John T. Washington Center",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "8",
+	"Name": "Parking Garage D",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "9",
+	"Name": "Psychology Building",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6046576, "lon": -81.1993400},
+	{"lat": 28.6045564, "lon": -81.1995100}]
+},
+{
+	"key": "10",
+	"Name": "Rehearsal Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6013639, "lon": -81.2022500},
+	{"lat": 28.6014667, "lon": -81.2023100}]
+},
+{
+	"key": "11",
+	"Name": "Business Administration II",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "12",
+	"Name": "Burnett Honors College",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6022827, "lon": -81.2023400}]
+},
+{
+	"key": "13",
+	"Name": "Theatre",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6005323, "lon": -81.1994800}]
+},
+{
+	"key": "14",
+	"Name": "Harris Corporation Engineering Center",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6006319, "lon": -81.1980700}]
+},
+{
+	"key": "15",
+	"Name": "Health and Public Affairs",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6027888, "lon": -81.1983500},
+	{"lat": 28.6028979, "lon": -81.1988600}]
+},
+{
+	"key": "16",
+	"Name": "Classroom Building I",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "17",
+	"Name": "Student Union",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6022309, "lon": -81.2002500},
+	{"lat": 28.6017185, "lon": -81.2002300},
+	{"lat": 28.6017709, "lon": -81.2010700}]
+},
+{
+	"key": "18",
+	"Name": "John C. Hitt Library",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6009659, "lon": -81.2010500}]
+},
+{
+	"key": "19",
+	"Name": "Biological Sciences Building",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5998458, "lon": -81.1989700},
+	{"lat": 28.6000036, "lon": -81.1989900},
+	{"lat": 28.6003692, "lon": -81.1982900}]
+},
+{
+	"key": "20",
+	"Name": "Career Services and Experiential Learning",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6053645, "lon": -81.1989300}]
+},
+{
+	"key": "21",
+	"Name": "Howard Phillips Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6001075, "lon": -81.2025300}]
+},
+{
+	"key": "22",
+	"Name": "Parking Garage H",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "23",
+	"Name": "Visual Arts Building",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6027801, "lon": -81.2038700}]
+},
+{
+	"key": "24",
+	"Name": "BPW Scholarship House",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "25",
+	"Name": "Brevard Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5988513, "lon": -81.1988200}]
+},
+{
+	"key": "26",
+	"Name": "Center for Multilingual Multicultural Studies",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "27",
+	"Name": "Citrus Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "28",
+	"Name": "Counseling and Psychological Services",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5993172, "lon": -81.1989400}]
+},
+{
+	"key": "29",
+	"Name": "Creative School for Children",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "30",
+	"Name": "Early Childhood Center",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "31",
+	"Name": "Flager Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "32",
+	"Name": "Health Center &amp; Pharmacy",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5995382, "lon": -81.1992200}]
+},
+{
+	"key": "33",
+	"Name": "Housing Administration Building",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "34",
+	"Name": "Orange Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "35",
+	"Name": "Parking Garage B",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5973577, "lon": -81.1998000}]
+},
+{
+	"key": "36",
+	"Name": "Parking Garage G",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "37",
+	"Name": "Print Shop",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "38",
+	"Name": "Recreation and Wellness Center",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "39",
+	"Name": "Seminole Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5979755, "lon": -81.1982300}]
+},
+{
+	"key": "40",
+	"Name": "Volusia Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5984023, "lon": -81.2008100},
+	{"lat": 28.5985982, "lon": -81.2007300},
+	{"lat": 28.5985433, "lon": -81.2005700},
+	{"lat": 28.5984269, "lon": -81.2004200},
+	{"lat": 28.5983309, "lon": -81.2004600},
+	{"lat": 28.5984123, "lon": -81.2006100},
+	{"lat": 28.5984350, "lon": -81.2007200}]
+},
+{
+	"key": "41",
+	"Name": "Parking Garage I",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "42",
+	"Name": "Education Complex",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6001286, "lon": -81.2038000}]
+},
+{
+	"key": "43",
+	"Name": "Progress Energy Welcome Center",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5979226, "lon": -81.2030000}]
+},
+{
+	"key": "44",
+	"Name": "Sumter Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5988135, "lon": -81.1982800}]
+},
+{
+	"key": "45",
+	"Name": "Teaching Academy",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5992729, "lon": -81.2039100}]
+},
+{
+	"key": "46",
+	"Name": "Osceola Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5977522, "lon": -81.2008500},
+	{"lat": 28.5976677, "lon": -81.2007300}]
+},
+{
+	"key": "47",
+	"Name": "Mathematical Sciences Building",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5994353, "lon": -81.2002000},
+	{"lat": 28.5995661, "lon": -81.2005800},
+	{"lat": 28.5997741, "lon": -81.2004900}]
+},
+{
+	"key": "48",
+	"Name": "Polk Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5974604, "lon": -81.2014400},
+	{"lat": 28.5975574, "lon": -81.2015500},
+	{"lat": 28.5976562, "lon": -81.2014600},
+	{"lat": 28.5973616, "lon": -81.2011900}]
+},
+{
+	"key": "49",
+	"Name": "Lake Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5985143, "lon": -81.2011900},
+	{"lat": 28.5986490, "lon": -81.2011900},
+	{"lat": 28.5988122, "lon": -81.2012100}]
+},
+{
+	"key": "50",
+	"Name": "UCF Police Department",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "51",
+	"Name": "Laboratory &amp; Environmental Support",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "52",
+	"Name": "Physical Sciences Building",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5997285, "lon": -81.1979400}]
+},
+{
+	"key": "53",
+	"Name": "Parking Garage A",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "54",
+	"Name": "Millican Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5993065, "lon": -81.2021400},
+	{"lat": 28.5990632, "lon": -81.2019600}]
+},
+{
+	"key": "55",
+	"Name": "Chilled Water Plant",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "56",
+	"Name": "Facilities and Safety",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "57",
+	"Name": "Nicholson Fieldhouse",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "58",
+	"Name": "Parking Garage E",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "59",
+	"Name": "Tower IV",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "60",
+	"Name": "Tower III",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6066099, "lon": -81.1964100}]
+},
+{
+	"key": "61",
+	"Name": "Wayne Densch Sports Center",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "62",
+	"Name": "Knights Plaza I",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "63",
+	"Name": "Addition Financial Arena",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6068425, "lon": -81.1975400}]
+},
+{
+	"key": "64",
+	"Name": "Tower I",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6080329, "lon": -81.1983300}]
+},
+{
+	"key": "65",
+	"Name": "Tower II",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6096158, "lon": -81.1974200}]
+},
+{
+	"key": "66",
+	"Name": "Parking Garage F",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "67",
+	"Name": "Barbara Ying Center",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5954709, "lon": -81.2025800}]
+},
+{
+	"key": "68",
+	"Name": "Burnett House",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "69",
+	"Name": "Fairwinds Alumni Center",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "70",
+	"Name": "ΑΔΠ",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "71",
+	"Name": "ΘΧ",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "72",
+	"Name": "ΣΧ",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6071012, "lon": -81.2063100}]
+},
+{
+	"key": "73",
+	"Name": "ΚΔ",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6053056, "lon": -81.2049000}]
+},
+{
+	"key": "74",
+	"Name": "Morgridge International Reading Center",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "75",
+	"Name": "ΖΤΑ",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6050003, "lon": -81.2065200}]
+},
+{
+	"key": "76",
+	"Name": "ΔΔΔ",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "77",
+	"Name": "Hercules 109",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "78",
+	"Name": "Nike 103",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "79",
+	"Name": "Hercules 110",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "80",
+	"Name": "Hercules 108",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "81",
+	"Name": "Hercules 113",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "82",
+	"Name": "Nike 106",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "83",
+	"Name": "Hercules 111",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "84",
+	"Name": "Lake Claire Mail Center",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "85",
+	"Name": "Hercules 25",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "86",
+	"Name": "Hercules 114",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "87",
+	"Name": "Hercules 112",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "88",
+	"Name": "Nike 107",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "89",
+	"Name": "ΚΣ",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "90",
+	"Name": "ΚΑΘ",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6064562, "lon": -81.2057500}]
+},
+{
+	"key": "91",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "92",
+	"Name": "ΑΤΩ",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "93",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6036712, "lon": -81.2049700}]
+},
+{
+	"key": "94",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6044650, "lon": -81.2042400}]
+},
+{
+	"key": "95",
+	"Name": "Performing Arts Center Theatre",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6027684, "lon": -81.2041200}]
+},
+{
+	"key": "96",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6041876, "lon": -81.2039400},
+	{"lat": 28.6039965, "lon": -81.2039500}]
+},
+{
+	"key": "97",
+	"Name": "Performing Arts Center Music",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6019441, "lon": -81.2041100}]
+},
+{
+	"key": "98",
+	"Name": "ΠΒΦ",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6057231, "lon": -81.2054400}]
+},
+{
+	"key": "99",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6041881, "lon": -81.2034900}]
+},
+{
+	"key": "100",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "101",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "102",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6052011, "lon": -81.2034500}]
+},
+{
+	"key": "103",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6051744, "lon": -81.2030700}]
+},
+{
+	"key": "104",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6036526, "lon": -81.2045000}]
+},
+{
+	"key": "105",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "106",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6049839, "lon": -81.2029300}]
+},
+{
+	"key": "107",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6042501, "lon": -81.2042200}]
+},
+{
+	"key": "108",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6040482, "lon": -81.2045500},
+	{"lat": 28.6038888, "lon": -81.2045500}]
+},
+{
+	"key": "109",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6046873, "lon": -81.2031300}]
+},
+{
+	"key": "110",
+	"Name": "Engineering Field Laboratory",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "111",
+	"Name": "Engine Research Laboratory",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "112",
+	"Name": "Observatory and Astronomy Laboratory",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "113",
+	"Name": "Recycling Center",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "114",
+	"Name": "Arboretum Office",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "115",
+	"Name": "Visitor and Parking Information Center",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "116",
+	"Name": "Leisure Pool Services",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "117",
+	"Name": "Libra Garage",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "118",
+	"Name": "Emergency Operation Center",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "119",
+	"Name": "Health and Public Affairs II",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6028336, "lon": -81.1981700},
+	{"lat": 28.6032760, "lon": -81.1980000},
+	{"lat": 28.6035534, "lon": -81.1983000}]
+},
+{
+	"key": "120",
+	"Name": "Classroom Building II",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6042509, "lon": -81.2006400}]
+},
+{
+	"key": "121",
+	"Name": "Emegency Services Training Building",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "122",
+	"Name": "Engineering II",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "123",
+	"Name": "Engineering I",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6012957, "lon": -81.1986800},
+	{"lat": 28.6015806, "lon": -81.1980000},
+	{"lat": 28.6015760, "lon": -81.1986500}]
+},
+{
+	"key": "124",
+	"Name": "Technology Commons I",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6002964, "lon": -81.2005400}]
+},
+{
+	"key": "125",
+	"Name": "Toppers",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "126",
+	"Name": "Global UCF",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6045961, "lon": -81.1979800}]
+},
+{
+	"key": "127",
+	"Name": "ΚΚΓ",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6041653, "lon": -81.2066700}]
+},
+{
+	"key": "128",
+	"Name": "Fraternity and Sorority Life",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6034665, "lon": -81.2065200}]
+},
+{
+	"key": "129",
+	"Name": "ΧΩ",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "130",
+	"Name": "Neptune 158",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "131",
+	"Name": "Neptune 157",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "132",
+	"Name": "Neptune 156",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "133",
+	"Name": "Trevor Colbourn Hall",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "134",
+	"Name": "Neptune 159",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "135",
+	"Name": "Parking Garage C",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "136",
+	"Name": "Interdisciplinary Research Building",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6020920, "lon": -81.1975200}]
+},
+{
+	"key": "137",
+	"Name": "Lake Claire Community",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.6042932, "lon": -81.2034100}]
+},
+{
+	"key": "138",
+	"Name": "The Celeste Hotel, Orlando, a Tribute Portfolio Hotel",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "139",
+	"Name": "Chick-fil-A",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 28.5959816, "lon": -81.1988800}]
+},
+{
+	"key": "140",
+	"Name": "Nike 102",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "141",
+	"Name": "Nike 105",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+},
+{
+	"key": "142",
+	"Name": "Knight's Pantry",
+	"Abbreviation": "N/A",
+	"Entrances": [
+	{"lat": 1, "lon": 1}]
+}]
