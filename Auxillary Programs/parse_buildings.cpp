@@ -176,12 +176,12 @@ int main(void)
                     {   
                         for(int i = 0; i < pointlist.size() - 1; i++)
                         {
-                            outputfile<<setprecision(7)<<fixed<<"\t{\"lat\": "<<pointlist[i].lat<<", \"lon\": "<<pointlist[i].lon<<"},\n";
+                            outputfile<<setprecision(7)<<fixed<<"\t{\"lat\": "<<pointlist[i].lat<<", \"lon\": "<<pointlist[i].lon<<", \"id\": "<<pointlist[i].id<<"},\n";
                         }
-                        outputfile<<setprecision(7)<<fixed<<"\t{\"lat\": "<<pointlist[pointlist.size() - 1].lat<<", \"lon\": "<<pointlist[pointlist.size() - 1].lon<<"}";
+                        outputfile<<setprecision(7)<<fixed<<"\t{\"lat\": "<<pointlist[pointlist.size() - 1].lat<<", \"lon\": "<<pointlist[pointlist.size() - 1].lon<<", \"id\": "<<pointlist[pointlist.size() - 1].id<<"}";
                     } 
                     else
-                        outputfile<<"\t{\"lat\": 1, \"lon\": 1}";
+                        outputfile<<"\t{\"lat\": 1, \"lon\": 1, \"id\": -1}";
                         
 
                     outputfile<<"]\n},\n";
