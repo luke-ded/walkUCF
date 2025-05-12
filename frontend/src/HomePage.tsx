@@ -18,6 +18,13 @@ function HomePage()
         localStorage.setItem("settings", JSON.stringify({"units": "imperial", "walkSpeed": 3, "saveRoute": true}));
     }
 
+    var distanceData = localStorage.getItem("graphData");
+    if(distanceData == null || distanceData == undefined)
+    {
+        localStorage.setItem("graphData", JSON.stringify({distanceMi: 0, distanceKm : 0}));
+    }
+    
+
     const triggerRerender = () => 
     {
         setCount(count + 1);
