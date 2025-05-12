@@ -20,6 +20,7 @@ int main(void)
     outputfile<<"[";
     while (getline(inputfile, line)) 
     {
+        start:
         if(line.find("<node id") != string::npos)
         {
             regex delimiter(" "); 
@@ -81,6 +82,8 @@ int main(void)
 
         if(line.find("k=\"entrance\"") != string::npos)
             outputfile<<setprecision(7)<<fixed<<"{\"id\": "<<id<<" , \"lat\": "<<lat<<" , \"lon\": "<<lon<<" },\n";
+        else if(!inputfile.eof())
+            goto start;
     }
 
     outputfile<<"]";
