@@ -509,43 +509,43 @@
 },
 {
   "key": "70",
-  "Name": "ΑΔΠ",
-  "Abbreviation": "N/A",
+  "Name": "Alpha Delta Pi Sorority",
+  "Abbreviation": "ΑΔΠ",
   "Entrances": [
   {"lat": 1, "lon": 1, "id": -1}]
 },
 {
   "key": "71",
-  "Name": "ΘΧ",
-  "Abbreviation": "N/A",
+  "Name": "Theta Chi Fraternity",
+  "Abbreviation": "ΘΧ",
   "Entrances": [
   {"lat": 1, "lon": 1, "id": -1}]
 },
 {
   "key": "72",
-  "Name": "ΣΧ",
-  "Abbreviation": "N/A",
+  "Name": "Sigma Chi Fraternity",
+  "Abbreviation": "ΣΧ",
   "Entrances": [
   {"lat": 28.6071012, "lon": -81.2063100, "id": 12653691724}]
 },
 {
   "key": "73",
-  "Name": "ΚΔ",
-  "Abbreviation": "N/A",
+  "Name": "Kappa Delta Sorority",
+  "Abbreviation": "ΚΔ",
   "Entrances": [
   {"lat": 28.6053056, "lon": -81.2049000, "id": 12653585896}]
 },
 {
   "key": "74",
   "Name": "Morgridge International Reading Center",
-  "Abbreviation": "N/A",
+  "Abbreviation": "MIRC",
   "Entrances": [
   {"lat": 1, "lon": 1, "id": -1}]
 },
 {
   "key": "75",
-  "Name": "ΖΤΑ",
-  "Abbreviation": "N/A",
+  "Name": "Zeta Tau Alpha Sorority",
+  "Abbreviation": "ΖΤΑ",
   "Entrances": [
   {"lat": 28.6050003, "lon": -81.2065200, "id": 1719808973}]
 },
@@ -642,15 +642,15 @@
 },
 {
   "key": "89",
-  "Name": "ΚΣ",
-  "Abbreviation": "N/A",
+  "Name": "Kappa Sigma Fraternity",
+  "Abbreviation": "ΚΣ",
   "Entrances": [
   {"lat": 1, "lon": 1, "id": -1}]
 },
 {
   "key": "90",
-  "Name": "ΚΑΘ",
-  "Abbreviation": "N/A",
+  "Name": "Kappa Alpha Theta Sorority",
+  "Abbreviation": "ΚΑΘ",
   "Entrances": [
   {"lat": 28.6064562, "lon": -81.2057500, "id": 12653585898}]
 },
@@ -663,8 +663,8 @@
 },
 {
   "key": "92",
-  "Name": "ΑΤΩ",
-  "Abbreviation": "N/A",
+  "Name": "Alpha Tau Omega Fraternity",
+  "Abbreviation": "ΑΤΩ",
   "Entrances": [
   {"lat": 1, "lon": 1, "id": -1}]
 },
@@ -706,8 +706,8 @@
 },
 {
   "key": "98",
-  "Name": "ΠΒΦ",
-  "Abbreviation": "N/A",
+  "Name": "Pi Beta Phi Sorority",
+  "Abbreviation": "ΠΒΦ",
   "Entrances": [
   {"lat": 28.6057231, "lon": -81.2054400, "id": 1719809211}]
 },
@@ -914,8 +914,8 @@
 },
 {
   "key": "127",
-  "Name": "ΚΚΓ",
-  "Abbreviation": "N/A",
+  "Name": "Kappa Kappa Gamma Sorority",
+  "Abbreviation": "ΚΚΓ",
   "Entrances": [
   {"lat": 28.6041653, "lon": -81.2066700, "id": 12653585894}]
 },
@@ -928,8 +928,8 @@
 },
 {
   "key": "129",
-  "Name": "ΧΩ",
-  "Abbreviation": "N/A",
+  "Name": "Chi Omega Sorority",
+  "Abbreviation": "ΧΩ",
   "Entrances": [
   {"lat": 1, "lon": 1, "id": -1}]
 },
@@ -998,7 +998,7 @@
 },
 {
   "key": "139",
-  "Name": "Chick-fil-A - JTW Center",
+  "Name": "Chick-fil-A at JTW Center",
   "Abbreviation": "N/A",
   "Entrances": [
   {"lat": 28.5959816, "lon": -81.1988800, "id": 12653691716}]
