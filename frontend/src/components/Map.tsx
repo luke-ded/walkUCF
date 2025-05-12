@@ -89,7 +89,11 @@ function Map()
       if(temp != undefined && temp != null)
       {
         var parsedItem : Item = JSON.parse(temp);
-        tempSelectedPoint = [parsedItem.Entrances[0].lat, parsedItem.Entrances[0].lon];
+
+        if(parsedItem.Entrances == undefined || parsedItem.Entrances == null)
+          tempSelectedPoint = [100, 100];
+        else
+          tempSelectedPoint = [parsedItem.Entrances[0].lat, parsedItem.Entrances[0].lon];
       }
       else
         tempSelectedPoint = [100, 100];
