@@ -159,7 +159,7 @@ function Map()
     });
 
     return(
-      <Polyline positions={newPath} color="blue">
+      <Polyline positions={newPath} color="blue" opacity={.5} weight={4}>
         <Popup closeButton={false}>Leg 1</Popup>
       </Polyline>
     );
