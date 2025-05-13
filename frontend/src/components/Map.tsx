@@ -24,7 +24,7 @@ interface PropsType
 interface PathPropsType 
 {
   items: number[][];
-  renderer: (path: any) => React.ReactNode;
+  renderer: (path: any, index: number) => React.ReactNode;
 }
 
 const createColoredIcon = () => 
@@ -154,7 +154,7 @@ function Map()
       );
   }
 
-  const renderPath = (path : number[]): React.ReactNode =>
+  const renderPath = (path : number[], index: number): React.ReactNode =>
   {
     var newPath: LatLngExpression[] = [];
 
@@ -165,7 +165,7 @@ function Map()
 
     return(
       <Polyline positions={newPath} color="blue" opacity={.5} weight={4}>
-        <Popup closeButton={false}>Leg 1</Popup>
+        <Popup closeButton={false}>Leg {index + 1}</Popup>
       </Polyline>
     );
   }
@@ -255,8 +255,8 @@ function Map()
             ))
           ))} */}
           {/* <Polyline positions={path} color="blue" /> */}
-          {pathProps.items.map((path) => {
-          return <div>{pathProps.renderer(path)}</div>;
+          {pathProps.items.map((path, index) => {
+          return <div>{pathProps.renderer(path, index)}</div>;
           })}
 
           <Polygon
