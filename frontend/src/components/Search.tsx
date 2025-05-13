@@ -34,6 +34,7 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
 
         stoplist.push(item);
 
+        //localStorage.setItem('stoplist', JSON.stringify(locations));
         localStorage.setItem('stoplist', JSON.stringify(stoplist));
         
         triggerRerender();

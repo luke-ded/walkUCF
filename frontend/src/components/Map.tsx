@@ -16,17 +16,18 @@ interface Item
 
 interface PropsType 
 {
-    items: any[];
-    renderer: (point: any) => React.ReactNode;
+  items: any[];
+  renderer: (point: any) => React.ReactNode;
 }
 
 interface PathPropsType 
 {
-    items: number[][];
-    renderer: (path: any) => React.ReactNode;
+  items: number[][];
+  renderer: (path: any) => React.ReactNode;
 }
 
-const createColoredIcon = (color: string) => {
+const createColoredIcon = (color: string) => 
+{
   return L.divIcon({
     className: 'colored-marker', 
     html: `<div style="background-color: ${color}; width: 10px; height: 10px; border-radius: 50%;"></div>`,
@@ -51,22 +52,31 @@ function Map()
   
   const customIcon = createColoredIcon("red");
 
+  // Retrieve graph data
   var data = createGraph(buildings, jaywalking, grass, parking);
-  var result = dijkstra(data.graph, 5001725302, 3137058034);
   var pointMap = data.pointMap;
+
+  var totalDistance = 0;
+  // Calculate 
+  for(var i = 0; i < stopPoints.length - 1; i++)
+  {
+    var result = dijkstra(data.graph, stopPoints[i].Entrances[0].id, stopPoints[i + 1].Entrances[0].id);
+    
+    if(result.distances.get(stopPoints[i + 1].Entrances[0].id) != undefined)
+      totalDistance += result.distances.get(stopPoints[i + 1].Entrances[0].id)!;
+
+    paths.push(result.path);
+    console.log("Result: " + result.path);
+  }
 
   localStorage.setItem("graphData", JSON.stringify(
   {
-    distanceMi: (result.distances.get(3137058034)! * .621371),
-    distanceKm : result.distances.get(3137058034)
+    distanceMi: (totalDistance! * .621371),
+    distanceKm : totalDistance
   }));
-  paths = data.pathnum;
+  //paths = data.pathnum;
   /* if(result.path.length == 0)
     alert("Locations inacessible to each other."); */
-
-  paths.push(result.path);
-  console.log("Result: " + result.path);
-
 
   function getStops()
   {
@@ -224,10 +234,23 @@ function Map()
               <Popup>This is the selected point!!</Popup>
             </Marker>
           )}
-          
           {props.items.map((point) => {
           return <div>{props.renderer(point)}</div>;
           })}
+
+          {/* {stopPoints.map((building) => (
+            building.Entrances.map((entrance) => (
+              <Marker
+                key={entrance.id}
+                position={[entrance.lat, entrance.lon]}
+              >
+                <Popup>
+                  Building: {building.Name} ({building.Abbreviation})<br />
+                  Entrance ID: {entrance.id}
+                </Popup>
+              </Marker>
+            ))
+          ))} */}
           {/* <Polyline positions={path} color="blue" /> */}
           {pathProps.items.map((path) => {
           return <div>{pathProps.renderer(path)}</div>;
