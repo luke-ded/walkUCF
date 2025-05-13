@@ -3,8 +3,8 @@ import {LatLngTuple, LatLngBoundsExpression, LatLngExpression} from 'leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useState } from 'react';
-import deselectImage from "../assets/red-deselect-marker-icon.png";
-import selectImage from "../assets/red-select-marker-icon.png";
+import deselectImage from "../assets/gold-deselect-marker-icon.png";
+import selectImage from "../assets/gold-select-marker-icon.png";
 import {createGraph, dijkstra} from '../graphing/Dijkstra.ts';
 
 interface Item 
