@@ -43,7 +43,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
                 <div className="flex justify-between mt-2 items-center">
                     <div className="flex justify-start">
                         <p className="dark:text-[#ffca09] text-[#a48100] text-sm">{item.Abbreviation}</p>
-                        <p className="dark:text-neutral-200 text-neutral-700 text-sm">&nbsp;| Stop {itemsList.indexOf(item) + 1}</p>
+                        <p className="dark:text-neutral-200 text-neutral-700 text-sm">&nbsp;| Stop {itemsList.indexOf(item) + 1} | Entrance_Method</p>
                     </div>
                     <div>
                         <button className = "mr-3 rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
