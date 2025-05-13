@@ -61,6 +61,7 @@ function Map()
   var pointMap = data.pointMap;
 
   var totalDistance = 0;
+
   // Calculate 
   for(var i = 0; i < stopPoints.length - 1; i++)
   {
@@ -78,7 +79,7 @@ function Map()
     distanceMi: (totalDistance! * .621371),
     distanceKm : totalDistance
   }));
-  paths = data.pathnum;
+  //paths = data.pathnum;
   /* if(result.path.length == 0)
     alert("Locations inacessible to each other."); */
 
@@ -234,9 +235,7 @@ function Map()
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
-            <Marker position={selectedPoint} icon={customIcon}>
-              <Popup>This is the selected point!!</Popup>
-            </Marker>
+            <Marker position={selectedPoint} icon={customIcon} />
           )}
           {props.items.map((point) => {
           return <div>{props.renderer(point)}</div>;
