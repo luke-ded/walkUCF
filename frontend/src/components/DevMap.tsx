@@ -3,7 +3,8 @@ import {LatLngTuple, LatLngBoundsExpression, LatLngExpression} from 'leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useState } from 'react';
-import deselectImage from "../assets/deselect-marker-icon2.png";
+import deselectImage from "../assets/red-deselect-marker-icon.png";
+import selectImage from "../assets/red-select-marker-icon.png";
 import {createGraph, dijkstra} from '../graphing/Dijkstra.ts';
 
 interface Item 
@@ -26,13 +27,16 @@ interface PathPropsType
     renderer: (path: any) => React.ReactNode;
 }
 
-const createColoredIcon = (color: string) => 
+const createColoredIcon = () => 
 {
   return L.divIcon({
     className: 'colored-marker', 
-    html: `<div style="background-color: ${color}; width: 10px; height: 10px; border-radius: 50%;"></div>`,
+    html: `
+    <div style="width: 25px; height: 40px;">
+      <img style="width:auto; height: 41px;" src=${selectImage} />
+    </div>`,
     iconSize: [10, 10], 
-    iconAnchor: [5, 5],
+    iconAnchor: [12, 41],
     popupAnchor: [0, -10]
   });
 };
@@ -50,7 +54,7 @@ function Map()
   
   var stopPoints = getStops();
   
-  const customIcon = createColoredIcon("red");
+  const customIcon = createColoredIcon();
 
   var data = createGraph(buildings, jaywalking, grass, parking);
   var result = dijkstra(data.graph, 5001725302, 3137058034);
@@ -61,7 +65,7 @@ function Map()
     distanceMi: (result.distances.get(3137058034)! * .621371),
     distanceKm : result.distances.get(3137058034)
   }));
-  //paths = data.pathnum;
+  paths = data.pathnum;
   /* if(result.path.length == 0)
     alert("Locations inacessible to each other."); */
 
@@ -214,7 +218,7 @@ function Map()
               <img className="h-17/20 w-auto" src={deselectImage} alt="Deselect marker icon"></img>
             </div>
           </div>
-          <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
+          <MapContainer center={position} zoom={16} minZoom={15} maxZoom={22} scrollWheelZoom={true} 
             maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-t-sm z-0">
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
@@ -229,7 +233,7 @@ function Map()
           return <div>{props.renderer(point)}</div>;
           })}
 
-          {/* {stopPoints.map((building) => (
+          {stopPoints.map((building) => (
             building.Entrances.map((entrance) => (
               <Marker
                 key={entrance.id}
@@ -241,7 +245,7 @@ function Map()
                 </Popup>
               </Marker>
             ))
-          ))} */}
+          ))}
           {/* <Polyline positions={path} color="blue" /> */}
           {pathProps.items.map((path) => {
           return <div>{pathProps.renderer(path)}</div>;

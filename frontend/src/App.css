@@ -6,3 +6,7 @@
 .leaflet-popup-content {
     text-align: center;
   }
+
+.colored-marker {
+  z-index: 1000 !important;
+}
