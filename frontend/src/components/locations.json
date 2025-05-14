@@ -182,8 +182,6 @@
   "selectedEntrance": 1,
   "Entrances": [
   {"lat": 28.6009659, "lon": -81.2010520, "id": 12653691728},
-  {"lat": 28.6008257, "lon": -81.2008540, "id": 7742619966},
-  {"lat": 28.6007423, "lon": -81.2009120, "id": 3128392699},
   {"lat": 28.6001152, "lon": -81.2016370, "id": 3128392703}]
 },
 {
@@ -725,7 +723,7 @@
 {
   "key": "75",
   "Name": "Zeta Tau Alpha Sorority",
-  "Abbreviation": "ΖΤΑ",
+  "Abbreviation": "ZTA",
   "selectedEntrance": 1,
   "Entrances": [
   {"lat": 28.6050003, "lon": -81.2065260, "id": 1719808973},
@@ -853,11 +851,12 @@
 },
 {
   "key": "91",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 56",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 1, "lon": 1, "id": -1}]
+  {"id": 126 , "lat": 28.6034630 , "lon": -81.2047123 },
+  {"id": 127 , "lat": 28.6036194 , "lon": -81.2047498 }]
 },
 {
   "key": "92",
@@ -870,15 +869,16 @@
 },
 {
   "key": "93",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 57",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 28.6036712, "lon": -81.2049700, "id": 1719808579}]
+  {"lat": 28.6036712, "lon": -81.2049700, "id": 1719808579},
+  {"id": 120 , "lat": 28.6036675 , "lon": -81.2051789 }]
 },
 {
   "key": "94",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 62",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
@@ -896,7 +896,7 @@
 },
 {
   "key": "96",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 60",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
@@ -922,15 +922,16 @@
 },
 {
   "key": "99",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 64",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 28.6041881, "lon": -81.2034900, "id": 1719808744}]
+  {"lat": 28.6041881, "lon": -81.2034900, "id": 1719808744},
+  {"id": 132 , "lat": 28.6041860 , "lon": -81.2037112 }]
 },
 {
   "key": "100",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 67",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
@@ -939,39 +940,43 @@
 },
 {
   "key": "101",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 58",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 1, "lon": 1, "id": -1}]
+  {"id": 116 , "lat": 28.6040494 , "lon": -81.2049918 },
+  {"id": 118 , "lat": 28.6039035 , "lon": -81.2049754 }]
 },
 {
   "key": "102",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 68",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 28.6052011, "lon": -81.2034500, "id": 1719809051}]
+  {"lat": 28.6052011, "lon": -81.2034500, "id": 1719809051},
+  {"id": 141 , "lat": 28.6053331 , "lon": -81.2034699 }]
 },
 {
   "key": "103",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 69",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 28.6051744, "lon": -81.2030700, "id": 1719809027}]
+  {"lat": 28.6051744, "lon": -81.2030700, "id": 1719809027},
+  {"id": 138 , "lat": 28.6053362 , "lon": -81.2030858 }]
 },
 {
   "key": "104",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 55",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 28.6036526, "lon": -81.2045000, "id": 5001725381}]
+  {"lat": 28.6036526, "lon": -81.2045000, "id": 5001725381},
+  {"id": 122 , "lat": 28.6036450 , "lon": -81.2043170 }]
 },
 {
   "key": "105",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 63",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
@@ -979,23 +984,25 @@
 },
 {
   "key": "106",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 70",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 28.6049839, "lon": -81.2029300, "id": 5001725337}]
+  {"lat": 28.6049839, "lon": -81.2029300, "id": 5001725337},
+  {"id": 106 , "lat": 28.6049874 , "lon": -81.2027372 }]
 },
 {
   "key": "107",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 61",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 28.6042501, "lon": -81.2042200, "id": 5001725369}]
+  {"lat": 28.6042501, "lon": -81.2042200, "id": 5001725369},
+  {"id": 130 , "lat": 28.6042431 , "lon": -81.2044009 }]
 },
 {
   "key": "108",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 59",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
@@ -1004,7 +1011,7 @@
 },
 {
   "key": "109",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire 66",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
@@ -1253,12 +1260,14 @@
 },
 {
   "key": "137",
-  "Name": "Lake Claire Community",
+  "Name": "Lake Claire Community Center (65)",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
   {"lat": 28.6045498, "lon": -81.2031870, "id": 5001725332},
-  {"lat": 28.6042932, "lon": -81.2034110, "id": 5001725349}]
+  {"lat": 28.6042932, "lon": -81.2034110, "id": 5001725349},
+  {"id": 144 , "lat": 28.6042907 , "lon": -81.2033029 },
+  {"id": 145 , "lat": 28.6043775 , "lon": -81.2031807 }]
 },
 {
   "key": "138",
@@ -1487,4 +1496,12 @@
   "Abbreviation": "LKCR",
   "Entrances": [
   {"id": 2762462991 , "lat": 28.6073971 , "lon": -81.2030530 }]
+},
+{
+  "key": "164",
+  "Name": "Alpha Xi Delta Sorority",
+  "selectedEntrance": 1,
+  "Abbreviation": "ΑΞΔ",
+  "Entrances": [
+  {"id": 12653585892 , "lat": 28.6037975 , "lon": -81.2059900 }]
 }]
