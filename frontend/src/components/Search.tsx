@@ -24,7 +24,7 @@ interface ItemProps
 
 const ItemRenderer: React.FC<ItemProps> = ({ item, addItem, triggerRerender, setSelectedItem }) =>
 {
-    const [selectedEntrance, setSelectedEntrance] = useState(-1);
+    const [selectedEntrance, setSelectedEntrance] = useState(1);
 
     function handleItemChange(entrance: number)
     {
@@ -47,9 +47,8 @@ const ItemRenderer: React.FC<ItemProps> = ({ item, addItem, triggerRerender, set
             <div className="flex justify-between items-center my-[1vh]">
                 <div className="flex justify-start">
                     <p className="dark:text-neutral-300 text-neutral-600">Entrance: </p>
-                    <button className = {`rounded-sm inline-block h-fit w-fit ml-2 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${selectedEntrance != -1 ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-[#faefc8] text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-[#faefc8] hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
-                    onClick={() => handleItemChange(-1)}
-                    /* style={{backgroundColor: selectedEntrance == -1 ? "rgba(255, 202, 9, 0.6)" : "#ffca09", color: selectedEntrance == -1 ? "#faefc8" : "#404040"}} */>Closest</button>
+                    {item.Entrances?.length! > 1 && (<button className = {`rounded-sm inline-block h-fit w-fit ml-2 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${selectedEntrance != -1 ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-[#faefc8] text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-[#faefc8] hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
+                    onClick={() => handleItemChange(-1)}>Closest</button>)}
                     <button className = {`rounded-sm inline-block h-fit w-fit ml-2 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${selectedEntrance != 1 ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-[#faefc8] text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-[#faefc8] hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
                     onClick={() => handleItemChange(1)}>Main</button>
                     {item.Entrances!.map((entrance, index) => {
