@@ -7,6 +7,7 @@ interface Item
     Name: string;
     Abbreviation: string;
     Entrances?: any [];
+    selectedEntrance: number;
 }
 
 interface ChildProps {
@@ -22,7 +23,7 @@ interface PropsType
 
 const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
 {
-    function addItem(item: Item)
+    function addItem(item: Item, selectedEntrance: number)
     {
         var temp = localStorage.getItem('stoplist');
         var stoplist : Item [] = [];
@@ -32,6 +33,8 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
             stoplist = JSON.parse(temp);
         }
 
+        item.selectedEntrance = selectedEntrance;
+        
         stoplist.push(item);
 
         //localStorage.setItem('stoplist', JSON.stringify(locations));
@@ -42,6 +45,8 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
 
     const renderItem = (item: Item): React.ReactNode => 
     {
+        const [selectedEntrance, setSelectedEntrance] = useState(1);
+
         return (
             <div>
                 <div className="flex justify-between items-center">
@@ -52,18 +57,21 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
                 <div className="flex justify-between items-center my-[1vh]">
                     <div className="flex justify-start">
                         <p className="dark:text-neutral-300 text-neutral-600">Entrance: </p>
-                        <button className = "rounded-sm inline-block h-fit w-fit ml-2 px-1 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-sm text-center font-bold hover:bg-[#ffca09]/60 cursor-pointer">Closest</button>
-                        <button className = "rounded-sm inline-block h-fit w-fit ml-2 px-1 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-sm text-center font-bold hover:bg-[#ffca09]/60 cursor-pointer">Main</button>
-                        {item.Entrances!.map((entrance, index) => {
+                        <button className = "rounded-sm inline-block h-fit w-fit ml-2 px-1 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-sm text-center font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                        onClick={() => setSelectedEntrance(-1)}>Closest</button>
+                        <button className = "rounded-sm inline-block h-fit w-fit ml-2 px-1 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-sm text-center font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                        onClick={() => setSelectedEntrance(1)}>Main</button>
+                        {item.Entrances!.map((index) => {
                             if(index == 0)
                                 return <></>;
 
-                            return <button className = "rounded-sm inline-block h-fit w-fit ml-2 px-1 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-sm text-center font-bold hover:bg-[#ffca09]/60 cursor-pointer">{index + 1}</button>;
+                            return <button className = "rounded-sm inline-block h-fit w-fit ml-2 px-1 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-sm text-center font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                            onClick={() => setSelectedEntrance(index + 1)}>{index + 1}</button>;
                         })}
                     </div>
                     <div>
                         <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
-                        onClick={() => addItem(item)}>+</button>
+                        onClick={() => addItem(item, selectedEntrance)}>+</button>
                     </div>
                 </div>
             </div>

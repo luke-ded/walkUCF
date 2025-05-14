@@ -6,6 +6,7 @@ interface Item
     Name: string;
     Abbreviation: string;
     Entrances: any [];
+    selectedEntrance: number;
 }
 
 interface ChildProps {
