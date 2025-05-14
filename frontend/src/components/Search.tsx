@@ -52,9 +52,9 @@ const ItemRenderer: React.FC<ItemProps> = ({ item, addItem, triggerRerender, set
                     <button className = {`rounded-sm inline-block h-fit w-fit ml-2 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${selectedEntrance != 1 ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-[#faefc8] text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-[#faefc8] hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
                     onClick={() => handleItemChange(1)}>Main</button>
                     {item.Entrances!.map((entrance, index) => {
-                        if(index == 0)
+                        if(index == 0 || entrance.id == undefined)
                             return <></>;
-
+                        
                         return <button className = {`rounded-sm inline-block h-fit w-fit ml-2 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${selectedEntrance != index + 1 ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-[#faefc8] text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-[#faefc8] hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
                         onClick={() => handleItemChange(index + 1)}>{index + 1}</button>;
                     })}
