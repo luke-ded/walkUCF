@@ -109,7 +109,12 @@ function Map()
         if(parsedItem.Entrances == undefined || parsedItem.Entrances == null)
           tempSelectedPoint = [100, 100];
         else
+        {
+          if(parsedItem.selectedEntrance == -1)
           tempSelectedPoint = [parsedItem.Entrances[0].lat, parsedItem.Entrances[0].lon];
+          else
+            tempSelectedPoint = [parsedItem.Entrances[parsedItem.selectedEntrance -1].lat, parsedItem.Entrances[parsedItem.selectedEntrance -1].lon];
+        }
       }
       else
         tempSelectedPoint = [100, 100];
