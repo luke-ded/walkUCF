@@ -66,10 +66,19 @@ function Map()
   // Calculate 
   for(var i = 0; i < stopPoints.length - 1; i++)
   {
-    var result = dijkstra(data.graph, stopPoints[i].Entrances[0].id, stopPoints[i + 1].Entrances[0].id);
+    if(stopPoints[i].selectedEntrance == -1)
+    {
+      alert("Do something");
+    }
+   
+    var result = dijkstra(data.graph, stopPoints[i].Entrances[stopPoints[i].selectedEntrance - 1].id, stopPoints[i + 1].Entrances[stopPoints[i + 1].selectedEntrance - 1].id);
     
-    if(result.distances.get(stopPoints[i + 1].Entrances[0].id) != undefined)
-      totalDistance += result.distances.get(stopPoints[i + 1].Entrances[0].id)!;
+    if(stopPoints[i + 1].selectedEntrance == -1)
+    {
+      alert("Do something");
+    }
+    if(result.distances.get(stopPoints[i + 1].Entrances[stopPoints[i + 1].selectedEntrance - 1].id) != undefined)
+      totalDistance += result.distances.get(stopPoints[i + 1].Entrances[stopPoints[i + 1].selectedEntrance - 1].id)!;
 
     paths.push(result.path);
     console.log("Result: " + result.path);
@@ -128,7 +137,7 @@ function Map()
 
   const renderPoint = (point : any): React.ReactNode => 
   {
-    var pointPosition : LatLngTuple = [point.Entrances[0].lat, point.Entrances[0].lon];
+    var pointPosition : LatLngTuple = [point.Entrances[point.selectedEntrance - 1].lat, point.Entrances[point.selectedEntrance - 1].lon];
 
     if(point.Entrances == undefined)
     {
