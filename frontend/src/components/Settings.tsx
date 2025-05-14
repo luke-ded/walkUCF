@@ -108,7 +108,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                                     <h1 className="dark:text-neutral-200 text-center text-neutral-700 text-sm ml-2">If you wear a smartwatch, check your health app for the most accurate mesure of this metric. 
                                     Otherwise, calculate it yourself or leave the default setting of {units == "imperial" ? "3.0 mi/hr" : "4.8 km/hr"}</h1>
                                     <div className="flex">
-                                        <IoCloseSharp size={15} onClick={() => setInfo(false)} className="hover:text-white"/>
+                                        <IoCloseSharp size={15} onClick={() => setInfo(false)} className="hover:text-white bg-white/25 hover:bg-white/42 rounded-lg"/>
                                     </div>
                                 </div>
                             )}
