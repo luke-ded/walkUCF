@@ -59,24 +59,23 @@ export function createGraph(buildings: boolean, jaywalking: boolean, grass: bool
     if(buildings)
     {
         var buildingPaths: Path[] = buildingPathsData;
-        paths.concat(buildingPaths);
+        paths = paths.concat(buildingPaths);
     }
     if(jaywalking)
     {
         var jaywalkingPaths: Path[] = jaywalkingPathsData;
-        paths.concat(jaywalkingPaths); 
+        paths = paths.concat(jaywalkingPaths); 
     }
     if(grass)
     {
         var grassPaths: Path[] = grassPathsData;
-        paths.concat(grassPaths); 
+        paths = paths.concat(grassPaths); 
     }
     if(parking)
     {
         var parkingPaths: Path[] = parkingPathsData;
-        paths.concat(parkingPaths); 
+        paths = paths.concat(parkingPaths); 
     }
-
     const pathnum: number[][] = [];
     const graph : GraphMap = new Map();
 
