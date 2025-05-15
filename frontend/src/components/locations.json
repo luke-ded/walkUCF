@@ -91,7 +91,8 @@
   {"lat": 28.6046576, "lon": -81.1993440, "id": 3153643157},
   {"lat": 28.6045564, "lon": -81.1995160, "id": 3153643155},
   {"lat": 28.6046960, "lon": -81.1999480, "id": 3153643158},
-  {"lat": 28.6047778, "lon": -81.2001170, "id": 3456743102}]
+  {"lat": 28.6047778, "lon": -81.2001170, "id": 3456743102},
+  {"id": 154 , "lat": 28.6049018 , "lon": -81.1997052 }]
 },
 {
   "key": "10",
@@ -158,7 +159,8 @@
   "Entrances": [
   {"lat": 28.6039891, "lon": -81.2003400, "id": 12653691721},
   {"lat": 28.6036387, "lon": -81.2000970, "id": 3136972008},
-  {"lat": 28.6035359, "lon": -81.2008440, "id": 1668088165}]
+  {"lat": 28.6035359, "lon": -81.2008440, "id": 1668088165},
+  {"id": 151 , "lat": 28.6039117 , "lon": -81.2007549 }]
 },
 {
   "key": "17",
@@ -202,7 +204,8 @@
   "selectedEntrance": 1,
   "Entrances": [
   {"lat": 28.6053645, "lon": -81.1989310, "id": 12653691702},
-  {"lat": 28.6053303, "lon": -81.1988450, "id": 12653691703}]
+  {"lat": 28.6053303, "lon": -81.1988450, "id": 12653691703},
+  {"id": 159 , "lat": 28.6052043 , "lon": -81.1989225 }]
 },
 {
   "key": "21",
@@ -1275,7 +1278,7 @@
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 1, "lon": 1, "id": -1}]
+  {"id": 167 , "lat": 28.5991754 , "lon": -81.2068938 }]
 },
 {
   "key": "139",
@@ -1307,7 +1310,8 @@
   "Abbreviation": "NFCG",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 1, "lon": 1, "id": -1}]
+  {"id": 3137057807 , "lat": 28.5975024 , "lon": -81.1989200 },
+  {"id": 3137057804 , "lat": 28.5977607 , "lon": -81.1989000 }]
 },
 {
   "key": "143",
@@ -1504,4 +1508,52 @@
   "Abbreviation": "ΑΞΔ",
   "Entrances": [
   {"id": 12653585892 , "lat": 28.6037975 , "lon": -81.2059900 }]
+},
+{
+  "key": "165",
+  "Name": "Dunkin' Donuts",
+  "selectedEntrance": 1,
+  "Abbreviation": "N/A",
+  "Entrances": [
+  {"id": 12150621457 , "lat": 28.6067174 , "lon": -81.1985120 }]
+},
+{
+  "key": "166",
+  "Name": "Subway",
+  "selectedEntrance": 1,
+  "Abbreviation": "N/A",
+  "Entrances": [
+  {"id": 12150621458 , "lat": 28.6067902 , "lon": -81.1984690 }]
+},
+{
+  "key": "166",
+  "Name": "Dominos at Knights Plaza",
+  "selectedEntrance": 1,
+  "Abbreviation": "N/A",
+  "Entrances": [
+  {"id": 12150621458 , "lat": 28.6067902 , "lon": -81.1984690 }]
+},
+{
+  "key": "168",
+  "Name": "Gringos Locos",
+  "selectedEntrance": 1,
+  "Abbreviation": "N/A",
+  "Entrances": [
+  {"id": 12150621459 , "lat": 28.6070586 , "lon": -81.1983110 }]
+},
+{
+  "key": "169",
+  "Name": "Knights Plaza Mail Center",
+  "selectedEntrance": 1,
+  "Abbreviation": "N/A",
+  "Entrances": [
+  {"id": 169 , "lat": 28.6071695 , "lon": -81.1982488 }]
+},
+{
+  "key": "170",
+  "Name": "Knightstop",
+  "selectedEntrance": 1,
+  "Abbreviation": "N/A",
+  "Entrances": [
+  {"id": 170 , "lat": 28.6072490 , "lon": -81.1982032 }]
 }]
