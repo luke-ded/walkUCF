@@ -248,7 +248,7 @@
   "Abbreviation": "BPW",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 1, "lon": 1, "id": -1}]
+  {"id": 204 , "lat": 28.5952290 , "lon": -81.2035894 }]
 },
 {
   "key": "25",
@@ -1556,4 +1556,22 @@
   "Abbreviation": "N/A",
   "Entrances": [
   {"id": 170 , "lat": 28.6072490 , "lon": -81.1982032 }]
+},
+{
+  "key": "171",
+  "Name": "Softball Stadium",
+  "selectedEntrance": 1,
+  "Abbreviation": "SBS",
+  "Entrances": [
+  {"id": 194 , "lat": 28.6044598 , "lon": -81.1900308 }]
+},
+{
+  "key": "172",
+  "Name": "Hercules Basketball Courts",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 216 , "lat": 28.5949260 , "lon": -81.2004449 },
+  {"id": 217 , "lat": 28.5948030 , "lon": -81.2004437 },
+  {"id": 220 , "lat": 28.5947168 , "lon": -81.2009356 }]
 }]
