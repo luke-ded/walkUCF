@@ -11,6 +11,10 @@ function HomePage()
     const [count, setCount] = useState(0);
     const [about, toggleAbout] = useState(false);
     const [settings, toggleSettings] = useState(false);
+    const [stops, setStops] = useState<any []>([]);
+
+    console.log("homepage render");
+    console.log(stops);
 
     var settingsData = localStorage.getItem("settings");
     if(settingsData == null || settingsData == undefined)
@@ -35,11 +39,11 @@ function HomePage()
             <NavBar toggleAbout={toggleAbout} about={about} toggleSettings={toggleSettings} settings={settings}/>
             <div className="flex w-screen h-13/14 items-center justify-center bg-gradient-to-b from-black/60 to-transparent">
                 <div className="flex flex-col items-center justify-between w-2/5 h-4/5 max-h-4/5 mr-20">
-                    <Search triggerRerender={triggerRerender} />
-                    <RouteList triggerRerender={triggerRerender} />
+                    <Search triggerRerender={triggerRerender} setStops={setStops} />
+                    <RouteList triggerRerender={triggerRerender} setStops={setStops} stops={stops!}/>
                 </div>
                 <div className="flex flex-col justify-between w-2/5 h-4/5 border-2 dark:border-[#ffca09] border-[#a48100] rounded-md shadow-lg">
-                    <Map />
+                    <Map stops={stops!} triggerRerender={triggerRerender}/>
                 </div>
                 {about && (<About />)}
                 {settings && (<Settings triggerRerender={triggerRerender} toggleSettings={toggleSettings} settings={settings}/>)}

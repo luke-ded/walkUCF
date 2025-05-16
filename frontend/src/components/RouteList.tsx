@@ -11,6 +11,8 @@ interface Item
 
 interface ChildProps {
     triggerRerender: () => void;
+    setStops: (stops: any) => void;
+    stops: any [];
 }
 
 interface PropsType 
@@ -19,13 +21,13 @@ interface PropsType
     renderer: (item: Item) => React.ReactNode;
 }
 
-const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
+const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =>
 {
     // This is for highlighting on map later
     const [selectedItem, setSelectedItem] = useState("");
     console.log(selectedItem);
 
-    const itemsList = getStops();
+    const itemsList = stops;
     var graphData = JSON.parse(localStorage.getItem("graphData")!);
 
     const renderItem = (item: Item): React.ReactNode => 
@@ -58,47 +60,31 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
         );
     };
 
-    function getStops()
+    function removeStop(item: Item) 
     {
-        var temp = localStorage.getItem('stoplist');
-        var stoplist : Item [] = [];
+      const index = itemsList.indexOf(item);
 
-        if(temp != undefined && temp != null)
-        {
-            stoplist = JSON.parse(temp);
-        }
+      if (index < 0) {
+        console.log("Item not found in removeStop.\n");
+        return;
+      }
 
-        return stoplist;      
-    }
+      const newItemsList = [...itemsList.slice(0, index), ...itemsList.slice(index + 1)];
 
-    function removeStop(item : Item)
-    {
-        var index = itemsList.indexOf(item);
+      if (newItemsList.length === 0) {
+        localStorage.setItem("graphData", JSON.stringify({ distanceMi: 0, distanceKm: 0 }));
+      }
 
-        if(index < 0)
-        {
-            console.log("Item not found in removeStop.\n");
-            return;
-        }
-
-        itemsList.splice(index, 1);
-
-        localStorage.setItem('stoplist', JSON.stringify(itemsList));
-
-        if(itemsList.length == 0)
-        {
-            localStorage.setItem("graphData", JSON.stringify({distanceMi: 0, distanceKm: 0}));
-        }
-
-        // This will rerender the map
-        triggerRerender();
+      setStops(newItemsList);
     }
 
     function swap(index1 : any, index2 : any) 
     {
-        var temp = itemsList[index1];
-        itemsList[index1] = itemsList[index2];
-        itemsList[index2] = temp;
+        var newItemsList = [...itemsList];
+        var temp = newItemsList[index1];
+        newItemsList[index1] = newItemsList[index2];
+        newItemsList[index2] = temp;
+        setStops(newItemsList);
     }
 
     function swapDown(item : Item)
@@ -111,15 +97,10 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
             return;  
         }
 
-        if(itemsList.length - 1 == itemsList.indexOf(item))
+        if(itemsList.length - 1 == index)
             return;
 
         swap(index, index + 1);
-
-        localStorage.setItem('stoplist', JSON.stringify(itemsList));
-
-        // This will rerender the map
-        triggerRerender();
     }
 
     function swapUp(item : Item)
@@ -132,15 +113,10 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender }) =>
             return;  
         }
 
-        if(0 == itemsList.indexOf(item))
+        if(0 == index)
             return;
 
         swap(index - 1, index);
-
-        localStorage.setItem('stoplist', JSON.stringify(itemsList));
-
-        // This will rerender the map
-        triggerRerender();
     }
 
     function handleItemChange(item : Item)

@@ -10,8 +10,10 @@ interface Item
     selectedEntrance: number;
 }
 
-interface ChildProps {
+interface ChildProps 
+{
     triggerRerender: () => void;
+    setStops: (stops: any) => void;
 }
 
 interface ItemProps 
@@ -68,26 +70,14 @@ const ItemRenderer: React.FC<ItemProps> = ({ item, addItem, triggerRerender, set
     );
 }
 
-const SearchBar: React.FC<ChildProps> = ({ triggerRerender }) =>
+const SearchBar: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
 {
     function addItem(item: Item, selectedEntrance: number)
     {
-        var temp = localStorage.getItem('stoplist');
-        var stoplist : Item [] = [];
-
-        if(temp != undefined && temp != null)
-        {
-            stoplist = JSON.parse(temp);
-        }
-
         item.selectedEntrance = selectedEntrance;
-        
-        stoplist.push(item);
 
-        //localStorage.setItem('stoplist', JSON.stringify(locations));
-        localStorage.setItem('stoplist', JSON.stringify(stoplist));
-        
-        triggerRerender();
+        //setStops(locations);
+        setStops((prevStops: any[]) => [...(prevStops || []), item]);
     }
     
     const [searchTerm, setSearchTerm] = useState('');

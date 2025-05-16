@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline} from 'react-
 import {LatLngTuple, LatLngBoundsExpression, LatLngExpression} from 'leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import deselectImage from "../assets/gold-deselect-marker-icon.png";
 import selectImage from "../assets/gold-select-marker-icon.png";
 import {createGraph, dijkstra} from '../graphing/Dijkstra.ts';
@@ -28,6 +28,12 @@ interface PathPropsType
   renderer: (path: any, index: number) => React.ReactNode;
 }
 
+interface ChildProps
+{
+  triggerRerender: () => void;
+  stops: any [];
+}
+
 const createColoredIcon = () => 
 {
   return L.divIcon({
@@ -42,69 +48,64 @@ const createColoredIcon = () =>
   });
 };
 
-function Map()
+const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
 {
   var initPoint : LatLngTuple = [10, 10];
-  var paths: number[][] = [];
+
 
   const [buildings, setBuilding] = useState(true);
   const [jaywalking, setJaywalking] = useState(false);
   const [grass, setGrass] = useState(false);
   const [parking, setParking] = useState(false);
   const [selectedPoint, setSelectedPoint] = useState(initPoint);
-  
-  var stopPoints = getStops();
+  const [paths, setPaths] = useState<number[][]>([]);
   
   const customIcon = createColoredIcon();
 
-  // Retrieve graph data
   var data = createGraph(buildings, jaywalking, grass, parking);
   var pointMap = data.pointMap;
 
-  var totalDistance = 0;
-
-  // Calculate 
-  for(var i = 0; i < stopPoints.length - 1; i++)
+  useEffect(() =>
   {
-    if(stopPoints[i].selectedEntrance == -1)
+    console.log("graphing");
+    // Retrieve graph data
+
+    var totalDistance = 0;
+    var tempPaths: number[][] = [];
+
+    // Calculate 
+    for(var i = 0; i < stops.length - 1; i++)
     {
-      alert("Do something");
-    }
-   
-    var result = dijkstra(data.graph, stopPoints[i].Entrances[stopPoints[i].selectedEntrance - 1].id, stopPoints[i + 1].Entrances[stopPoints[i + 1].selectedEntrance - 1].id);
-    
-    if(stopPoints[i + 1].selectedEntrance == -1)
-    {
-      alert("Do something");
-    }
-    if(result.distances.get(stopPoints[i + 1].Entrances[stopPoints[i + 1].selectedEntrance - 1].id) != undefined)
-      totalDistance += result.distances.get(stopPoints[i + 1].Entrances[stopPoints[i + 1].selectedEntrance - 1].id)!;
-
-    paths.push(result.path);
-    console.log("Result: " + result.path);
-  }
-
-  localStorage.setItem("graphData", JSON.stringify(
-  {
-    distanceMi: (totalDistance! * .621371),
-    distanceKm : totalDistance
-  }));
-  //paths = data.pathnum;
-  /* if(result.path.length == 0)
-    alert("Locations inacessible to each other."); */
-
-  function getStops()
-  {
-      var temp = localStorage.getItem('stoplist');
-      var stopList : Item [] = [];
-      
-      if(temp != undefined && temp != null)
+      if(stops[i].selectedEntrance == -1)
       {
-          stopList = JSON.parse(temp);
+        alert("Do something");
       }
+   
+      var result = dijkstra(data.graph, stops[i].Entrances[stops[i].selectedEntrance - 1].id, stops[i + 1].Entrances[stops[i + 1].selectedEntrance - 1].id);
+    
+      if(stops[i + 1].selectedEntrance == -1)
+      {
+        alert("Do something");
+      }
+      if(result.distances.get(stops[i + 1].Entrances[stops[i + 1].selectedEntrance - 1].id) != undefined)
+        totalDistance += result.distances.get(stops[i + 1].Entrances[stops[i + 1].selectedEntrance - 1].id)!;
 
-      return stopList;      
-  }
+      tempPaths.push(result.path);
+      //console.log("Result: " + result.path);
+    }
+
+    localStorage.setItem("graphData", JSON.stringify(
+    {
+      distanceMi: (totalDistance! * .621371),
+      distanceKm : totalDistance
+    }));
+    //paths = data.pathnum;
+    /* if(result.path.length == 0)
+      alert("Locations inacessible to each other."); */
+
+    setPaths(tempPaths);
+    triggerRerender();
+  }, [stops, buildings, jaywalking, grass, parking]);
 
   function getSelected()
   {
@@ -146,7 +147,7 @@ function Map()
       return(<div></div>);
     }
     
-    var stopPosition = stopPoints.indexOf(point) + 1;
+    var stopPosition = stops.indexOf(point) + 1;
     //console.log(point.Name + ": " + stopPosition);
 
     if(stopPosition == 1)
@@ -155,7 +156,7 @@ function Map()
           <Popup closeButton={false}>Start: {point.Name}</Popup>
         </Marker>
       );
-    else if(stopPosition == stopPoints.length)
+    else if(stopPosition == stops.length)
       return(
         <Marker position={pointPosition}>
           <Popup>End: {point.Name}</Popup>
@@ -172,12 +173,13 @@ function Map()
   const renderPath = (path : number[], index: number): React.ReactNode =>
   {
     var newPath: LatLngExpression[] = [];
-
+    
     path.forEach(node => 
     {
       newPath.push([(pointMap.get(node)?.lat)!, (pointMap.get(node)?.lon)!])
     });
 
+    console.log("in renderpath,");
     return(
       <Polyline positions={newPath} color="blue" opacity={.5} weight={4}>
         <Popup closeButton={false}>Leg {index + 1}</Popup>
@@ -195,7 +197,7 @@ function Map()
 
   var props: PropsType = 
   {
-    items: stopPoints,
+    items: stops,
     renderer: renderPoint
   };
 
@@ -256,7 +258,7 @@ function Map()
           return <div>{props.renderer(point)}</div>;
           })}
 
-          {/* {stopPoints.map((building) => (
+          {/* {stops.map((building) => (
             building.Entrances.map((entrance) => (
               <Marker
                 key={entrance.id}
