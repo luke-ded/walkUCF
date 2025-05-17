@@ -86,7 +86,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                         <h1 className="text-2xl dark:text-neutral-200 text-neutral-700 font-bold">Settings</h1>
                     </div>
                     <div className="flex-col justify-start h-6/8 dark:text-neutral-200 text-neutral-700 p-5">
-                        <div className="flex items-center w-full">
+                        <div className="flex justify-center items-center w-full">
                             <h1 className="text-xl mr-2">Units:</h1>
                             <div className="flex cursor-pointer h-10 w-38 dark:bg-black/40 bg-white/70 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl">
                                 <div className={`flex justify-center items-center w-5/10 h-full border-r-2 dark:border-[#ffe68c] border-[#a48100] rounded-l-lg ${units == "imperial" ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
@@ -99,7 +99,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                                 </div>
                             </div>
                         </div>
-                        <div className="flex items-center w-full mt-5">
+                        <div className="flex justify-center items-center w-full mt-5">
                             <h1 className="text-xl mr-2">Walking Speed:</h1>
                             <input className="w-1/10 h-full w-3/20 text-lg dark:text-neutral-200 text-neutral-700 p-1 border-2 dark:border-[#ffe68c] border-[#a48100] dark:placeholder-neutral-200/75 placeholder-neutral-700/75 placeholder:text-center text-center rounded-md dark:bg-black/25 bg-white/70 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="3.0" 
                             value={newWalkSpeed} onChange={(e) => setWalkSpeedHandler(e.target.value)} onBlur={(e) => setWalkSpeedHandler(e.target.value)}></input>
@@ -117,7 +117,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                                 )}
                             </div>
                         </div>
-                        <div className="flex items-center w-full mt-5">
+                        <div className="flex justify-center items-center w-full mt-5">
                             <h1 className="text-xl mr-2">Save Route:</h1>
                             <div className="flex cursor-pointer h-10 w-38 dark:bg-black/40 bg-white/70 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl">
                                 <div className={`flex justify-center items-center w-5/10 h-full border-r-2 dark:border-[#ffe68c] border-[#a48100] rounded-l-lg ${saveRoute ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
