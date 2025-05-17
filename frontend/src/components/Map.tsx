@@ -295,7 +295,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
            onClick={() => setJaywalking(!jaywalking)}>Jaywalking</button>
           <button className = {`rounded-sm inline-block h-fit w-fit ml-2 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!parking ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
            onClick={() => setParking(!parking)}>Parking Lots</button>
-          <button className = {`rounded-sm inline-block h-fit w-fit ml-2 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!grass ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
+          <button className = {`rounded-sm inline-block h-fit w-fit ml-2 mr-2 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!grass ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
            onClick={() => setGrass(!grass)}>Grass</button>
       </div>
     </div>
