@@ -39,14 +39,13 @@ const ItemRenderer: React.FC<ItemProps> = ({ item, addItem, triggerRerender, set
     }
 
     return (
-        <div>
+        <div className="w-full h-full">
             <div className="flex justify-between items-center">
                 <span className="dark:text-neutral-200 text-neutral-700 font-semibold text-md max-w-9/10">{item.Name}</span>
                 <span className="dark:text-[#ffca09] text-[#a48100] text-xs">{item.Abbreviation}</span>
             </div>
-            
             <div className="flex justify-between items-center my-[1vh]">
-                <div className="flex justify-start">
+                <div className="flex flex-wrap justify-start max-w-9/10">
                     <p className="dark:text-neutral-300 text-neutral-600">Entrance: </p>
                     {item.Entrances?.length! > 1 && (<button className = {`rounded-sm inline-block h-fit w-fit ml-2 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${selectedEntrance != -1 ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-[#faefc8] text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-[#faefc8] hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
                     onClick={() => handleItemChange(-1)}>Closest</button>)}
