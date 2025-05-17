@@ -86,12 +86,12 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                     <div className="flex items-center w-full">
                         <h1 className="text-xl mr-2">Units:</h1>
                         <div className="flex cursor-pointer h-10 w-38 bg-black/40 border-2 border-[#ffe68c] rounded-xl">
-                            <div className="flex justify-center items-center w-5/10 h-full border-r-2 border-[#ffe68c] rounded-l-lg"
-                            onClick={() => setUnitsHandler("imperial")} style={{backgroundColor: units == "imperial" ? "#ffe68c66" : "transparent"}}>
+                            <div className={`flex justify-center items-center w-5/10 h-full border-r-2 border-[#ffe68c] rounded-l-lg ${units == "imperial" ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
+                            onClick={() => setUnitsHandler("imperial")}>
                                 <h1>Imperial</h1>
                             </div>
-                            <div className="flex justify-center items-center w-5/10 h-full rounded-r-lg"
-                            onClick={() => setUnitsHandler("metric")} style={{backgroundColor: units == "metric" ? "#ffe68c66" : "transparent"}}>
+                            <div className={`flex justify-center items-center w-5/10 h-full rounded-r-lg ${units == "metric" ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
+                            onClick={() => setUnitsHandler("metric")}>
                                 <h1>Metric</h1>
                             </div>
                         </div>
@@ -108,7 +108,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                                     <h1 className="dark:text-neutral-200 text-center text-neutral-700 text-sm ml-2">If you wear a smartwatch, check your health app for the most accurate mesure of this metric. 
                                     Otherwise, calculate it yourself or leave the default setting of {units == "imperial" ? "3.0 mi/hr" : "4.8 km/hr"}</h1>
                                     <div className="flex">
-                                        <IoCloseSharp size={15} onClick={() => setInfo(false)} className="hover:text-white bg-white/25 hover:bg-white/42 rounded-lg"/>
+                                        <IoCloseSharp size={15} onClick={() => setInfo(false)} className="hover:text-white bg-[#ffe68c]/30 hover:bg-[#ffe68c]/42 rounded-lg"/>
                                     </div>
                                 </div>
                             )}
@@ -117,12 +117,12 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                     <div className="flex items-center w-full mt-5">
                         <h1 className="text-xl mr-2">Save Route:</h1>
                         <div className="flex cursor-pointer h-10 w-38 bg-black/40 border-2 border-[#ffe68c] rounded-xl">
-                            <div className="flex justify-center items-center w-5/10 h-full border-r-2 border-[#ffe68c] rounded-l-lg"
-                                onClick={() => setSaveRoute(true)} style={{backgroundColor: saveRoute ? "#ffe68c66" : "transparent"}}>
+                            <div className={`flex justify-center items-center w-5/10 h-full border-r-2 border-[#ffe68c] rounded-l-lg ${saveRoute ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
+                                onClick={() => setSaveRoute(true)} >
                                 <h1>Yes</h1>
                             </div>
-                            <div className="flex justify-center items-center w-5/10 h-full rounded-r-lg"
-                                onClick={() => setSaveRoute(false)} style={{backgroundColor: !saveRoute ? "#ffe68c66" : "transparent"}}>
+                            <div className={`flex justify-center items-center w-5/10 h-full rounded-r-lg ${!saveRoute ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
+                                onClick={() => setSaveRoute(false)}>
                                 <h1>No</h1>
                             </div>
                         </div>
