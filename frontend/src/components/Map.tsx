@@ -237,7 +237,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
   
   return (
     <div className="w-full h-full">
-      <div className="flex w-full h-37/40 max-sm:h-35/40 self-start border-b-2 dark:border-[#ffca09] border-[#a48100]">
+      <div className="relative flex w-full h-37/40 max-sm:h-35/40 self-start border-b-2 dark:border-[#ffca09] border-[#a48100]">
         <div id="map" className="h-full w-full rounded-t-sm">
           <div className="flex items-center justify-center absolute z-10 mt-20 ml-[11px] bg-black/20 text-black rounded-[4px] w-[33px] h-[33px] text-[18px] font-bold cursor-pointer"
           onClick={handleDeselect}>
