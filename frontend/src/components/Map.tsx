@@ -69,7 +69,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
   {
     console.log("graphing");
     // Retrieve graph data
-
+    handleDeselect();
     var totalDistance = 0;
     var tempPaths: number[][] = [];
 
@@ -99,7 +99,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
       distanceMi: (totalDistance! * .621371),
       distanceKm : totalDistance
     }));
-    //paths = data.pathnum;
+    //tempPaths = data.pathnum;
     /* if(result.path.length == 0)
       alert("Locations inacessible to each other."); */
 
@@ -288,7 +288,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
           </MapContainer>
         </div>
       </div>
-      <div className="flex w-full h-2/40 dark:bg-black/50 bg-white/50 font-bold justify-center rounded-b-md items-center">
+      <div className="flex w-full h-2/40 dark:bg-black/50 bg-white/50 font-bold text-md max-sm:text-xs justify-center rounded-b-md items-center">
           <input type="checkbox" value="" checked={buildings} onChange={() => setBuilding(!buildings)} className="w-5 h-5 bg-neutral-100 border-neutral-300 rounded-lg" />
           <h1 className="ml-1">Through buildings</h1>
           <input type="checkbox" value="" checked={jaywalking} onChange={() => setJaywalking(!jaywalking)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />

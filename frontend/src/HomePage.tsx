@@ -37,12 +37,12 @@ function HomePage()
     return(
         <div className="flex-col h-screen w-screen items-center justify-center dark:text-neutral-200 text-neutral-700 cursor-default select-none">
             <NavBar toggleAbout={toggleAbout} about={about} toggleSettings={toggleSettings} settings={settings}/>
-            <div className="flex w-screen h-13/14 items-center justify-center bg-gradient-to-b from-black/60 to-transparent">
-                <div className="flex flex-col items-center justify-between w-2/5 h-4/5 max-h-4/5 mr-20">
+            <div className="flex max-sm:flex-col w-screen h-13/14 max-sm:h-3/2 items-center sm:justify-center bg-gradient-to-b from-black/60 to-transparent">
+                <div className="flex flex-col items-center sm:justify-between w-2/5 h-4/5 max-sm:h-3/5 max-sm:w-9/10 max-h-4/5 max-sm:mt-5 sm:mr-20 max-sm:order-2 sm:order-1">
                     <Search triggerRerender={triggerRerender} setStops={setStops} />
                     <RouteList triggerRerender={triggerRerender} setStops={setStops} stops={stops!}/>
                 </div>
-                <div className="flex flex-col justify-between w-2/5 h-4/5 border-2 dark:border-[#ffca09] border-[#a48100] rounded-md shadow-lg">
+                <div className="flex flex-col justify-between w-2/5 h-4/5 max-sm:w-9/10 max-sm:min-h-8/20 max-sm:mt-5 border-2 dark:border-[#ffca09] border-[#a48100] rounded-md shadow-lg max-sm:order-1 sm:order-2">
                     <Map stops={stops!} triggerRerender={triggerRerender}/>
                 </div>
                 {about && (<About />)}
