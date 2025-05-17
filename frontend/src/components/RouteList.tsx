@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 interface Item 
 {
@@ -147,7 +148,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
             <div className="overflow-y-auto h-29/32 w-full">
                 <ul className="shadow divide-y dark:divide-[#ffe68c] min-h-0">
                     {props.items.map((item) => {
-                    return <li onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15">{props.renderer(item)}</li>;
+                    return <li key={uuidv4()} onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15">{props.renderer(item)}</li>;
                     })}
                 </ul>
             </div>
