@@ -36,7 +36,7 @@ const NavBar: React.FC<ChildProps> = ({ toggleAbout, about, toggleSettings, sett
     }
 
     return(
-        <div className="flex h-1/14 bg-black/90 border-b-2 border-[#ffca09] justify-between">
+        <div className="flex h-1/14 w-full max-w-full bg-black/90 border-b-2 border-[#ffca09] justify-between">
             <div className="flex items-center ml-3">
                 <img className="h-6/10 w-auto" src={src} alt="UCF Logo" />
                 <h1 className="text-3xl text-neutral-200 font-semibold ml-3">walkUCF</h1>
