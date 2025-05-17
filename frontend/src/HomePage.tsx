@@ -45,7 +45,7 @@ function HomePage()
                 <div className="flex flex-col justify-between w-2/5 h-4/5 max-lg:w-9/10 max-lg:min-h-6/16 max-lg:mt-5 border-2 dark:border-[#ffca09] border-[#a48100] rounded-md shadow-lg max-lg:order-1 lg:order-2">
                     <Map stops={stops!} triggerRerender={triggerRerender}/>
                 </div>
-                {about && (<About />)}
+                {about && (<About toggleAbout={toggleAbout}/>)}
                 {settings && (<Settings triggerRerender={triggerRerender} toggleSettings={toggleSettings} settings={settings}/>)}
             </div>
         </div>
