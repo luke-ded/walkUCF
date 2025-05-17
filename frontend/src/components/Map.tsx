@@ -289,14 +289,14 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
         </div>
       </div>
       <div className="flex w-full h-2/40 dark:bg-black/50 bg-white/50 font-bold text-md max-sm:text-xs justify-center rounded-b-md items-center">
-          <input type="checkbox" value="" checked={buildings} onChange={() => setBuilding(!buildings)} className="w-5 h-5 bg-neutral-100 border-neutral-300 rounded-lg" />
-          <h1 className="ml-1">Through buildings</h1>
-          <input type="checkbox" value="" checked={jaywalking} onChange={() => setJaywalking(!jaywalking)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
-          <h1 className="ml-1">Jaywalking</h1>
-          <input type="checkbox" value="" checked={parking} onChange={() => setParking(!parking)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
-          <h1 className="ml-1">Parking lots</h1>
-          <input type="checkbox" value="" checked={grass} onChange={() => setGrass(!grass)} className="w-5 h-5 ml-4 bg-neutral-100 border-neutral-300 rounded-lg" />
-          <h1 className="ml-1">Grass</h1>
+          <button className = {`rounded-sm inline-block h-fit w-fit ml-2 mt-1 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!buildings ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
+           onClick={() => setBuilding(!buildings)}>Through Buildings</button>
+          <button className = {`rounded-sm inline-block h-fit w-fit ml-2 mt-1 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!jaywalking ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
+           onClick={() => setJaywalking(!jaywalking)}>Jaywalking</button>
+          <button className = {`rounded-sm inline-block h-fit w-fit ml-2 mt-1 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!parking ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
+           onClick={() => setParking(!parking)}>Parking Lots</button>
+          <button className = {`rounded-sm inline-block h-fit w-fit ml-2 mt-1 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!grass ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
+           onClick={() => setGrass(!grass)}>Grass</button>
       </div>
     </div>
   );
