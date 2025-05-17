@@ -79,63 +79,65 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
     }
 
     return (
-        <div className="absolute z-12 bg-[url(./assets/backgroundmap2.jpg)] border-2 dark:border-[#ffca09] border-[#a48100] rounded-md w-3/10 h-5/10 shadow-lg">
-            <div className="flex-col justify-center w-full h-full dark:bg-black/80 bg-[#d6d4d4]/80 rounded-sm">
-                <div className="flex justify-center items-center h-1/8 border-b-2 dark:border-[#ffca09] border-[#a48100]">
-                    <h1 className="text-2xl dark:text-neutral-200 text-neutral-700 font-bold">Settings</h1>
-                </div>
-                <div className="flex-col justify-start h-6/8 dark:text-neutral-200 text-neutral-700 p-5">
-                    <div className="flex items-center w-full">
-                        <h1 className="text-xl mr-2">Units:</h1>
-                        <div className="flex cursor-pointer h-10 w-38 dark:bg-black/40 bg-white/70 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl">
-                            <div className={`flex justify-center items-center w-5/10 h-full border-r-2 dark:border-[#ffe68c] border-[#a48100] rounded-l-lg ${units == "imperial" ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
-                            onClick={() => setUnitsHandler("imperial")}>
-                                <h1>Imperial</h1>
-                            </div>
-                            <div className={`flex justify-center items-center w-5/10 h-full rounded-r-lg ${units == "metric" ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
-                            onClick={() => setUnitsHandler("metric")}>
-                                <h1>Metric</h1>
-                            </div>
-                        </div>
+        <div className="absolute z-12 top-0 left-0 w-full max-w-full h-full flex items-center justify-center overflow-x-hide bg-black/50">
+            <div className="absolute z-12 bg-[url(./assets/backgroundmap2.jpg)] border-2 dark:border-[#ffca09] border-[#a48100] rounded-md lg:w-3/10 h-5/10 max-sm:w-9/10 md:w-5/10 shadow-lg">
+                <div className="flex-col justify-center w-full h-full dark:bg-black/80 bg-[#d6d4d4]/80 rounded-sm">
+                    <div className="flex justify-center items-center h-1/8 border-b-2 dark:border-[#ffca09] border-[#a48100]">
+                        <h1 className="text-2xl dark:text-neutral-200 text-neutral-700 font-bold">Settings</h1>
                     </div>
-                    <div className="flex items-center w-full mt-5">
-                        <h1 className="text-xl mr-2">Walking Speed:</h1>
-                        <input className="w-1/10 h-full w-3/20 text-lg dark:text-neutral-200 text-neutral-700 p-1 border-2 dark:border-[#ffe68c] border-[#a48100] dark:placeholder-neutral-200/75 placeholder-neutral-700/75 placeholder:text-center text-center rounded-md dark:bg-black/25 bg-white/70 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="3.0" 
-                        value={newWalkSpeed} onChange={(e) => setWalkSpeedHandler(e.target.value)} onBlur={(e) => setWalkSpeedHandler(e.target.value)}></input>
-                        <h1 className="text-lg ml-2">{units == "imperial" ? "mi/hr" : "km/hr"}</h1>
-                        <div className="relative inline-block">
-                            <MdInfoOutline size={20} onClick={() => setInfo(!info)} className="ml-2 dark:text-[#ffca09] text-[#a48100] cursor-pointer hover:text-[#ffe68c]"/>
-                            {info && (
-                                <div className="flex absolute z-14 w-80 left-5 border-2 dark:border-[#ffca09] border-[#a48100] rounded-lg shardow-lg p-1 dark:bg-black bg-white">
-                                    <h1 className="dark:text-neutral-200 text-center text-neutral-700 text-sm ml-2">If you wear a smartwatch, check your health app for the most accurate mesure of this metric. 
-                                    Otherwise, calculate it yourself or leave the default setting of {units == "imperial" ? "3.0 mi/hr" : "4.8 km/hr"}</h1>
-                                    <div className="flex">
-                                        <IoCloseSharp size={15} onClick={() => setInfo(false)} className="dark:hover:text-white hover:text-black dark:bg-[#ffe68c]/30 bg-[#ffe68c]/50 dark:hover:bg-[#ffe68c]/42 hover:bg-[#ffe68c]/82 rounded-lg"/>
-                                    </div>
+                    <div className="flex-col justify-start h-6/8 dark:text-neutral-200 text-neutral-700 p-5">
+                        <div className="flex items-center w-full">
+                            <h1 className="text-xl mr-2">Units:</h1>
+                            <div className="flex cursor-pointer h-10 w-38 dark:bg-black/40 bg-white/70 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl">
+                                <div className={`flex justify-center items-center w-5/10 h-full border-r-2 dark:border-[#ffe68c] border-[#a48100] rounded-l-lg ${units == "imperial" ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
+                                onClick={() => setUnitsHandler("imperial")}>
+                                    <h1>Imperial</h1>
                                 </div>
-                            )}
-                        </div>
-                    </div>
-                    <div className="flex items-center w-full mt-5">
-                        <h1 className="text-xl mr-2">Save Route:</h1>
-                        <div className="flex cursor-pointer h-10 w-38 dark:bg-black/40 bg-white/70 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl">
-                            <div className={`flex justify-center items-center w-5/10 h-full border-r-2 dark:border-[#ffe68c] border-[#a48100] rounded-l-lg ${saveRoute ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
-                                onClick={() => setSaveRoute(true)} >
-                                <h1>Yes</h1>
-                            </div>
-                            <div className={`flex justify-center items-center w-5/10 h-full rounded-r-lg ${!saveRoute ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
-                                onClick={() => setSaveRoute(false)}>
-                                <h1>No</h1>
+                                <div className={`flex justify-center items-center w-5/10 h-full rounded-r-lg ${units == "metric" ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
+                                onClick={() => setUnitsHandler("metric")}>
+                                    <h1>Metric</h1>
+                                </div>
                             </div>
                         </div>
+                        <div className="flex items-center w-full mt-5">
+                            <h1 className="text-xl mr-2">Walking Speed:</h1>
+                            <input className="w-1/10 h-full w-3/20 text-lg dark:text-neutral-200 text-neutral-700 p-1 border-2 dark:border-[#ffe68c] border-[#a48100] dark:placeholder-neutral-200/75 placeholder-neutral-700/75 placeholder:text-center text-center rounded-md dark:bg-black/25 bg-white/70 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="3.0" 
+                            value={newWalkSpeed} onChange={(e) => setWalkSpeedHandler(e.target.value)} onBlur={(e) => setWalkSpeedHandler(e.target.value)}></input>
+                            <h1 className="text-lg ml-2">{units == "imperial" ? "mi/hr" : "km/hr"}</h1>
+                            <div className="relative inline-block">
+                                <MdInfoOutline size={20} onClick={() => setInfo(!info)} className="ml-2 dark:text-[#ffca09] text-[#a48100] cursor-pointer hover:text-[#ffe68c]"/>
+                                {info && (
+                                    <div className="flex absolute z-14 w-80 left-5 border-2 dark:border-[#ffca09] border-[#a48100] rounded-lg shardow-lg p-1 dark:bg-black bg-white">
+                                        <h1 className="dark:text-neutral-200 text-center text-neutral-700 text-sm ml-2">If you wear a smartwatch, check your health app for the most accurate mesure of this metric. 
+                                        Otherwise, calculate it yourself or leave the default setting of {units == "imperial" ? "3.0 mi/hr" : "4.8 km/hr"}</h1>
+                                        <div className="flex">
+                                            <IoCloseSharp size={15} onClick={() => setInfo(false)} className="dark:hover:text-white hover:text-black dark:bg-[#ffe68c]/30 bg-[#ffe68c]/50 dark:hover:bg-[#ffe68c]/42 hover:bg-[#ffe68c]/82 rounded-lg"/>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                        <div className="flex items-center w-full mt-5">
+                            <h1 className="text-xl mr-2">Save Route:</h1>
+                            <div className="flex cursor-pointer h-10 w-38 dark:bg-black/40 bg-white/70 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl">
+                                <div className={`flex justify-center items-center w-5/10 h-full border-r-2 dark:border-[#ffe68c] border-[#a48100] rounded-l-lg ${saveRoute ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
+                                    onClick={() => setSaveRoute(true)} >
+                                    <h1>Yes</h1>
+                                </div>
+                                <div className={`flex justify-center items-center w-5/10 h-full rounded-r-lg ${!saveRoute ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
+                                    onClick={() => setSaveRoute(false)}>
+                                    <h1>No</h1>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div className="flex w-full h-1/8 justify-center justify-self-end">
-                    <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl mr-3"
-                    onClick={save}>Save</button>
-                    <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl"
-                    onClick={cancel}>Cancel</button>
+                    <div className="flex w-full h-1/8 justify-center justify-self-end">
+                        <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl mr-3"
+                        onClick={save}>Save</button>
+                        <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl"
+                        onClick={cancel}>Cancel</button>
+                    </div>
                 </div>
             </div>
         </div>
