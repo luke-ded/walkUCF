@@ -31,11 +31,10 @@ const ItemRenderer: React.FC<ItemProps> = ({ item, addItem, triggerRerender, set
     function handleItemChange(entrance: number)
     {
         setSelectedEntrance(entrance);
-        item.selectedEntrance = entrance;
-
         setSelectedItem(item.key);
-    
-        localStorage.setItem("selectedPoint", JSON.stringify(item));
+
+        localStorage.setItem("selectedPoint", JSON.stringify({...item, selectedEntrance: entrance}));
+
         triggerRerender();
     }
 
@@ -74,10 +73,11 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
 {
     function addItem(item: Item, selectedEntrance: number)
     {
-        item.selectedEntrance = selectedEntrance;
+        console.log("item in addItem: " + item.key);
+        var newItem = { ...item, selectedEntrance: selectedEntrance };
 
         //setStops(locations);
-        setStops((prevStops: any[]) => [...(prevStops || []), item]);
+        setStops((prevStops: any[]) => [...(prevStops || []), newItem]);
     }
     
     const [searchTerm, setSearchTerm] = useState('');
@@ -97,7 +97,7 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
             <div className="mt-5 overflow-y-auto h-11/16 border-2 dark:border-[#ffca09] border-[#a48100] rounded-sm dark:bg-black/35 bg-white/65 shadow-lg">
                 <ul className="shadow divide-y dark:divide-[#ffca09] divide:[#d6d4d4] min-h-0">
                     {itemsList.filter((item) => (item.Name.toLowerCase().includes(searchTerm.toLowerCase())) || item.Abbreviation.toLowerCase().includes(searchTerm.toLowerCase())).map((item) => {
-                    return <li className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15">
+                    return <li key={item.key} className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15">
                         <ItemRenderer item={item} addItem={addItem} triggerRerender={triggerRerender} setSelectedItem={setSelectedItem} />
                     </li>;
                 })}
