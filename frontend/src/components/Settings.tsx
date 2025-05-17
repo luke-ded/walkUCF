@@ -85,8 +85,8 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                 <div className="flex-col justify-start h-6/8 dark:text-neutral-200 text-neutral-700 p-5">
                     <div className="flex items-center w-full">
                         <h1 className="text-xl mr-2">Units:</h1>
-                        <div className="flex cursor-pointer h-10 w-38 bg-black/40 border-2 border-[#ffe68c] rounded-xl">
-                            <div className={`flex justify-center items-center w-5/10 h-full border-r-2 border-[#ffe68c] rounded-l-lg ${units == "imperial" ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
+                        <div className="flex cursor-pointer h-10 w-38 dark:bg-black/40 bg-white/70 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl">
+                            <div className={`flex justify-center items-center w-5/10 h-full border-r-2 dark:border-[#ffe68c] border-[#a48100] rounded-l-lg ${units == "imperial" ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
                             onClick={() => setUnitsHandler("imperial")}>
                                 <h1>Imperial</h1>
                             </div>
@@ -102,13 +102,13 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                         value={newWalkSpeed} onChange={(e) => setWalkSpeedHandler(e.target.value)} onBlur={(e) => setWalkSpeedHandler(e.target.value)}></input>
                         <h1 className="text-lg ml-2">{units == "imperial" ? "mi/hr" : "km/hr"}</h1>
                         <div className="relative inline-block">
-                            <MdInfoOutline size={20} onClick={() => setInfo(!info)} className="ml-2 text-[#ffca09] cursor-pointer hover:text-[#ffe68c]"/>
+                            <MdInfoOutline size={20} onClick={() => setInfo(!info)} className="ml-2 dark:text-[#ffca09] text-[#a48100] cursor-pointer hover:text-[#ffe68c]"/>
                             {info && (
-                                <div className="flex absolute z-14 w-80 left-5 border-2 dark:border-[#ffca09] border-[#a48100] rounded-lg shardow-lg p-1 bg-black">
+                                <div className="flex absolute z-14 w-80 left-5 border-2 dark:border-[#ffca09] border-[#a48100] rounded-lg shardow-lg p-1 dark:bg-black bg-white">
                                     <h1 className="dark:text-neutral-200 text-center text-neutral-700 text-sm ml-2">If you wear a smartwatch, check your health app for the most accurate mesure of this metric. 
                                     Otherwise, calculate it yourself or leave the default setting of {units == "imperial" ? "3.0 mi/hr" : "4.8 km/hr"}</h1>
                                     <div className="flex">
-                                        <IoCloseSharp size={15} onClick={() => setInfo(false)} className="hover:text-white bg-[#ffe68c]/30 hover:bg-[#ffe68c]/42 rounded-lg"/>
+                                        <IoCloseSharp size={15} onClick={() => setInfo(false)} className="dark:hover:text-white hover:text-black dark:bg-[#ffe68c]/30 bg-[#ffe68c]/50 dark:hover:bg-[#ffe68c]/42 hover:bg-[#ffe68c]/82 rounded-lg"/>
                                     </div>
                                 </div>
                             )}
@@ -116,8 +116,8 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                     </div>
                     <div className="flex items-center w-full mt-5">
                         <h1 className="text-xl mr-2">Save Route:</h1>
-                        <div className="flex cursor-pointer h-10 w-38 bg-black/40 border-2 border-[#ffe68c] rounded-xl">
-                            <div className={`flex justify-center items-center w-5/10 h-full border-r-2 border-[#ffe68c] rounded-l-lg ${saveRoute ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
+                        <div className="flex cursor-pointer h-10 w-38 dark:bg-black/40 bg-white/70 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl">
+                            <div className={`flex justify-center items-center w-5/10 h-full border-r-2 dark:border-[#ffe68c] border-[#a48100] rounded-l-lg ${saveRoute ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
                                 onClick={() => setSaveRoute(true)} >
                                 <h1>Yes</h1>
                             </div>
@@ -130,9 +130,9 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                 </div>
 
                 <div className="flex w-full h-1/8 justify-center justify-self-end">
-                    <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 bg-black/40 px-2 py-1.5 border-2 border-[#ffe68c] rounded-xl mr-3"
+                    <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl mr-3"
                     onClick={save}>Save</button>
-                    <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 bg-black/40 px-2 py-1.5 border-2 border-[#ffe68c] rounded-xl"
+                    <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl"
                     onClick={cancel}>Cancel</button>
                 </div>
             </div>
