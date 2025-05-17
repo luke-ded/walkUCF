@@ -2,6 +2,7 @@ import src from "../assets/logo.png"
 import { CiDark } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { CiSettings } from "react-icons/ci";
+import { IoIosInformationCircleOutline } from "react-icons/io";
 import { useState } from "react";
 
 interface ChildProps 
@@ -56,8 +57,10 @@ const NavBar: React.FC<ChildProps> = ({ toggleAbout, about, toggleSettings, sett
                 onClick={() => settingsHandler()}>
                     <CiSettings size={26} />
                 </div>
-                <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 px-2 py-1.5 border-2 border-[#ffe68c]/30 rounded-xl"
-                onClick={() => aboutHandler()}>About</button>
+                <div className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 px-2 py-1.5 border-2 border-[#ffe68c]/30 rounded-xl"
+                onClick={() => aboutHandler()}>
+                    <IoIosInformationCircleOutline size={26} />
+                </div>
             </div>
         </div>
     );
