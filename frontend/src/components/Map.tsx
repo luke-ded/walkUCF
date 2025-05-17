@@ -39,8 +39,8 @@ const createColoredIcon = () =>
   return L.divIcon({
     className: 'colored-marker', 
     html: `
-    <div style="width: 25px; height: 40px;">
-      <img style="width:auto; height: 41px;" src=${selectImage} />
+    <div style="width: 25px; height: 40px;" aria-label="Deselect button">
+      <img style="width:auto; height: 41px;" src=${selectImage} alt="Deselect marker icon"/>
     </div>`,
     iconSize: [10, 10], 
     iconAnchor: [12, 41],
