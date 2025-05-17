@@ -288,7 +288,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
           </MapContainer>
         </div>
       </div>
-      <div className="flex w-full h-2/40 dark:bg-black/50 bg-white/50 font-bold text-md max-sm:text-xs justify-center rounded-b-md items-center">
+      <div className="flex w-full h-2/40 dark:bg-black/50 bg-white/50 font-bold text-md max-lg:text-xs justify-center rounded-b-md items-center">
           <button className = {`rounded-sm inline-block h-fit w-fit ml-2 mt-1 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!buildings ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
            onClick={() => setBuilding(!buildings)}>Through Buildings</button>
           <button className = {`rounded-sm inline-block h-fit w-fit ml-2 mt-1 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!jaywalking ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-sm text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
