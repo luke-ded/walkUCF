@@ -48,14 +48,16 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
     {  
         if(!isNaN(Number(newWalkSpeed)))
         {
-            if(val == "imperial")
+            if(val == "imperial" && units == "metric")
             {
                 setWalkSpeedHandler(String((Number(newWalkSpeed) * .621371).toFixed(1)));
             }
-            else
+            else if(val == "metric" && units == "imperial")
             {
                 setWalkSpeedHandler(String((Number(newWalkSpeed) / .621371).toFixed(1)));
             }
+            else
+                return;
         }
 
         setUnits(val);
