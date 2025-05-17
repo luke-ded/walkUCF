@@ -85,7 +85,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                     <div className="flex justify-center items-center h-1/8 border-b-2 dark:border-[#ffca09] border-[#a48100]">
                         <h1 className="text-2xl dark:text-neutral-200 text-neutral-700 font-bold">Settings</h1>
                     </div>
-                    <div className="flex-col justify-start h-6/8 dark:text-neutral-200 text-neutral-700 p-5">
+                    <div className="flex-col justify-start h-5/8 dark:text-neutral-200 text-neutral-700 p-5">
                         <div className="flex justify-center items-center w-full">
                             <h1 className="text-xl mr-2">Units:</h1>
                             <div className="flex cursor-pointer h-10 w-38 dark:bg-black/40 bg-white/70 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl">
@@ -132,7 +132,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                         </div>
                     </div>
 
-                    <div className="flex w-full h-1/8 justify-center justify-self-end">
+                    <div className="flex w-full h-2/8 justify-center items-center">
                         <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl mr-3"
                         onClick={save}>Save</button>
                         <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl"
