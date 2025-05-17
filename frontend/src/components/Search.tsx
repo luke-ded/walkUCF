@@ -69,7 +69,7 @@ const ItemRenderer: React.FC<ItemProps> = ({ item, addItem, triggerRerender, set
     );
 }
 
-const SearchBar: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
+const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
 {
     function addItem(item: Item, selectedEntrance: number)
     {
@@ -107,4 +107,4 @@ const SearchBar: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
     );
 }
 
-export default SearchBar;
+export default Search;
