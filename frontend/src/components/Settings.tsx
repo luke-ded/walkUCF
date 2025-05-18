@@ -31,11 +31,12 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
     const [saveRoute, setSaveRoute] = useState(settings.saveRoute);
     const [info, setInfo] = useState(false);
 
-    setSaveRoute(true);
     
+
     function setWalkSpeedHandler(inputWalkSpeed: string)
     {
         setNewWalkSpeed(inputWalkSpeed);
+        setSaveRoute(true);
 
         if(!isNaN(Number(newWalkSpeed)))
         {
