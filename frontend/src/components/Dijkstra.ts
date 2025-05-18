@@ -1,10 +1,10 @@
 import PriorityQueue from 'js-priority-queue';
-import pointsData from "./coords.json";
-import pathsData from "./paths.json";
-import buildingPathsData from "./buildingPaths.json";
-import jaywalkingPathsData from "./jaywalkingPaths.json";
-import parkingPathsData from "./parkingPaths.json";
-import grassPathsData from "./grassPaths.json";
+import pointsData from "../json_files/coords.json";
+import pathsData from "../json_files/paths.json";
+import buildingPathsData from "../json_files/buildingPaths.json";
+import jaywalkingPathsData from "../json_files/jaywalkingPaths.json";
+import parkingPathsData from "../json_files/parkingPaths.json";
+import grassPathsData from "../json_files/grassPaths.json";
 
 interface Point 
 {

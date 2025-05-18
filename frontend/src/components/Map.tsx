@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import deselectImage from "../assets/gold-deselect-marker-icon.png";
 import selectImage from "../assets/gold-select-marker-icon.png";
 import standardImage from "../assets/standard-marker-icon.png";
-import {createGraph, dijkstra} from '../graphing/Dijkstra.ts';
+import {createGraph, dijkstra} from './Dijkstra.ts';
 
 interface Item 
 {
@@ -124,7 +124,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
       alert("Locations inacessible to each other."); */
 
     localStorage.setItem("mapOptions", JSON.stringify([buildings, jaywalking, grass, parking]));
-    
+
     setPaths(tempPaths);
     triggerRerender();
   }, [stops, buildings, jaywalking, grass, parking]);

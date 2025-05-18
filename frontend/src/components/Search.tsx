@@ -1,5 +1,5 @@
 import { useState } from "react";
-import locations from "./locations.json";
+import locations from "../json_files/locations.json";
 
 interface Item 
 {
