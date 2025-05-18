@@ -17,28 +17,23 @@ const About: React.FC<ChildProps> = ({toggleAbout}) =>
                     <div className="flex justify-center items-center h-1/8 border-b-2 dark:border-[#ffca09] border-[#a48100]">
                         <h1 className="text-2xl dark:text-neutral-200 text-neutral-700 font-bold">About this Project</h1>
                     </div>
-                    <div className="flex-col justify-center items-center dark:text-neutral-200 text-neutral-700 text-center h-5/8 p-5">
-                        <div className="flex justify-center mt-5">
-                            <p>This project was created by&nbsp;
-                                <a href="https://www.linkedin.com/in/luke-ded" target="_blank" rel="noopener noreferrer"
-                                   className="font-bold dark:text-[#ffca09] text-[#a48100] hover:text-[#ffe68c]">
-                                   Luke</a>
-                                , a CS major at the University of Central Florida.
-                            </p>
-                        </div>
-                        <div className="flex justify-center mt-5">
-                            <p>Find the code for this project&nbsp;
+                    <div className="flex-col justify-center items-center bg-red-400 dark:text-neutral-200 text-neutral-700 text-center h-5/8 p-3">
+                        <p className="mt-5">This project was created by&nbsp;
+                            <a href="https://www.linkedin.com/in/luke-ded" target="_blank" rel="noopener noreferrer"
+                                className="font-bold dark:text-[#ffca09] text-[#a48100] hover:text-[#ffe68c]">
+                                Luke</a>
+                            , a CS major at the University of Central Florida.
+                        </p>
+                        <p className="mt-5">Find the code for this project&nbsp;
                             <a href="https://github.com/luke-ded/walkUCF" target="_blank" rel="noopener noreferrer" 
                             className="font-bold dark:text-[#ffca09] text-[#a48100] hover:text-[#ffe68c]">here</a>
                             .
-                            </p>
-                        </div>
-                        <div className="flex justify-center mt-5">
-                            <p>Report bugs, issues, or missing map elements&nbsp;
+                        </p>
+                        <p className="mt-5">Report bugs, issues, or missing map elements&nbsp;
                             <a href="https://forms.gle/XmwzZMkAw9f15xzs6" target="_blank" rel="noopener noreferrer"
                             className="font-bold dark:text-[#ffca09] text-[#a48100] hover:text-[#ffe68c]">here</a>
-                            .</p>
-                        </div>
+                            .
+                        </p>
                         <p className="mt-5">Thanks for trying <h1 className="inline font-bold">walkUCF</h1>!</p>
                     </div>
                     <div className="flex w-full h-2/8 items-center justify-center justify-self-end">
