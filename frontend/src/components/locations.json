@@ -585,8 +585,37 @@
   {"id": 28 , "lat": 28.6062133 , "lon": -81.1947862 }]
 },
 {
+  "key": "64",
+  "Name": "Tower 1",
+  "Abbreviation": "T1",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 28.6080329, "lon": -81.1983300, "id": 5001725299},
+  {"lat": 28.6081137, "lon": -81.1985360, "id": 12150621476},
+  {"lat": 28.6075637, "lon": -81.1982540, "id": 12150621494}]
+},
+{
+  "key": "65",
+  "Name": "Tower 2",
+  "Abbreviation": "T2",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 28.6096158, "lon": -81.1974200, "id": 5001725285},
+  {"lat": 28.6096959, "lon": -81.1976610, "id": 12150621482}]
+},
+{
+  "key": "60",
+  "Name": "Tower 3",
+  "Abbreviation": "T3",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 28.6066099, "lon": -81.1964100, "id": 1701655570},
+  {"lat": 28.6067400, "lon": -81.1966620, "id": 21},
+  {"lat": 28.6061529, "lon": -81.1964160, "id": 5001725302}]
+},
+{
   "key": "59",
-  "Name": "Tower IV",
+  "Name": "Tower 4",
   "Abbreviation": "T4",
   "selectedEntrance": 1,
   "Entrances": [
@@ -594,16 +623,6 @@
   {"lat": 28.6057713, "lon": -81.1962410, "id": 5001725305},
   {"lat": 28.6059579, "lon": -81.1953730, "id": 6314866400},
   {"id": 30 , "lat": 28.6053639 , "lon": -81.1957066 }]
-},
-{
-  "key": "60",
-  "Name": "Tower III",
-  "Abbreviation": "T3",
-  "selectedEntrance": 1,
-  "Entrances": [
-  {"lat": 28.6066099, "lon": -81.1964100, "id": 1701655570},
-  {"lat": 28.6067400, "lon": -81.1966620, "id": 21},
-  {"lat": 28.6061529, "lon": -81.1964160, "id": 5001725302}]
 },
 {
   "key": "61",
@@ -630,25 +649,6 @@
   "selectedEntrance": 1,
   "Entrances": [
   {"lat": 28.6068425, "lon": -81.1975400, "id": 12653691704}]
-},
-{
-  "key": "64",
-  "Name": "Tower I",
-  "Abbreviation": "T1",
-  "selectedEntrance": 1,
-  "Entrances": [
-  {"lat": 28.6080329, "lon": -81.1983300, "id": 5001725299},
-  {"lat": 28.6081137, "lon": -81.1985360, "id": 12150621476},
-  {"lat": 28.6075637, "lon": -81.1982540, "id": 12150621494}]
-},
-{
-  "key": "65",
-  "Name": "Tower II",
-  "Abbreviation": "T2",
-  "selectedEntrance": 1,
-  "Entrances": [
-  {"lat": 28.6096158, "lon": -81.1974200, "id": 5001725285},
-  {"lat": 28.6096959, "lon": -81.1976610, "id": 12150621482}]
 },
 {
   "key": "66",
