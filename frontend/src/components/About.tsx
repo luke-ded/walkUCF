@@ -17,7 +17,7 @@ const About: React.FC<ChildProps> = ({toggleAbout}) =>
                     <div className="flex justify-center items-center h-1/8 border-b-2 dark:border-[#ffca09] border-[#a48100]">
                         <h1 className="text-2xl dark:text-neutral-200 text-neutral-700 font-bold">About this Project</h1>
                     </div>
-                    <div className="flex-col justify-center items-center text-md dark:text-neutral-200 text-neutral-700 text-center h-5/8 p-3">
+                    <div className="flex-col justify-center items-center max-sm:text-sm text-md dark:text-neutral-200 text-neutral-700 text-center h-5/8 p-3">
                         <p>This project was created by&nbsp;
                             <a href="https://www.linkedin.com/in/luke-ded" target="_blank" rel="noopener noreferrer"
                                 className="font-bold dark:text-[#ffca09] text-[#a48100] hover:text-[#ffe68c]">
