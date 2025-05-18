@@ -34,7 +34,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
     const renderItem = (item: Item): React.ReactNode => 
     {
         return (
-            <div className="flex-col">
+            <div className="flex-col w-full h-full max-md:px-1">
                 <div className="flex justify-between items-center">
                         <div className="flex justify-start max-w-7/10 items-center">
                             <span className="dark:text-neutral-200 text-neutral-700 font-semibold text-md">{item.Name}</span>
