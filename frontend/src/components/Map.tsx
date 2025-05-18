@@ -5,6 +5,7 @@ import 'leaflet/dist/leaflet.css';
 import { useState, useEffect } from 'react';
 import deselectImage from "../assets/gold-deselect-marker-icon.png";
 import selectImage from "../assets/gold-select-marker-icon.png";
+import standardImage from "../assets/standard-marker-icon.png";
 import {createGraph, dijkstra} from '../graphing/Dijkstra.ts';
 
 interface Item 
@@ -34,13 +35,27 @@ interface ChildProps
   stops: any [];
 }
 
-const createColoredIcon = () => 
+const createSelectIcon = () => 
 {
   return L.divIcon({
     className: 'colored-marker', 
     html: `
     <div style="width: 25px; height: 40px;" aria-label="Deselect button">
       <img style="width:auto; height: 41px;" src=${selectImage} alt="Deselect marker icon"/>
+    </div>`,
+    iconSize: [10, 10], 
+    iconAnchor: [12, 41],
+    popupAnchor: [0, -10]
+  });
+};
+
+const createStandardIcon = () => 
+{
+  return L.divIcon({
+    className: 'standard-marker', 
+    html: `
+    <div style="width: 25px; height: 40px;" aria-label="Deselect button">
+      <img style="width:auto; height: 41px;" src=${standardImage} alt="Deselect marker icon"/>
     </div>`,
     iconSize: [10, 10], 
     iconAnchor: [12, 41],
@@ -60,7 +75,8 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
   const [selectedPoint, setSelectedPoint] = useState(initPoint);
   const [paths, setPaths] = useState<number[][]>([]);
   
-  const customIcon = createColoredIcon();
+  const selectIcon = createSelectIcon();
+  const standardIcon = createStandardIcon();
 
   var data = createGraph(buildings, jaywalking, grass, parking);
   var pointMap = data.pointMap;
@@ -152,19 +168,19 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
 
     if(stopPosition == 1)
       return(
-        <Marker position={pointPosition}>
+        <Marker position={pointPosition} icon={standardIcon}>
           <Popup closeButton={false}>Start: {point.Name}</Popup>
         </Marker>
       );
     else if(stopPosition == stops.length)
       return(
-        <Marker position={pointPosition}>
+        <Marker position={pointPosition} icon={standardIcon}>
           <Popup>End: {point.Name}</Popup>
         </Marker>
       );
     else
       return(
-        <Marker position={pointPosition}>
+        <Marker position={pointPosition} icon={standardIcon}>
           <Popup>Stop {stopPosition}: {point.Name}</Popup>
         </Marker>
       );
@@ -252,7 +268,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
-            <Marker position={selectedPoint} icon={customIcon} />
+            <Marker position={selectedPoint} icon={selectIcon} />
           )}
           {props.items.map((point) => {
           return <div>{props.renderer(point)}</div>;
