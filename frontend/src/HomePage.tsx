@@ -46,7 +46,7 @@ function HomePage()
                     <Map stops={stops!} triggerRerender={triggerRerender}/>
                 </div>
                 {about && (<About toggleAbout={toggleAbout}/>)}
-                {settings && (<Settings toggleSettings={toggleSettings} settings={settings}/>)}
+                {settings && (<Settings triggerRerender={triggerRerender} toggleSettings={toggleSettings} settings={settings}/>)}
             </div>
         </div>
     );

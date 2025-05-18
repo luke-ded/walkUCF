@@ -9,7 +9,7 @@ interface ChildProps
     settings: any;
 }
 
-const Settings: React.FC<ChildProps> = ({toggleSettings, settings}) =>
+const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settings}) =>
 {
     var settingsData = localStorage.getItem("settings");
     if(settingsData == null || settingsData == undefined)
