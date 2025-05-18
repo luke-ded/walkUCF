@@ -251,14 +251,24 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
     ]
   ];
   
+  var graphData = JSON.parse(localStorage.getItem("graphData")!);
+  var settings = JSON.parse(localStorage.getItem("settings")!);
+
   return (
     <div className="w-full h-full">
       <div className="relative flex w-full h-37/40 max-sm:h-35/40 self-start border-b-2 dark:border-[#ffca09] border-[#a48100]">
-        <div id="map" className="h-full w-full rounded-t-sm">
+        <div id="map" className="relative flex-col h-full w-full rounded-t-sm">
           <div className="flex items-center justify-center absolute z-10 mt-20 ml-[11px] bg-black/20 text-black rounded-[4px] w-[33px] h-[33px] text-[18px] font-bold cursor-pointer"
           onClick={handleDeselect}>
             <div className="flex items-center justify-center w-[29px] h-[29px] rounded-[2px] bg-[#ffffff] hover:bg-[#f4f4f4]">
               <img className="h-17/20 w-auto" src={deselectImage} alt="Deselect marker icon"></img>
+            </div>
+          </div>
+          <div className="flex items-center justify-center absolute z-10 top-0 right-0 bg-black/55 text-black rounded-[4px] p-1 pl-3 rounded-tr-sm rounded-bl-md rounded-tl-none rounded-br-none border-b-2 border-l-2 dark:border-[#ffca09] border-[#a48100]">
+             <div className="flex mr-2 text-neutral-100 text-md max-sm:text-sm">
+                <h1>{settings.walkSpeed != 0 && graphData.distanceMi != null && graphData != undefined && settings.walkSpeed != null? (graphData?.distanceMi.toFixed(2) / (settings.walkSpeed/60)).toFixed(1) : "0"} min&nbsp;</h1> 
+                <h1 className="text-white font-bold">|</h1>
+                <h1>&nbsp;{settings.units == "imperial" ? graphData?.distanceMi.toFixed(2) + " mi": graphData?.distanceKm.toFixed(2) + " km"}</h1>
             </div>
           </div>
           <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
