@@ -31,6 +31,8 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
     const [saveRoute, setSaveRoute] = useState(settings.saveRoute);
     const [info, setInfo] = useState(false);
 
+    setSaveRoute(true);
+    
     function setWalkSpeedHandler(inputWalkSpeed: string)
     {
         setNewWalkSpeed(inputWalkSpeed);
@@ -117,7 +119,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                                 )}
                             </div>
                         </div>
-                        <div className="flex justify-center items-center w-full mt-5">
+                        {/* <div className="flex justify-center items-center w-full mt-5">
                             <h1 className="text-xl mr-2">Save Route:</h1>
                             <div className="flex cursor-pointer h-10 w-38 dark:bg-black/40 bg-white/70 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl">
                                 <div className={`flex justify-center items-center w-5/10 h-full border-r-2 dark:border-[#ffe68c] border-[#a48100] rounded-l-lg ${saveRoute ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
@@ -129,7 +131,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                                     <h1>No</h1>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="flex w-full h-2/8 justify-center items-center">
