@@ -148,7 +148,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
         <div className="flex-col justify-start mt-5 max-lg:mt-7 h-12/16 max-lg:h-10/16 max-h-11/16 w-full border-2 dark:border-[#ffca09] border-[#a48100] dark:bg-black/40 bg-white/60 rounded-sm shadow-lg">
             <div className="flex items-center justify-between h-3/32 border-b-2 dark:border-[#ffca09] border-[#a48100]">
                 <h1 className="ml-2 text-xl dark:text-neutral-200 text-neutral-700 font-bold">Route</h1>
-                <div className="flex mr-2 w-fit bg-red-400 items-center justify-end dark:text-gray-300 text-gray-700 text-md">
+                <div className="flex mr-2 w-fit items-center justify-end dark:text-gray-300 text-gray-700 text-md">
                     <h1>{settings.walkSpeed != 0 && graphData.distanceMi != null && graphData != undefined && settings.walkSpeed != null? (graphData?.distanceMi.toFixed(2) / (settings.walkSpeed/60)).toFixed(1) : "0"} min&nbsp;</h1> 
                     <h1 className="dark:text-neutral-100 text-neutral-700 font-bold">|</h1>
                     <h1>&nbsp;{settings.units == "imperial" ? graphData?.distanceMi.toFixed(2) + " mi": graphData?.distanceKm.toFixed(2) + " km"}</h1> {/* Add error checking for this */}
