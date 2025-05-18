@@ -79,7 +79,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
     }
 
     return (
-        <div className="absolute z-12 top-0 left-0 w-full max-w-full h-full flex items-center justify-center bg-black/50">
+        <div className="absolute z-12 top-1/14 left-0 w-full max-w-full h-13/14 flex items-center justify-center bg-black/50">
             <div className="absolute z-12 bg-[url(./assets/backgroundmap2.jpg)] border-2 dark:border-[#ffca09] border-[#a48100] rounded-md lg:w-3/10 h-5/10 max-sm:w-9/10 md:w-5/10 shadow-lg">
                 <div className="flex-col justify-center w-full h-full dark:bg-black/80 bg-[#d6d4d4]/80 rounded-sm">
                     <div className="flex justify-center items-center h-1/8 border-b-2 dark:border-[#ffca09] border-[#a48100]">
