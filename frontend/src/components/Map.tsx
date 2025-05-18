@@ -304,14 +304,14 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
           </MapContainer>
         </div>
       </div>
-      <div className="flex w-full h-3/40 max-sm:h-5/40 dark:bg-black/50 bg-white/50 font-bold text-md max-lg:text-sm justify-center rounded-b-sm items-center">
-          <button className = {`rounded-sm inline-block h-fit w-fit ml-2 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!buildings ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
+      <div className="flex justify-center w-full h-3/40 max-sm:h-5/40 dark:bg-black/50 bg-white/50 font-bold text-md max-xl:text-sm rounded-b-sm items-center">
+          <button className = {`rounded-sm inline-block h-8/10 w-fit ml-[3%] px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!buildings ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
            onClick={() => setBuilding(!buildings)}>Buildings</button>
-          <button className = {`rounded-sm inline-block h-fit w-fit ml-2 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!jaywalking ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
+          <button className = {`rounded-sm inline-block h-8/10 w-fit ml-[3%] px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!jaywalking ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
            onClick={() => setJaywalking(!jaywalking)}>Jaywalking</button>
-          <button className = {`rounded-sm inline-block h-fit w-fit ml-2 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!parking ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
+          <button className = {`rounded-sm inline-block h-8/10 w-fit ml-[3%] px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!parking ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
            onClick={() => setParking(!parking)}>Parking Lots</button>
-          <button className = {`rounded-sm inline-block h-fit w-fit ml-2 mr-2 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!grass ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
+          <button className = {`rounded-sm inline-block h-8/10 w-fit ml-[3%] mr-[3%] px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!grass ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
            onClick={() => setGrass(!grass)}>Grass</button>
       </div>
     </div>
