@@ -128,6 +128,15 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
         triggerRerender();
     }
 
+    function clearList()
+    {
+        const newItemsList: Item[] = [];
+
+        localStorage.setItem("graphData", JSON.stringify({ distanceMi: 0, distanceKm: 0 }));
+        
+        setStops(newItemsList);
+    }
+
     var props: PropsType = {
         items: itemsList,
         renderer: renderItem
@@ -139,10 +148,12 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
         <div className="flex-col justify-start mt-5 max-lg:mt-7 h-12/16 max-lg:h-10/16 max-h-11/16 w-full border-2 dark:border-[#ffca09] border-[#a48100] dark:bg-black/40 bg-white/60 rounded-sm shadow-lg">
             <div className="flex items-center justify-between h-3/32 border-b-2 dark:border-[#ffca09] border-[#a48100]">
                 <h1 className="ml-2 text-xl dark:text-neutral-200 text-neutral-700 font-bold">Route</h1>
-                <div className="flex mr-2 dark:text-gray-300 text-gray-700 text-md">
+                <div className="flex mr-2 w-55 items-center justify-end dark:text-gray-300 text-gray-700 text-md">
                     <h1>{settings.walkSpeed != 0 && graphData.distanceMi != null && graphData != undefined && settings.walkSpeed != null? (graphData?.distanceMi.toFixed(2) / (settings.walkSpeed/60)).toFixed(1) : "0"} min&nbsp;</h1> 
                     <h1 className="dark:text-neutral-100 text-neutral-700 font-bold">|</h1>
                     <h1>&nbsp;{settings.units == "imperial" ? graphData?.distanceMi.toFixed(2) + " mi": graphData?.distanceKm.toFixed(2) + " km"}</h1> {/* Add error checking for this */}
+                    <button className = "rounded-sm inline-block h-8/10 w-fit ml-3 mr-1 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100] dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer"
+                       onClick={() => clearList()}>Clear</button>
                 </div>
             </div>
             <div className="overflow-y-auto h-29/32 w-full">
