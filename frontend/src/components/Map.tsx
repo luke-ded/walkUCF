@@ -66,12 +66,16 @@ const createStandardIcon = () =>
 const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
 {
   var initPoint : LatLngTuple = [10, 10];
+  var initVals = [true, false, false, false];
 
-
-  const [buildings, setBuilding] = useState(true);
-  const [jaywalking, setJaywalking] = useState(false);
-  const [grass, setGrass] = useState(false);
-  const [parking, setParking] = useState(false);
+  var initData = localStorage.getItem("mapOptions");
+  if(initData != undefined)
+    initVals = JSON.parse(initData);
+    
+  const [buildings, setBuilding] = useState(initVals[0]);
+  const [jaywalking, setJaywalking] = useState(initVals[1]);
+  const [grass, setGrass] = useState(initVals[2]);
+  const [parking, setParking] = useState(initVals[3]);
   const [selectedPoint, setSelectedPoint] = useState(initPoint);
   const [paths, setPaths] = useState<number[][]>([]);
   
@@ -119,6 +123,8 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
     /* if(result.path.length == 0)
       alert("Locations inacessible to each other."); */
 
+    localStorage.setItem("mapOptions", JSON.stringify([buildings, jaywalking, grass, parking]));
+    
     setPaths(tempPaths);
     triggerRerender();
   }, [stops, buildings, jaywalking, grass, parking]);
