@@ -36447,7 +36447,7 @@
   <nd ref="6083840331"/>
   <nd ref="6083840332"/>
   <nd ref="6083840333"/>
-  <tag k="highway" v="service"/>
+  <tag k="highway" v="footway"/>
  </way>
  <way id="674296704" visible="true" version="1" changeset="67746623" timestamp="2019-03-03T20:28:09Z" user="_jcaruso" uid="8148904">
   <nd ref="6314866236"/>
@@ -43628,7 +43628,7 @@
   <nd ref="7983482470"/>
   <nd ref="7983482471"/>
   <nd ref="7983482472"/>
-  <tag k="highway" v="service"/>
+  <tag k="highway" v="footway"/>
  </way>
  <way id="891852555" visible="true" version="5" changeset="150308561" timestamp="2024-04-21T15:53:22Z" user="Atalanttore" uid="291453">
   <nd ref="8289169858"/>
