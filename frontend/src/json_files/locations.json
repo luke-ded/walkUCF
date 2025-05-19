@@ -60,6 +60,16 @@
   {"lat": 28.6005652, "lon": -81.2003100, "id": 7783295145}]
 },
 {
+  "key": "7",
+  "Name": "John T. Washington Center",
+  "Abbreviation": "JTWC",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 3095577371 , "lat": 28.6011909 , "lon": -81.2012800 },
+  {"id": 3095577372 , "lat": 28.6008500 , "lon": -81.2020760 },
+  {"id": 7743185633 , "lat": 28.6008195 , "lon": -81.2017580 }]
+},
+{
   "key": "8",
   "Name": "Parking Garage D",
   "Abbreviation": "PGD",
@@ -253,12 +263,48 @@
   {"lat": 28.5986628, "lon": -81.1989710, "id": 12653691711}]
 },
 {
+  "key": "26",
+  "Name": "Center for Multilingual Multicultural Studies",
+  "Abbreviation": "CMMS",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 8932946959 , "lat": 28.5951567 , "lon": -81.2026370 },
+  {"id": 248 , "lat": 28.5949124 , "lon": -81.2023269 },
+  {"id": 243 , "lat": 28.5947750 , "lon": -81.2025672 }]
+},
+{
+  "key": "27",
+  "Name": "Citrus Hall",
+  "Abbreviation": "CIT",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 3172712700 , "lat": 28.5985453 , "lon": -81.1984980 }]
+},
+{
   "key": "28",
   "Name": "Counseling and Psychological Services",
   "Abbreviation": "CAPS",
   "selectedEntrance": 1,
   "Entrances": [
   {"lat": 28.5993172, "lon": -81.1989400, "id": 3151833029}]
+},
+{
+  "key": "29",
+  "Name": "Creative School for Children",
+  "Abbreviation": "CSC",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 8922111580 , "lat": 28.5970103 , "lon": -81.1977520 }]
+},
+{
+  "key": "30",
+  "Name": "Early Childhood Center",
+  "Abbreviation": "ECC",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 4267311917 , "lat": 28.5964228 , "lon": -81.1979330 },
+  {"id": 8922190301 , "lat": 28.5965783 , "lon": -81.1976490 },
+  {"id": 8922223717 , "lat": 28.5964761 , "lon": -81.1976470 }]
 },
 {
   "key": "31",
@@ -279,6 +325,23 @@
   {"lat": 28.5991584, "lon": -81.1991610, "id": 3148137856}]
 },
 {
+  "key": "33",
+  "Name": "Housing Administration",
+  "Abbreviation": "HAB",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 261 , "lat": 28.5974171 , "lon": -81.1984339 },
+  {"id": 3172712666 , "lat": 28.5975944 , "lon": -81.1986180 }]
+},
+{
+  "key": "34",
+  "Name": "Orange Hall",
+  "Abbreviation": "ORG",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 1719808134 , "lat": 28.5980682 , "lon": -81.1987500 }]
+},
+{
   "key": "35",
   "Name": "Parking Garage B",
   "Abbreviation": "PGB",
@@ -289,6 +352,17 @@
   {"id": 64 , "lat": 28.5971681 , "lon": -81.2010973 },
   {"id": 3137058031 , "lat": 28.5964362 , "lon": -81.2009460 },
   {"id": 3137058032 , "lat": 28.5966312 , "lon": -81.1996760 }]
+},
+{
+  "key": "36",
+  "Name": "Parking Garage G",
+  "Abbreviation": "PGG",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 240 , "lat": 28.6083640 , "lon": -81.1976152 },
+  {"id": 12150621466 , "lat": 28.6089474 , "lon": -81.1972320 },
+  {"id": 12150621486 , "lat": 28.6087299 , "lon": -81.1980850 },
+  {"id": 12150621479 , "lat": 28.6091298 , "lon": -81.1979180 }]
 },
 {
   "key": "37",
@@ -436,6 +510,23 @@
   {"lat": 28.5989456, "lon": -81.2012380, "id": 3151833018}]
 },
 {
+  "key": "50",
+  "Name": "UCF Police Department",
+  "Abbreviation": "UPD",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 258 , "lat": 28.5922252 , "lon": -81.1960638 },
+  {"id": 8921970687 , "lat": 28.5919474 , "lon": -81.1956070 }]
+},
+{
+  "key": "51",
+  "Name": "Laboratory & Environmental Support",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 3104859844 , "lat": 28.5919516 , "lon": -81.1978500 }]
+},
+{
   "key": "52",
   "Name": "Physical Sciences Building",
   "Abbreviation": "PSB",
@@ -472,6 +563,15 @@
   {"lat": 28.5989002, "lon": -81.2024150, "id": 3137213554}]
 },
 {
+  "key": "56",
+  "Name": "Facilities and Safety",
+  "Abbreviation": "FSC",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 8921970677 , "lat": 28.5916451 , "lon": -81.1962650 },
+  {"id": 8921970671 , "lat": 28.5912203 , "lon": -81.1959720 }]
+},
+{
   "key": "57",
   "Name": "Nicholson Fieldhouse",
   "Abbreviation": "NFH",
@@ -496,7 +596,8 @@
   "Entrances": [
   {"lat": 28.6080329, "lon": -81.1983300, "id": 5001725299},
   {"lat": 28.6081137, "lon": -81.1985360, "id": 12150621476},
-  {"lat": 28.6075637, "lon": -81.1982540, "id": 12150621494}]
+  {"lat": 28.6075637, "lon": -81.1982540, "id": 12150621494},
+  {"id": 238 , "lat": 28.6082752 , "lon": -81.1978471 }]
 },
 {
   "key": "65",
@@ -505,7 +606,9 @@
   "selectedEntrance": 1,
   "Entrances": [
   {"lat": 28.6096158, "lon": -81.1974200, "id": 5001725285},
-  {"lat": 28.6096959, "lon": -81.1976610, "id": 12150621482}]
+  {"lat": 28.6096959, "lon": -81.1976610, "id": 12150621482},
+  {"id": 236 , "lat": 28.6091459 , "lon": -81.1973340 },
+  {"id": 234 , "lat": 28.6098507 , "lon": -81.1969239 }]
 },
 {
   "key": "60",
@@ -515,7 +618,8 @@
   "Entrances": [
   {"lat": 28.6066099, "lon": -81.1964100, "id": 1701655570},
   {"lat": 28.6067400, "lon": -81.1966620, "id": 21},
-  {"lat": 28.6061529, "lon": -81.1964160, "id": 5001725302}]
+  {"lat": 28.6061529, "lon": -81.1964160, "id": 5001725302},
+  {"id": 233 , "lat": 28.6068335 , "lon": -81.1959540 }]
 },
 {
   "key": "59",
@@ -563,7 +667,17 @@
   "Abbreviation": "BYC",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 28.5954709, "lon": -81.2025800, "id": 12653691710}]
+  {"id": 252 , "lat": 28.5955480 , "lon": -81.2027133 },
+  {"lat": 28.5954709, "lon": -81.2025800, "id": 12653691710},
+  {"id": 8932946955 , "lat": 28.5953115 , "lon": -81.2027130 }]
+},
+{
+  "key": "68",
+  "Name": "Burnett House",
+  "Abbreviation": "BH",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 254 , "lat": 28.5961998 , "lon": -81.2049442 }]
 },
 {
   "key": "69",
@@ -571,7 +685,8 @@
   "Abbreviation": "ALUM",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 28.6059293, "lon": -81.1984860, "id": 3456746312}]
+  {"lat": 28.6059293, "lon": -81.1984860, "id": 3456746312},
+  {"id": 241 , "lat": 28.6061233 , "lon": -81.1986176 }]
 },
 {
   "key": "70",
@@ -632,12 +747,108 @@
   {"lat": 28.6053355, "lon": -81.2058970, "id": 12653585897}]
 },
 {
+  "key": "77",
+  "Name": "Hercules 109",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 1, "lon": 1, "id": -1}]
+},
+{
   "key": "78",
   "Name": "Nike 103",
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 28.5946484, "lon": -81.1979160, "id": 12653691709}]
+  {"lat": 28.5946484, "lon": -81.1979160, "id": 12653691709},
+  {"id": 9273615201 , "lat": 28.5947962 , "lon": -81.1976610 },
+  {"id": 9273615183 , "lat": 28.5946526 , "lon": -81.1975410 },
+  {"id": 276 , "lat": 28.5943289 , "lon": -81.1975892 }]
+},
+{
+  "key": "79",
+  "Name": "Hercules 110",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 1, "lon": 1, "id": -1}]
+},
+{
+  "key": "80",
+  "Name": "Hercules 108",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 1, "lon": 1, "id": -1}]
+},
+{
+  "key": "81",
+  "Name": "Hercules 113",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 1, "lon": 1, "id": -1}]
+},
+{
+  "key": "82",
+  "Name": "Nike 106",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 2762673758 , "lat": 28.5939856 , "lon": -81.1976350 },
+  {"id": 277 , "lat": 28.5940761 , "lon": -81.1974335 },
+  {"id": 278 , "lat": 28.5940617 , "lon": -81.1972321 },
+  {"id": 281 , "lat": 28.5940365 , "lon": -81.1970331 }]
+},
+{
+  "key": "83",
+  "Name": "Hercules 111",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 1, "lon": 1, "id": -1}]
+},
+{
+  "key": "84",
+  "Name": "Lake Claire Mail Center",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 100 , "lat": 28.6044243 , "lon": -81.2033300 }]
+},
+{
+  "key": "85",
+  "Name": "Hercules 25",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 2762673631 , "lat": 28.5933921 , "lon": -81.2007060 },
+  {"id": 2762673633 , "lat": 28.5932838 , "lon": -81.2006050 },
+  {"id": 8922111622 , "lat": 28.5934755 , "lon": -81.2004150 }]
+},
+{
+  "key": "86",
+  "Name": "Hercules 114",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 2762673678 , "lat": 28.5941669 , "lon": -81.2005480 }]
+},
+{
+  "key": "87",
+  "Name": "Hercules 112",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 2762673642 , "lat": 28.5935358 , "lon": -81.2000040 }]
+},
+{
+  "key": "88",
+  "Name": "Nike 107",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 2762673769 , "lat": 28.5942070 , "lon": -81.1971850 }]
 },
 {
   "key": "89",
@@ -825,6 +1036,14 @@
   {"lat": 28.6046873, "lon": -81.2031350, "id": 1719808872}]
 },
 {
+  "key": "113",
+  "Name": "Recycling Center",
+  "Abbreviation": "RCS",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 255 , "lat": 28.5916733 , "lon": -81.1979563 }]
+},
+{
   "key": "114",
   "Name": "Arboretum Office",
   "Abbreviation": "ARB",
@@ -839,6 +1058,32 @@
   "selectedEntrance": 1,
   "Entrances": [
   {"id": 8932946951 , "lat": 28.5968998 , "lon": -81.2030640 }]
+},
+{
+  "key": "116",
+  "Name": "Leisure Pool",
+  "Abbreviation": "LPS",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 12479573270 , "lat": 28.5957609 , "lon": -81.1982070 }]
+},
+{
+  "key": "117",
+  "Name": "Libra Garage",
+  "Abbreviation": "LG",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 259 , "lat": 28.5964177 , "lon": -81.1970001 },
+  {"id": 260 , "lat": 28.5956163 , "lon": -81.1963715 },
+  {"id": 8925265164 , "lat": 28.5954988 , "lon": -81.1968690 }]
+},
+{
+  "key": "118",
+  "Name": "Emergency Operation Center",
+  "Abbreviation": "EOC",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 257 , "lat": 28.5924861 , "lon": -81.1966247 }]
 },
 {
   "key": "119",
@@ -896,13 +1141,22 @@
   {"lat": 28.6002964, "lon": -81.2005410, "id": 3147766675}]
 },
 {
+  "key": "125",
+  "Name": "Topper's Creamery",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 3148137827 , "lat": 28.5993228 , "lon": -81.2013550 }]
+},
+{
   "key": "126",
   "Name": "UCF Global",
   "Abbreviation": "GB",
   "selectedEntrance": 1,
   "Entrances": [
   {"lat": 28.6045961, "lon": -81.1979870, "id": 12653691706},
-  {"lat": 28.6048854, "lon": -81.1981290, "id": 12653691705}]
+  {"lat": 28.6048854, "lon": -81.1981290, "id": 12653691705},
+  {"id": 6438179452 , "lat": 28.6044590 , "lon": -81.1976110 }]
 },
 {
   "key": "127",
@@ -929,6 +1183,30 @@
   {"lat": 28.6037681, "lon": -81.2066490, "id": 12653585893}]
 },
 {
+  "key": "130",
+  "Name": "Neptune 158",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 1, "lon": 1, "id": -1}]
+},
+{
+  "key": "131",
+  "Name": "Neptune 157",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 1, "lon": 1, "id": -1}]
+},
+{
+  "key": "132",
+  "Name": "Neptune 156",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 1, "lon": 1, "id": -1}]
+},
+{
   "key": "133",
   "Name": "Trevor Colbourn Hall",
   "Abbreviation": "TCH",
@@ -938,6 +1216,15 @@
   {"id": 45 , "lat": 28.6017820 , "lon": -81.2037969 },
   {"id": 46 , "lat": 28.6016136 , "lon": -81.2030526 },
   {"id": 47 , "lat": 28.6018188 , "lon": -81.2026852 }]
+},
+{
+  "key": "134",
+  "Name": "Neptune 159",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 279 , "lat": 28.5938202 , "lon": -81.1972421 },
+  {"id": 8925265140 , "lat": 28.5937108 , "lon": -81.1968610 }]
 },
 {
   "key": "135",
@@ -994,6 +1281,14 @@
   "selectedEntrance": 1,
   "Entrances": [
   {"lat": 28.5945240, "lon": -81.1982340, "id": 12634099699}]
+},
+{
+  "key": "141",
+  "Name": "Nike 105",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 275 , "lat": 28.5948967 , "lon": -81.1970168 }]
 },
 {
   "key": "142",
@@ -1218,7 +1513,7 @@
 },
 {
   "key": "167",
-  "Name": "Dominos at Knights Plaza",
+  "Name": "Domino's at Knights Plaza",
   "selectedEntrance": 1,
   "Abbreviation": "N/A",
   "Entrances": [
@@ -1265,4 +1560,215 @@
   {"id": 216 , "lat": 28.5949260 , "lon": -81.2004449 },
   {"id": 217 , "lat": 28.5948030 , "lon": -81.2004437 },
   {"id": 220 , "lat": 28.5947168 , "lon": -81.2009356 }]
+},
+{
+  "key": "173",
+  "Name": "Apollo & Libra Mail Center",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 265 , "lat": 28.5983510 , "lon": -81.1998319 }]
+},
+{
+  "key": "174",
+  "Name": "Live Oak Ballroom",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 60 , "lat": 28.5978578 , "lon": -81.2004460 }]
+},
+{
+  "key": "175",
+  "Name": "Pride Commons",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 3137057788 , "lat": 28.5977922 , "lon": -81.1996980 }]
+},
+{
+  "key": "176",
+  "Name": "Barnie's Coffee & tea Co.",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 3128392703 , "lat": 28.6001152 , "lon": -81.2016300 }]
+},
+{
+  "key": "177",
+  "Name": "Foxtail Coffee Co. at JTWC",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 7743185634 , "lat": 28.6009530 , "lon": -81.2018360 },
+  {"id": 266 , "lat": 28.6010101 , "lon": -81.2021720 }]
+},
+{
+  "key": "178",
+  "Name": "Fairwinds Credit Union",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 7743185634 , "lat": 28.6009530 , "lon": -81.2018360 }]
+},
+{
+  "key": "179",
+  "Name": "The SPOT",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 7743185634 , "lat": 28.6009530 , "lon": -81.2018360 }]
+},
+{
+  "key": "180",
+  "Name": "The Skate Shop",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 7743185634 , "lat": 28.6009530 , "lon": -81.2018360 }]
+},
+{
+  "key": "181",
+  "Name": "Addition Financial",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 268 , "lat": 28.6010112 , "lon": -81.2017053 }]
+},
+{
+  "key": "182",
+  "Name": "Domino's at JTWC",
+  "selectedEntrance": 1,
+  "Abbreviation": "N/A",
+  "Entrances": [
+  {"id": 3095577371 , "lat": 28.6011909 , "lon": -81.2012800 }]
+},
+{
+  "key": "183",
+  "Name": "UCF Police at Student Union",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 28.6017709, "lon": -81.2010740, "id": 3420036606},
+  {"lat": 28.6022309, "lon": -81.2002570, "id": 2188622665},
+  {"lat": 28.6017185, "lon": -81.2002340, "id": 7745913387},
+  {"lat": 28.6015780, "lon": -81.2003680, "id": 7745913388},
+  {"lat": 28.6015813, "lon": -81.2005050, "id": 7745911631},
+  {"lat": 28.6017759, "lon": -81.2005370, "id": 3095577369},
+  {"lat": 28.6016897, "lon": -81.2008850, "id": 3420036612},
+  {"lat": 28.6022783, "lon": -81.2007620, "id": 3420036605}]
+},
+{
+  "key": "184",
+  "Name": "Student Union Food Court: Halal Shack, Qdoba, Panda Express, Huey Magoo's, Which Which?, Bento Sushi, Purple Ocean Superfood Bar",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 28.6022309, "lon": -81.2002570, "id": 2188622665},
+  {"lat": 28.6017709, "lon": -81.2010740, "id": 3420036606},
+  {"lat": 28.6017185, "lon": -81.2002340, "id": 7745913387},
+  {"lat": 28.6015780, "lon": -81.2003680, "id": 7745913388},
+  {"lat": 28.6015813, "lon": -81.2005050, "id": 7745911631},
+  {"lat": 28.6017759, "lon": -81.2005370, "id": 3095577369},
+  {"lat": 28.6016897, "lon": -81.2008850, "id": 3420036612},
+  {"lat": 28.6022783, "lon": -81.2007620, "id": 3420036605}]
+},
+{
+  "key": "185",
+  "Name": "Starbucks at Student Union",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 28.6022309, "lon": -81.2002570, "id": 2188622665},
+  {"lat": 28.6017709, "lon": -81.2010740, "id": 3420036606},
+  {"lat": 28.6017185, "lon": -81.2002340, "id": 7745913387},
+  {"lat": 28.6015780, "lon": -81.2003680, "id": 7745913388},
+  {"lat": 28.6015813, "lon": -81.2005050, "id": 7745911631},
+  {"lat": 28.6017759, "lon": -81.2005370, "id": 3095577369},
+  {"lat": 28.6016897, "lon": -81.2008850, "id": 3420036612},
+  {"lat": 28.6022783, "lon": -81.2007620, "id": 3420036605}]
+},
+{
+  "key": "186",
+  "Name": "Knightcade",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 28.6022309, "lon": -81.2002570, "id": 2188622665},
+  {"lat": 28.6017709, "lon": -81.2010740, "id": 3420036606},
+  {"lat": 28.6017185, "lon": -81.2002340, "id": 7745913387},
+  {"lat": 28.6015780, "lon": -81.2003680, "id": 7745913388},
+  {"lat": 28.6015813, "lon": -81.2005050, "id": 7745911631},
+  {"lat": 28.6017759, "lon": -81.2005370, "id": 3095577369},
+  {"lat": 28.6016897, "lon": -81.2008850, "id": 3420036612},
+  {"lat": 28.6022783, "lon": -81.2007620, "id": 3420036605}]
+},
+{
+  "key": "187",
+  "Name": "Smoothie King at Student Union",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 7745911631 , "lat": 28.6015813 , "lon": -81.2005000 },
+  {"id": 7745913388 , "lat": 28.6015780 , "lon": -81.2003600 }]
+},
+{
+  "key": "188",
+  "Name": "Smoothie King at RWC",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"lat": 28.5960944, "lon": -81.1992850, "id": 3137058034}]
+},
+{
+  "key": "189",
+  "Name": "Starbucks at Memory Mall",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 269 , "lat": 28.6035107 , "lon": -81.1989452 }]
+},
+{
+  "key": "190",
+  "Name": "Einstein Bagels at BA1",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 270 , "lat": 28.6014901 , "lon": -81.1990248 }]
+},
+{
+  "key": "191",
+  "Name": "Chick-fil-A at Academic Village",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 12653691716 , "lat": 28.5959816 , "lon": -81.1988800 }]
+},
+{
+  "key": "192",
+  "Name": "Academic Village Mail Center",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 272 , "lat": 28.5949748 , "lon": -81.1990627 }]
+},
+{
+  "key": "193",
+  "Name": "Nike 101",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 12653691708 , "lat": 28.5948128 , "lon": -81.1982900 },
+  {"id": 272 , "lat": 28.5949748 , "lon": -81.1990627 }]
+},
+{
+  "key": "194",
+  "Name": "Nike 104",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 9273615213 , "lat": 28.5950879 , "lon": -81.1975200 },
+  {"id": 9273615160 , "lat": 28.5951768 , "lon": -81.1977080 },
+  {"id": 9273615164 , "lat": 28.5950816 , "lon": -81.1973000 },
+  {"id": 274 , "lat": 28.5950688 , "lon": -81.1971093 },
+  {"id": 9273615161 , "lat": 28.5950833 , "lon": -81.1969190 }]
 }]
