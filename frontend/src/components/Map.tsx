@@ -102,7 +102,10 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
       }
    
       var result = dijkstra(data.graph, stops[i].Entrances[stops[i].selectedEntrance - 1].id, stops[i + 1].Entrances[stops[i + 1].selectedEntrance - 1].id);
-    
+      
+      if(result.path.length == 0)
+        alert("Locations inacessible to each other. If this is probably incorrect, please submit a bug report with the names & entrances of these two locations in the info tab.");
+
       if(stops[i + 1].selectedEntrance == -1)
       {
         alert("Do something");
@@ -120,8 +123,6 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
       distanceKm : totalDistance
     }));
     //tempPaths = data.pathnum;
-    /* if(result.path.length == 0)
-      alert("Locations inacessible to each other."); */
 
     localStorage.setItem("mapOptions", JSON.stringify([buildings, jaywalking, grass, parking]));
 
