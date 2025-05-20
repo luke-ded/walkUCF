@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline} from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline, useMap} from 'react-leaflet';
 import {LatLngTuple, LatLngBoundsExpression, LatLngExpression} from 'leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -35,6 +35,25 @@ interface ChildProps
   toggleError: (error: boolean) => void;
   stops: any [];
 }
+interface MapPanHandlerProps 
+{
+  targetPoint: LatLngTuple;
+}
+
+const MapPanHandler: React.FC<MapPanHandlerProps> = ({ targetPoint }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    if (targetPoint && targetPoint[0] !== 100 && targetPoint[0] !== -1) {
+      const latLng = L.latLng(targetPoint[0], targetPoint[1]);
+      const bounds = L.latLngBounds(latLng, latLng);
+
+      map.fitBounds(bounds, { padding: [50, 50], maxZoom: map.getZoom() });
+    }
+  }, [targetPoint, map]);
+
+  return null;
+};
 
 const createSelectIcon = () => 
 {
@@ -145,7 +164,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
         else
         {
           if(parsedItem.selectedEntrance == -1)
-          tempSelectedPoint = [parsedItem.Entrances[0].lat, parsedItem.Entrances[0].lon];
+            tempSelectedPoint = [parsedItem.Entrances[0].lat, parsedItem.Entrances[0].lon];
           else
             tempSelectedPoint = [parsedItem.Entrances[parsedItem.selectedEntrance -1].lat, parsedItem.Entrances[parsedItem.selectedEntrance -1].lon];
         }
@@ -156,7 +175,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
       if(tempSelectedPoint[0] != selectedPoint[0] || tempSelectedPoint[1] != selectedPoint[1])
       {
         //console.log(tempSelectedPoint[0] + "=?" + selectedPoint[0]);
-        setSelectedPoint(tempSelectedPoint);  
+        setSelectedPoint(tempSelectedPoint);
       }    
   }
 
@@ -309,7 +328,9 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
           {pathProps.items.map((path, index) => {
           return <div>{pathProps.renderer(path, index)}</div>;
           })}
-
+          {selectedPoint[0] !== 100 && selectedPoint[0] !== -1 && (
+              <MapPanHandler targetPoint={selectedPoint} />
+          )}
           <Polygon
             positions={outsideBoundsArea}
             color="#ffca09"
