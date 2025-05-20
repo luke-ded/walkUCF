@@ -37,9 +37,9 @@ function HomePage()
     };
 
     return(
-        <div className={`flex-col h-screen w-screen items-center justify-center dark:text-neutral-200 text-neutral-700 cursor-default select-none ${about || settings || error ? "overflow-y-hidden" : ""}`}>
+        <div className={`flex-col h-[150vh] lg:h-screen w-screen items-center justify-center dark:text-neutral-200 text-neutral-700 cursor-default select-none ${about || settings || error ? "overflow-y-hidden" : ""}`}>
             <NavBar toggleAbout={toggleAbout} about={about} toggleSettings={toggleSettings} settings={settings}/>
-            <div className="flex max-lg:flex-col w-screen h-13/14 max-lg:h-12/8 max-lg:min-h-[1200px] items-center lg:justify-center bg-gradient-to-b from-black/60 lg:to-transparent to-black/50">
+            <div className="flex max-lg:flex-col w-screen h-13/14 max-lg:h-20/21 max-lg:min-h-[1200px] items-center lg:justify-center bg-gradient-to-b from-black/60 lg:to-transparent to-black/50">
                 <div className="flex flex-col items-center lg:justify-between w-2/5 h-4/5 max-lg:max-h-9/16 max-lg:min-h-9/16 max-lg:w-9/10 max-h-4/5 max-lg:mt-5 lg:mr-20 max-lg:order-2 lg:order-1">
                     <Search triggerRerender={triggerRerender} setStops={setStops} />
                     <RouteList triggerRerender={triggerRerender} setStops={setStops} stops={stops!}/>
