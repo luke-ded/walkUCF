@@ -110,9 +110,9 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                             <div className="relative inline-block">
                                 <MdInfoOutline size={20} onClick={() => setInfo(!info)} className="ml-2 dark:text-[#ffca09] text-[#a48100] cursor-pointer hover:text-[#ffe68c]"/>
                                 {info && (
-                                    <div className="flex absolute z-14 w-80 left-5 border-2 dark:border-[#ffca09] border-[#a48100] rounded-lg shardow-lg p-1 dark:bg-black bg-white">
+                                    <div className="flex absolute z-14 w-80 xl:left-5 max-lg:right-1 max-lg:bottom-8 border-2 dark:border-[#ffca09] border-[#a48100] rounded-lg shardow-lg p-1 dark:bg-black bg-white">
                                         <h1 className="dark:text-neutral-200 text-center text-neutral-700 text-sm ml-2">If you wear a smartwatch, check your health app for the most accurate mesure of this metric. 
-                                        Otherwise, calculate it yourself or leave the default setting of {units == "imperial" ? "3.0 mi/hr" : "4.8 km/hr"}</h1>
+                                        Otherwise, calculate it yourself or leave the default setting of {units == "imperial" ? "3.0 mi/hr" : "4.8 km/hr"}.</h1>
                                         <div className="flex">
                                             <IoCloseSharp size={15} onClick={() => setInfo(false)} className="dark:hover:text-white hover:text-black dark:bg-[#ffe68c]/30 bg-[#ffe68c]/50 dark:hover:bg-[#ffe68c]/42 hover:bg-[#ffe68c]/82 rounded-lg"/>
                                         </div>
