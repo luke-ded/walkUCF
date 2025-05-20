@@ -82,11 +82,11 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
     }
 
     return (
-        <div className="absolute z-12 top-1/14 left-0 w-full max-w-full h-13/14 flex items-center justify-center bg-black/50">
-            <div className="absolute z-12 bg-[url(./assets/backgroundmap.jpg)] border-2 dark:border-[#ffca09] border-[#a48100] rounded-md lg:w-3/10 h-5/10 max-sm:w-9/10 md:w-5/10 shadow-lg">
+        <div className="absolute z-12 top-1/14 max-lg:top-1/21 left-0 w-full max-w-full h-full max-lg:20/21 flex items-center justify-center bg-black/50">
+            <div className="absolute z-12 top-1/8 max-lg:top-1/16 bg-[url(./assets/backgroundmap.jpg)] border-2 dark:border-[#ffca09] border-[#a48100] rounded-md lg:w-3/10 h-fit max-sm:w-9/10 md:w-5/10 shadow-lg">
                 <div className="flex-col justify-center w-full h-full dark:bg-black/80 bg-[#d6d4d4]/80 rounded-sm">
                     <div className="flex justify-center items-center h-1/8 border-b-2 dark:border-[#ffca09] border-[#a48100]">
-                        <h1 className="text-2xl dark:text-neutral-200 text-neutral-700 font-bold">Settings</h1>
+                        <h1 className="text-2xl py-1 dark:text-neutral-200 text-neutral-700 font-bold">Settings</h1>
                     </div>
                     <div className="flex-col justify-start h-5/8 dark:text-neutral-200 text-neutral-700 p-5">
                         <div className="flex justify-center items-center w-full">
@@ -134,11 +134,10 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                             </div>
                         </div> */}
                     </div>
-
-                    <div className="flex w-full h-2/8 justify-center items-center">
-                        <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl mr-3"
+                    <div className="flex w-full h-2/8 mt-5 justify-center items-center">
+                        <button className="cursor-pointer h-10 mb-5 hover:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl mr-3"
                         onClick={save}>Save</button>
-                        <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl"
+                        <button className="cursor-pointer h-10 mb-5 hover:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl"
                         onClick={cancel}>Cancel</button>
                     </div>
                 </div>
