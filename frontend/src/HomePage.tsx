@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar";
 import Map from "./components/Map.tsx";
 import Search from "./components/Search.tsx";
 import About from "./components/About.tsx";
+import Error from "./components/Error.tsx";
 import Settings from "./components/Settings.tsx";
 import RouteList from "./components/RouteList.tsx";
 import { useState } from "react";
@@ -10,6 +11,7 @@ function HomePage()
 {
     const [count, setCount] = useState(0);
     const [about, toggleAbout] = useState(false);
+    const [error, toggleError] = useState(false);
     const [settings, toggleSettings] = useState(false);
     const [stops, setStops] = useState<any []>([]);
 
@@ -43,9 +45,10 @@ function HomePage()
                     <RouteList triggerRerender={triggerRerender} setStops={setStops} stops={stops!}/>
                 </div>
                 <div className="flex flex-col justify-between w-2/5 h-4/5 max-lg:w-9/10 max-lg:min-h-6/16 max-lg:mt-5 border-2 dark:border-[#ffca09] border-[#a48100] rounded-md shadow-lg max-lg:order-1 lg:order-2">
-                    <Map stops={stops!} triggerRerender={triggerRerender}/>
+                    <Map stops={stops!} triggerRerender={triggerRerender} toggleError={toggleError}/>
                 </div>
                 {about && (<About toggleAbout={toggleAbout}/>)}
+                {error && (<Error toggleError={toggleError}/>)}
                 {settings && (<Settings triggerRerender={triggerRerender} toggleSettings={toggleSettings} settings={settings}/>)}
             </div>
         </div>

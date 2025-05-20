@@ -32,6 +32,7 @@ interface PathPropsType
 interface ChildProps
 {
   triggerRerender: () => void;
+  toggleError: (error: boolean) => void;
   stops: any [];
 }
 
@@ -63,7 +64,7 @@ const createStandardIcon = () =>
   });
 };
 
-const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
+const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
 {
   var initPoint : LatLngTuple = [10, 10];
   var initVals = [true, false, false, false];
@@ -82,13 +83,13 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
   const selectIcon = createSelectIcon();
   const standardIcon = createStandardIcon();
 
+  // Retrieve graph data
   var data = createGraph(buildings, jaywalking, grass, parking);
   var pointMap = data.pointMap;
 
   useEffect(() =>
   {
     console.log("graphing");
-    // Retrieve graph data
     handleDeselect();
     var totalDistance = 0;
     var tempPaths: number[][] = [];
@@ -104,7 +105,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender}) =>
       var result = dijkstra(data.graph, stops[i].Entrances[stops[i].selectedEntrance - 1].id, stops[i + 1].Entrances[stops[i + 1].selectedEntrance - 1].id);
       
       if(result.path.length == 0)
-        alert("Locations inacessible to each other. If this is probably incorrect, please submit a bug report with the names & entrances of these two locations in the info tab.");
+        toggleError(true);
 
       if(stops[i + 1].selectedEntrance == -1)
       {
