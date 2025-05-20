@@ -5,6 +5,8 @@ interface ChildProps
 
 const Error: React.FC<ChildProps> = ({toggleError}) =>
 {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+
     function close()
     {
         toggleError(false);
@@ -12,7 +14,7 @@ const Error: React.FC<ChildProps> = ({toggleError}) =>
 
     return (
         <div className="absolute z-12 top-1/14 left-0 w-full max-w-full h-13/14 flex items-center justify-center bg-black/50">
-            <div className="absolute z-12 bg-[url(./assets/backgroundmap.jpg)] border-2 dark:border-red-400 border-red-500 rounded-md lg:w-2/10 h-3/10 max-md:h-5/10 max-sm:w-9/10 md:w-5/10 shadow-lg">
+            <div className="absolute z-12 bg-[url(./assets/backgroundmap.jpg)] border-2 dark:border-red-400 border-red-500 rounded-md lg:w-2/10 h-3/10 max-md:h-4/10 max-sm:w-9/10 md:w-5/10 shadow-lg">
                 <div className="flex-col justify-center w-full h-full dark:bg-black/80 bg-[#d6d4d4]/80 rounded-sm">
                     <div className="flex-col justify-center items-center max-sm:text-sm text-md dark:text-neutral-200 text-neutral-700 text-center h-6/8 p-3">
                         <p className="mt-3">Locations inacessible to each other. Some entrances could be inacessible depending on your map options. </p>
