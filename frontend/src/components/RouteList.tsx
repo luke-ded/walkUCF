@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
+import { FaXmark } from "react-icons/fa6";
 
 interface Item 
 {
@@ -40,8 +41,8 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
                             <span className="dark:text-neutral-200 text-neutral-700 font-semibold text-md">{item.Name}</span>
                         </div>
                         <div>
-                            <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
-                            onClick={() => removeStop(item)}>x</button>   
+                            <button className = "rounded-sm inline-block h-fit w-fit p-1.5 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                            onClick={() => removeStop(item)}><FaXmark /></button>   
                         </div> 
                 </div>
                 <div className="flex justify-between mt-2 items-center">
