@@ -1,5 +1,6 @@
 # $${\color{gold}walkUCF}$$
-**walkUCF** is a virtual walking map of the University of Central Florida that exhibits many advantages over other UCF maps.
+**walkUCF** is a virtual walking map of the University of Central Florida that exhibits many advantages over other UCF maps.  
+![Homepage Screenshot](Auxiliary Programs/Auxiliary Files/Images/homepage.png)
 
 ## How is walkUCF superior to other maps?
 UCF students often use unconventional routes when walking across campus. As a result, traditional mapping services provide inaccurate and unhelpful routes to students looking for the fastest routes.
