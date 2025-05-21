@@ -43,7 +43,8 @@ interface MapPanHandlerProps
 const MapPanHandler: React.FC<MapPanHandlerProps> = ({ targetPoint }) => {
   const map = useMap();
 
-  useEffect(() => {
+  useEffect(() => 
+  {
     if (targetPoint && targetPoint[0] !== 100 && targetPoint[0] !== -1) {
       const latLng = L.latLng(targetPoint[0], targetPoint[1]);
       const bounds = L.latLngBounds(latLng, latLng);
@@ -108,7 +109,6 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
 
   useEffect(() =>
   {
-    console.log("graphing");
     handleDeselect();
     var totalDistance = 0;
     var tempPaths: number[][] = [];
@@ -134,7 +134,6 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
         totalDistance += result.distances.get(stops[i + 1].Entrances[stops[i + 1].selectedEntrance - 1].id)!;
 
       tempPaths.push(result.path);
-      //console.log("Result: " + result.path);
     }
 
     localStorage.setItem("graphData", JSON.stringify(
@@ -152,31 +151,30 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
 
   function getSelected()
   {
-      var temp = localStorage.getItem('selectedPoint');
-      var tempSelectedPoint : LatLngTuple = [100, 100];
+    var temp = localStorage.getItem('selectedPoint');
+    var tempSelectedPoint : LatLngTuple = [100, 100];
 
-      if(temp != undefined && temp != null)
-      {
-        var parsedItem : Item = JSON.parse(temp);
+    if(temp != undefined && temp != null)
+    {
+      var parsedItem : Item = JSON.parse(temp);
 
-        if(parsedItem.Entrances == undefined || parsedItem.Entrances == null)
-          tempSelectedPoint = [100, 100];
-        else
-        {
-          if(parsedItem.selectedEntrance == -1)
-            tempSelectedPoint = [parsedItem.Entrances[0].lat, parsedItem.Entrances[0].lon];
-          else
-            tempSelectedPoint = [parsedItem.Entrances[parsedItem.selectedEntrance -1].lat, parsedItem.Entrances[parsedItem.selectedEntrance -1].lon];
-        }
-      }
-      else
+      if(parsedItem.Entrances == undefined || parsedItem.Entrances == null)
         tempSelectedPoint = [100, 100];
-
-      if(tempSelectedPoint[0] != selectedPoint[0] || tempSelectedPoint[1] != selectedPoint[1])
+      else
       {
-        //console.log(tempSelectedPoint[0] + "=?" + selectedPoint[0]);
-        setSelectedPoint(tempSelectedPoint);
-      }    
+        if(parsedItem.selectedEntrance == -1)
+          tempSelectedPoint = [parsedItem.Entrances[0].lat, parsedItem.Entrances[0].lon];
+        else
+          tempSelectedPoint = [parsedItem.Entrances[parsedItem.selectedEntrance -1].lat, parsedItem.Entrances[parsedItem.selectedEntrance -1].lon];
+      }
+    }
+    else
+      tempSelectedPoint = [100, 100];
+
+    if(tempSelectedPoint[0] != selectedPoint[0] || tempSelectedPoint[1] != selectedPoint[1])
+    {
+      setSelectedPoint(tempSelectedPoint);
+    }    
   }
 
   const renderPoint = (point : any): React.ReactNode => 
@@ -191,7 +189,6 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
     }
     
     var stopPosition = stops.indexOf(point) + 1;
-    //console.log(point.Name + ": " + stopPosition);
 
     if(stopPosition == 1)
       return(
@@ -222,7 +219,6 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
       newPath.push([(pointMap.get(node)?.lat)!, (pointMap.get(node)?.lon)!])
     });
 
-    console.log("in renderpath,");
     return(
       <Polyline positions={newPath} color="blue" opacity={.5} weight={4}>
         <Popup closeButton={false}>Leg {index + 1}</Popup>
@@ -234,8 +230,8 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
   {
     var tempSelectedPoint : LatLngTuple = [100, 100];
     localStorage.setItem("selectedPoint", JSON.stringify(tempSelectedPoint));
+
     setSelectedPoint(tempSelectedPoint);
-    //console.log(selectedPoint);
   }
 
   var props: PropsType = 
@@ -300,46 +296,24 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
           </div>
           <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
             maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-t-sm z-0">
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
-            <Marker position={selectedPoint} icon={selectIcon} />
-          )}
-          {props.items.map((point) => {
-          return <div>{props.renderer(point)}</div>;
-          })}
-
-          {/* {stops.map((building) => (
-            building.Entrances.map((entrance) => (
-              <Marker
-                key={entrance.id}
-                position={[entrance.lat, entrance.lon]}
-              >
-                <Popup>
-                  Building: {building.Name} ({building.Abbreviation})<br />
-                  Entrance ID: {entrance.id}
-                </Popup>
-              </Marker>
-            ))
-          ))} */}
-          {/* <Polyline positions={path} color="blue" /> */}
-          {pathProps.items.map((path, index) => {
-          return <div>{pathProps.renderer(path, index)}</div>;
-          })}
-          {selectedPoint[0] !== 100 && selectedPoint[0] !== -1 && (
-              <MapPanHandler targetPoint={selectedPoint} />
-          )}
-          <Polygon
-            positions={outsideBoundsArea}
-            color="#ffca09"
-            opacity={.75}
-            weight={2}
-            fillColor="black"
-            fillOpacity={0.4}
-          />
-            
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
+              <Marker position={selectedPoint} icon={selectIcon} />
+            )}
+            {props.items.map((point) => {
+            return <div>{props.renderer(point)}</div>;
+            })}
+            {pathProps.items.map((path, index) => {
+            return <div>{pathProps.renderer(path, index)}</div>;
+            })}
+            {selectedPoint[0] !== 100 && selectedPoint[0] !== -1 && (
+                <MapPanHandler targetPoint={selectedPoint} />
+            )}
+            <Polygon positions={outsideBoundsArea} color="#ffca09" opacity={.75} weight={2}
+              fillColor="black" fillOpacity={0.4}/>
           </MapContainer>
         </div>
       </div>

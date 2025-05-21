@@ -11,21 +11,15 @@ interface Item
     selectedEntrance: number;
 }
 
-interface ChildProps {
+interface ChildProps 
+{
     triggerRerender: () => void;
     setStops: (stops: any) => void;
     stops: any [];
 }
 
-interface PropsType 
-{
-    items: Item[];
-    renderer: (item: Item) => React.ReactNode;
-}
-
 const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =>
 {
-    // This is for highlighting on map later
     const [selectedItem, setSelectedItem] = useState("");
     console.log(selectedItem);
 
@@ -37,13 +31,13 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
         return (
             <div className="flex-col w-full h-full max-md:px-1">
                 <div className="flex justify-between items-center">
-                        <div className="flex justify-start max-w-7/10 items-center">
-                            <span className="dark:text-neutral-200 text-neutral-700 font-semibold text-md">{item.Name}</span>
-                        </div>
-                        <div>
-                            <button className = "rounded-sm inline-block h-fit w-fit p-1.5 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
-                            onClick={() => removeStop(item)}><FaXmark /></button>   
-                        </div> 
+                    <div className="flex justify-start max-w-7/10 items-center">
+                        <span className="dark:text-neutral-200 text-neutral-700 font-semibold text-md">{item.Name}</span>
+                    </div>
+                    <div>
+                        <button className = "rounded-sm inline-block h-fit w-fit p-1.5 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                        onClick={() => removeStop(item)}><FaXmark /></button>   
+                    </div> 
                 </div>
                 <div className="flex justify-between mt-2 items-center">
                     <div className="flex justify-start">
@@ -64,28 +58,32 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
 
     function removeStop(item: Item) 
     {
-      const index = itemsList.indexOf(item);
+        const index = itemsList.indexOf(item);
 
-      if (index < 0) {
-        console.log("Item not found in removeStop.\n");
-        return;
-      }
+        if (index < 0) 
+        {
+            console.log("Item not found in removeStop.\n");
+            return;
+        }
 
-      const newItemsList = [...itemsList.slice(0, index), ...itemsList.slice(index + 1)];
+        const newItemsList = [...itemsList.slice(0, index), ...itemsList.slice(index + 1)];
 
-      if (newItemsList.length === 0) {
-        localStorage.setItem("graphData", JSON.stringify({ distanceMi: 0, distanceKm: 0 }));
-      }
+        if (newItemsList.length === 0)
+        {
+            localStorage.setItem("graphData", JSON.stringify({ distanceMi: 0, distanceKm: 0 }));
+        }
 
-      setStops(newItemsList);
+        setStops(newItemsList);
     }
 
     function swap(index1 : any, index2 : any) 
     {
         var newItemsList = [...itemsList];
         var temp = newItemsList[index1];
+
         newItemsList[index1] = newItemsList[index2];
         newItemsList[index2] = temp;
+
         setStops(newItemsList);
     }
 
@@ -126,6 +124,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
         setSelectedItem(item.key);
 
         localStorage.setItem("selectedPoint", JSON.stringify(item));
+
         triggerRerender();
     }
 
@@ -138,11 +137,6 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
         setStops(newItemsList);
     }
 
-    var props: PropsType = {
-        items: itemsList,
-        renderer: renderItem
-    };
-
     var settings = JSON.parse(localStorage.getItem("settings")!);
 
     return(
@@ -152,15 +146,15 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
                 <div className="flex mr-2 w-fit items-center justify-end dark:text-gray-300 text-gray-700 text-md">
                     <h1>{settings.walkSpeed != 0 && graphData.distanceMi != null && graphData != undefined && settings.walkSpeed != null? (graphData?.distanceMi.toFixed(2) / (settings.walkSpeed/60)).toFixed(1) : "0"} min&nbsp;</h1> 
                     <h1 className="dark:text-neutral-100 text-neutral-700 font-bold">|</h1>
-                    <h1>&nbsp;{settings.units == "imperial" ? graphData?.distanceMi.toFixed(2) + " mi": graphData?.distanceKm.toFixed(2) + " km"}</h1> {/* Add error checking for this */}
+                    <h1>&nbsp;{settings.units == "imperial" ? graphData?.distanceMi.toFixed(2) + " mi": graphData?.distanceKm.toFixed(2) + " km"}</h1>
                     <button className = "rounded-sm inline-block h-8/10 w-fit ml-3 mr-1 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100] dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer"
                        onClick={() => clearList()}>Clear</button>
                 </div>
             </div>
             <div className="overflow-y-auto h-29/32 w-full">
                 <ul className="shadow divide-y dark:divide-[#ffe68c] min-h-0">
-                    {props.items.map((item) => {
-                    return <li key={uuidv4()} onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15">{props.renderer(item)}</li>;
+                    {itemsList.map((item) => {
+                    return <li key={uuidv4()} onClick={() => handleItemChange(item)} className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15">{renderItem(item)}</li>;
                     })}
                 </ul>
             </div>

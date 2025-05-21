@@ -150,7 +150,7 @@ int main(void)
                         lon2 = pointlist[i - 1].lon;
 
                         pointset.insert(pointlist[i]);
-                        
+
                         //{ point_id1: 1, point_id2: 2, dist: 1234.34254}
                         outputfile<<setprecision(7)<<fixed<<"{\"id\": "<<id<<" , \"point_id1\": "<<pointlist[i].id<<" , \"point_id2\": "<<pointlist[i - 1].id<<" , \"dist\": "<<haversine(lat1, lon1, lat2, lon2)<<" },\n";
                     }
@@ -170,7 +170,7 @@ int main(void)
         pointoutputfile<<setprecision(7)<<fixed<<"{\"id\": "<<element.id <<" , \"lat\": "<<element.lat<<" , \"lon\": "<<element.lon<<" },\n";
     }
 
-    // Close the file
+    // Close the files
     inputfile.close();
     osminputfile.close();
     outputfile.close();

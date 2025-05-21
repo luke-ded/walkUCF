@@ -15,8 +15,6 @@ function HomePage()
     const [settings, toggleSettings] = useState(false);
     const [stops, setStops] = useState<any []>([]);
 
-    console.log("homepage render");
-    console.log(stops);
 
     var settingsData = localStorage.getItem("settings");
     if(settingsData == null || settingsData == undefined)
@@ -30,12 +28,12 @@ function HomePage()
         localStorage.setItem("graphData", JSON.stringify({distanceMi: 0, distanceKm : 0}));
     }
     
-
     const triggerRerender = () => 
     {
         setCount(count + 1);
     };
 
+    
     return(
         <div className={`relative flex-col h-[150vh] max-lg:min-h-[1100px] lg:h-screen w-screen items-center justify-center dark:text-neutral-200 text-neutral-700 cursor-default select-none ${about || settings || error ? "overflow-y-hidden" : ""}`}>
             <NavBar toggleAbout={toggleAbout} about={about} toggleSettings={toggleSettings} settings={settings}/>

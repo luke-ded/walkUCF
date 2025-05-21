@@ -30,10 +30,9 @@ interface GraphEdge
 interface QItem
 {
     pointID: number;
-    distance:number;
+    distance: number;
 }
 
-// Possibly remove - is distances needed?
 interface Result
 {
     distances: Map<number, number>;
@@ -50,9 +49,9 @@ interface createResult
 interface GraphMap extends Map<number, GraphEdge[]> {}
 
 
+// Create graph map
 export function createGraph(buildings: boolean, jaywalking: boolean, grass: boolean, parking: boolean) : createResult
 {
-    // Change these to arguments
     const points: Point[] = pointsData;
     var paths: Path[] = pathsData;
 
@@ -76,6 +75,7 @@ export function createGraph(buildings: boolean, jaywalking: boolean, grass: bool
         var parkingPaths: Path[] = parkingPathsData;
         paths = paths.concat(parkingPaths); 
     }
+
     const pathnum: number[][] = [];
     const graph : GraphMap = new Map();
 
@@ -109,7 +109,7 @@ export function createGraph(buildings: boolean, jaywalking: boolean, grass: bool
 }
 
 
-export function dijkstra (graph : GraphMap, startID : number, endID : number) : Result
+export function dijkstra (graph: GraphMap, startID: number, endID: number) : Result
 {
     // <nodeID, distance from start node>
     const distances : Map<number, number> = new Map();
