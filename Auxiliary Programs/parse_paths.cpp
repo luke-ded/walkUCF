@@ -51,10 +51,10 @@ int main(void)
 {
     cout<<"Please wait while the program is set up...\n";
 
-    ifstream inputfile("Auxillary Files/coords.json");
-    ifstream osminputfile("Auxillary Files/UCFmap.osm");
-    ofstream outputfile("Auxillary Files/paths.json");
-    ofstream pointoutputfile("Auxillary Files/used_points.json");
+    ifstream inputfile("Auxiliary Files/coords.json");
+    ifstream osminputfile("Auxiliary Files/UCFmap.osm");
+    ofstream outputfile("Auxiliary Files/paths.json");
+    ofstream pointoutputfile("Auxiliary Files/used_points.json");
 
     map<long long, point> points;
     vector<point> pointlist;

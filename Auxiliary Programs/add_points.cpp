@@ -20,7 +20,7 @@ int main(void)
     double lat, lon;
     string line;
 
-    ofstream outputfile("Auxillary Files/coords.json", ios::app);
+    ofstream outputfile("Auxiliary Files/coords.json", ios::app);
     
 
     cout<<"\nProgram ready. Add points in the format \"id lat lon\". Enter -1 when finished.\n";

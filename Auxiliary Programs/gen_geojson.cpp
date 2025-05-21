@@ -22,8 +22,8 @@ using namespace std;
 
 int main(void) 
 {
-  ifstream inputfile("Auxillary Files/used_points.json");
-  ofstream outputfile("Auxillary Files/generated_geojson.json");
+  ifstream inputfile("Auxiliary Files/used_points.json");
+  ofstream outputfile("Auxiliary Files/generated_geojson.json");
 
   outputfile<<"{\n\"type\": \"FeatureCollection\",\n\"features\": [\n";
 

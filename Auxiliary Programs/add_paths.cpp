@@ -50,8 +50,8 @@ int main(void)
 {
     cout<<"Please wait while the program is set up...\n";
 
-    ifstream inputfile("Auxillary Files/coords.json");
-    ifstream oldpaths("Auxillary Files/paths.json");
+    ifstream inputfile("Auxiliary Files/coords.json");
+    ifstream oldpaths("Auxiliary Files/paths.json");
     string tempbuffer;
     
 
@@ -103,7 +103,7 @@ int main(void)
     double lat1, lat2, lon1, lon2;
 
     
-    ofstream outputfile("Auxillary Files/paths.json");
+    ofstream outputfile("Auxiliary Files/paths.json");
     outputfile<<tempbuffer;
 
     cout<<"Add path: ";
