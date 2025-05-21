@@ -70,17 +70,12 @@ int main(void)
                 cout<<"Failed at line: "<<line<<endl;
                 cout<<"Attempted to convert to double: "<<newline<<endl;
                 return 0;
-            }
-
-            //cout<<setprecision(7)<<fixed<<id<<", "<<lat<<", "<<lon<<endl;
-
-            //{ id: 'A', lat: 37.7749, lon: -122.4194 }
-            
+            }       
         }
 
         getline(inputfile, line);
 
-        if(line.find("k=\"entrance\"") != string::npos)
+        if(line.find("k=\"entrance\"") != string::npos) // { id: 'A', lat: 37.7749, lon: -122.4194 }
             outputfile<<setprecision(7)<<fixed<<"{\"id\": "<<id<<" , \"lat\": "<<lat<<" , \"lon\": "<<lon<<" },\n";
         else if(!inputfile.eof())
             goto start;

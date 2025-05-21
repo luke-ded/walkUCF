@@ -27,7 +27,6 @@ typedef struct point
     }
 } point;
 
-
 // via https://www.geeksforgeeks.org/haversine-formula-to-find-distance-between-two-points-on-a-sphere/
 static double haversine(double lat1, double lon1,
     double lat2, double lon2)
@@ -56,13 +55,12 @@ int main(void)
     ifstream inputfile("Auxillary Files/entrance_coords.json");
     ifstream osminputfile("Auxillary Files/UCFmap.osm");
     ofstream outputfile("Auxillary Files/buildings.json");
-    
-    string line;
-    point temp;
 
     map<long long, point> points;
     vector<point> pointlist;
     set<point> pointset;
+    string line;
+    point temp;
 
 
     while (getline(inputfile, line)) 

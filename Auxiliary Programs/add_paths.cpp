@@ -16,7 +16,8 @@ typedef struct point
     double lat;
     double lon;
 
-    bool operator<(const point& other) const {
+    bool operator<(const point& other) const 
+    {
         if (id != other.id) {
             return id < other.id;
         }
@@ -79,8 +80,6 @@ int main(void)
         regex delimiter(" "); 
         vector<string> result(sregex_token_iterator(line.begin(), line.end(), delimiter, -1), sregex_token_iterator());
 
-        //cout<<result[1]<<endl;
-
         if(result.size() < 5)
             break;
 
@@ -95,6 +94,7 @@ int main(void)
             return 1;
         }
     }
+
     oldpaths.close();
 
     cout<<"\nProgram ready. Add point names in the format \"1 2\" to create a path between them. Enter -1 when finished.\n";
@@ -121,7 +121,7 @@ int main(void)
         lon1 = points[point1].lon;
         lon2 = points[point2].lon;
 
-        //{ point_id1: 1, point_id2: 2, dist: 1234.34254}
+        // { point_id1: 1, point_id2: 2, dist: 1234.34254}
         outputfile<<"{\"id\": "<<id<<" , \"point_id1\": "<<point1<<" , \"point_id2\": "<<point2<<" , \"dist\": "<<haversine(lat1, lon1, lat2, lon2)<<" },\n";
 
 

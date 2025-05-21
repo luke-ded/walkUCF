@@ -16,17 +16,15 @@ int main(void)
 {
     cout<<"Please wait while the program is set up...\n";
 
-    ofstream outputfile("Auxillary Files/coords.json", ios::app);
-
-    string line;
-
-
-    cout<<"\nProgram ready. Add points in the format \"id lat lon\". Enter -1 when finished.\n";
-
-    cout<<"Add point: ";
-
     long long id, numpoints = 0;
     double lat, lon;
+    string line;
+
+    ofstream outputfile("Auxillary Files/coords.json", ios::app);
+    
+
+    cout<<"\nProgram ready. Add points in the format \"id lat lon\". Enter -1 when finished.\n";
+    cout<<"Add point: ";
 
     cin>>id>>lat>>lon;
 

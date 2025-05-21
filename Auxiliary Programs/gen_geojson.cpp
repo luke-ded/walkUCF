@@ -22,28 +22,28 @@ using namespace std;
 
 int main(void) 
 {
-    ifstream inputfile("Auxillary Files/used_points.json");
-    ofstream outputfile("Auxillary Files/generated_geojson.json");
+  ifstream inputfile("Auxillary Files/used_points.json");
+  ofstream outputfile("Auxillary Files/generated_geojson.json");
 
-    outputfile<<"{\n\"type\": \"FeatureCollection\",\n\"features\": [\n";
+  outputfile<<"{\n\"type\": \"FeatureCollection\",\n\"features\": [\n";
 
-    string line;
+  string line;
 
-    while (getline(inputfile, line)) 
-    {
-      regex delimiter(" "); 
-      vector<string> result(sregex_token_iterator(line.begin(), line.end(), delimiter, -1), sregex_token_iterator());
+  while (getline(inputfile, line)) 
+  {
+    regex delimiter(" "); 
+    vector<string> result(sregex_token_iterator(line.begin(), line.end(), delimiter, -1), sregex_token_iterator());
 
-      outputfile<<"{\"type\": \"Feature\",\n\"geometry\": {\n\"type\": \"Point\",\n\"coordinates\": [\n";
-      outputfile<<setprecision(7)<<fixed<<result[7]<<",\n";
-      outputfile<<setprecision(7)<<fixed<<result[4]<<"\n]\n},\n";
+    outputfile<<"{\"type\": \"Feature\",\n\"geometry\": {\n\"type\": \"Point\",\n\"coordinates\": [\n";
+    outputfile<<setprecision(7)<<fixed<<result[7]<<",\n";
+    outputfile<<setprecision(7)<<fixed<<result[4]<<"\n]\n},\n";
 
-      outputfile<<"\"properties\": {\n";
-      outputfile<<"\"id\": "<<result[1]<<"\n}\n},";
-    }
+    outputfile<<"\"properties\": {\n";
+    outputfile<<"\"id\": "<<result[1]<<"\n}\n},";
+  }
 
-    inputfile.close();
-    outputfile.close();
+  inputfile.close();
+  outputfile.close();
 
-    return 0;
+  return 0;
 }
