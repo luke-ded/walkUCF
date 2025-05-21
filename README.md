@@ -1,6 +1,7 @@
 # $${\color{gold}walkUCF}$$
 **walkUCF** is a virtual walking map of the University of Central Florida that exhibits many advantages over other UCF maps.  
-![Homepage Screenshot](Auxiliary Programs/Auxiliary Files/Images/homepage.png)
+  
+![Homepage Screenshot](Images/homepage.png)
 
 ## How is walkUCF superior to other maps?
 UCF students often use unconventional routes when walking across campus. As a result, traditional mapping services provide inaccurate and unhelpful routes to students looking for the fastest routes.
@@ -39,6 +40,9 @@ Please report any issues, including incorrect map data, with the form link provi
 In the future, I will likely use JavaScript & JSX instead. The extra specificity provided by TypeScript did not significantly improve the code for this application and overcomplicated some portions.
 - **JSON Files:** JSON files are used to store map data such as paths, nodes, and locations (buildings.) Each map option has its own JSON file containing many additional paths (for example, selecting
 the "parking lots" map option concatenates the parkingPaths JSON array to the standard paths, resulting in 150+ new paths.)
+## 
+![Auxiliary Programs Screenshot](Images/auxprogs.png)
+
 - **Auxiliary Programs:** There are several C++ programs in the Auxiliary Programs folder that I wrote to assist me with creating the map data for this application. They include programs for parsing nodes, footpaths, and entrances from the OSM
 data in the .osm file as well as programs to add new paths and nodes to the JSON map data files.
 
@@ -50,6 +54,10 @@ data in the .osm file as well as programs to add new paths and nodes to the JSON
 
 ## Other Resources
 - **OpenStreetMap(OSM):** Basis for many of the nodes and paths used for Dijkstra's algorithm. Custom C++ programs were used to parse this data into JSON arrays. OSM is also used to tile the LeafletJS map.
+
+## 
+![Geojson Screenshot](Images/geojson.png)
+
 - **GeoJSON.io:** This website was very helpful when I was creating hundreds of custom points and paths. After writing a C++ program to parse the OSM data and convert it into GeoJSON, I could see all
 of my points displayed on a visual map.
 
