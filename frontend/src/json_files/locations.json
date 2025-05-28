@@ -45,7 +45,8 @@
   "Abbreviation": "CSB",
   "selectedEntrance": 1,
   "Entrances": [
-  {"lat": 28.6011422, "lon": -81.2002730, "id": 12653691727}]
+  {"lat": 28.6011422, "lon": -81.2002730, "id": 12653691727},
+  {"id": 310 , "lat": 28.6010220 , "lon": -81.2003204 }]
 },
 {
   "key": "5",
@@ -1551,7 +1552,7 @@
 },
 {
   "key": "170",
-  "Name": "Knightstop",
+  "Name": "Knightstop at Knights Plaza",
   "selectedEntrance": 1,
   "Abbreviation": "N/A",
   "Entrances": [
@@ -2160,4 +2161,27 @@
   "selectedEntrance": 1,
   "Entrances": [
   {"id": 8657513652 , "lat": 28.6031624 , "lon": -81.2061760 }]
-}]
+},
+{
+  "key": "228",
+  "Name": "USPS Dropbox",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 3420036606 , "lat": 28.6017709 , "lon": -81.2010700 }]
+},
+{
+  "key": "229",
+  "Name": "Knightstop at Student Union",
+  "selectedEntrance": 1,
+  "Abbreviation": "N/A",
+  "Entrances": [
+  {"lat": 28.6016897, "lon": -81.2008850, "id": 3420036612},
+  {"lat": 28.6022309, "lon": -81.2002570, "id": 2188622665},
+  {"lat": 28.6017185, "lon": -81.2002340, "id": 7745913387},
+  {"lat": 28.6015780, "lon": -81.2003680, "id": 7745913388},
+  {"lat": 28.6015813, "lon": -81.2005050, "id": 7745911631},
+  {"lat": 28.6017759, "lon": -81.2005370, "id": 3095577369},
+  {"lat": 28.6017709, "lon": -81.2010740, "id": 3420036606},
+  {"lat": 28.6022783, "lon": -81.2007620, "id": 3420036605}]
+}] 
