@@ -10,8 +10,8 @@ int main(void)
 {
     cout<<"Program running..."<<endl;
 
-    ifstream inputfile("Auxiliary Files/UCFmap.osm");
-    ofstream outputfile("Auxiliary Files/entrance_coords.json");
+    ifstream inputfile("auxiliary_files/UCFmap.osm");
+    ofstream outputfile("auxiliary_files/entrance_coords.json");
 
     string line, newline;
     long long id;
