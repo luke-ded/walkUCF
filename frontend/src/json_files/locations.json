@@ -113,7 +113,8 @@
   "selectedEntrance": 1,
   "Entrances": [
   {"lat": 28.6022502, "lon": -81.2021950, "id": 3420036306},
-  {"lat": 28.6022827, "lon": -81.2023490, "id": 3420036308}]
+  {"lat": 28.6022827, "lon": -81.2023490, "id": 3420036308},
+  {"id": 405 , "lat": 28.6022539 , "lon": -81.2017732 }]
 },
 {
   "key": "13",
@@ -1604,6 +1605,7 @@
   "Abbreviation": "N/A",
   "selectedEntrance": 1,
   "Entrances": [
+  {"id": 408 , "lat": 28.5978091 , "lon": -81.1995258 },
   {"id": 3137057788 , "lat": 28.5977922 , "lon": -81.1996980 }]
 },
 {
@@ -2189,4 +2191,44 @@
   "selectedEntrance": 1,
   "Entrances": [
   {"id": 354 , "lat": 28.5935331 , "lon": -81.2046731 }]
+},
+{
+  "key": "231",
+  "Name": "Pegasus Ballroom",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 334 , "lat": 28.6021253 , "lon": -81.2008694 }]
+},
+{
+  "key": "232",
+  "Name": "Dining Services",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 407 , "lat": 28.5982299 , "lon": -81.2001322 }]
+},
+{
+  "key": "233",
+  "Name": "LEAD Scholars Academy",
+  "Abbreviation": "N/A",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 409 , "lat": 28.5978162 , "lon": -81.1994390 }]
+},
+{
+  "key": "234",
+  "Name": "Student Accessibility Services",
+  "Abbreviation": "SAS",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 58 , "lat": 28.5979431 , "lon": -81.1991878 }]
+},
+{
+  "key": "235",
+  "Name": "Student Care Services",
+  "Abbreviation": "SCS",
+  "selectedEntrance": 1,
+  "Entrances": [
+  {"id": 411 , "lat": 28.5980106 , "lon": -81.1996383 }]
 }] 
