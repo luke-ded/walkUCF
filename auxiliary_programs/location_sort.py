@@ -12,7 +12,7 @@ data.sort(key=lambda entry: entry['Name'])
 
 i = 1
 for entry in data:
-    entry['key'] = i
+    entry['key'] = str(i)
     i += 1
 
 

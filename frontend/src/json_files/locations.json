@@ -1,6 +1,6 @@
 [
   {
-    "key": 1,
+    "key": "1",
     "Name": "'63 South",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -13,7 +13,7 @@
     ]
   },
   {
-    "key": 2,
+    "key": "2",
     "Name": "Academic Village Mail Center",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -26,7 +26,7 @@
     ]
   },
   {
-    "key": 3,
+    "key": "3",
     "Name": "Academic Village Mailboxes",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -39,7 +39,7 @@
     ]
   },
   {
-    "key": 4,
+    "key": "4",
     "Name": "Addition Financial",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -52,7 +52,7 @@
     ]
   },
   {
-    "key": 5,
+    "key": "5",
     "Name": "Addition Financial Arena",
     "Abbreviation": "ARNA",
     "selectedEntrance": 1,
@@ -65,7 +65,7 @@
     ]
   },
   {
-    "key": 6,
+    "key": "6",
     "Name": "Addition Financial Arena Ticket Office",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -78,7 +78,7 @@
     ]
   },
   {
-    "key": 7,
+    "key": "7",
     "Name": "Alpha Delta Pi Sorority",
     "Abbreviation": "\u0391\u0394\u03a0",
     "selectedEntrance": 1,
@@ -91,7 +91,7 @@
     ]
   },
   {
-    "key": 8,
+    "key": "8",
     "Name": "Alpha Tau Omega Fraternity",
     "Abbreviation": "\u0391\u03a4\u03a9",
     "selectedEntrance": 1,
@@ -109,7 +109,7 @@
     ]
   },
   {
-    "key": 9,
+    "key": "9",
     "Name": "Alpha Xi Delta Sorority",
     "selectedEntrance": 1,
     "Abbreviation": "\u0391\u039e\u0394",
@@ -122,7 +122,7 @@
     ]
   },
   {
-    "key": 10,
+    "key": "10",
     "Name": "Amazon Pickup and Returns at UCF",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -135,7 +135,7 @@
     ]
   },
   {
-    "key": 11,
+    "key": "11",
     "Name": "Apollo & Libra Mail Center",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -148,7 +148,7 @@
     ]
   },
   {
-    "key": 12,
+    "key": "12",
     "Name": "Arboretum Office",
     "Abbreviation": "ARB",
     "selectedEntrance": 1,
@@ -161,7 +161,7 @@
     ]
   },
   {
-    "key": 13,
+    "key": "13",
     "Name": "BPW Scholarship House",
     "Abbreviation": "BPW",
     "selectedEntrance": 1,
@@ -174,7 +174,7 @@
     ]
   },
   {
-    "key": 14,
+    "key": "14",
     "Name": "Barbara Ying Center",
     "Abbreviation": "BYC",
     "selectedEntrance": 1,
@@ -197,7 +197,7 @@
     ]
   },
   {
-    "key": 15,
+    "key": "15",
     "Name": "Barnes & Noble at Knights Plaza",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -215,7 +215,7 @@
     ]
   },
   {
-    "key": 16,
+    "key": "16",
     "Name": "Barnie's Coffee & tea Co.",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -228,7 +228,7 @@
     ]
   },
   {
-    "key": 17,
+    "key": "17",
     "Name": "Biological Sciences Building",
     "Abbreviation": "BIO",
     "selectedEntrance": 1,
@@ -261,7 +261,7 @@
     ]
   },
   {
-    "key": 18,
+    "key": "18",
     "Name": "Brevard Hall",
     "Abbreviation": "BRE",
     "selectedEntrance": 1,
@@ -284,7 +284,7 @@
     ]
   },
   {
-    "key": 19,
+    "key": "19",
     "Name": "Burger U",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -297,7 +297,7 @@
     ]
   },
   {
-    "key": 20,
+    "key": "20",
     "Name": "Burnett Honors College",
     "Abbreviation": "BHC",
     "selectedEntrance": 1,
@@ -320,7 +320,7 @@
     ]
   },
   {
-    "key": 21,
+    "key": "21",
     "Name": "Burnett House",
     "Abbreviation": "BH",
     "selectedEntrance": 1,
@@ -333,7 +333,7 @@
     ]
   },
   {
-    "key": 22,
+    "key": "22",
     "Name": "Business Administration I",
     "Abbreviation": "BA1",
     "selectedEntrance": 1,
@@ -376,7 +376,7 @@
     ]
   },
   {
-    "key": 23,
+    "key": "23",
     "Name": "Business Administration II",
     "Abbreviation": "BA2",
     "selectedEntrance": 1,
@@ -394,7 +394,7 @@
     ]
   },
   {
-    "key": 24,
+    "key": "24",
     "Name": "CREOL",
     "Abbreviation": "CROL",
     "selectedEntrance": 1,
@@ -417,7 +417,7 @@
     ]
   },
   {
-    "key": 25,
+    "key": "25",
     "Name": "Career Services and Experiential Learning",
     "Abbreviation": "CSEL",
     "selectedEntrance": 1,
@@ -450,7 +450,7 @@
     ]
   },
   {
-    "key": 26,
+    "key": "26",
     "Name": "Center for Multilingual Multicultural Studies",
     "Abbreviation": "CMMS",
     "selectedEntrance": 1,
@@ -473,7 +473,7 @@
     ]
   },
   {
-    "key": 27,
+    "key": "27",
     "Name": "Chemistry",
     "Abbreviation": "CHEM",
     "selectedEntrance": 1,
@@ -496,7 +496,7 @@
     ]
   },
   {
-    "key": 28,
+    "key": "28",
     "Name": "Chi Omega Sorority",
     "Abbreviation": "\u03a7\u03a9",
     "selectedEntrance": 1,
@@ -509,7 +509,7 @@
     ]
   },
   {
-    "key": 29,
+    "key": "29",
     "Name": "Chick-fil-A at Academic Village",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -522,7 +522,7 @@
     ]
   },
   {
-    "key": 30,
+    "key": "30",
     "Name": "Chick-fil-A at JTW Center",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -535,7 +535,7 @@
     ]
   },
   {
-    "key": 31,
+    "key": "31",
     "Name": "Citrus Hall",
     "Abbreviation": "CIT",
     "selectedEntrance": 1,
@@ -558,7 +558,7 @@
     ]
   },
   {
-    "key": 32,
+    "key": "32",
     "Name": "Classroom Building I",
     "Abbreviation": "CB1",
     "selectedEntrance": 1,
@@ -601,7 +601,7 @@
     ]
   },
   {
-    "key": 33,
+    "key": "33",
     "Name": "Classroom Building II",
     "Abbreviation": "CB2",
     "selectedEntrance": 1,
@@ -624,7 +624,7 @@
     ]
   },
   {
-    "key": 34,
+    "key": "34",
     "Name": "College of Arts & Humanities",
     "Abbreviation": "CAH",
     "selectedEntrance": 1,
@@ -637,7 +637,7 @@
     ]
   },
   {
-    "key": 35,
+    "key": "35",
     "Name": "College of Sciences",
     "Abbreviation": "CSB",
     "selectedEntrance": 1,
@@ -655,7 +655,7 @@
     ]
   },
   {
-    "key": 36,
+    "key": "36",
     "Name": "Community Counseling & Research Center",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -668,7 +668,7 @@
     ]
   },
   {
-    "key": 37,
+    "key": "37",
     "Name": "Counseling and Psychological Services",
     "Abbreviation": "CAPS",
     "selectedEntrance": 1,
@@ -686,7 +686,7 @@
     ]
   },
   {
-    "key": 38,
+    "key": "38",
     "Name": "Creative School for Children",
     "Abbreviation": "CSC",
     "selectedEntrance": 1,
@@ -699,7 +699,7 @@
     ]
   },
   {
-    "key": 39,
+    "key": "39",
     "Name": "Delta Delta Delta Sorority",
     "Abbreviation": "\u0394\u0394\u0394",
     "selectedEntrance": 1,
@@ -712,7 +712,7 @@
     ]
   },
   {
-    "key": 40,
+    "key": "40",
     "Name": "Dining Services",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -725,7 +725,7 @@
     ]
   },
   {
-    "key": 41,
+    "key": "41",
     "Name": "Domino's at JTWC",
     "selectedEntrance": 1,
     "Abbreviation": "N/A",
@@ -738,7 +738,7 @@
     ]
   },
   {
-    "key": 42,
+    "key": "42",
     "Name": "Domino's at Knights Plaza",
     "selectedEntrance": 1,
     "Abbreviation": "N/A",
@@ -751,7 +751,7 @@
     ]
   },
   {
-    "key": 43,
+    "key": "43",
     "Name": "Duke Energy Welcome Center",
     "Abbreviation": "UWC",
     "selectedEntrance": 1,
@@ -774,7 +774,7 @@
     ]
   },
   {
-    "key": 44,
+    "key": "44",
     "Name": "Dunkin' Donuts",
     "selectedEntrance": 1,
     "Abbreviation": "N/A",
@@ -787,7 +787,7 @@
     ]
   },
   {
-    "key": 45,
+    "key": "45",
     "Name": "Early Childhood Center",
     "Abbreviation": "ECC",
     "selectedEntrance": 1,
@@ -800,7 +800,7 @@
     ]
   },
   {
-    "key": 46,
+    "key": "46",
     "Name": "Education Complex And Gym",
     "Abbreviation": "ED",
     "selectedEntrance": 1,
@@ -838,7 +838,7 @@
     ]
   },
   {
-    "key": 47,
+    "key": "47",
     "Name": "Einstein Bagels at BA1",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -856,7 +856,7 @@
     ]
   },
   {
-    "key": 48,
+    "key": "48",
     "Name": "Einstein Bagels at Education Complex",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -894,7 +894,7 @@
     ]
   },
   {
-    "key": 49,
+    "key": "49",
     "Name": "Emergency Operation Center",
     "Abbreviation": "EOC",
     "selectedEntrance": 1,
@@ -907,7 +907,7 @@
     ]
   },
   {
-    "key": 50,
+    "key": "50",
     "Name": "Engineering I",
     "Abbreviation": "ENG1",
     "selectedEntrance": 1,
@@ -940,7 +940,7 @@
     ]
   },
   {
-    "key": 51,
+    "key": "51",
     "Name": "Engineering II",
     "Abbreviation": "ENG2",
     "selectedEntrance": 1,
@@ -978,7 +978,7 @@
     ]
   },
   {
-    "key": 52,
+    "key": "52",
     "Name": "FBC Mortgage Stadium",
     "Abbreviation": "SS",
     "selectedEntrance": 1,
@@ -991,7 +991,7 @@
     ]
   },
   {
-    "key": 53,
+    "key": "53",
     "Name": "Facilities and Safety",
     "Abbreviation": "FSC",
     "selectedEntrance": 1,
@@ -1009,7 +1009,7 @@
     ]
   },
   {
-    "key": 54,
+    "key": "54",
     "Name": "Fairwinds Alumni Center",
     "Abbreviation": "ALUM",
     "selectedEntrance": 1,
@@ -1032,7 +1032,7 @@
     ]
   },
   {
-    "key": 55,
+    "key": "55",
     "Name": "Fairwinds Credit Union",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1045,7 +1045,7 @@
     ]
   },
   {
-    "key": 56,
+    "key": "56",
     "Name": "Flager Hall",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1073,7 +1073,7 @@
     ]
   },
   {
-    "key": 57,
+    "key": "57",
     "Name": "Football Practice Field",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1086,7 +1086,7 @@
     ]
   },
   {
-    "key": 58,
+    "key": "58",
     "Name": "Foxtail Coffee Co. at JTWC",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1104,7 +1104,7 @@
     ]
   },
   {
-    "key": 59,
+    "key": "59",
     "Name": "Foxtail Coffee Co. at Knights Plaza",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1117,7 +1117,7 @@
     ]
   },
   {
-    "key": 60,
+    "key": "60",
     "Name": "Fraternity and Sorority Life",
     "Abbreviation": "G415",
     "selectedEntrance": 1,
@@ -1130,7 +1130,7 @@
     ]
   },
   {
-    "key": 61,
+    "key": "61",
     "Name": "Gringos Locos",
     "selectedEntrance": 1,
     "Abbreviation": "N/A",
@@ -1143,7 +1143,7 @@
     ]
   },
   {
-    "key": 62,
+    "key": "62",
     "Name": "Health Center & Pharmacy",
     "Abbreviation": "HC",
     "selectedEntrance": 1,
@@ -1161,7 +1161,7 @@
     ]
   },
   {
-    "key": 63,
+    "key": "63",
     "Name": "Health Sciences I",
     "Abbreviation": "HS1",
     "selectedEntrance": 1,
@@ -1204,7 +1204,7 @@
     ]
   },
   {
-    "key": 64,
+    "key": "64",
     "Name": "Health Sciences II",
     "Abbreviation": "HS2",
     "selectedEntrance": 1,
@@ -1242,7 +1242,7 @@
     ]
   },
   {
-    "key": 65,
+    "key": "65",
     "Name": "Hercules 108",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1270,7 +1270,7 @@
     ]
   },
   {
-    "key": 66,
+    "key": "66",
     "Name": "Hercules 109",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1298,7 +1298,7 @@
     ]
   },
   {
-    "key": 67,
+    "key": "67",
     "Name": "Hercules 110",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1321,7 +1321,7 @@
     ]
   },
   {
-    "key": 68,
+    "key": "68",
     "Name": "Hercules 111",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1349,7 +1349,7 @@
     ]
   },
   {
-    "key": 69,
+    "key": "69",
     "Name": "Hercules 112",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1362,7 +1362,7 @@
     ]
   },
   {
-    "key": 70,
+    "key": "70",
     "Name": "Hercules 113",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1395,7 +1395,7 @@
     ]
   },
   {
-    "key": 71,
+    "key": "71",
     "Name": "Hercules 114",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1408,7 +1408,7 @@
     ]
   },
   {
-    "key": 72,
+    "key": "72",
     "Name": "Hercules 25",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1431,7 +1431,7 @@
     ]
   },
   {
-    "key": 73,
+    "key": "73",
     "Name": "Hercules Basketball Courts",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1454,7 +1454,7 @@
     ]
   },
   {
-    "key": 74,
+    "key": "74",
     "Name": "Housing Administration",
     "Abbreviation": "HAB",
     "selectedEntrance": 1,
@@ -1477,7 +1477,7 @@
     ]
   },
   {
-    "key": 75,
+    "key": "75",
     "Name": "Howard Phillips Hall",
     "Abbreviation": "HPH",
     "selectedEntrance": 1,
@@ -1505,7 +1505,7 @@
     ]
   },
   {
-    "key": 76,
+    "key": "76",
     "Name": "Jimmy John's",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1518,7 +1518,7 @@
     ]
   },
   {
-    "key": 77,
+    "key": "77",
     "Name": "John C. Hitt Library",
     "Abbreviation": "LIB",
     "selectedEntrance": 1,
@@ -1536,7 +1536,7 @@
     ]
   },
   {
-    "key": 78,
+    "key": "78",
     "Name": "John Euliano Park",
     "Abbreviation": "JEP",
     "selectedEntrance": 1,
@@ -1549,7 +1549,7 @@
     ]
   },
   {
-    "key": 79,
+    "key": "79",
     "Name": "John T. Washington Center",
     "Abbreviation": "JTWC",
     "selectedEntrance": 1,
@@ -1572,7 +1572,7 @@
     ]
   },
   {
-    "key": 80,
+    "key": "80",
     "Name": "Kappa Alpha Theta Sorority",
     "Abbreviation": "\u039a\u0391\u0398",
     "selectedEntrance": 1,
@@ -1585,7 +1585,7 @@
     ]
   },
   {
-    "key": 81,
+    "key": "81",
     "Name": "Kappa Delta Sorority",
     "Abbreviation": "\u039a\u0394",
     "selectedEntrance": 1,
@@ -1598,7 +1598,7 @@
     ]
   },
   {
-    "key": 82,
+    "key": "82",
     "Name": "Kappa Kappa Gamma Sorority",
     "Abbreviation": "\u039a\u039a\u0393",
     "selectedEntrance": 1,
@@ -1611,7 +1611,7 @@
     ]
   },
   {
-    "key": 83,
+    "key": "83",
     "Name": "Kappa Sigma Fraternity",
     "Abbreviation": "\u039a\u03a3",
     "selectedEntrance": 1,
@@ -1624,7 +1624,7 @@
     ]
   },
   {
-    "key": 84,
+    "key": "84",
     "Name": "Knight's Pantry",
     "Abbreviation": "NFCG",
     "selectedEntrance": 1,
@@ -1642,7 +1642,7 @@
     ]
   },
   {
-    "key": 85,
+    "key": "85",
     "Name": "Knightcade",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1680,7 +1680,7 @@
     ]
   },
   {
-    "key": 86,
+    "key": "86",
     "Name": "Knightro's",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1693,7 +1693,7 @@
     ]
   },
   {
-    "key": 87,
+    "key": "87",
     "Name": "Knights Plaza Mail Center",
     "selectedEntrance": 1,
     "Abbreviation": "N/A",
@@ -1706,7 +1706,7 @@
     ]
   },
   {
-    "key": 88,
+    "key": "88",
     "Name": "Knightstop at Knights Plaza",
     "selectedEntrance": 1,
     "Abbreviation": "N/A",
@@ -1719,7 +1719,7 @@
     ]
   },
   {
-    "key": 89,
+    "key": "89",
     "Name": "Knightstop at Student Union",
     "selectedEntrance": 1,
     "Abbreviation": "N/A",
@@ -1757,7 +1757,7 @@
     ]
   },
   {
-    "key": 90,
+    "key": "90",
     "Name": "L3Harris Engineering Center",
     "Abbreviation": "HEC",
     "selectedEntrance": 1,
@@ -1780,7 +1780,7 @@
     ]
   },
   {
-    "key": 91,
+    "key": "91",
     "Name": "LEAD Scholars Academy",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1793,7 +1793,7 @@
     ]
   },
   {
-    "key": 92,
+    "key": "92",
     "Name": "Laboratory & Environmental Support",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1806,7 +1806,7 @@
     ]
   },
   {
-    "key": 93,
+    "key": "93",
     "Name": "Lake Claire 55",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1824,7 +1824,7 @@
     ]
   },
   {
-    "key": 94,
+    "key": "94",
     "Name": "Lake Claire 56",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1842,7 +1842,7 @@
     ]
   },
   {
-    "key": 95,
+    "key": "95",
     "Name": "Lake Claire 57",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1860,7 +1860,7 @@
     ]
   },
   {
-    "key": 96,
+    "key": "96",
     "Name": "Lake Claire 58",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1878,7 +1878,7 @@
     ]
   },
   {
-    "key": 97,
+    "key": "97",
     "Name": "Lake Claire 59",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1896,7 +1896,7 @@
     ]
   },
   {
-    "key": 98,
+    "key": "98",
     "Name": "Lake Claire 60",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1914,7 +1914,7 @@
     ]
   },
   {
-    "key": 99,
+    "key": "99",
     "Name": "Lake Claire 61",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1932,7 +1932,7 @@
     ]
   },
   {
-    "key": 100,
+    "key": "100",
     "Name": "Lake Claire 62",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1950,7 +1950,7 @@
     ]
   },
   {
-    "key": 101,
+    "key": "101",
     "Name": "Lake Claire 63",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1968,7 +1968,7 @@
     ]
   },
   {
-    "key": 102,
+    "key": "102",
     "Name": "Lake Claire 64",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1986,7 +1986,7 @@
     ]
   },
   {
-    "key": 103,
+    "key": "103",
     "Name": "Lake Claire 66",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2004,7 +2004,7 @@
     ]
   },
   {
-    "key": 104,
+    "key": "104",
     "Name": "Lake Claire 67",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2022,7 +2022,7 @@
     ]
   },
   {
-    "key": 105,
+    "key": "105",
     "Name": "Lake Claire 68",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2040,7 +2040,7 @@
     ]
   },
   {
-    "key": 106,
+    "key": "106",
     "Name": "Lake Claire 69",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2058,7 +2058,7 @@
     ]
   },
   {
-    "key": 107,
+    "key": "107",
     "Name": "Lake Claire 70",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2076,7 +2076,7 @@
     ]
   },
   {
-    "key": 108,
+    "key": "108",
     "Name": "Lake Claire Community Center (65)",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2104,7 +2104,7 @@
     ]
   },
   {
-    "key": 109,
+    "key": "109",
     "Name": "Lake Claire Mail Center",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2117,7 +2117,7 @@
     ]
   },
   {
-    "key": 110,
+    "key": "110",
     "Name": "Lake Claire Recreational Area",
     "selectedEntrance": 1,
     "Abbreviation": "LKCR",
@@ -2130,7 +2130,7 @@
     ]
   },
   {
-    "key": 111,
+    "key": "111",
     "Name": "Lake Hall",
     "Abbreviation": "LAK",
     "selectedEntrance": 1,
@@ -2173,7 +2173,7 @@
     ]
   },
   {
-    "key": 112,
+    "key": "112",
     "Name": "Leisure Pool",
     "Abbreviation": "LPS",
     "selectedEntrance": 1,
@@ -2186,7 +2186,7 @@
     ]
   },
   {
-    "key": 113,
+    "key": "113",
     "Name": "Libra Garage",
     "Abbreviation": "LG",
     "selectedEntrance": 1,
@@ -2209,7 +2209,7 @@
     ]
   },
   {
-    "key": 114,
+    "key": "114",
     "Name": "Live Oak Ballroom",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2222,7 +2222,7 @@
     ]
   },
   {
-    "key": 115,
+    "key": "115",
     "Name": "Mathematical Sciences Building",
     "Abbreviation": "MSB",
     "selectedEntrance": 1,
@@ -2250,7 +2250,7 @@
     ]
   },
   {
-    "key": 116,
+    "key": "116",
     "Name": "Millican Hall",
     "Abbreviation": "MH",
     "selectedEntrance": 1,
@@ -2278,7 +2278,7 @@
     ]
   },
   {
-    "key": 117,
+    "key": "117",
     "Name": "Morgridge International Reading Center",
     "Abbreviation": "MIRC",
     "selectedEntrance": 1,
@@ -2291,7 +2291,7 @@
     ]
   },
   {
-    "key": 118,
+    "key": "118",
     "Name": "Neptune 156",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2324,7 +2324,7 @@
     ]
   },
   {
-    "key": 119,
+    "key": "119",
     "Name": "Neptune 157",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2362,7 +2362,7 @@
     ]
   },
   {
-    "key": 120,
+    "key": "120",
     "Name": "Neptune 158",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2390,7 +2390,7 @@
     ]
   },
   {
-    "key": 121,
+    "key": "121",
     "Name": "Neptune 159",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2418,7 +2418,7 @@
     ]
   },
   {
-    "key": 122,
+    "key": "122",
     "Name": "Nicholson Fieldhouse",
     "Abbreviation": "NFH",
     "selectedEntrance": 1,
@@ -2436,7 +2436,7 @@
     ]
   },
   {
-    "key": 123,
+    "key": "123",
     "Name": "Nicholson School of Communication",
     "Abbreviation": "NSC",
     "selectedEntrance": 1,
@@ -2469,7 +2469,7 @@
     ]
   },
   {
-    "key": 124,
+    "key": "124",
     "Name": "Nike 101",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2487,7 +2487,7 @@
     ]
   },
   {
-    "key": 125,
+    "key": "125",
     "Name": "Nike 102",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2515,7 +2515,7 @@
     ]
   },
   {
-    "key": 126,
+    "key": "126",
     "Name": "Nike 103",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2543,7 +2543,7 @@
     ]
   },
   {
-    "key": 127,
+    "key": "127",
     "Name": "Nike 104",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2576,7 +2576,7 @@
     ]
   },
   {
-    "key": 128,
+    "key": "128",
     "Name": "Nike 105",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2589,7 +2589,7 @@
     ]
   },
   {
-    "key": 129,
+    "key": "129",
     "Name": "Nike 106",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2617,7 +2617,7 @@
     ]
   },
   {
-    "key": 130,
+    "key": "130",
     "Name": "Nike 107",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2630,7 +2630,7 @@
     ]
   },
   {
-    "key": 131,
+    "key": "131",
     "Name": "Office of Military and Veteran Student Success",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2643,7 +2643,7 @@
     ]
   },
   {
-    "key": 132,
+    "key": "132",
     "Name": "Orange Hall",
     "Abbreviation": "ORG",
     "selectedEntrance": 1,
@@ -2671,7 +2671,7 @@
     ]
   },
   {
-    "key": 133,
+    "key": "133",
     "Name": "Osceola Hall",
     "Abbreviation": "OSC",
     "selectedEntrance": 1,
@@ -2719,7 +2719,7 @@
     ]
   },
   {
-    "key": 134,
+    "key": "134",
     "Name": "POD Market",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -2732,7 +2732,7 @@
     ]
   },
   {
-    "key": 135,
+    "key": "135",
     "Name": "Parking Garage A",
     "Abbreviation": "PGA",
     "selectedEntrance": 1,
@@ -2785,7 +2785,7 @@
     ]
   },
   {
-    "key": 136,
+    "key": "136",
     "Name": "Parking Garage B",
     "Abbreviation": "PGB",
     "selectedEntrance": 1,
@@ -2818,7 +2818,7 @@
     ]
   },
   {
-    "key": 137,
+    "key": "137",
     "Name": "Parking Garage C",
     "Abbreviation": "PGC",
     "selectedEntrance": 1,
@@ -2851,7 +2851,7 @@
     ]
   },
   {
-    "key": 138,
+    "key": "138",
     "Name": "Parking Garage D",
     "Abbreviation": "PGD",
     "selectedEntrance": 1,
@@ -2894,7 +2894,7 @@
     ]
   },
   {
-    "key": 139,
+    "key": "139",
     "Name": "Parking Garage E",
     "Abbreviation": "PGE",
     "selectedEntrance": 1,
@@ -2912,7 +2912,7 @@
     ]
   },
   {
-    "key": 140,
+    "key": "140",
     "Name": "Parking Garage F",
     "Abbreviation": "PGF",
     "selectedEntrance": 1,
@@ -2940,7 +2940,7 @@
     ]
   },
   {
-    "key": 141,
+    "key": "141",
     "Name": "Parking Garage G",
     "Abbreviation": "PGG",
     "selectedEntrance": 1,
@@ -2968,7 +2968,7 @@
     ]
   },
   {
-    "key": 142,
+    "key": "142",
     "Name": "Parking Garage H",
     "Abbreviation": "PGH",
     "selectedEntrance": 1,
@@ -3011,7 +3011,7 @@
     ]
   },
   {
-    "key": 143,
+    "key": "143",
     "Name": "Parking Garage I",
     "Abbreviation": "PGI",
     "selectedEntrance": 1,
@@ -3054,7 +3054,7 @@
     ]
   },
   {
-    "key": 144,
+    "key": "144",
     "Name": "Parking Lot B1",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3097,7 +3097,7 @@
     ]
   },
   {
-    "key": 145,
+    "key": "145",
     "Name": "Parking Lot B10",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3135,7 +3135,7 @@
     ]
   },
   {
-    "key": 146,
+    "key": "146",
     "Name": "Parking Lot B11",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3168,7 +3168,7 @@
     ]
   },
   {
-    "key": 147,
+    "key": "147",
     "Name": "Parking Lot B12",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3181,7 +3181,7 @@
     ]
   },
   {
-    "key": 148,
+    "key": "148",
     "Name": "Parking Lot B15",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3229,7 +3229,7 @@
     ]
   },
   {
-    "key": 149,
+    "key": "149",
     "Name": "Parking Lot B16",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3247,7 +3247,7 @@
     ]
   },
   {
-    "key": 150,
+    "key": "150",
     "Name": "Parking Lot B17",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3270,7 +3270,7 @@
     ]
   },
   {
-    "key": 151,
+    "key": "151",
     "Name": "Parking Lot B2",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3293,7 +3293,7 @@
     ]
   },
   {
-    "key": 152,
+    "key": "152",
     "Name": "Parking Lot B3",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3326,7 +3326,7 @@
     ]
   },
   {
-    "key": 153,
+    "key": "153",
     "Name": "Parking Lot B4",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3379,7 +3379,7 @@
     ]
   },
   {
-    "key": 154,
+    "key": "154",
     "Name": "Parking Lot B5",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3397,7 +3397,7 @@
     ]
   },
   {
-    "key": 155,
+    "key": "155",
     "Name": "Parking Lot B6",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3435,7 +3435,7 @@
     ]
   },
   {
-    "key": 156,
+    "key": "156",
     "Name": "Parking Lot B7",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3448,7 +3448,7 @@
     ]
   },
   {
-    "key": 157,
+    "key": "157",
     "Name": "Parking Lot B8",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3486,7 +3486,7 @@
     ]
   },
   {
-    "key": 158,
+    "key": "158",
     "Name": "Parking Lot B9",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3524,7 +3524,7 @@
     ]
   },
   {
-    "key": 159,
+    "key": "159",
     "Name": "Parking Lot C2",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3557,7 +3557,7 @@
     ]
   },
   {
-    "key": 160,
+    "key": "160",
     "Name": "Parking Lot C3",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3590,7 +3590,7 @@
     ]
   },
   {
-    "key": 161,
+    "key": "161",
     "Name": "Parking Lot D1",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3648,7 +3648,7 @@
     ]
   },
   {
-    "key": 162,
+    "key": "162",
     "Name": "Parking Lot D2",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3671,7 +3671,7 @@
     ]
   },
   {
-    "key": 163,
+    "key": "163",
     "Name": "Parking Lot E1",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3704,7 +3704,7 @@
     ]
   },
   {
-    "key": 164,
+    "key": "164",
     "Name": "Parking Lot E1-A",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3722,7 +3722,7 @@
     ]
   },
   {
-    "key": 165,
+    "key": "165",
     "Name": "Parking Lot E4",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3750,7 +3750,7 @@
     ]
   },
   {
-    "key": 166,
+    "key": "166",
     "Name": "Parking Lot H10",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3768,7 +3768,7 @@
     ]
   },
   {
-    "key": 167,
+    "key": "167",
     "Name": "Parking Lot H2",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3811,7 +3811,7 @@
     ]
   },
   {
-    "key": 168,
+    "key": "168",
     "Name": "Parking Lot H3",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3834,7 +3834,7 @@
     ]
   },
   {
-    "key": 169,
+    "key": "169",
     "Name": "Parking Lot H4",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3872,7 +3872,7 @@
     ]
   },
   {
-    "key": 170,
+    "key": "170",
     "Name": "Parking Lot H4-A",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3885,7 +3885,7 @@
     ]
   },
   {
-    "key": 171,
+    "key": "171",
     "Name": "Parking Lot H5",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3918,7 +3918,7 @@
     ]
   },
   {
-    "key": 172,
+    "key": "172",
     "Name": "Parking Lot H6",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3946,7 +3946,7 @@
     ]
   },
   {
-    "key": 173,
+    "key": "173",
     "Name": "Parking Lot H7",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3969,7 +3969,7 @@
     ]
   },
   {
-    "key": 174,
+    "key": "174",
     "Name": "Parking Lot H8",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -3997,7 +3997,7 @@
     ]
   },
   {
-    "key": 175,
+    "key": "175",
     "Name": "Parking Lot H9",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4025,7 +4025,7 @@
     ]
   },
   {
-    "key": 176,
+    "key": "176",
     "Name": "Pegasus Ballroom",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4038,7 +4038,7 @@
     ]
   },
   {
-    "key": 177,
+    "key": "177",
     "Name": "Performing Arts Center Music",
     "Abbreviation": "PAC",
     "selectedEntrance": 1,
@@ -4066,7 +4066,7 @@
     ]
   },
   {
-    "key": 178,
+    "key": "178",
     "Name": "Performing Arts Center Theatre",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4094,7 +4094,7 @@
     ]
   },
   {
-    "key": 179,
+    "key": "179",
     "Name": "Physical Sciences Building",
     "Abbreviation": "PSB",
     "selectedEntrance": 1,
@@ -4127,7 +4127,7 @@
     ]
   },
   {
-    "key": 180,
+    "key": "180",
     "Name": "Pi Beta Phi Sorority",
     "Abbreviation": "\u03a0\u0392\u03a6",
     "selectedEntrance": 1,
@@ -4140,7 +4140,7 @@
     ]
   },
   {
-    "key": 181,
+    "key": "181",
     "Name": "Polk Hall",
     "Abbreviation": "POL",
     "selectedEntrance": 1,
@@ -4198,7 +4198,7 @@
     ]
   },
   {
-    "key": 182,
+    "key": "182",
     "Name": "Pop Parlour",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4211,7 +4211,7 @@
     ]
   },
   {
-    "key": 183,
+    "key": "183",
     "Name": "Pride Commons",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4229,7 +4229,7 @@
     ]
   },
   {
-    "key": 184,
+    "key": "184",
     "Name": "Print Shop",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4242,7 +4242,7 @@
     ]
   },
   {
-    "key": 185,
+    "key": "185",
     "Name": "Psychology Building",
     "Abbreviation": "PHY",
     "selectedEntrance": 1,
@@ -4275,7 +4275,7 @@
     ]
   },
   {
-    "key": 186,
+    "key": "186",
     "Name": "Psychology Clinic",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4288,7 +4288,7 @@
     ]
   },
   {
-    "key": 187,
+    "key": "187",
     "Name": "RWC Challenge Course",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4301,7 +4301,7 @@
     ]
   },
   {
-    "key": 188,
+    "key": "188",
     "Name": "Recreation and Wellness Center",
     "Abbreviation": "RWC",
     "selectedEntrance": 1,
@@ -4319,7 +4319,7 @@
     ]
   },
   {
-    "key": 189,
+    "key": "189",
     "Name": "Recycling Center",
     "Abbreviation": "RCS",
     "selectedEntrance": 1,
@@ -4332,7 +4332,7 @@
     ]
   },
   {
-    "key": 190,
+    "key": "190",
     "Name": "Rehearsal Hall",
     "Abbreviation": "RH",
     "selectedEntrance": 1,
@@ -4350,7 +4350,7 @@
     ]
   },
   {
-    "key": 191,
+    "key": "191",
     "Name": "Research I",
     "Abbreviation": "R1",
     "selectedEntrance": 1,
@@ -4383,7 +4383,7 @@
     ]
   },
   {
-    "key": 192,
+    "key": "192",
     "Name": "Seminole Hall",
     "Abbreviation": "SEM",
     "selectedEntrance": 1,
@@ -4411,7 +4411,7 @@
     ]
   },
   {
-    "key": 193,
+    "key": "193",
     "Name": "Sigma Chi Fraternity",
     "Abbreviation": "\u03a3\u03a7",
     "selectedEntrance": 1,
@@ -4429,7 +4429,7 @@
     ]
   },
   {
-    "key": 194,
+    "key": "194",
     "Name": "Smoothie King at RWC",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4442,7 +4442,7 @@
     ]
   },
   {
-    "key": 195,
+    "key": "195",
     "Name": "Smoothie King at Student Union",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4460,7 +4460,7 @@
     ]
   },
   {
-    "key": 196,
+    "key": "196",
     "Name": "Soccer Practice Field",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4473,7 +4473,7 @@
     ]
   },
   {
-    "key": 197,
+    "key": "197",
     "Name": "Softball Stadium",
     "selectedEntrance": 1,
     "Abbreviation": "SBS",
@@ -4486,7 +4486,7 @@
     ]
   },
   {
-    "key": 198,
+    "key": "198",
     "Name": "Starbucks at Memory Mall",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4499,7 +4499,7 @@
     ]
   },
   {
-    "key": 199,
+    "key": "199",
     "Name": "Starbucks at Student Union",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4537,7 +4537,7 @@
     ]
   },
   {
-    "key": 200,
+    "key": "200",
     "Name": "Student Accessibility Services",
     "Abbreviation": "SAS",
     "selectedEntrance": 1,
@@ -4550,7 +4550,7 @@
     ]
   },
   {
-    "key": 201,
+    "key": "201",
     "Name": "Student Care Services",
     "Abbreviation": "SCS",
     "selectedEntrance": 1,
@@ -4563,7 +4563,7 @@
     ]
   },
   {
-    "key": 202,
+    "key": "202",
     "Name": "Student Union",
     "Abbreviation": "STUN",
     "selectedEntrance": 1,
@@ -4601,7 +4601,7 @@
     ]
   },
   {
-    "key": 203,
+    "key": "203",
     "Name": "Student Union Food Court: Halal Shack, Qdoba, Panda Express, Huey Magoo's, Which Which?, Bento Sushi, Purple Ocean Superfood Bar",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4639,7 +4639,7 @@
     ]
   },
   {
-    "key": 204,
+    "key": "204",
     "Name": "Subway",
     "selectedEntrance": 1,
     "Abbreviation": "N/A",
@@ -4652,7 +4652,7 @@
     ]
   },
   {
-    "key": 205,
+    "key": "205",
     "Name": "Sumter Hall",
     "Abbreviation": "SUM",
     "selectedEntrance": 1,
@@ -4680,7 +4680,7 @@
     ]
   },
   {
-    "key": 206,
+    "key": "206",
     "Name": "Teaching Academy",
     "Abbreviation": "TA",
     "selectedEntrance": 1,
@@ -4693,7 +4693,7 @@
     ]
   },
   {
-    "key": 207,
+    "key": "207",
     "Name": "Technology Commons I",
     "Abbreviation": "TC1",
     "selectedEntrance": 1,
@@ -4711,7 +4711,7 @@
     ]
   },
   {
-    "key": 208,
+    "key": "208",
     "Name": "Technology Commons II",
     "Abbreviation": "TC2",
     "selectedEntrance": 1,
@@ -4734,7 +4734,7 @@
     ]
   },
   {
-    "key": 209,
+    "key": "209",
     "Name": "Tennis Courts",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4747,7 +4747,7 @@
     ]
   },
   {
-    "key": 210,
+    "key": "210",
     "Name": "The Celeste Hotel",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4760,7 +4760,7 @@
     ]
   },
   {
-    "key": 211,
+    "key": "211",
     "Name": "The SPOT",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4773,7 +4773,7 @@
     ]
   },
   {
-    "key": 212,
+    "key": "212",
     "Name": "The Skate Shop",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4786,7 +4786,7 @@
     ]
   },
   {
-    "key": 213,
+    "key": "213",
     "Name": "The Venue",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4799,7 +4799,7 @@
     ]
   },
   {
-    "key": 214,
+    "key": "214",
     "Name": "Theatre",
     "Abbreviation": "TH",
     "selectedEntrance": 1,
@@ -4822,7 +4822,7 @@
     ]
   },
   {
-    "key": 215,
+    "key": "215",
     "Name": "Theta Chi Fraternity",
     "Abbreviation": "\u0398\u03a7",
     "selectedEntrance": 1,
@@ -4835,7 +4835,7 @@
     ]
   },
   {
-    "key": 216,
+    "key": "216",
     "Name": "Topper's Creamery",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4848,7 +4848,7 @@
     ]
   },
   {
-    "key": 217,
+    "key": "217",
     "Name": "Tower 1",
     "Abbreviation": "T1",
     "selectedEntrance": 1,
@@ -4876,7 +4876,7 @@
     ]
   },
   {
-    "key": 218,
+    "key": "218",
     "Name": "Tower 2",
     "Abbreviation": "T2",
     "selectedEntrance": 1,
@@ -4904,7 +4904,7 @@
     ]
   },
   {
-    "key": 219,
+    "key": "219",
     "Name": "Tower 3",
     "Abbreviation": "T3",
     "selectedEntrance": 1,
@@ -4932,7 +4932,7 @@
     ]
   },
   {
-    "key": 220,
+    "key": "220",
     "Name": "Tower 4",
     "Abbreviation": "T4",
     "selectedEntrance": 1,
@@ -4960,7 +4960,7 @@
     ]
   },
   {
-    "key": 221,
+    "key": "221",
     "Name": "Towers Basketball Court",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -4973,7 +4973,7 @@
     ]
   },
   {
-    "key": 222,
+    "key": "222",
     "Name": "Track & Soccer Stadium",
     "Abbreviation": "TSS",
     "selectedEntrance": 1,
@@ -4986,7 +4986,7 @@
     ]
   },
   {
-    "key": 223,
+    "key": "223",
     "Name": "Trevor Colbourn Hall",
     "Abbreviation": "TCH",
     "selectedEntrance": 1,
@@ -5014,7 +5014,7 @@
     ]
   },
   {
-    "key": 224,
+    "key": "224",
     "Name": "UCF Global",
     "Abbreviation": "GB",
     "selectedEntrance": 1,
@@ -5037,7 +5037,7 @@
     ]
   },
   {
-    "key": 225,
+    "key": "225",
     "Name": "UCF Police Department",
     "Abbreviation": "UPD",
     "selectedEntrance": 1,
@@ -5055,7 +5055,7 @@
     ]
   },
   {
-    "key": 226,
+    "key": "226",
     "Name": "UCF Police at Student Union",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -5093,7 +5093,7 @@
     ]
   },
   {
-    "key": 227,
+    "key": "227",
     "Name": "USPS Dropbox",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -5106,7 +5106,7 @@
     ]
   },
   {
-    "key": 228,
+    "key": "228",
     "Name": "Visitor and Parking Information Center",
     "Abbreviation": "VPI",
     "selectedEntrance": 1,
@@ -5119,7 +5119,7 @@
     ]
   },
   {
-    "key": 229,
+    "key": "229",
     "Name": "Visual Arts Building",
     "Abbreviation": "VAB",
     "selectedEntrance": 1,
@@ -5142,7 +5142,7 @@
     ]
   },
   {
-    "key": 230,
+    "key": "230",
     "Name": "Volusia Hall",
     "Abbreviation": "VOL",
     "selectedEntrance": 1,
@@ -5195,7 +5195,7 @@
     ]
   },
   {
-    "key": 231,
+    "key": "231",
     "Name": "Wayne Densch Center for Student-Athlete Leadership",
     "Abbreviation": "CSAL",
     "selectedEntrance": 1,
@@ -5208,7 +5208,7 @@
     ]
   },
   {
-    "key": 232,
+    "key": "232",
     "Name": "Wayne Densch Sports Center",
     "Abbreviation": "WDSC",
     "selectedEntrance": 1,
@@ -5231,7 +5231,7 @@
     ]
   },
   {
-    "key": 233,
+    "key": "233",
     "Name": "Wesley at UCF",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -5244,7 +5244,7 @@
     ]
   },
   {
-    "key": 234,
+    "key": "234",
     "Name": "Zeta Tau Alpha Sorority",
     "Abbreviation": "ZTA",
     "selectedEntrance": 1,
