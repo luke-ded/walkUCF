@@ -297,7 +297,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
           <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
             maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-t-sm z-0">
             <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+              attribution='&copy; <a href="https://www.openstreetmap.org/">OSM</a>'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
