@@ -1,4 +1,4 @@
-# $${\color{gold}walkUCF}$$
+# walkUCF
 **walkUCF** is a virtual walking map of the University of Central Florida that exhibits many advantages over other UCF maps.  
   
 ![Homepage Screenshot](images/homepage.png)
