@@ -70,6 +70,8 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
 {
     function addItem(item: Item, selectedEntrance: number)
     {
+        localStorage.setItem("selectedPoint", JSON.stringify({...item, selectedEntrance: selectedEntrance}));
+
         var newItem = { ...item, selectedEntrance: selectedEntrance };
 
         setStops((prevStops: any[]) => [...(prevStops || []), newItem]);
