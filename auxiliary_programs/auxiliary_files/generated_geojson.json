@@ -68895,6 +68895,31 @@
         "type": "Point"
       },
       "id": 5267
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 531
+      },
+      "geometry": {
+        "coordinates": [
+          -81.20381962503487,
+          28.59182768531575
+        ],
+        "type": "Point"
+      },
+      "id": 5268
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -81.20395272950972,
+          28.591572693360547
+        ],
+        "type": "Point"
+      }
     }
   ]
 }
