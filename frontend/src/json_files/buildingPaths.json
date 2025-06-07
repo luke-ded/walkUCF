@@ -99,5 +99,13 @@
     {"id": 5856 , "point_id1": 478 , "point_id2": 76 , "dist": 0.0458498 },
     {"id": 5857 , "point_id1": 3172712717 , "point_id2": 478 , "dist": 0.0257559 },
     {"id": 5858 , "point_id1": 3172712717 , "point_id2": 479 , "dist": 0.034133 },
-    {"id": 5859 , "point_id1": 479 , "point_id2": 76 , "dist": 0.0223038 }
+    {"id": 5859 , "point_id1": 479 , "point_id2": 76 , "dist": 0.0223038 },
+    {"id": 5937 , "point_id1": 3137213644 , "point_id2": 533 , "dist": 0.00706164 },
+    {"id": 5938 , "point_id1": 533 , "point_id2": 534 , "dist": 0.0125906 },
+    {"id": 5939 , "point_id1": 3137213637 , "point_id2": 534 , "dist": 0.0217656 },
+    {"id": 5940 , "point_id1": 534 , "point_id2": 535 , "dist": 0.0639536 },
+    {"id": 5941 , "point_id1": 535 , "point_id2": 39 , "dist": 0.00448131 },
+    {"id": 5942 , "point_id1": 39 , "point_id2": 536 , "dist": 0.0106933 },
+    {"id": 5943 , "point_id1": 536 , "point_id2": 533 , "dist": 0.0696944 },
+    {"id": 5960 , "point_id1": 549 , "point_id2": 550 , "dist": 0.0217256 }
 ]
