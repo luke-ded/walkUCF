@@ -39,7 +39,7 @@ Please report any issues, including incorrect map data, with the form link provi
 - **TypeScript & TSX:** TSX made integrating state variables and list elements easy. 
 In the future, I will likely use JavaScript & JSX instead. The extra specificity provided by TypeScript did not significantly improve the code for this application and overcomplicated some portions.
 - **JSON Files:** JSON files are used to store map data such as paths, nodes, and locations (buildings.) Each map option has its own JSON file containing many additional paths (for example, selecting
-the "parking lots" map option concatenates the parkingPaths JSON array to the standard paths, resulting in 150+ new paths.)
+the "parking lots" map option concatenates the parkingPaths JSON array to the standard paths, resulting in 300+ new paths.)
 ## 
 ![Auxiliary Programs Screenshot](images/auxprogs.png)
 
@@ -58,13 +58,13 @@ data in the .osm file as well as programs to add new paths and nodes to the JSON
 ## 
 ![Geojson Screenshot](images/geojson.png)
 
-- **GeoJSON.io:** This website was very helpful when I was creating hundreds of custom points and paths. After writing a C++ program to parse the OSM data and convert it into GeoJSON, I could see all
+- **GeoJSON.io:** This website was helpful when I was creating hundreds of custom points and paths. After writing a C++ program to parse the OSM data and convert it into GeoJSON, I could see all
 of my points displayed on a visual map.
 
 ## Potential Future Enhancements
 - Mobile app.
 - Entrance option for "closest," which automatically calculates the entrance closest to the previous stop.
-- Map option for maximizing time indoors (for rainy days).
+- Map option for maximizing time indoors/under cover (for rainy days, hot days, etc.).
 - Users reporting temporarily inaccessible paths (due to construction, events, etc.).
 - Turn-by-turn directions.
 - Location services.
