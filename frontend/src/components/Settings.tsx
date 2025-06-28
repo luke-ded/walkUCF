@@ -125,9 +125,9 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
                         </div>
                     </div>
                     <div className="flex w-full h-2/8 justify-center items-center">
-                        <button className="cursor-pointer h-10 mb-5 hover:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl mr-3"
+                        <button className="cursor-pointer h-10 mb-5 hover:bg-[#ffe68c]/20 active:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl mr-3"
                         onClick={save}>Save</button>
-                        <button className="cursor-pointer h-10 mb-5 hover:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl"
+                        <button className="cursor-pointer h-10 mb-5 hover:bg-[#ffe68c]/20 active:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl"
                         onClick={cancel}>Cancel</button>
                     </div>
                 </div>

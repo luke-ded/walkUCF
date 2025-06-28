@@ -37,7 +37,7 @@ const About: React.FC<ChildProps> = ({toggleAbout}) =>
                         <p className="mt-5">Thanks for trying <h1 className="inline font-bold">walkUCF</h1>!</p>
                     </div>
                     <div className="flex w-full h-2/8 mb-5 mt-5 items-center justify-center justify-self-end">
-                        <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl"
+                        <button className="cursor-pointer h-10 hover:bg-[#ffe68c]/20 active:bg-[#ffe68c]/20 dark:bg-black/40 bg-white/70 px-2 py-1.5 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl"
                         onClick={close}>Close</button>
                     </div>
                 </div>

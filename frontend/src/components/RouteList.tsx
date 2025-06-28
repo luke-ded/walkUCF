@@ -35,7 +35,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
                         <span className="dark:text-neutral-200 text-neutral-700 font-semibold text-md">{item.Name}</span>
                     </div>
                     <div>
-                        <button className = "rounded-sm inline-block h-fit w-fit p-1.5 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                        <button className = "rounded-sm inline-block h-fit w-fit p-1.5 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 active:bg-[#ffca09]/60 cursor-pointer"
                         onClick={() => removeStop(item)}><FaXmark /></button>   
                     </div> 
                 </div>
@@ -46,9 +46,9 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
                             &nbsp;| {item.selectedEntrance == -1 ? "Closest Entrance" : item.selectedEntrance == 1 ? "Main Entrance" : "Door " + item.selectedEntrance}</p>
                     </div>
                     <div>
-                        <button className = "mr-3 rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                        <button className = "mr-3 rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 active:bg-[#ffca09]/60 cursor-pointer"
                         onClick={() => swapDown(item)}>▼</button> 
-                        <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                        <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 active:bg-[#ffca09]/60 cursor-pointer"
                         onClick={() => swapUp(item)}>▲</button> 
                     </div>
                 </div>
@@ -147,7 +147,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
                     <h1>{settings.walkSpeed != 0 && graphData.distanceMi != null && graphData != undefined && settings.walkSpeed != null? (graphData?.distanceMi.toFixed(2) / (settings.walkSpeed/60)).toFixed(1) : "0"} min&nbsp;</h1> 
                     <h1 className="dark:text-neutral-100 text-neutral-700 font-bold">|</h1>
                     <h1>&nbsp;{settings.units == "imperial" ? graphData?.distanceMi.toFixed(2) + " mi": graphData?.distanceKm.toFixed(2) + " km"}</h1>
-                    <button className = "rounded-sm inline-block h-8/10 w-fit ml-3 mr-1 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100] dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer"
+                    <button className = "rounded-sm inline-block h-8/10 w-fit ml-3 mr-1 px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100] dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 active:bg-[#ffca09]/60 font-bold cursor-pointer"
                        onClick={() => clearList()}>Clear</button>
                 </div>
             </div>

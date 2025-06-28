@@ -58,7 +58,7 @@ const ItemRenderer: React.FC<ItemProps> = ({ item, addItem, triggerRerender, set
                     })}
                 </div>
                 <div>
-                    <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 cursor-pointer"
+                    <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 active:bg-[#ffca09]/60 cursor-pointer"
                     onClick={() => addItem(item, selectedEntrance)}>+</button>
                 </div>
             </div>
