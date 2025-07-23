@@ -187,6 +187,15 @@
     ]
   },
   {
+    "key": "253",
+    "Name": "Art Gallery",
+    "Abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 3420036301 , "lat": 28.6027801 , "lon": -81.2038700 }
+    ]
+  },
+  {
     "key": "15",
     "Name": "BPW Scholarship House",
     "Abbreviation": "BPW",
@@ -2425,6 +2434,15 @@
         "lat": 28.6005968,
         "lon": -81.205114
       }
+    ]
+  },
+  {
+    "key": "254",
+    "Name": "Marching Band Practice Facility",
+    "Abbreviation": "BAND",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 581 , "lat": 28.5916082 , "lon": -81.2003273 }
     ]
   },
   {
