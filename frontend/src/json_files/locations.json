@@ -104,6 +104,19 @@
     ]
   },
   {
+    "key": "231",
+    "Name": "Alpha Epsilon Phi Sorority",
+    "Abbreviation": "AE\u03a6",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "lat": 28.6058645,
+        "lon": -81.204081,
+        "id": 12653585899
+      }
+    ]
+  },
+  {
     "key": "9",
     "Name": "Alpha Tau Omega Fraternity",
     "Abbreviation": "\u0391\u03a4\u03a9",
@@ -5122,19 +5135,6 @@
         "lat": 28.6005323,
         "lon": -81.199485,
         "id": 3420273022
-      }
-    ]
-  },
-  {
-    "key": "231",
-    "Name": "Theta Chi Fraternity",
-    "Abbreviation": "\u0398\u03a7",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "lat": 28.6058645,
-        "lon": -81.204081,
-        "id": 12653585899
       }
     ]
   },
