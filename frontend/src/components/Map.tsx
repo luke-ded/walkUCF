@@ -141,6 +141,9 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
     }
     navigator.geolocation.getCurrentPosition(
       (position) => {
+        if(currentLocation[0] == position.coords.latitude && currentLocation[1] == position.coords.longitude)
+          return;
+
         setCurrentLocation([position.coords.latitude, position.coords.longitude]);
       },
       (e) => {
