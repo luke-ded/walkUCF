@@ -19,7 +19,7 @@ function HomePage()
     var settingsData = localStorage.getItem("settings");
     if(settingsData == null || settingsData == undefined)
     {
-        localStorage.setItem("settings", JSON.stringify({"units": "imperial", "walkSpeed": 3, "saveRoute": true}));
+        localStorage.setItem("settings", JSON.stringify({"units": "imperial", "walkSpeed": 3, "saveRoute": true, "showLocation": true}));
     }
 
     var distanceData = localStorage.getItem("graphData");
@@ -47,7 +47,7 @@ function HomePage()
                 </div>
                 {about && (<About toggleAbout={toggleAbout}/>)}
                 {error && (<Error toggleError={toggleError}/>)}
-                {settings && (<Settings triggerRerender={triggerRerender} toggleSettings={toggleSettings} settings={settings}/>)}
+                {settings && (<Settings triggerRerender={triggerRerender} toggleSettings={toggleSettings}/>)}
             </div>
         </div>
     );
