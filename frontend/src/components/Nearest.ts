@@ -1,4 +1,4 @@
-import pointsData from "../json_files/coords.json";
+import pointsData from "../json_files/used_coords.json";
 
 interface Point 
 {
