@@ -20,13 +20,13 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings}) =>
     else
         var settings = JSON.parse(settingsData);
 
-    console.log(settings);
+    
     if(settings.units == "imperial") 
         var startUnits = String(settings.walkSpeed.toFixed(1));
     else
         var startUnits = String((settings.walkSpeed / .621371).toFixed(1));
 
-    console.log(settings.showLocation);
+
     const [units, setUnits] = useState(settings.units);
     const [walkSpeed, setWalkSpeed] = useState(settings.walkSpeed);
     const [newWalkSpeed, setNewWalkSpeed] = useState(startUnits);
