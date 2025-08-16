@@ -73,13 +73,13 @@ const createSelectIcon = () =>
 const createCurrentLocIcon = () => 
 {
   return L.divIcon({
-    className: 'colored-marker', 
+    className: 'current-marker', 
     html: `
     <div style="width: 25px; height: 25px; background-color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);" aria-label="Deselect button">
       <div style="width:19px; height:19px; background-color: blue; background: linear-gradient(to bottom, #4899d0, #1975c8); border-radius: 50%;"/>
     </div>`,
     iconSize: [10, 10], 
-    iconAnchor: [10, 10],
+    iconAnchor: [11.5, 15],
     popupAnchor: [0, 0]
   });
 };

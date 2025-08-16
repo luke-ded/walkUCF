@@ -8,5 +8,13 @@
   }
 
 .colored-marker {
-  z-index: 1000 !important;
+  z-index: 10 !important;
+}
+
+.current-marker {
+  z-index: 0 !important;
+}
+
+.standard-marker {
+  z-index: 5 !important;
 }
