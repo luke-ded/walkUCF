@@ -15,7 +15,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings, settin
 
     if(settingsData == null || settingsData == undefined)
     {
-        var settings: any = {"units": "imperial", "walkSpeed": 3, "saveRoute": true};
+        var settings: any = {"units": "imperial", "walkSpeed": 3, "saveRoute": true, "showLocation": true};
         localStorage.setItem("settings", JSON.stringify(settings));
     }
     else
