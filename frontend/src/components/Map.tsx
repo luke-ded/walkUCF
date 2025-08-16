@@ -124,17 +124,13 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
   var pointMap = data.pointMap;
   var graphData = JSON.parse(localStorage.getItem("graphData")!);
   var settings = JSON.parse(localStorage.getItem("settings")!);
-  console.log(settings.showLocation);
 
   function currentLocationHandler()
   {
     var currentSettings = JSON.parse(localStorage.getItem("settings")!);
 
-    console.log("in currentlocationhandler: " + currentSettings.showLocation);
     if(currentSettings.showLocation == false)
     {
-      console.log("inside, " + currentSettings.showLocation);
-      console.log("nop show location");
       setCurrentLocation([-1, -1]);
       return;
     }
@@ -153,16 +149,12 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
     );
   }
 
-  useEffect(() => 
-  {
-    currentLocationHandler();
-  }, [settings]);
-
   useEffect(() => {
+    currentLocationHandler();
     setInterval(() =>
     {
       currentLocationHandler();
-    }, 5000);
+    }, 2000);
   }, []);
 
   useEffect(() =>
