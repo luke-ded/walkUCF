@@ -122,11 +122,25 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
   // Retrieve graph data
   var data = createGraph(buildings, jaywalking, grass, parking);
   var pointMap = data.pointMap;
+  var graphData = JSON.parse(localStorage.getItem("graphData")!);
+  var settings = JSON.parse(localStorage.getItem("settings")!);
+  console.log(settings.showLocation);
 
   function currentLocationHandler()
   {
+    var currentSettings = JSON.parse(localStorage.getItem("settings")!);
+
+    console.log("in currentlocationhandler: " + currentSettings.showLocation);
+    if(currentSettings.showLocation == false)
+    {
+      console.log("inside, " + currentSettings.showLocation);
+      console.log("nop show location");
+      setCurrentLocation([-1, -1]);
+      return;
+    }
+
     if (!navigator.geolocation) {
-      console.error('Geolocation is not supported by your browser.');
+      console.error("Geolocation is not supported by your browser.");
       return;
     }
     navigator.geolocation.getCurrentPosition(
@@ -139,8 +153,12 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
     );
   }
 
-  useEffect(() => {
+  useEffect(() => 
+  {
     currentLocationHandler();
+  }, [settings]);
+
+  useEffect(() => {
     setInterval(() =>
     {
       currentLocationHandler();
@@ -313,9 +331,6 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
       [28.5908900, -81.2072900]  // SW
     ]
   ];
-  
-  var graphData = JSON.parse(localStorage.getItem("graphData")!);
-  var settings = JSON.parse(localStorage.getItem("settings")!);
 
   return (
     <div className="w-full h-full">
