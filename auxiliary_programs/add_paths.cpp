@@ -25,7 +25,7 @@ typedef struct point
     }
 } point;
 
-// via https://www.geeksforgeeks.org/haversine-formula-to-find-distance-between-two-points-on-a-sphere/
+// via https://tinyurl.com/3yvuz6zs
 static double haversine(double lat1, double lon1,
     double lat2, double lon2)
 {
