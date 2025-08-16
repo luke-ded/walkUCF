@@ -70,6 +70,20 @@ const createSelectIcon = () =>
   });
 };
 
+const createCurrentLocIcon = () => 
+{
+  return L.divIcon({
+    className: 'colored-marker', 
+    html: `
+    <div style="width: 25px; height: 25px; background-color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);" aria-label="Deselect button">
+      <div style="width:19px; height:19px; background-color: blue; background: linear-gradient(to bottom, #4899d0, #1975c8); border-radius: 50%;"/>
+    </div>`,
+    iconSize: [10, 10], 
+    iconAnchor: [10, 10],
+    popupAnchor: [0, 0]
+  });
+};
+
 const createStandardIcon = () => 
 {
   return L.divIcon({
@@ -99,13 +113,39 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
   const [parking, setParking] = useState(initVals[3]);
   const [selectedPoint, setSelectedPoint] = useState(initPoint);
   const [paths, setPaths] = useState<number[][]>([]);
+  const [currentLocation, setCurrentLocation] = useState<LatLngTuple>([-1, -1]);
   
   const selectIcon = createSelectIcon();
+  const currentIcon = createCurrentLocIcon();
   const standardIcon = createStandardIcon();
 
   // Retrieve graph data
   var data = createGraph(buildings, jaywalking, grass, parking);
   var pointMap = data.pointMap;
+
+  function currentLocationHandler()
+  {
+    if (!navigator.geolocation) {
+      console.error('Geolocation is not supported by your browser.');
+      return;
+    }
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setCurrentLocation([position.coords.latitude, position.coords.longitude]);
+      },
+      (e) => {
+        console.error(e.message);
+      }
+    );
+  }
+
+  useEffect(() => {
+    currentLocationHandler();
+    setInterval(() =>
+    {
+      currentLocationHandler();
+    }, 5000);
+  }, []);
 
   useEffect(() =>
   {
@@ -302,6 +342,9 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
             />
             {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
               <Marker position={selectedPoint} icon={selectIcon} />
+            )}
+            {currentLocation[0] != undefined && currentLocation[0] != -1 && (
+              <Marker position={currentLocation} icon={currentIcon} />
             )}
             {props.items.map((point) => {
             return <div>{props.renderer(point)}</div>;
