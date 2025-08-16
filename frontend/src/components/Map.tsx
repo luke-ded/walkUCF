@@ -355,7 +355,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
             {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
               <Marker position={selectedPoint} icon={selectIcon} />
             )}
-            {currentLocation[0] != undefined && currentLocation[0] != -1 && (
+            {currentLocation[0] != undefined && currentLocation[0] != -1 && settings.showLocation && (
               <Marker position={currentLocation} icon={currentIcon} />
             )}
             {props.items.map((point) => {

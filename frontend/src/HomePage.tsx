@@ -55,7 +55,7 @@ function HomePage()
         if((permissionStatus.state == "granted") != lastPermissionStatus)
         {
             console.log(permissionStatus.state + " != " + lastPermissionStatus);
-            localStorage.setItem("permissionStatus", JSON.stringify(permissionStatus.state == "granted"));
+            localStorage.setItem("permissionStatus", JSON.stringify(!lastPermissionStatus));
             triggerRerender();
         }      
       } 
