@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import locations from "../json_files/locations.json";
+import { nearestPoint } from "./Nearest.ts";
 
 interface Item 
 {
@@ -92,8 +93,26 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
         if(scrollRef.current)
             scrollRef.current.scrollTop = 0;
     }
-    
 
+    function calcNearestPoint() : Item
+    {
+        var closestPoint : any = {id: -1, lat: -1, lon: -1};
+
+        var currentLocationData = localStorage.getItem("currentLocation");
+
+        if(currentLocationData == undefined || currentLocationData == null || !navigator.geolocation)
+            return closestPoint;
+
+        var currentLocation = JSON.parse(currentLocationData)
+
+        closestPoint = nearestPoint([currentLocation[0], currentLocation[1]]);
+        
+        var calculatedItem : Item = {key: "-1", Name: "Current Location", Abbreviation: "N/A", Entrances: [closestPoint], selectedEntrance: 0};
+        setSelectedItem(closestPoint.id);
+
+        return calculatedItem;
+    }
+    
     return (
         <div className="h-1/4 w-full">
             <div className="h-2/8 flex w-full justify-center items-center">
@@ -101,6 +120,11 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
             </div>           
             <div ref={scrollRef} className="mt-5 overflow-y-scroll min-h-11/16 max-h-11/16 border-2 dark:border-[#ffca09] border-[#a48100] rounded-sm dark:bg-black/35 bg-white/65 shadow-lg">
                 <ul className="shadow divide-y dark:divide-[#ffca09] divide:[#d6d4d4] min-h-21/20">
+                    {searchTerm.length == 0 && navigator.geolocation && <li className="flex justify-between items-center px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15 font-bold">
+                        Current Location
+                        <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 active:bg-[#ffca09]/60 cursor-pointer"
+                        onClick={() => addItem(calcNearestPoint(), 1)}>+</button>
+                    </li>}
                     {itemsList.filter((item) => (item.Name.toLowerCase().includes(searchTerm.toLowerCase())) || item.Abbreviation.toLowerCase().includes(searchTerm.toLowerCase())).map((item) => {
                     return <li key={item.key} className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15">
                         <ItemRenderer item={item} addItem={addItem} triggerRerender={triggerRerender} setSelectedItem={setSelectedItem} />
