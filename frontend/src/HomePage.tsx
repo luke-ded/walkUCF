@@ -33,6 +33,37 @@ function HomePage()
         setCount(count + 1);
     };
 
+    async function checkGeolocationPermission() {
+      try 
+      {
+        const permissionStatus = await navigator.permissions.query({ name: 'geolocation' });
+
+        var permissionStatusData = localStorage.getItem("permissionStatus");
+        var lastPermissionStatus : any = null;
+
+        if(permissionStatusData != null && permissionStatusData != undefined)
+            lastPermissionStatus = JSON.parse(permissionStatusData);
+
+        switch (permissionStatus.state) {
+          case 'granted':
+            localStorage.setItem("permissionStatus", JSON.stringify(true));
+            break;
+          default:
+            localStorage.setItem("permissionStatus", JSON.stringify(false));
+        }
+
+        if(permissionStatus.state != lastPermissionStatus)
+            triggerRerender();
+        } 
+      catch (error) 
+      {
+      console.error("Error querying permissions:", error);
+      }
+    }
+
+    
+    checkGeolocationPermission();
+
     
     return(
         <div className={`relative flex-col h-[150vh] max-lg:min-h-[1100px] lg:h-screen w-screen items-center justify-center dark:text-neutral-200 text-neutral-700 cursor-default select-none ${about || settings || error ? "overflow-y-hidden" : ""}`}>

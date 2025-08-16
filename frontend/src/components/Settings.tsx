@@ -26,6 +26,12 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings}) =>
     else
         var startUnits = String((settings.walkSpeed / .621371).toFixed(1));
 
+    var permissionStatusData = localStorage.getItem("permissionStatus");
+    var permissionStatus : any = null;
+
+    if(permissionStatusData != null && permissionStatusData != undefined)
+        permissionStatus = JSON.parse(permissionStatusData);
+
 
     const [units, setUnits] = useState(settings.units);
     const [walkSpeed, setWalkSpeed] = useState(settings.walkSpeed);
@@ -123,7 +129,7 @@ const Settings: React.FC<ChildProps> = ({triggerRerender, toggleSettings}) =>
                                 )}
                             </div>
                         </div>
-                        {navigator.geolocation &&
+                        {navigator.geolocation && permissionStatus &&
                         <div className="flex justify-center items-center w-full mt-5">
                             <h1 className="text-xl mr-2">Show Location:</h1>
                             <div className="flex cursor-pointer h-10 w-38 dark:bg-black/40 bg-white/70 border-2 dark:border-[#ffe68c] border-[#a48100] rounded-xl">

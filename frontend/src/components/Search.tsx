@@ -79,6 +79,16 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
 
     console.log(selectedItem);
 
+    
+    var permissionStatusData = localStorage.getItem("permissionStatus");
+    var permissionStatus : boolean;
+
+    if(permissionStatusData == null || permissionStatusData == undefined)
+        permissionStatus = false;
+    else
+        permissionStatus = JSON.parse(permissionStatusData);
+
+
     function addItem(item: Item, selectedEntrance: number)
     {
         localStorage.setItem("selectedPoint", JSON.stringify({...item, selectedEntrance: selectedEntrance}));
@@ -103,7 +113,7 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
         if(currentLocationData == undefined || currentLocationData == null || !navigator.geolocation)
             return closestPoint;
 
-        var currentLocation = JSON.parse(currentLocationData)
+        var currentLocation = JSON.parse(currentLocationData);
 
         closestPoint = nearestPoint([currentLocation[0], currentLocation[1]]);
         
@@ -120,7 +130,7 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
             </div>           
             <div ref={scrollRef} className="mt-5 overflow-y-scroll min-h-11/16 max-h-11/16 border-2 dark:border-[#ffca09] border-[#a48100] rounded-sm dark:bg-black/35 bg-white/65 shadow-lg">
                 <ul className="shadow divide-y dark:divide-[#ffca09] divide:[#d6d4d4] min-h-21/20">
-                    {searchTerm.length == 0 && navigator.geolocation && <li className="flex justify-between items-center px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15 font-bold">
+                    {searchTerm.length == 0 && navigator.geolocation && permissionStatus != false && <li className="flex justify-between items-center px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15 font-bold">
                         Current Location
                         <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 active:bg-[#ffca09]/60 cursor-pointer"
                         onClick={() => addItem(calcNearestPoint(), 1)}>+</button>
