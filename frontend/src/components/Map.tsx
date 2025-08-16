@@ -131,7 +131,8 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
 
     if(currentSettings.showLocation == false)
     {
-      setCurrentLocation([-1, -1]);
+      if(currentLocation[0] != -1 || currentLocation[1] != -1)
+        setCurrentLocation([-1, -1]);
       return;
     }
 

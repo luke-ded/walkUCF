@@ -52,9 +52,13 @@ function HomePage()
             localStorage.setItem("permissionStatus", JSON.stringify(false));
         }
 
-        if(permissionStatus.state != lastPermissionStatus)
+        if((permissionStatus.state == "granted") != lastPermissionStatus)
+        {
+            console.log(permissionStatus.state + " != " + lastPermissionStatus);
+            localStorage.setItem("permissionStatus", JSON.stringify(permissionStatus.state == "granted"));
             triggerRerender();
-        } 
+        }      
+      } 
       catch (error) 
       {
       console.error("Error querying permissions:", error);
