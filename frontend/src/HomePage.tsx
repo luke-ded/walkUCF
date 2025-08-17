@@ -14,6 +14,7 @@ function HomePage()
     const [error, toggleError] = useState(false);
     const [settings, toggleSettings] = useState(false);
     const [stops, setStops] = useState<any []>([]);
+    const [prevLoc, setPrevLoc] = useState<any>(null);
 
 
     var settingsData = localStorage.getItem("settings");
@@ -37,6 +38,8 @@ function HomePage()
       try 
       {
         const permissionStatus = await navigator.permissions.query({ name: 'geolocation' });
+        if(permissionStatus.state == prevLoc)
+            return;
 
         var permissionStatusData = localStorage.getItem("permissionStatus");
         var lastPermissionStatus : any = null;
@@ -52,21 +55,18 @@ function HomePage()
             localStorage.setItem("permissionStatus", JSON.stringify(false));
         }
 
-        if((permissionStatus.state == "granted") != lastPermissionStatus)
+        if(permissionStatus.state != prevLoc)
         {
-            console.log(permissionStatus.state + " != " + lastPermissionStatus);
-            localStorage.setItem("permissionStatus", JSON.stringify(!lastPermissionStatus));
-            triggerRerender();
+            setPrevLoc(permissionStatus.state);
         }      
       } 
       catch (error) 
       {
-      console.error("Error querying permissions:", error);
+        console.error("Error querying permissions:", error);
       }
     }
 
-    
-    checkGeolocationPermission();
+    setInterval(checkGeolocationPermission, 4000);
 
     
     return(
