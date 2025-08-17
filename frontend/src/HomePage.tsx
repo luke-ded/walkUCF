@@ -37,10 +37,10 @@ function HomePage()
     async function iosCheckGeolocationPermission(): Promise<any> {
         return new Promise((resolve) => {
             navigator.geolocation.getCurrentPosition(
-                (position) => {
+                (_position) => {
                     resolve("granted");
                 },
-                (error) => {
+                (_error) => {
                     resolve("denied"); 
                 }
             );
