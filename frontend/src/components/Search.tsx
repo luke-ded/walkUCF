@@ -2,6 +2,8 @@ import { useState, useRef } from "react";
 import locations from "../json_files/locations.json";
 import { nearestPoint } from "./Nearest.ts";
 
+import { TiLocationArrow } from "react-icons/ti";
+
 interface Item 
 {
     key:string;
@@ -131,7 +133,10 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
                     {searchTerm.length == 0 && navigator.geolocation && permissionStatus != false && 
                     <li className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15 font-bold">
                         <div className="flex justify-between items-center max-md:px-1">
-                            Current Location
+                            <div className="flex items-center">
+                                Current Location&nbsp;
+                                <TiLocationArrow size={26}/>
+                            </div>
                             <button className = "rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 active:bg-[#ffca09]/60 cursor-pointer"
                             onClick={() => addItem(calcNearestPoint(), 1)}>+</button>   
                         </div>
