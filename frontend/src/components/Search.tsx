@@ -72,14 +72,12 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
 {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [searchTerm, setSearchTerm] = useState('');
-    const [selectedItem, setSelectedItem] = useState("");
+    const [_selectedItem, setSelectedItem] = useState("");
 
     // List of UCF buildings
     const itemsList = locations;
 
-    console.log(selectedItem);
 
-    
     var permissionStatusData = localStorage.getItem("permissionStatus");
     var permissionStatus : boolean;
 

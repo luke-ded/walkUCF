@@ -20,8 +20,7 @@ interface ChildProps
 
 const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =>
 {
-    const [selectedItem, setSelectedItem] = useState("");
-    console.log(selectedItem);
+    const [_selectedItem, setSelectedItem] = useState("");
 
     const itemsList = stops;
     var graphData = JSON.parse(localStorage.getItem("graphData")!);
