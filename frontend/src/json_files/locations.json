@@ -39,19 +39,6 @@
     ]
   },
   {
-    "key": "4",
-    "Name": "Academic Village Bus Stop (6)",
-    "Abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 8925265163,
-        "lat": 28.5952613,
-        "lon": -81.196839
-      }
-    ]
-  },
-  {
     "key": "5",
     "Name": "Addition Financial",
     "Abbreviation": "N/A",
@@ -88,6 +75,20 @@
         "lon": -81.197318,
         "id": 2980303863
       }
+    ]
+  },
+  {
+    "key": "13",
+    "Name": "Addition Arena/Knights Plaza/Towers Bus Stop (5)",
+    "Abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 12150621438,
+        "lat": 28.6061847,
+        "lon": -81.197935
+      },
+      {"id": 3456757082 , "lat": 28.6065100 , "lon": -81.1982350 }
     ]
   },
   {
@@ -170,19 +171,6 @@
         "id": 265,
         "lat": 28.598351,
         "lon": -81.1998319
-      }
-    ]
-  },
-  {
-    "key": "13",
-    "Name": "Athletics Village Bus Stop (3)",
-    "Abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 12150621438,
-        "lat": 28.6061847,
-        "lon": -81.197935
       }
     ]
   },
@@ -1200,19 +1188,6 @@
     ]
   },
   {
-    "key": "62",
-    "Name": "Ferrell Commons Bus Stop (7)",
-    "Abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 2762522365,
-        "lat": 28.5974122,
-        "lon": -81.199449
-      }
-    ]
-  },
-  {
     "key": "63",
     "Name": "Flager Hall",
     "Abbreviation": "N/A",
@@ -1295,6 +1270,15 @@
         "lon": -81.20652,
         "id": 12653691722
       }
+    ]
+  },
+  {
+    "key": "193",
+    "Name": "Greek Park Bus Stop (4)",
+    "Abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 12150621412 , "lat": 28.6052611 , "lon": -81.2052700 }
     ]
   },
   {
@@ -1982,6 +1966,19 @@
     ]
   },
   {
+    "key": "207",
+    "Name": "Engineering/Business/CREOL/Research 1 Bus Stop (6)",
+    "Abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 485,
+        "lat": 28.6023309,
+        "lon": -81.1967098
+      }
+    ]
+  },
+  {
     "key": "99",
     "Name": "LEAD Scholars Academy",
     "Abbreviation": "N/A",
@@ -2333,15 +2330,11 @@
   },
   {
     "key": "119",
-    "Name": "Lake Claire Bus Stop (2)",
+    "Name": "Lake Claire Community Bus Stop (3)",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
-      {
-        "id": 576,
-        "lat": 28.6043422,
-        "lon": -81.2050626
-      }
+      {"id": 8921428195 , "lat": 28.6034047 , "lon": -81.2039740 }
     ]
   },
   {
@@ -2438,7 +2431,7 @@
   },
   {
     "key": "124",
-    "Name": "LYNX/UCF Transit Center Bus Stop (11)",
+    "Name": "LYNX Transit Center Bus Stop (1)",
     "Abbreviation": "LYNX",
     "selectedEntrance": 1,
     "Entrances": [
@@ -2873,6 +2866,19 @@
         "id": 2762673769,
         "lat": 28.594207,
         "lon": -81.197185
+      }
+    ]
+  },
+  {
+    "key": "4",
+    "Name": "Nike and Neptune Communities Bus Stop (7)",
+    "Abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 8925265163,
+        "lat": 28.5952613,
+        "lon": -81.196839
       }
     ]
   },
@@ -4272,45 +4278,6 @@
     ]
   },
   {
-    "key": "186",
-    "Name": "Parking Lot B1 Bus Stop (10)",
-    "Abbreviation": "LYNX",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 12286301832,
-        "lat": 28.5987999,
-        "lon": -81.203225
-      }
-    ]
-  },
-  {
-    "key": "187",
-    "Name": "Parking Lot B2 Bus Stop (9)",
-    "Abbreviation": "LYNX",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 579,
-        "lat": 28.5981969,
-        "lon": -81.2020669
-      }
-    ]
-  },
-  {
-    "key": "188",
-    "Name": "Parking Lot B7 Bus Stop (8)",
-    "Abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 8932946956,
-        "lat": 28.5949368,
-        "lon": -81.202062
-      }
-    ]
-  },
-  {
     "key": "189",
     "Name": "Pegasus Ballroom",
     "Abbreviation": "N/A",
@@ -4409,19 +4376,6 @@
         "id": 471,
         "lat": 28.6001755,
         "lon": -81.1978672
-      }
-    ]
-  },
-  {
-    "key": "193",
-    "Name": "Physical Sciences Building Bus Stop (5)",
-    "Abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 578,
-        "lat": 28.5994436,
-        "lon": -81.1982041
       }
     ]
   },
@@ -4631,6 +4585,15 @@
     ]
   },
   {
+    "key": "62",
+    "Name": "Recreation & Wellness Center (RWC) Bus Stop (8)",
+    "Abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 2762673593 , "lat": 28.5962676 , "lon": -81.1993570 }
+    ]
+  },
+  {
     "key": "204",
     "Name": "Recycling Center",
     "Abbreviation": "RCS",
@@ -4703,19 +4666,6 @@
         "id": 466,
         "lat": 28.6024673,
         "lon": -81.1971345
-      }
-    ]
-  },
-  {
-    "key": "207",
-    "Name": "Research 1 Bus Stop (4)",
-    "Abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 485,
-        "lat": 28.6023309,
-        "lon": -81.1967098
       }
     ]
   },
@@ -4939,7 +4889,7 @@
   },
   {
     "key": "219",
-    "Name": "Student Union Bus Stop (1)",
+    "Name": "Student Union/John T. Washington Center Bus Stop (2)",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5074,6 +5024,15 @@
         "lat": 28.5991754,
         "lon": -81.2068938
       }
+    ]
+  },
+  {
+    "key": "186",
+    "Name": "Celeste Hotel Bus Stop (10)",
+    "Abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 584 , "lat": 28.5995891 , "lon": -81.2070012 }
     ]
   },
   {
@@ -5438,6 +5397,15 @@
         "lat": 28.5968998,
         "lon": -81.203064
       }
+    ]
+  },
+  {
+    "key": "188",
+    "Name": "Visitor & Parking Information Center (VPI) Bus Stop (9)",
+    "Abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 8932946951 , "lat": 28.5968998 , "lon": -81.2030640 }
     ]
   },
   {
