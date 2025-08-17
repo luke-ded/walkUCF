@@ -148,8 +148,8 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
         setCurrentLocation([position.coords.latitude, position.coords.longitude]);
         localStorage.setItem("currentLocation", JSON.stringify([position.coords.latitude, position.coords.longitude]));
       },
-      (e) => {
-        console.error(e.message);
+      (_e) => {
+        //console.error(_e.message);
       }
     );
   }
