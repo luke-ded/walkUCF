@@ -32,28 +32,29 @@ select the options you would like enabled for your route.
 8. View your optimized route!
 
 ### Report an Issue
-Please report any issues, including incorrect map data, with the form link provided in the "about" pane. 
+Please report any issues, including incorrect map data, with the form link [here](https://docs.google.com/forms/d/e/1FAIpQLSc7kSWWmnO68TkJwnQDMlhnf3cZ2gaRdT9crBl4PxXvx3JQGg/viewform) or as provided in the "about" pane. 
 
 ## The Code
 - **Dijkstra's Algorithm:** I wrote a customized version of the classic Dijkstra's Algorithm in TypeScript to find the shortest path in this application. It utilizes a priority queue from the "js-priority-queue" npm package.
 - **TypeScript & TSX:** TSX made integrating state variables and list elements easy. 
-In the future, I will likely use JavaScript & JSX instead. The extra specificity provided by TypeScript did not significantly improve the code for this application and overcomplicated some portions.
+In the future, I will likely use JavaScript & JSX instead; the extra specificity provided by TypeScript did not significantly improve the code for this application and overcomplicated some portions.
 - **JSON Files:** JSON files are used to store map data such as paths, nodes, and locations (buildings.) Each map option has its own JSON file containing many additional paths (for example, selecting
-the "parking lots" map option concatenates the parkingPaths JSON array to the standard paths, resulting in 300+ new paths.)
+the "parking lots" map option concatenates the parkingPaths JSON array to the standard paths array, resulting in 300+ new paths.)
 ## 
 ![Auxiliary Programs Screenshot](images/auxprogs.png)
 
 - **Auxiliary Programs:** There are several C++ programs in the Auxiliary Programs folder that I wrote to assist me with creating the map data for this application. They include programs for parsing nodes, footpaths, and entrances from the OSM
-data in the .osm file as well as programs to add new paths and nodes to the JSON map data files.
+data in the .osm file as well as programs to add new paths and nodes to the JSON map data files. There is also a python program for sorting and formatting location data.
 
 ## Tech Stack
-- React (TypeScript): Framework for building the website using TSX components instead of traditional HTML.
-- Tailwindcss: Framework for using simplified inline styles instead of traditional CSS.
-- LeafletJS: Framework for generating the map, map markers, and map lines.
-- Nginx: Backend server OS.
+- **React (TypeScript):** Framework for building the website using TSX components instead of traditional HTML.
+- **Tailwindcss:** Framework for using simplified inline styles instead of traditional CSS.
+- **React Leaflet:** Framework for generating the map, map markers, and map lines.
+- **Nginx:** Backend server OS.
+- **DigitalOcean:** Server hosting provider.
 
 ## Other Resources
-- **OpenStreetMap(OSM):** Basis for many of the nodes and paths used for Dijkstra's algorithm. Custom C++ programs were used to parse this data into JSON arrays. OSM is also used to tile the LeafletJS map.
+- **OpenStreetMap(OSM):** An open source map which provided a basis for many of the nodes and paths used for Dijkstra's algorithm. I wrote custom C++ programs to parse this data into JSON arrays (therefore, this application is no longer linked to OSM data.) OSM is also used to tile the LeafletJS map. I have made some contributions to OSM since this project launched; I encourage users who desire to improve the visual appearance of the map to [contribute themselves](https://www.openstreetmap.org/#map=16/28.60327/-81.19849). 
 
 ## 
 ![Geojson Screenshot](images/geojson.png)
@@ -62,12 +63,12 @@ data in the .osm file as well as programs to add new paths and nodes to the JSON
 of my points displayed on a visual map.
 
 ## Potential Future Enhancements
-- Mobile app.
 - Entrance option for "closest," which automatically calculates the entrance closest to the previous stop.
 - Map option for maximizing time indoors/under cover (for rainy days, hot days, etc.).
 - Users reporting temporarily inaccessible paths (due to construction, events, etc.).
 - Turn-by-turn directions.
-- Location services.
+- - Mobile app.
+- ~~Location services.~~ Added as of 08/2025.
 
 ## About
 The name "walkUCF" is creatively shortened from "walking the University of Central Florida". This program was created by Luke, a CS major at the University of Central Florida.
