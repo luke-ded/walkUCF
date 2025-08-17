@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import { FaXmark } from "react-icons/fa6";
+import { TiLocationArrow } from "react-icons/ti";
 
 interface Item 
 {
@@ -32,6 +33,7 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
                 <div className="flex justify-between items-center">
                     <div className="flex justify-start max-w-7/10 items-center">
                         <span className="dark:text-neutral-200 text-neutral-700 font-semibold text-md">{item.Name}</span>
+                        {item.Name == "Current Location" && <TiLocationArrow size={26} className="ml-2 dark:text-neutral-200 text-neutral-700 font-semibold text-md"/>}
                     </div>
                     <div>
                         <button className = "rounded-sm inline-block h-fit w-fit p-1.5 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 active:bg-[#ffca09]/60 cursor-pointer"
@@ -41,8 +43,8 @@ const RouteList: React.FC<ChildProps> = ({ triggerRerender, setStops, stops }) =
                 <div className="flex justify-between mt-2 items-center">
                     <div className="flex justify-start">
                         <p className="dark:text-[#ffca09] text-[#a48100] text-sm">{item.Abbreviation}</p>
-                        <p className="dark:text-neutral-200 text-neutral-700 text-sm">&nbsp;| Stop {itemsList.indexOf(item) + 1}
-                            &nbsp;| {item.selectedEntrance == -1 ? "Closest Entrance" : item.selectedEntrance == 1 ? "Main Entrance" : "Door " + item.selectedEntrance}</p>
+                        <p className="dark:text-neutral-200 text-neutral-700 text-sm">&nbsp;| Stop {itemsList.indexOf(item) + 1}</p>
+                        {item.Name != "Current Location" && <p className="dark:text-neutral-200 text-neutral-700 text-sm">&nbsp;| {item.selectedEntrance == -1 ? "Closest Entrance" : item.selectedEntrance == 1 ? "Main Entrance" : "Door " + item.selectedEntrance}</p>}
                     </div>
                     <div>
                         <button className = "mr-3 rounded-sm inline-block h-fit w-fit px-2 dark:bg-[#ffca09] bg-[#a48100] border-2 dark:border-[#ffca09] border-[#a48100] text-center dark:text-neutral-700 text-neutral-200 dark:hover:text-[#faefc8] hover:text-neutral-600 text-lg font-bold hover:bg-[#ffca09]/60 active:bg-[#ffca09]/60 cursor-pointer"
