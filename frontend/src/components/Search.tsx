@@ -128,7 +128,7 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) =>
             <div className="h-2/8 flex w-full justify-center items-center">
                 <input className="w-full h-full text-lg dark:text-neutral-200 text-neutral-700 p-1 pl-2 border-2 dark:border-[#ffca09] border-[#a48100] dark:placeholder-neutral-200/75 placeholder-neutral-700/75 rounded-md dark:bg-black/25 bg-white/70 focus:outline-none focus:ring-1 focus:ring-[#ffca09]/70 shadow-lg" placeholder="Search" value={searchTerm} onChange={(e) => {setSearchTerm(e.target.value); scrollTop();}}></input>
             </div>           
-            <div ref={scrollRef} className="mt-5 overflow-y-scroll min-h-11/16 max-h-11/16 border-2 dark:border-[#ffca09] border-[#a48100] rounded-sm dark:bg-black/35 bg-white/65 shadow-lg">
+            <div ref={scrollRef} className="mt-5 overflow-y-scroll overflow-x-hidden min-h-11/16 max-h-11/16 border-2 dark:border-[#ffca09] border-[#a48100] rounded-sm dark:bg-black/35 bg-white/65 shadow-lg">
                 <ul className="shadow divide-y dark:divide-[#ffca09] divide:[#d6d4d4] min-h-21/20">
                     {searchTerm.length == 0 && navigator.geolocation && permissionStatus != false && 
                     <li className="px-[1vw] py-[1vh] cursor-pointer border-b dark:border-[#ffe68c]/50 hover:bg-neutral-100/15 font-bold">
