@@ -50,15 +50,7 @@ function HomePage()
     async function checkGeolocationPermission() {
       try 
       {
-        var permissionStatus : any;
-
-        if('permissions' in navigator && 'query' in navigator.permissions)
-        {
-            var permissionStatusData = await navigator.permissions.query({ name: 'geolocation' });
-            permissionStatus = permissionStatusData.state;
-        }
-        else
-            permissionStatus = await iosCheckGeolocationPermission();
+        var permissionStatus = await iosCheckGeolocationPermission();
         
         switch (permissionStatus) {
           case 'granted':
