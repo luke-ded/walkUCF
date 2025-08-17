@@ -339,10 +339,10 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
               <img className="h-17/20 w-auto" src={deselectImage} alt="Deselect marker icon" title="Deselect"></img>
             </div>
           </div>
-          <div className="flex items-center justify-center absolute z-10 top-0 right-0 bg-black/55 text-black rounded-[4px] p-1 pl-3 rounded-tr-sm rounded-bl-md rounded-tl-none rounded-br-none border-b-2 border-l-2 dark:border-[#ffca09] border-[#a48100]">
-             <div className="flex mr-2 text-neutral-100 text-md max-sm:text-sm">
+          <div className="flex items-center justify-center absolute z-10 top-0 right-0 dark:bg-black/55 bg-white/80 text-neutral-700 rounded-[4px] p-1 pl-3 rounded-tr-sm rounded-bl-md rounded-tl-none rounded-br-none border-b-2 border-l-2 dark:border-[#ffca09] border-[#a48100]">
+             <div className="flex mr-2 dark:text-neutral-100 text-md max-sm:text-sm">
                 <h1>{settings.walkSpeed != 0 && graphData.distanceMi != null && graphData != undefined && settings.walkSpeed != null? (graphData?.distanceMi.toFixed(2) / (settings.walkSpeed/60)).toFixed(1) : "0"} min&nbsp;</h1> 
-                <h1 className="text-white font-bold">|</h1>
+                <h1 className="dark:text-white font-bold">|</h1>
                 <h1>&nbsp;{settings.units == "imperial" ? graphData?.distanceMi.toFixed(2) + " mi": graphData?.distanceKm.toFixed(2) + " km"}</h1>
             </div>
           </div>
