@@ -336,7 +336,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
           <div className="flex items-center justify-center absolute z-10 mt-20 ml-[11px] bg-black/20 text-black rounded-[4px] w-[33px] h-[33px] text-[18px] font-bold cursor-pointer"
           onClick={handleDeselect}>
             <div className="flex items-center justify-center w-[29px] h-[29px] rounded-[2px] bg-[#ffffff] hover:bg-[#f4f4f4]">
-              <img className="h-17/20 w-auto" src={deselectImage} alt="Deselect marker icon"></img>
+              <img className="h-17/20 w-auto" src={deselectImage} alt="Deselect marker icon" title="Deselect"></img>
             </div>
           </div>
           <div className="flex items-center justify-center absolute z-10 top-0 right-0 bg-black/55 text-black rounded-[4px] p-1 pl-3 rounded-tr-sm rounded-bl-md rounded-tl-none rounded-br-none border-b-2 border-l-2 dark:border-[#ffca09] border-[#a48100]">
