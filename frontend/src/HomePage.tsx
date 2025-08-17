@@ -34,20 +34,33 @@ function HomePage()
         setCount(count + 1);
     };
 
+    async function iosCheckGeolocationPermission(): Promise<any> {
+        return new Promise((resolve) => {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    resolve("granted");
+                },
+                (error) => {
+                    resolve("denied"); 
+                }
+            );
+        });
+    }
+
     async function checkGeolocationPermission() {
       try 
       {
-        const permissionStatus = await navigator.permissions.query({ name: 'geolocation' });
-        if(permissionStatus.state == prevLoc)
-            return;
+        var permissionStatus : any;
 
-        var permissionStatusData = localStorage.getItem("permissionStatus");
-        var lastPermissionStatus : any = null;
-
-        if(permissionStatusData != null && permissionStatusData != undefined)
-            lastPermissionStatus = JSON.parse(permissionStatusData);
-
-        switch (permissionStatus.state) {
+        if('permissions' in navigator && 'query' in navigator.permissions)
+        {
+            var permissionStatusData = await navigator.permissions.query({ name: 'geolocation' });
+            permissionStatus = permissionStatusData.state;
+        }
+        else
+            permissionStatus = await iosCheckGeolocationPermission();
+        
+        switch (permissionStatus) {
           case 'granted':
             localStorage.setItem("permissionStatus", JSON.stringify(true));
             break;
@@ -55,9 +68,9 @@ function HomePage()
             localStorage.setItem("permissionStatus", JSON.stringify(false));
         }
 
-        if(permissionStatus.state != prevLoc)
+        if(permissionStatus != prevLoc)
         {
-            setPrevLoc(permissionStatus.state);
+            setPrevLoc(permissionStatus);
         }      
       } 
       catch (error) 
