@@ -277,6 +277,16 @@
     ]
   },
   {
+    "key": "256",
+    "Name": "Baseball Stadium",
+    "selectedEntrance": 1,
+    "Abbreviation": "N/A",
+    "Entrances": [
+      {"id": 5001725283 , "lat": 28.6093310 , "lon": -81.1963080 },
+      {"id": 1701706496 , "lat": 28.6091755 , "lon": -81.1959420 }
+    ]
+  },
+  {
     "key": "19",
     "Name": "Biological Sciences Building",
     "Abbreviation": "BIO",
