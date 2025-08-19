@@ -2487,7 +2487,7 @@
   {
     "key": "255",
     "Name": "Memory Mall",
-    "Abbreviation": "MH",
+    "Abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {"id": 893880952 , "lat": 28.6042691 , "lon": -81.1990590 }
