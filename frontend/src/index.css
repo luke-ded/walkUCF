@@ -1,6 +1,8 @@
-:root 
-{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Avenir, Helvetica, Arial, sans-serif;
+:root {
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, Avenir, Helvetica,
+    Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -8,7 +10,7 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #ffffffb8;
   background-size: cover;
-  background-blend-mode:lighten;
+  background-blend-mode: lighten;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,23 +18,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body 
-{
-  height:100%;
+html,
+body {
+  height: 100%;
 }
 
-@media (max-width: 1023px)
-{
-  :root
-  {
+@media (max-width: 1023px) {
+  :root {
     background-image: url("./assets/backgroundmap_mobile.jpg");
   }
 }
 
-@media (min-width: 1024px)
-{
-  :root
-  {
+@media (min-width: 1024px) {
+  :root {
     background-image: url("./assets/backgroundmap.jpg");
   }
 }

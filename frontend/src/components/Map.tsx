@@ -1,50 +1,52 @@
-import { MapContainer, TileLayer, Marker, Popup, Polygon, Polyline, useMap} from 'react-leaflet';
-import {LatLngTuple, LatLngBoundsExpression, LatLngExpression} from 'leaflet';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import { useState, useEffect } from 'react';
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  Polygon,
+  Polyline,
+  useMap,
+} from "react-leaflet";
+import { LatLngTuple, LatLngBoundsExpression, LatLngExpression } from "leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import { useState, useEffect } from "react";
 import deselectImage from "../assets/gold-deselect-marker-icon.png";
 import selectImage from "../assets/gold-select-marker-icon.png";
 import standardImage from "../assets/standard-marker-icon.png";
-import {createGraph, dijkstra} from './Dijkstra.ts';
+import { createGraph, dijkstra } from "./Dijkstra.ts";
 
-interface Item 
-{
-  key:string;
+interface Item {
+  key: string;
   Name: string;
   Abbreviation: string;
-  Entrances: any [];
+  Entrances: any[];
   selectedEntrance: number;
 }
 
-interface PropsType 
-{
+interface PropsType {
   items: any[];
   renderer: (point: any) => React.ReactNode;
 }
 
-interface PathPropsType 
-{
+interface PathPropsType {
   items: number[][];
   renderer: (path: any, index: number) => React.ReactNode;
 }
 
-interface ChildProps
-{
+interface ChildProps {
   triggerRerender: () => void;
   toggleError: (error: boolean) => void;
-  stops: any [];
+  stops: any[];
 }
-interface MapPanHandlerProps 
-{
+interface MapPanHandlerProps {
   targetPoint: LatLngTuple;
 }
 
 const MapPanHandler: React.FC<MapPanHandlerProps> = ({ targetPoint }) => {
   const map = useMap();
 
-  useEffect(() => 
-  {
+  useEffect(() => {
     if (targetPoint && targetPoint[0] !== 100 && targetPoint[0] !== -1) {
       const latLng = L.latLng(targetPoint[0], targetPoint[1]);
       const bounds = L.latLngBounds(latLng, latLng);
@@ -56,57 +58,52 @@ const MapPanHandler: React.FC<MapPanHandlerProps> = ({ targetPoint }) => {
   return null;
 };
 
-const createSelectIcon = () => 
-{
+const createSelectIcon = () => {
   return L.divIcon({
-    className: 'colored-marker', 
+    className: "colored-marker",
     html: `
     <div style="width: 25px; height: 40px;" aria-label="Deselect button">
       <img style="width:auto; height: 41px;" src=${selectImage} alt="Deselect marker icon"/>
     </div>`,
-    iconSize: [10, 10], 
+    iconSize: [10, 10],
     iconAnchor: [12, 41],
-    popupAnchor: [0, -10]
+    popupAnchor: [0, -10],
   });
 };
 
-const createCurrentLocIcon = () => 
-{
+const createCurrentLocIcon = () => {
   return L.divIcon({
-    className: 'current-marker', 
+    className: "current-marker",
     html: `
     <div style="width: 25px; height: 25px; background-color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);" aria-label="Deselect button">
       <div style="width:19px; height:19px; background-color: blue; background: linear-gradient(to bottom, #4899d0, #1975c8); border-radius: 50%;"/>
     </div>`,
-    iconSize: [10, 10], 
+    iconSize: [10, 10],
     iconAnchor: [11.5, 15],
-    popupAnchor: [0, 0]
+    popupAnchor: [0, 0],
   });
 };
 
-const createStandardIcon = () => 
-{
+const createStandardIcon = () => {
   return L.divIcon({
-    className: 'standard-marker', 
+    className: "standard-marker",
     html: `
     <div style="width: 25px; height: 40px;" aria-label="Deselect button">
       <img style="width:auto; height: 41px;" src=${standardImage} alt="Deselect marker icon"/>
     </div>`,
-    iconSize: [10, 10], 
+    iconSize: [10, 10],
     iconAnchor: [12, 41],
-    popupAnchor: [0, -10]
+    popupAnchor: [0, -10],
   });
 };
 
-const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
-{
-  var initPoint : LatLngTuple = [10, 10];
+const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
+  var initPoint: LatLngTuple = [10, 10];
   var initVals = [true, false, false, false];
 
   var initData = localStorage.getItem("mapOptions");
-  if(initData != undefined)
-    initVals = JSON.parse(initData);
-    
+  if (initData != undefined) initVals = JSON.parse(initData);
+
   const [buildings, setBuilding] = useState(initVals[0]);
   const [jaywalking, setJaywalking] = useState(initVals[1]);
   const [grass, setGrass] = useState(initVals[2]);
@@ -114,7 +111,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
   const [selectedPoint, setSelectedPoint] = useState(initPoint);
   const [paths, setPaths] = useState<number[][]>([]);
   const [currentLocation, setCurrentLocation] = useState<LatLngTuple>([-1, -1]);
-  
+
   const selectIcon = createSelectIcon();
   const currentIcon = createCurrentLocIcon();
   const standardIcon = createStandardIcon();
@@ -125,13 +122,11 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
   var graphData = JSON.parse(localStorage.getItem("graphData")!);
   var settings = JSON.parse(localStorage.getItem("settings")!);
 
-  function currentLocationHandler()
-  {
+  function currentLocationHandler() {
     var currentSettings = JSON.parse(localStorage.getItem("settings")!);
 
-    if(currentSettings.showLocation == false)
-    {
-      if(currentLocation[0] != -1 || currentLocation[1] != -1)
+    if (currentSettings.showLocation == false) {
+      if (currentLocation[0] != -1 || currentLocation[1] != -1)
         setCurrentLocation([-1, -1]);
       return;
     }
@@ -142,212 +137,260 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
     }
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        if(currentLocation[0] == position.coords.latitude && currentLocation[1] == position.coords.longitude)
+        if (
+          currentLocation[0] == position.coords.latitude &&
+          currentLocation[1] == position.coords.longitude
+        )
           return;
 
-        setCurrentLocation([position.coords.latitude, position.coords.longitude]);
-        localStorage.setItem("currentLocation", JSON.stringify([position.coords.latitude, position.coords.longitude]));
+        setCurrentLocation([
+          position.coords.latitude,
+          position.coords.longitude,
+        ]);
+        localStorage.setItem(
+          "currentLocation",
+          JSON.stringify([position.coords.latitude, position.coords.longitude]),
+        );
       },
       (_e) => {
         //console.error(_e.message);
-      }
+      },
     );
   }
 
   useEffect(() => {
     currentLocationHandler();
-    setInterval(() =>
-    {
+    setInterval(() => {
       currentLocationHandler();
     }, 2000);
   }, []);
 
-  useEffect(() =>
-  {
+  useEffect(() => {
     handleDeselect();
     var totalDistance = 0;
     var tempPaths: number[][] = [];
 
-    // Calculate 
-    for(var i = 0; i < stops.length - 1; i++)
-    {
-      if(stops[i].selectedEntrance == -1)
-      {
+    // Calculate
+    for (var i = 0; i < stops.length - 1; i++) {
+      if (stops[i].selectedEntrance == -1) {
         alert("Do something");
       }
-   
-      var result = dijkstra(data.graph, stops[i].Entrances[stops[i].selectedEntrance - 1].id, stops[i + 1].Entrances[stops[i + 1].selectedEntrance - 1].id);
-      
-      if(result.path.length == 0)
-        toggleError(true);
 
-      if(stops[i + 1].selectedEntrance == -1)
-      {
+      var result = dijkstra(
+        data.graph,
+        stops[i].Entrances[stops[i].selectedEntrance - 1].id,
+        stops[i + 1].Entrances[stops[i + 1].selectedEntrance - 1].id,
+      );
+
+      if (result.path.length == 0) toggleError(true);
+
+      if (stops[i + 1].selectedEntrance == -1) {
         alert("Do something");
       }
-      if(result.distances.get(stops[i + 1].Entrances[stops[i + 1].selectedEntrance - 1].id) != undefined)
-        totalDistance += result.distances.get(stops[i + 1].Entrances[stops[i + 1].selectedEntrance - 1].id)!;
+      if (
+        result.distances.get(
+          stops[i + 1].Entrances[stops[i + 1].selectedEntrance - 1].id,
+        ) != undefined
+      )
+        totalDistance += result.distances.get(
+          stops[i + 1].Entrances[stops[i + 1].selectedEntrance - 1].id,
+        )!;
 
       tempPaths.push(result.path);
     }
 
-    localStorage.setItem("graphData", JSON.stringify(
-    {
-      distanceMi: (totalDistance! * .621371),
-      distanceKm : totalDistance
-    }));
+    localStorage.setItem(
+      "graphData",
+      JSON.stringify({
+        distanceMi: totalDistance! * 0.621371,
+        distanceKm: totalDistance,
+      }),
+    );
     //tempPaths = data.pathnum;
 
-    localStorage.setItem("mapOptions", JSON.stringify([buildings, jaywalking, grass, parking]));
+    localStorage.setItem(
+      "mapOptions",
+      JSON.stringify([buildings, jaywalking, grass, parking]),
+    );
 
     setPaths(tempPaths);
     triggerRerender();
   }, [stops, buildings, jaywalking, grass, parking]);
 
-  function getSelected()
-  {
-    var temp = localStorage.getItem('selectedPoint');
-    var tempSelectedPoint : LatLngTuple = [100, 100];
+  function getSelected() {
+    var temp = localStorage.getItem("selectedPoint");
+    var tempSelectedPoint: LatLngTuple = [100, 100];
 
-    if(temp != undefined && temp != null)
-    {
-      var parsedItem : Item = JSON.parse(temp);
+    if (temp != undefined && temp != null) {
+      var parsedItem: Item = JSON.parse(temp);
 
-      if(parsedItem.Entrances == undefined || parsedItem.Entrances == null)
+      if (parsedItem.Entrances == undefined || parsedItem.Entrances == null)
         tempSelectedPoint = [100, 100];
-      else
-      {
-        if(parsedItem.selectedEntrance == -1)
-          tempSelectedPoint = [parsedItem.Entrances[0].lat, parsedItem.Entrances[0].lon];
+      else {
+        if (parsedItem.selectedEntrance == -1)
+          tempSelectedPoint = [
+            parsedItem.Entrances[0].lat,
+            parsedItem.Entrances[0].lon,
+          ];
         else
-          tempSelectedPoint = [parsedItem.Entrances[parsedItem.selectedEntrance -1].lat, parsedItem.Entrances[parsedItem.selectedEntrance -1].lon];
+          tempSelectedPoint = [
+            parsedItem.Entrances[parsedItem.selectedEntrance - 1].lat,
+            parsedItem.Entrances[parsedItem.selectedEntrance - 1].lon,
+          ];
       }
-    }
-    else
-      tempSelectedPoint = [100, 100];
+    } else tempSelectedPoint = [100, 100];
 
-    if(tempSelectedPoint[0] != selectedPoint[0] || tempSelectedPoint[1] != selectedPoint[1])
-    {
+    if (
+      tempSelectedPoint[0] != selectedPoint[0] ||
+      tempSelectedPoint[1] != selectedPoint[1]
+    ) {
       setSelectedPoint(tempSelectedPoint);
-    }    
+    }
   }
 
-  const renderPoint = (point : any): React.ReactNode => 
-  {
-    var pointPosition : LatLngTuple = [point.Entrances[point.selectedEntrance - 1].lat, point.Entrances[point.selectedEntrance - 1].lon];
+  const renderPoint = (point: any): React.ReactNode => {
+    var pointPosition: LatLngTuple = [
+      point.Entrances[point.selectedEntrance - 1].lat,
+      point.Entrances[point.selectedEntrance - 1].lon,
+    ];
 
-    if(point.Entrances == undefined)
-    {
-      console.error("Invalid point in stop list point rendering.\n")
+    if (point.Entrances == undefined) {
+      console.error("Invalid point in stop list point rendering.\n");
       console.error(point);
-      return(<div></div>);
+      return <div></div>;
     }
-    
+
     var stopPosition = stops.indexOf(point) + 1;
 
-    if(stopPosition == 1)
-      return(
+    if (stopPosition == 1)
+      return (
         <Marker position={pointPosition} icon={standardIcon}>
           <Popup closeButton={false}>Start: {point.Name}</Popup>
         </Marker>
       );
-    else if(stopPosition == stops.length)
-      return(
+    else if (stopPosition == stops.length)
+      return (
         <Marker position={pointPosition} icon={standardIcon}>
           <Popup>End: {point.Name}</Popup>
         </Marker>
       );
     else
-      return(
+      return (
         <Marker position={pointPosition} icon={standardIcon}>
-          <Popup>Stop {stopPosition}: {point.Name}</Popup>
+          <Popup>
+            Stop {stopPosition}: {point.Name}
+          </Popup>
         </Marker>
       );
-  }
+  };
 
-  const renderPath = (path : number[], index: number): React.ReactNode =>
-  {
+  const renderPath = (path: number[], index: number): React.ReactNode => {
     var newPath: LatLngExpression[] = [];
-    
-    path.forEach(node => 
-    {
-      newPath.push([(pointMap.get(node)?.lat)!, (pointMap.get(node)?.lon)!])
+
+    path.forEach((node) => {
+      newPath.push([pointMap.get(node)?.lat!, pointMap.get(node)?.lon!]);
     });
 
-    return(
-      <Polyline positions={newPath} color="blue" opacity={.5} weight={4}>
+    return (
+      <Polyline positions={newPath} color="blue" opacity={0.5} weight={4}>
         <Popup closeButton={false}>Leg {index + 1}</Popup>
       </Polyline>
     );
-  }
+  };
 
-  function handleDeselect()
-  {
-    var tempSelectedPoint : LatLngTuple = [100, 100];
+  function handleDeselect() {
+    var tempSelectedPoint: LatLngTuple = [100, 100];
     localStorage.setItem("selectedPoint", JSON.stringify(tempSelectedPoint));
 
     setSelectedPoint(tempSelectedPoint);
   }
 
-  var props: PropsType = 
-  {
+  var props: PropsType = {
     items: stops,
-    renderer: renderPoint
+    renderer: renderPoint,
   };
 
-  var pathProps: PathPropsType = 
-  {
+  var pathProps: PathPropsType = {
     items: paths,
-    renderer: renderPath
+    renderer: renderPath,
   };
 
   getSelected();
 
-  const position : LatLngTuple = [28.6016, -81.2005];
+  const position: LatLngTuple = [28.6016, -81.2005];
 
-  const bounds: LatLngBoundsExpression = 
-  [
+  const bounds: LatLngBoundsExpression = [
     [28.590814194772776, -81.20725051378662], // Southwest corner
-    [28.611654822136117, -81.18757949435675]  // Northeast corner
+    [28.611654822136117, -81.18757949435675], // Northeast corner
   ];
-  
-  const outsideBoundsArea : any = 
-  [
+
+  const outsideBoundsArea: any = [
     [
       [28.64840202840334, -81.26488475758394],
       [28.52485540175175, -81.26488475758394],
       [28.52485540175175, -81.11457124982738],
       [28.64840202840334, -81.11457124982738],
-      [28.64840202840334, -81.26488475758394]
+      [28.64840202840334, -81.26488475758394],
     ],
     [
-      [28.5908900, -81.2072900], // SW
-      [28.6117300, -81.2072900], // NW
-      [28.6117300, -81.1867800], // NE
-      [28.5908900, -81.1867800], // SE
-      [28.5908900, -81.2072900]  // SW
-    ]
+      [28.59089, -81.20729], // SW
+      [28.61173, -81.20729], // NW
+      [28.61173, -81.18678], // NE
+      [28.59089, -81.18678], // SE
+      [28.59089, -81.20729], // SW
+    ],
   ];
 
   return (
-    <div className="w-full h-full">
-      <div className="relative flex w-full h-37/40 max-sm:h-35/40 self-start border-b-2 dark:border-[#ffca09] border-[#a48100]">
-        <div id="map" className="relative flex-col h-full w-full rounded-t-sm">
-          <div className="flex items-center justify-center absolute z-10 mt-20 ml-[11px] bg-black/20 text-black rounded-[4px] w-[33px] h-[33px] text-[18px] font-bold cursor-pointer"
-          onClick={handleDeselect}>
-            <div className="flex items-center justify-center w-[29px] h-[29px] rounded-[2px] bg-[#ffffff] hover:bg-[#f4f4f4]">
-              <img className="h-17/20 w-auto" src={deselectImage} alt="Deselect marker icon" title="Deselect"></img>
+    <div className="h-full w-full">
+      <div className="relative flex h-37/40 w-full self-start border-b-2 border-[#a48100] max-sm:h-35/40 dark:border-[#ffca09]">
+        <div id="map" className="relative h-full w-full flex-col rounded-t-sm">
+          <div
+            className="absolute z-10 mt-20 ml-[11px] flex h-[33px] w-[33px] cursor-pointer items-center justify-center rounded-[4px] bg-black/20 text-[18px] font-bold text-black"
+            onClick={handleDeselect}
+          >
+            <div className="flex h-[29px] w-[29px] items-center justify-center rounded-[2px] bg-[#ffffff] hover:bg-[#f4f4f4]">
+              <img
+                className="h-17/20 w-auto"
+                src={deselectImage}
+                alt="Deselect marker icon"
+                title="Deselect"
+              ></img>
             </div>
           </div>
-          <div className="flex items-center justify-center absolute z-10 top-0 right-0 dark:bg-black/55 bg-white/80 text-neutral-700 rounded-[4px] p-1 pl-3 rounded-tr-sm rounded-bl-md rounded-tl-none rounded-br-none border-b-2 border-l-2 dark:border-[#ffca09] border-[#a48100]">
-             <div className="flex mr-2 dark:text-neutral-100 text-md max-sm:text-sm">
-                <h1>{settings.walkSpeed != 0 && graphData.distanceMi != null && graphData != undefined && settings.walkSpeed != null? (graphData?.distanceMi.toFixed(2) / (settings.walkSpeed/60)).toFixed(1) : "0"} min&nbsp;</h1> 
-                <h1 className="dark:text-white font-bold">|</h1>
-                <h1>&nbsp;{settings.units == "imperial" ? graphData?.distanceMi.toFixed(2) + " mi": graphData?.distanceKm.toFixed(2) + " km"}</h1>
+          <div className="absolute top-0 right-0 z-10 flex items-center justify-center rounded-[4px] rounded-tl-none rounded-tr-sm rounded-br-none rounded-bl-md border-b-2 border-l-2 border-[#a48100] bg-white/80 p-1 pl-3 text-neutral-700 dark:border-[#ffca09] dark:bg-black/55">
+            <div className="text-md mr-2 flex max-sm:text-sm dark:text-neutral-100">
+              <h1>
+                {settings.walkSpeed != 0 &&
+                graphData.distanceMi != null &&
+                graphData != undefined &&
+                settings.walkSpeed != null
+                  ? (
+                      graphData?.distanceMi.toFixed(2) /
+                      (settings.walkSpeed / 60)
+                    ).toFixed(1)
+                  : "0"}{" "}
+                min&nbsp;
+              </h1>
+              <h1 className="font-bold dark:text-white">|</h1>
+              <h1>
+                &nbsp;
+                {settings.units == "imperial"
+                  ? graphData?.distanceMi.toFixed(2) + " mi"
+                  : graphData?.distanceKm.toFixed(2) + " km"}
+              </h1>
             </div>
           </div>
-          <MapContainer center={position} zoom={16} minZoom={15} maxZoom={18} scrollWheelZoom={true} 
-            maxBounds={bounds} maxBoundsViscosity={1} className="h-full w-full rounded-t-sm z-0">
+          <MapContainer
+            center={position}
+            zoom={16}
+            minZoom={15}
+            maxZoom={18}
+            scrollWheelZoom={true}
+            maxBounds={bounds}
+            maxBoundsViscosity={1}
+            className="z-0 h-full w-full rounded-t-sm"
+          >
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/">OSM</a>'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -355,35 +398,59 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError}) =>
             {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
               <Marker position={selectedPoint} icon={selectIcon} />
             )}
-            {currentLocation[0] != undefined && currentLocation[0] != -1 && settings.showLocation && (
-              <Marker position={currentLocation} icon={currentIcon} />
-            )}
+            {currentLocation[0] != undefined &&
+              currentLocation[0] != -1 &&
+              settings.showLocation && (
+                <Marker position={currentLocation} icon={currentIcon} />
+              )}
             {props.items.map((point) => {
-            return <div>{props.renderer(point)}</div>;
+              return <div>{props.renderer(point)}</div>;
             })}
             {pathProps.items.map((path, index) => {
-            return <div>{pathProps.renderer(path, index)}</div>;
+              return <div>{pathProps.renderer(path, index)}</div>;
             })}
             {selectedPoint[0] !== 100 && selectedPoint[0] !== -1 && (
-                <MapPanHandler targetPoint={selectedPoint} />
+              <MapPanHandler targetPoint={selectedPoint} />
             )}
-            <Polygon positions={outsideBoundsArea} color="#ffca09" opacity={.75} weight={2}
-              fillColor="black" fillOpacity={0.4}/>
+            <Polygon
+              positions={outsideBoundsArea}
+              color="#ffca09"
+              opacity={0.75}
+              weight={2}
+              fillColor="black"
+              fillOpacity={0.4}
+            />
           </MapContainer>
         </div>
       </div>
-      <div className="flex justify-center w-full h-3/40 max-sm:h-5/40 dark:bg-black/50 bg-white/50 font-bold text-md max-xl:text-xs rounded-b-sm items-center">
-          <button className = {`flex items-center rounded-sm inline-block h-8/10 w-fit ml-[3%] px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!buildings ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
-           onClick={() => setBuilding(!buildings)}>Buildings</button>
-          <button className = {`flex items-center rounded-sm inline-block h-8/10 w-fit ml-[3%] px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!jaywalking ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
-           onClick={() => setJaywalking(!jaywalking)}>Jaywalking</button>
-          <button className = {`flex items-center rounded-sm inline-block h-8/10 w-fit ml-[3%] px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!parking ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
-           onClick={() => setParking(!parking)}>Parking Lots</button>
-          <button className = {`flex items-center rounded-sm inline-block h-8/10 w-fit ml-[3%] mr-[3%] px-1 border-2 dark:border-[#ffca09] border-[#a48100] text-center ${!grass ? "dark:text-neutral-700 text-neutral-200 dark:bg-[#ffca09] bg-[#a48100]" : "dark:text-neutral-50 text-neutral-600 bg-[#ffca09]/60"} dark:hover:text-neutral-50 hover:text-neutral-600 text-center hover:bg-[#ffca09]/60 font-bold cursor-pointer`}
-           onClick={() => setGrass(!grass)}>Grass</button>
+      <div className="text-md flex h-3/40 w-full items-center justify-center rounded-b-sm bg-white/50 font-bold max-xl:text-xs max-sm:h-5/40 dark:bg-black/50">
+        <button
+          className={`ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!buildings ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700" : "bg-[#ffca09]/60 text-neutral-600 dark:text-neutral-50"} cursor-pointer text-center font-bold hover:bg-[#ffca09]/60 hover:text-neutral-600 dark:hover:text-neutral-50`}
+          onClick={() => setBuilding(!buildings)}
+        >
+          Buildings
+        </button>
+        <button
+          className={`ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!jaywalking ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700" : "bg-[#ffca09]/60 text-neutral-600 dark:text-neutral-50"} cursor-pointer text-center font-bold hover:bg-[#ffca09]/60 hover:text-neutral-600 dark:hover:text-neutral-50`}
+          onClick={() => setJaywalking(!jaywalking)}
+        >
+          Jaywalking
+        </button>
+        <button
+          className={`ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!parking ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700" : "bg-[#ffca09]/60 text-neutral-600 dark:text-neutral-50"} cursor-pointer text-center font-bold hover:bg-[#ffca09]/60 hover:text-neutral-600 dark:hover:text-neutral-50`}
+          onClick={() => setParking(!parking)}
+        >
+          Parking Lots
+        </button>
+        <button
+          className={`mr-[3%] ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!grass ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700" : "bg-[#ffca09]/60 text-neutral-600 dark:text-neutral-50"} cursor-pointer text-center font-bold hover:bg-[#ffca09]/60 hover:text-neutral-600 dark:hover:text-neutral-50`}
+          onClick={() => setGrass(!grass)}
+        >
+          Grass
+        </button>
       </div>
     </div>
   );
-}
+};
 
 export default Map;
