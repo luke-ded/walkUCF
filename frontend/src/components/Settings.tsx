@@ -89,7 +89,7 @@ const Settings: React.FC<ChildProps> = ({
 
   return (
     <div className="max-lg:20/21 absolute top-1/14 left-0 z-12 flex h-full w-full max-w-full items-center justify-center bg-black/50 max-lg:top-1/21">
-      <div className="absolute top-1/8 z-12 h-7/20 rounded-md border-2 border-[#a48100] bg-[url(./assets/backgroundmap.jpg)] shadow-lg max-lg:top-1/16 max-lg:h-3/10 max-sm:w-9/10 md:w-5/10 lg:w-3/10 dark:border-[#ffca09]">
+      <div className="absolute top-1/8 z-12 h-9/20 rounded-md border-2 border-[#a48100] bg-[url(./assets/backgroundmap.jpg)] shadow-lg max-lg:top-1/16 max-lg:h-3/10 max-sm:w-9/10 md:w-5/10 lg:w-3/10 dark:border-[#ffca09]">
         <div className="h-full w-full flex-col justify-center rounded-sm bg-[#d6d4d4]/80 dark:bg-black/80">
           <div className="flex h-1/8 items-center justify-center border-b-2 border-[#a48100] dark:border-[#ffca09]">
             <h1 className="py-1 text-2xl font-bold text-neutral-700 dark:text-neutral-200">
