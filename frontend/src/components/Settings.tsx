@@ -144,7 +144,7 @@ const Settings: React.FC<ChildProps> = ({
                       <IoCloseSharp
                         size={15}
                         onClick={() => setInfo(false)}
-                        className="rounded-lg bg-[#ffe68c]/50 hover:bg-[#ffe68c]/82 hover:text-black dark:bg-[#ffe68c]/30 dark:hover:bg-[#ffe68c]/42 dark:hover:text-white"
+                        className="cursor-pointer rounded-lg bg-[#ffe68c]/50 hover:bg-[#ffe68c]/82 hover:text-black dark:bg-[#ffe68c]/30 dark:hover:bg-[#ffe68c]/42 dark:hover:text-white"
                       />
                     </div>
                   </div>
