@@ -173,7 +173,10 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
     // Calculate
     for (var i = 0; i < stops.length - 1; i++) {
       if (stops[i].selectedEntrance == -1) {
-        alert("Do something");
+        console.error("Entrance " + i + " not set in path calculation.");
+        toggleError(true);
+
+        break;
       }
 
       var result = dijkstra(
@@ -185,7 +188,10 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
       if (result.path.length == 0) toggleError(true);
 
       if (stops[i + 1].selectedEntrance == -1) {
-        alert("Do something");
+        console.error("Entrance " + (i + 1) + " not set in path calculation.");
+        toggleError(true);
+
+        break;
       }
       if (
         result.distances.get(
