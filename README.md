@@ -67,7 +67,7 @@ of my points displayed on a visual map.
 - Map option for maximizing time indoors/under cover (for rainy days, hot days, etc.).
 - Users reporting temporarily inaccessible paths (due to construction, events, etc.).
 - Turn-by-turn directions.
-- - Mobile app.
+- Mobile app.
 - ~~Location services.~~ Added as of 08/2025.
 
 ## About
