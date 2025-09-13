@@ -38,7 +38,7 @@ const RouteList: React.FC<ChildProps> = ({
             {item.Name == "Current Location" && (
               <TiLocationArrow
                 size={26}
-                className="text-md ml-2 font-semibold text-neutral-700 dark:text-neutral-200"
+                className="text-md ml-2 font-semibold text-[#1975c8] dark:text-[#4899d0]"
               />
             )}
           </div>
