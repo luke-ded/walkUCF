@@ -97,6 +97,8 @@ const createStandardIcon = () => {
   });
 };
 
+const displayAllPaths = false; // Change to true to view all paths
+
 const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
   var initPoint: LatLngTuple = [10, 10];
   var initVals = [true, false, false, false];
@@ -212,7 +214,8 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
         distanceKm: totalDistance,
       }),
     );
-    //tempPaths = data.pathnum;
+
+    if (displayAllPaths) tempPaths = data.pathnum;
 
     localStorage.setItem(
       "mapOptions",
