@@ -101,7 +101,7 @@
         "lat": 28.6061847,
         "lon": -81.197935
       },
-      {"id": 3456757082 , "lat": 28.6065100 , "lon": -81.1982350 }
+      { "id": 3456757082, "lat": 28.60651, "lon": -81.198235 }
     ]
   },
   {
@@ -205,9 +205,7 @@
     "Name": "Art Gallery",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
-    "Entrances": [
-      {"id": 3420036301 , "lat": 28.6027801 , "lon": -81.2038700 }
-    ]
+    "Entrances": [{ "id": 3420036301, "lat": 28.6027801, "lon": -81.20387 }]
   },
   {
     "key": "15",
@@ -282,8 +280,8 @@
     "selectedEntrance": 1,
     "Abbreviation": "N/A",
     "Entrances": [
-      {"id": 5001725283 , "lat": 28.6093310 , "lon": -81.1963080 },
-      {"id": 1701706496 , "lat": 28.6091755 , "lon": -81.1959420 }
+      { "id": 5001725283, "lat": 28.609331, "lon": -81.196308 },
+      { "id": 1701706496, "lat": 28.6091755, "lon": -81.195942 }
     ]
   },
   {
@@ -720,7 +718,9 @@
         "id": 388,
         "lat": 28.604198,
         "lon": -81.2003648
-      }
+      },
+      { "id": 585, "lat": 28.6044585, "lon": -81.2000107 },
+      { "id": 586, "lat": 28.6044707, "lon": -81.2003115 }
     ]
   },
   {
@@ -1287,9 +1287,7 @@
     "Name": "Greek Park Bus Stop (4)",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
-    "Entrances": [
-      {"id": 12150621412 , "lat": 28.6052611 , "lon": -81.2052700 }
-    ]
+    "Entrances": [{ "id": 12150621412, "lat": 28.6052611, "lon": -81.20527 }]
   },
   {
     "key": "68",
@@ -1703,7 +1701,7 @@
         "lon": -81.201052,
         "id": 12653691728
       },
-      {"id": 3128392703 , "lat": 28.6001152 , "lon": -81.201637 }
+      { "id": 3128392703, "lat": 28.6001152, "lon": -81.201637 }
     ]
   },
   {
@@ -2343,9 +2341,7 @@
     "Name": "Lake Claire Community Bus Stop (3)",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
-    "Entrances": [
-      {"id": 8921428195 , "lat": 28.6034047 , "lon": -81.2039740 }
-    ]
+    "Entrances": [{ "id": 8921428195, "lat": 28.6034047, "lon": -81.203974 }]
   },
   {
     "key": "120",
@@ -2457,9 +2453,7 @@
     "Name": "Marching Band Practice Facility",
     "Abbreviation": "BAND",
     "selectedEntrance": 1,
-    "Entrances": [
-      {"id": 581 , "lat": 28.5916082 , "lon": -81.2003273 }
-    ]
+    "Entrances": [{ "id": 581, "lat": 28.5916082, "lon": -81.2003273 }]
   },
   {
     "key": "125",
@@ -2499,9 +2493,7 @@
     "Name": "Memory Mall",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
-    "Entrances": [
-      {"id": 893880952 , "lat": 28.6042691 , "lon": -81.1990590 }
-    ]
+    "Entrances": [{ "id": 893880952, "lat": 28.6042691, "lon": -81.199059 }]
   },
   {
     "key": "126",
@@ -4608,9 +4600,7 @@
     "Name": "Recreation & Wellness Center (RWC) Bus Stop (8)",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
-    "Entrances": [
-      {"id": 4267311889 , "lat": 28.5963288 , "lon": -81.1985280 }
-    ]
+    "Entrances": [{ "id": 4267311889, "lat": 28.5963288, "lon": -81.198528 }]
   },
   {
     "key": "204",
@@ -4631,10 +4621,10 @@
     "Abbreviation": "RP",
     "selectedEntrance": 1,
     "Entrances": [
-      {"id": 3420273008 , "lat": 28.5997986 , "lon": -81.2018280 },
-      {"id": 893880633 , "lat": 28.5994478 , "lon": -81.2020590 },
-      {"id": 3420273014 , "lat": 28.5997973 , "lon": -81.2021400 },
-      {"id": 3148137831 , "lat": 28.5995579 , "lon": -81.2016820 }
+      { "id": 3420273008, "lat": 28.5997986, "lon": -81.201828 },
+      { "id": 893880633, "lat": 28.5994478, "lon": -81.202059 },
+      { "id": 3420273014, "lat": 28.5997973, "lon": -81.20214 },
+      { "id": 3148137831, "lat": 28.5995579, "lon": -81.201682 }
     ]
   },
   {
@@ -5050,9 +5040,7 @@
     "Name": "Celeste Hotel Bus Stop (10)",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
-    "Entrances": [
-      {"id": 584 , "lat": 28.5995891 , "lon": -81.2070012 }
-    ]
+    "Entrances": [{ "id": 584, "lat": 28.5995891, "lon": -81.2070012 }]
   },
   {
     "key": "227",
@@ -5423,9 +5411,7 @@
     "Name": "Visitor & Parking Information Center (VPI) Bus Stop (9)",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
-    "Entrances": [
-      {"id": 8932946951 , "lat": 28.5968998 , "lon": -81.2030640 }
-    ]
+    "Entrances": [{ "id": 8932946951, "lat": 28.5968998, "lon": -81.203064 }]
   },
   {
     "key": "246",
