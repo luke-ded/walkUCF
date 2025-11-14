@@ -1283,6 +1283,13 @@
     ]
   },
   {
+    "key": "260",
+    "Name": "Garvy Center for Student-Athlete Nutrition",
+    "Abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [{ "id": 587, "lat": 28.6070977, "lon": -81.192784 }]
+  },
+  {
     "key": "193",
     "Name": "Greek Park Bus Stop (4)",
     "Abbreviation": "N/A",
@@ -3935,8 +3942,26 @@
     ]
   },
   {
-    "key": "173",
+    "key": "174",
     "Name": "Parking Lot E1",
+    "Abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 6314866397,
+        "lat": 28.6055539,
+        "lon": -81.195113
+      },
+      {
+        "id": 2210042131,
+        "lat": 28.6056695,
+        "lon": -81.19472
+      }
+    ]
+  },
+  {
+    "key": "173",
+    "Name": "Parking Lot E2",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -3968,21 +3993,13 @@
     ]
   },
   {
-    "key": "174",
-    "Name": "Parking Lot E1-A",
+    "key": "257",
+    "Name": "Parking Lot E3",
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
-      {
-        "id": 6314866397,
-        "lat": 28.6055539,
-        "lon": -81.195113
-      },
-      {
-        "id": 2210042131,
-        "lat": 28.6056695,
-        "lon": -81.19472
-      }
+      { "id": 6314866284, "lat": 28.6058275, "lon": -81.193536 },
+      { "id": 6314866283, "lat": 28.605822, "lon": -81.193162 }
     ]
   },
   {
@@ -4011,6 +4028,24 @@
         "lat": 28.6040154,
         "lon": -81.189602
       }
+    ]
+  },
+  {
+    "key": "259",
+    "Name": "Parking Lot E6",
+    "Abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [{ "id": 3104858740, "lat": 28.6077436, "lon": -81.1916 }]
+  },
+  {
+    "key": "258",
+    "Name": "Parking Lot F1",
+    "Abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      { "id": 11, "lat": 28.6074922, "lon": -81.1962696 },
+      { "id": 31, "lat": 28.6072645, "lon": -81.1964916 },
+      { "id": 32, "lat": 28.6070007, "lon": -81.1959871 }
     ]
   },
   {

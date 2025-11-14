@@ -69767,6 +69767,17 @@
         "type": "Point"
       },
       "id": 5320
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 587
+      },
+      "geometry": {
+        "coordinates": [-81.19278401868594, 28.607097650827512],
+        "type": "Point"
+      },
+      "id": 5321
     }
   ]
 }
