@@ -54,7 +54,7 @@ const About: React.FC<ChildProps> = ({ toggleAbout }) => {
               .
             </p>
             <p className="mt-5">
-              Thanks for trying <h1 className="inline font-bold">walkUCF</h1>!
+              Thanks for using <h1 className="inline font-bold">walkUCF</h1>!
             </p>
           </div>
           <div className="mt-5 mb-5 flex h-2/8 w-full items-center justify-center justify-self-end">
