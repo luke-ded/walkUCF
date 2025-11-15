@@ -100,9 +100,7 @@ const createStandardIcon = () => {
 const displayAllPaths = false; // Change to true to view all paths
 
 const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
-  var initPoint: LatLngTuple = [10, 10];
   var initVals = [true, false, false, false];
-
   var initData = localStorage.getItem("mapOptions");
   if (initData != undefined) initVals = JSON.parse(initData);
 
@@ -110,7 +108,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
   const [jaywalking, setJaywalking] = useState(initVals[1]);
   const [grass, setGrass] = useState(initVals[2]);
   const [parking, setParking] = useState(initVals[3]);
-  const [selectedPoint, setSelectedPoint] = useState(initPoint);
+  const [selectedPoint, setSelectedPoint] = useState<LatLngTuple>([-1, -1]);
   const [paths, setPaths] = useState<number[][]>([]);
   const [currentLocation, setCurrentLocation] = useState<LatLngTuple>([-1, -1]);
 
@@ -228,13 +226,13 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
 
   function getSelected() {
     var temp = localStorage.getItem("selectedPoint");
-    var tempSelectedPoint: LatLngTuple = [100, 100];
+    var tempSelectedPoint: LatLngTuple = [-1, -1];
 
     if (temp != undefined && temp != null) {
       var parsedItem: Item = JSON.parse(temp);
 
       if (parsedItem.Entrances == undefined || parsedItem.Entrances == null)
-        tempSelectedPoint = [100, 100];
+        tempSelectedPoint = [-1, -1];
       else {
         if (parsedItem.selectedEntrance == -1)
           tempSelectedPoint = [
@@ -247,7 +245,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
             parsedItem.Entrances[parsedItem.selectedEntrance - 1].lon,
           ];
       }
-    } else tempSelectedPoint = [100, 100];
+    } else tempSelectedPoint = [-1, -1];
 
     if (
       tempSelectedPoint[0] != selectedPoint[0] ||
@@ -308,7 +306,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
   };
 
   function handleDeselect() {
-    var tempSelectedPoint: LatLngTuple = [100, 100];
+    var tempSelectedPoint: LatLngTuple = [-1, -1];
     localStorage.setItem("selectedPoint", JSON.stringify(tempSelectedPoint));
 
     setSelectedPoint(tempSelectedPoint);
@@ -404,21 +402,19 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
               attribution='&copy; <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OSM</a>'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
+            {selectedPoint[0] != -1 && (
               <Marker position={selectedPoint} icon={selectIcon} />
             )}
-            {currentLocation[0] != undefined &&
-              currentLocation[0] != -1 &&
-              settings.showLocation && (
-                <Marker position={currentLocation} icon={currentIcon} />
-              )}
+            {currentLocation[0] != -1 && settings.showLocation && (
+              <Marker position={currentLocation} icon={currentIcon} />
+            )}
             {props.items.map((point) => {
               return <div>{props.renderer(point)}</div>;
             })}
             {pathProps.items.map((path, index) => {
               return <div>{pathProps.renderer(path, index)}</div>;
             })}
-            {selectedPoint[0] !== 100 && selectedPoint[0] !== -1 && (
+            {selectedPoint[0] !== -1 && (
               <MapPanHandler targetPoint={selectedPoint} />
             )}
             <Polygon
