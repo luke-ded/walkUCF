@@ -66,6 +66,7 @@ of my points displayed on a visual map.
 - Entrance option for "closest," which automatically calculates the entrance closest to the previous stop.
 - Map option for maximizing time indoors/under cover (for rainy days, hot days, etc.).
 - Users reporting temporarily inaccessible paths (due to construction, events, etc.).
+- Buttons to show notable locations on the map such as bus stops, printers, mailboxes, etc. Possibly also filter location list.
 - Turn-by-turn directions.
 - Mobile app.
 - ~~Location services.~~ Added as of 08/2025.
