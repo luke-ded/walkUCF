@@ -356,7 +356,9 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
             className="absolute z-10 mt-20 ml-[11px] flex h-[33px] w-[33px] cursor-pointer items-center justify-center rounded-[4px] bg-black/20 text-[18px] font-bold text-black"
             onClick={handleDeselect}
           >
-            <div className="flex h-[29px] w-[29px] items-center justify-center rounded-[2px] bg-[#ffffff] hover:bg-[#f4f4f4]">
+            <div
+              className={`flex h-[29px] w-[29px] items-center justify-center rounded-[2px] ${selectedPoint[0] !== -1 ? "bg-[#ffffff] hover:bg-[#f4f4f4] active:bg-[#b5b5b5]" : "bg-[#cccccc]"}`}
+            >
               <img
                 className="h-17/20 w-auto"
                 src={deselectImage}
