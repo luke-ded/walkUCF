@@ -401,7 +401,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
             className="z-0 h-full w-full rounded-t-sm"
           >
             <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/">OSM</a>'
+              attribution='&copy; <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OSM</a>'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             {selectedPoint[0] != undefined && selectedPoint[0] != -1 && (
