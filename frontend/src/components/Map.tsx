@@ -11,6 +11,7 @@ import { LatLngTuple, LatLngBoundsExpression, LatLngExpression } from "leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useState, useEffect } from "react";
+import { FaBusAlt } from "react-icons/fa";
 import deselectImage from "../assets/gold-deselect-marker-icon.png";
 import selectImage from "../assets/gold-select-marker-icon.png";
 import standardImage from "../assets/standard-marker-icon.png";
@@ -113,6 +114,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
   const [selectedPoint, setSelectedPoint] = useState(initPoint);
   const [paths, setPaths] = useState<number[][]>([]);
   const [currentLocation, setCurrentLocation] = useState<LatLngTuple>([-1, -1]);
+  const [showBusStations, setShowBusStations] = useState(false);
 
   const selectIcon = createSelectIcon();
   const currentIcon = createCurrentLocIcon();
@@ -314,6 +316,10 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
     setSelectedPoint(tempSelectedPoint);
   }
 
+  function handleBusStations() {
+    setShowBusStations(!showBusStations);
+  }
+
   var props: PropsType = {
     items: stops,
     renderer: renderPoint,
@@ -365,6 +371,19 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
                 alt="Deselect marker icon"
                 title="Deselect"
               ></img>
+            </div>
+          </div>
+          <div
+            className="absolute z-10 mt-30 ml-[11px] flex h-[33px] w-[33px] cursor-pointer items-center justify-center rounded-[4px] bg-black/20 text-[18px] font-bold text-black"
+            onClick={handleBusStations}
+          >
+            <div
+              className={`flex h-[29px] w-[29px] items-center justify-center rounded-[2px] hover:bg-[#f4f4f4] active:bg-[#b5b5b5] ${showBusStations ? "bg-[#ffffff]" : "bg-[#cccccc]"}`}
+            >
+              <FaBusAlt
+                className="h-14/20 w-auto"
+                title="Show Bus Stations"
+              ></FaBusAlt>
             </div>
           </div>
           <div className="absolute top-0 right-0 z-10 flex items-center justify-center rounded-[4px] rounded-tl-none rounded-tr-sm rounded-br-none rounded-bl-md border-b-2 border-l-2 border-[#a48100] bg-white/80 p-1 pl-3 text-neutral-700 dark:border-[#ffca09] dark:bg-black/55">
