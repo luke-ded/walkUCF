@@ -584,19 +584,6 @@
     ]
   },
   {
-    "key": "32",
-    "Name": "Chick-fil-A at Academic Village",
-    "Abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 12653691716,
-        "lat": 28.5959816,
-        "lon": -81.19888
-      }
-    ]
-  },
-  {
     "key": "33",
     "Name": "John T. Washington Center",
     "Abbreviation": "JTWC",
@@ -4636,6 +4623,19 @@
     "Abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 4267311889, "lat": 28.5963288, "lon": -81.198528 }]
+  },
+  {
+    "key": "32",
+    "Name": "Chick-fil-A at RWC",
+    "Abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 12653691716,
+        "lat": 28.5959816,
+        "lon": -81.19888
+      }
+    ]
   },
   {
     "key": "204",
