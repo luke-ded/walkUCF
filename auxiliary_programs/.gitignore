@@ -1,4 +1,6 @@
-*
-!.cpp
-!.py
-!.gitignore
+add_paths
+add_points
+parse_buildings
+parse_coords_entrance
+parse_coords_entrance
+parse_paths
