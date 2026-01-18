@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import locations from "../json_files/locations.json";
 import { nearestPoint } from "./Nearest.ts";
-
+import { IoSearch } from "react-icons/io5";
 import { TiLocationArrow } from "react-icons/ti";
 
 interface Item {
@@ -151,9 +151,9 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) => {
 
   return (
     <div className="h-1/4 w-full">
-      <div className="flex h-2/8 w-full items-center justify-center">
+      <div className="relative flex h-2/8 w-full items-center justify-center">
         <input
-          className="h-full w-full rounded-md border-2 border-[#a48100] bg-white/70 p-1 pl-2 text-lg text-neutral-700 placeholder-neutral-700/75 shadow-lg focus:ring-1 focus:ring-[#ffca09]/70 focus:outline-none dark:border-[#ffca09] dark:bg-black/25 dark:text-neutral-200 dark:placeholder-neutral-200/75"
+          className="relative h-full w-full rounded-t-md border-2 border-[#a48100] bg-white/70 p-1 pl-2 text-lg text-neutral-700 placeholder-neutral-700/75 shadow-lg focus:ring-1 focus:ring-[#ffca09]/70 focus:outline-none dark:border-[#ffca09] dark:bg-black/25 dark:text-neutral-200 dark:placeholder-neutral-200/75"
           placeholder="Search"
           value={searchTerm}
           onChange={(e) => {
@@ -161,10 +161,11 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) => {
             scrollTop();
           }}
         ></input>
+        <IoSearch className="absolute right-2" size={23} />
       </div>
       <div
         ref={scrollRef}
-        className="mt-5 max-h-11/16 min-h-11/16 overflow-x-hidden overflow-y-scroll rounded-sm border-2 border-[#a48100] bg-white/65 shadow-lg dark:border-[#ffca09] dark:bg-black/35"
+        className="max-h-14/16 min-h-14/16 overflow-x-hidden overflow-y-scroll rounded-b-sm border-x-2 border-b-2 border-[#a48100] bg-white/65 shadow-lg dark:border-[#ffca09] dark:bg-black/35"
       >
         <ul className="divide:[#d6d4d4] min-h-21/20 divide-y shadow dark:divide-[#ffca09]">
           {searchTerm.length == 0 &&

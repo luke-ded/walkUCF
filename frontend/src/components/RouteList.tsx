@@ -170,7 +170,7 @@ const RouteList: React.FC<ChildProps> = ({
   var settings = JSON.parse(localStorage.getItem("settings")!);
 
   return (
-    <div className="mt-5 h-12/16 max-h-11/16 w-full flex-col justify-start rounded-sm border-2 border-[#a48100] bg-white/60 shadow-lg max-lg:mt-7 max-lg:h-10/16 dark:border-[#ffca09] dark:bg-black/40">
+    <div className="mt-5 h-12/16 max-h-11/16 w-full flex-col justify-start rounded-sm border-2 border-[#a48100] bg-white/60 shadow-lg max-lg:mt-10 max-lg:h-10/16 dark:border-[#ffca09] dark:bg-black/40">
       <div className="flex h-3/32 items-center justify-between border-b-2 border-[#a48100] dark:border-[#ffca09]">
         <h1 className="ml-2 text-xl font-bold text-neutral-700 dark:text-neutral-200">
           Route
