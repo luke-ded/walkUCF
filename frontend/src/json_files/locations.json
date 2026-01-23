@@ -2,6 +2,7 @@
   {
     "key": "1",
     "name": "'63 South",
+    "alternateName": "Dining Hall",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -40,7 +41,8 @@
   },
   {
     "key": "57",
-    "name": "Acrisure Bounce House (Stadium)",
+    "name": "Acrisure Bounce House",
+    "alternateName": "FBC Mortgage Stadium , Football Stadium , Spectrum Stadium",
     "abbreviation": "SS",
     "selectedEntrance": 1,
     "Entrances": [
@@ -249,6 +251,7 @@
   {
     "key": "18",
     "name": "Barnie's Coffee & tea Co.",
+    "alternateName": "Coffee Shop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -262,6 +265,7 @@
   {
     "key": "256",
     "name": "Baseball Stadium",
+    "alternateName": "Jay Bergman Field",
     "selectedEntrance": 1,
     "abbreviation": "N/A",
     "Entrances": [
@@ -878,6 +882,7 @@
   {
     "key": "49",
     "name": "Dunkin' Donuts",
+    "alternateName": "Dunkin Donuts , Coffee Shop",
     "selectedEntrance": 1,
     "abbreviation": "N/A",
     "Entrances": [
@@ -942,6 +947,7 @@
   {
     "key": "52",
     "name": "Einstein Bagels at BA1",
+    "alternateName": "Coffee Shop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -960,6 +966,7 @@
   {
     "key": "53",
     "name": "Einstein Bagels at Education Complex",
+    "alternateName": "Coffee Shop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -1201,20 +1208,18 @@
   },
   {
     "key": "64",
-    "name": "Football Practice Field",
+    "name": "Wayne Densch Practice Complex",
+    "alternateName": "Football Practice Fields",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
-      {
-        "lat": 28.6069797,
-        "lon": -81.19363,
-        "id": 1701655638
-      }
+      {"id": 1701706125 , "lat": 28.6070437 , "lon": -81.1926110 }
     ]
   },
   {
     "key": "65",
     "name": "Foxtail Coffee Co. at JTWC",
+    "alternateName": "Coffee Shop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -1233,6 +1238,7 @@
   {
     "key": "66",
     "name": "Foxtail Coffee Co. at Knights Plaza",
+    "alternateName": "Coffee Shop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -1819,6 +1825,7 @@
   {
     "key": "93",
     "name": "Knightro's",
+    "alternateName": "Dining Hall",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -2516,6 +2523,7 @@
   {
     "key": "255",
     "name": "Memory Mall",
+    "alternateName": "The Quad, Quadrangle",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 893880952, "lat": 28.6042691, "lon": -81.199059 }]
@@ -4627,6 +4635,7 @@
   {
     "key": "201",
     "name": "Recreation and Wellness Center",
+    "alternateName": "Gym",
     "abbreviation": "RWC",
     "selectedEntrance": 1,
     "Entrances": [
@@ -4857,6 +4866,7 @@
   {
     "key": "213",
     "name": "Softball Stadium",
+    "alternateName": "Softball Field",
     "selectedEntrance": 1,
     "abbreviation": "SBS",
     "Entrances": [
@@ -4870,6 +4880,7 @@
   {
     "key": "214",
     "name": "Starbucks at Memory Mall",
+    "alternateName": "Coffee Shop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -4883,6 +4894,7 @@
   {
     "key": "215",
     "name": "Starbucks at Student Union",
+    "alternateName": "Coffee Shop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5210,14 +5222,40 @@
   },
   {
     "key": "233",
-    "name": "Topper's Creamery",
+    "name": "Topper's Creamery at Knightstop SU",
+    "alternateName": "Toppers",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
-        "id": 3148137827,
-        "lat": 28.5993228,
-        "lon": -81.201355
+        "lat": 28.6022309,
+        "lon": -81.200257,
+        "id": 2188622665
+      },
+      {
+        "lat": 28.6017759,
+        "lon": -81.200537,
+        "id": 3095577369
+      },
+      {
+        "lat": 28.6022783,
+        "lon": -81.200762,
+        "id": 3420036605
+      },
+      {
+        "lat": 28.6017709,
+        "lon": -81.201074,
+        "id": 3420036606
+      },
+      {
+        "lat": 28.6016897,
+        "lon": -81.200885,
+        "id": 3420036612
+      },
+      {
+        "lat": 28.6017185,
+        "lon": -81.200234,
+        "id": 7745913387
       }
     ]
   },
@@ -5374,6 +5412,7 @@
   {
     "key": "239",
     "name": "Track & Soccer Stadium",
+    "alternateName": "Soccer Field",
     "abbreviation": "TSS",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5457,6 +5496,7 @@
   {
     "key": "243",
     "name": "UCF Police at Student Union",
+    "alternateName": "UCF Police Department",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
