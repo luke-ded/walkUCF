@@ -296,7 +296,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
     var newPath: LatLngExpression[] = [];
 
     path.forEach((node) => {
-      newPath.push([pointMap.get(node)?.lat!, pointMap.get(node)?.lon!]);
+      newPath.push([pointMap.get(node)?.lat, pointMap.get(node)?.lon] as LatLngExpression);
     });
 
     return (
