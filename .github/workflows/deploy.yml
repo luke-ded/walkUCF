@@ -3,22 +3,81 @@ name: Deploy to DigitalOcean
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
-  deploy:
+  lint:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Execute Remote Deploy Script
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm ci
+        working-directory: frontend
+
+      - name: Run Lint
+        run: npm run lint
+        working-directory: frontend
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm ci
+        working-directory: frontend
+
+      - name: Run Tests with Coverage
+        run: npm run test:coverage
+        working-directory: frontend
+
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: frontend/coverage/
+          retention-days: 30
+
+      - name: Delete Coverage Report
+        run: rm -rf frontend/coverage/
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute Remote Deploy Commands
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd
-            ./deploy.sh
+            set -e
+            cd /var/www/html/frontend/
+            
+            echo "🚀 Pulling latest changes..."
+            git pull
+            
+            echo "📦 Updating dependencies..."
+            npm install
+            
+            echo "🔧 Fixing vulnerable dependencies..."
+            npm audit fix
+            
+            echo "🏗️ Building walkUCF..."
+            npm run build
+            
+            echo "✅ Deployment Complete!"
