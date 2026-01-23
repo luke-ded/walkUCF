@@ -92,20 +92,6 @@
     ]
   },
   {
-    "key": "13",
-    "name": "Addition Arena/Knights Plaza/Towers Bus Stop (5)",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 12150621438,
-        "lat": 28.6061847,
-        "lon": -81.197935
-      },
-      { "id": 3456757082, "lat": 28.60651, "lon": -81.198235 }
-    ]
-  },
-  {
     "key": "8",
     "name": "Alpha Delta Pi Sorority",
     "abbreviation": "\u0391\u0394\u03a0",
@@ -176,16 +162,14 @@
     ]
   },
   {
-    "key": "12",
-    "name": "Apollo & Libra Mail Center",
+    "key": "262",
+    "name": "Apollo Community",
+    "alternateName": "Apollo Housing Community",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
-      {
-        "id": 265,
-        "lat": 28.598351,
-        "lon": -81.1998319
-      }
+      {"id": 3151833017 , "lat": 28.5985106 , "lon": -81.2010290 },
+      {"id": 1719808118 , "lat": 28.5975758 , "lon": -81.2011560 }
     ]
   },
   {
@@ -494,7 +478,8 @@
   },
   {
     "key": "28",
-    "name": "Career Services and Experiential Learning",
+    "name": "Kenneth G. Dixon Career Development Center",
+    "alternateName": "Career Services and Experiential Learning",
     "abbreviation": "CSEL",
     "selectedEntrance": 1,
     "Entrances": [
@@ -1398,6 +1383,16 @@
     ]
   },
   {
+    "key": "263",
+    "name": "Hercules Community",
+    "alternateName": "Hercules Housing Community",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 2762673658 , "lat": 28.5942706 , "lon": -81.1993870 }
+    ]
+  },
+  {
     "key": "72",
     "name": "Hercules 108",
     "abbreviation": "N/A",
@@ -1970,6 +1965,29 @@
     ]
   },
   {
+    "key": "261",
+    "name": "Libra Community",
+    "alternateName": "Libra Housing Community",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 3172712686 , "lat": 28.5986074 , "lon": -81.1982990 }
+    ]
+  },
+  {
+    "key": "12",
+    "name": "Apollo & Libra Mail Center",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 265,
+        "lat": 28.598351,
+        "lon": -81.1998319
+      }
+    ]
+  },
+  {
     "key": "207",
     "name": "Engineering/Business/CREOL/Research 1 Bus Stop (6)",
     "abbreviation": "N/A",
@@ -2006,6 +2024,16 @@
         "lat": 28.5919516,
         "lon": -81.19785
       }
+    ]
+  },
+  {
+    "key": "267",
+    "name": "Lake Claire Community",
+    "alternateName": "Lake Claire Housing Community",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 100 , "lat": 28.6044243 , "lon": -81.2033300 }
     ]
   },
   {
@@ -2280,7 +2308,8 @@
   },
   {
     "key": "116",
-    "name": "Lake Claire Community Center (65)",
+    "name": "Lake Claire Community Center",
+    "alternateName": "Lake Claire 65",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -2533,6 +2562,16 @@
     ]
   },
   {
+    "key": "265",
+    "name": "Neptune Community",
+    "alternateName": "Neptune Housing Community",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 12653691717 , "lat": 28.5937069 , "lon": -81.1985140 }
+    ]
+  },
+  {
     "key": "128",
     "name": "Neptune 156",
     "abbreviation": "N/A",
@@ -2713,6 +2752,16 @@
         "lat": 28.6041912,
         "lon": -81.2025984
       }
+    ]
+  },
+  {
+    "key": "264",
+    "name": "Nike Community",
+    "alternateName": "Nike Housing Community",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 2762673747 , "lat": 28.5946168 , "lon": -81.1981500 }
     ]
   },
   {
@@ -5173,6 +5222,17 @@
     ]
   },
   {
+    "key": "266",
+    "name": "Towers Community",
+    "alternateName": "Towers Housing Community",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 12150621470 , "lat": 28.6086826 , "lon": -81.1973900 },
+      {"id": 2188618375 , "lat": 28.6062180 , "lon": -81.1957770 }
+    ]
+  },
+  {
     "key": "234",
     "name": "Tower 1",
     "abbreviation": "T1",
@@ -5285,6 +5345,20 @@
     ]
   },
   {
+    "key": "13",
+    "name": "Addition Arena/Knights Plaza/Towers Bus Stop (5)",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 12150621438,
+        "lat": 28.6061847,
+        "lon": -81.197935
+      },
+      { "id": 3456757082, "lat": 28.60651, "lon": -81.198235 }
+    ]
+  },
+  {
     "key": "238",
     "name": "The Venue Parking Lot",
     "abbreviation": "N/A",
@@ -5341,7 +5415,7 @@
   {
     "key": "241",
     "name": "UCF SPRK (formerly UCF Global)",
-    "alternateName": "UCF Global UCF SPARK UCF Institute of Artificial Intelligence UCF Institute of AI",
+    "alternateName": "UCF Global UCF SPARK UCF Institute of Artificial Intelligence UCF Institute of AI BNY",
     "abbreviation": "GB",
     "selectedEntrance": 1,
     "Entrances": [
