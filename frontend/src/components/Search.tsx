@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import locations from "../json_files/locations.json";
 import { nearestPoint } from "./Nearest.ts";
 import { IoSearch } from "react-icons/io5";
@@ -67,10 +67,11 @@ const ItemRenderer: React.FC<ItemProps> = ({
             Main
           </button>
           {item.Entrances!.map((entrance, index) => {
-            if (index == 0 || entrance.id == undefined) return <></>;
+            if (index == 0 || entrance.id == undefined) return <React.Fragment key={entrance.id ?? index}/>;
 
             return (
               <button
+                key={entrance.id ?? index}
                 className={`mt-1 ml-2 inline-block h-fit w-fit rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${selectedEntrance != index + 1 ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700" : "bg-[#ffca09]/60 text-neutral-600 dark:text-[#faefc8]"} cursor-pointer text-center text-sm font-bold hover:bg-[#ffca09]/60 hover:text-neutral-600 dark:hover:text-[#faefc8]`}
                 onClick={() => handleItemChange(index + 1)}
               >
