@@ -1,8 +1,8 @@
 [
   {
     "key": "1",
-    "Name": "'63 South",
-    "Abbreviation": "N/A",
+    "name": "'63 South",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -14,8 +14,8 @@
   },
   {
     "key": "2",
-    "Name": "Academic Village Mail Center",
-    "Abbreviation": "N/A",
+    "name": "Academic Village Mail Center",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -27,8 +27,8 @@
   },
   {
     "key": "3",
-    "Name": "Academic Village Mailboxes",
-    "Abbreviation": "N/A",
+    "name": "Academic Village Mailboxes",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -40,8 +40,8 @@
   },
   {
     "key": "57",
-    "Name": "Acrisure Bounce House (Stadium)",
-    "Abbreviation": "SS",
+    "name": "Acrisure Bounce House (Stadium)",
+    "abbreviation": "SS",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -53,8 +53,8 @@
   },
   {
     "key": "5",
-    "Name": "Addition Financial",
-    "Abbreviation": "N/A",
+    "name": "Addition Financial",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -66,8 +66,9 @@
   },
   {
     "key": "6",
-    "Name": "Addition Financial Arena",
-    "Abbreviation": "ARNA",
+    "name": "Addition Financial Arena",
+    "alternateName": "Addition Arena",
+    "abbreviation": "ARNA",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -79,8 +80,8 @@
   },
   {
     "key": "7",
-    "Name": "Addition Financial Arena Ticket Office",
-    "Abbreviation": "N/A",
+    "name": "Addition Financial Arena Ticket Office",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -92,8 +93,8 @@
   },
   {
     "key": "13",
-    "Name": "Addition Arena/Knights Plaza/Towers Bus Stop (5)",
-    "Abbreviation": "N/A",
+    "name": "Addition Arena/Knights Plaza/Towers Bus Stop (5)",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -106,8 +107,8 @@
   },
   {
     "key": "8",
-    "Name": "Alpha Delta Pi Sorority",
-    "Abbreviation": "\u0391\u0394\u03a0",
+    "name": "Alpha Delta Pi Sorority",
+    "abbreviation": "\u0391\u0394\u03a0",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -119,8 +120,8 @@
   },
   {
     "key": "231",
-    "Name": "Alpha Epsilon Phi Sorority",
-    "Abbreviation": "AE\u03a6",
+    "name": "Alpha Epsilon Phi Sorority",
+    "abbreviation": "AE\u03a6",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -132,8 +133,8 @@
   },
   {
     "key": "9",
-    "Name": "Alpha Tau Omega Fraternity",
-    "Abbreviation": "\u0391\u03a4\u03a9",
+    "name": "Alpha Tau Omega Fraternity",
+    "abbreviation": "\u0391\u03a4\u03a9",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -150,9 +151,9 @@
   },
   {
     "key": "10",
-    "Name": "Alpha Xi Delta Sorority",
+    "name": "Alpha Xi Delta Sorority",
     "selectedEntrance": 1,
-    "Abbreviation": "\u0391\u039e\u0394",
+    "abbreviation": "\u0391\u039e\u0394",
     "Entrances": [
       {
         "id": 12653585892,
@@ -163,8 +164,8 @@
   },
   {
     "key": "11",
-    "Name": "Amazon Pickup and Returns at UCF",
-    "Abbreviation": "N/A",
+    "name": "Amazon Pickup and Returns at UCF",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -176,8 +177,8 @@
   },
   {
     "key": "12",
-    "Name": "Apollo & Libra Mail Center",
-    "Abbreviation": "N/A",
+    "name": "Apollo & Libra Mail Center",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -189,8 +190,8 @@
   },
   {
     "key": "14",
-    "Name": "Arboretum Office",
-    "Abbreviation": "ARB",
+    "name": "Arboretum Office",
+    "abbreviation": "ARB",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -202,15 +203,15 @@
   },
   {
     "key": "253",
-    "Name": "Art Gallery",
-    "Abbreviation": "N/A",
+    "name": "Art Gallery",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 3420036301, "lat": 28.6027801, "lon": -81.20387 }]
   },
   {
     "key": "15",
-    "Name": "BPW Scholarship House",
-    "Abbreviation": "BPW",
+    "name": "BPW Scholarship House",
+    "abbreviation": "BPW",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -222,8 +223,8 @@
   },
   {
     "key": "16",
-    "Name": "Barbara Ying Center",
-    "Abbreviation": "BYC",
+    "name": "Barbara Ying Center",
+    "abbreviation": "BYC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -245,8 +246,8 @@
   },
   {
     "key": "17",
-    "Name": "Barnes & Noble at Knights Plaza",
-    "Abbreviation": "N/A",
+    "name": "Barnes & Noble at Knights Plaza",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -263,8 +264,8 @@
   },
   {
     "key": "18",
-    "Name": "Barnie's Coffee & tea Co.",
-    "Abbreviation": "N/A",
+    "name": "Barnie's Coffee & tea Co.",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -276,9 +277,9 @@
   },
   {
     "key": "256",
-    "Name": "Baseball Stadium",
+    "name": "Baseball Stadium",
     "selectedEntrance": 1,
-    "Abbreviation": "N/A",
+    "abbreviation": "N/A",
     "Entrances": [
       { "id": 5001725283, "lat": 28.609331, "lon": -81.196308 },
       { "id": 1701706496, "lat": 28.6091755, "lon": -81.195942 }
@@ -286,8 +287,8 @@
   },
   {
     "key": "19",
-    "Name": "Biological Sciences Building",
-    "Abbreviation": "BIO",
+    "name": "Biological Sciences Building",
+    "abbreviation": "BIO",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -319,8 +320,8 @@
   },
   {
     "key": "20",
-    "Name": "Brevard Hall",
-    "Abbreviation": "BRE",
+    "name": "Brevard Hall",
+    "abbreviation": "BRE",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -347,8 +348,8 @@
   },
   {
     "key": "21",
-    "Name": "Burger U",
-    "Abbreviation": "N/A",
+    "name": "Burger U",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -360,8 +361,8 @@
   },
   {
     "key": "22",
-    "Name": "Burnett Honors College",
-    "Abbreviation": "BHC",
+    "name": "Burnett Honors College",
+    "abbreviation": "BHC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -383,8 +384,8 @@
   },
   {
     "key": "23",
-    "Name": "Burnett House",
-    "Abbreviation": "BH",
+    "name": "Burnett House",
+    "abbreviation": "BH",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -396,8 +397,8 @@
   },
   {
     "key": "24",
-    "Name": "Business Administration I",
-    "Abbreviation": "BA1",
+    "name": "Business Administration I",
+    "abbreviation": "BA1",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -439,8 +440,8 @@
   },
   {
     "key": "25",
-    "Name": "Business Administration II",
-    "Abbreviation": "BA2",
+    "name": "Business Administration II",
+    "abbreviation": "BA2",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -457,8 +458,8 @@
   },
   {
     "key": "26",
-    "Name": "CREOL",
-    "Abbreviation": "CROL",
+    "name": "CREOL",
+    "abbreviation": "CROL",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -480,8 +481,8 @@
   },
   {
     "key": "27",
-    "Name": "Cafe Bustelo",
-    "Abbreviation": "N/A",
+    "name": "Cafe Bustelo",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -493,8 +494,8 @@
   },
   {
     "key": "28",
-    "Name": "Career Services and Experiential Learning",
-    "Abbreviation": "CSEL",
+    "name": "Career Services and Experiential Learning",
+    "abbreviation": "CSEL",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -526,8 +527,8 @@
   },
   {
     "key": "29",
-    "Name": "Center for Multilingual Multicultural Studies",
-    "Abbreviation": "CMMS",
+    "name": "Center for Multilingual Multicultural Studies",
+    "abbreviation": "CMMS",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -549,8 +550,8 @@
   },
   {
     "key": "30",
-    "Name": "Chemistry",
-    "Abbreviation": "CHEM",
+    "name": "Chemistry",
+    "abbreviation": "CHEM",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -573,8 +574,8 @@
   },
   {
     "key": "31",
-    "Name": "Chi Omega Sorority",
-    "Abbreviation": "\u03a7\u03a9",
+    "name": "Chi Omega Sorority",
+    "abbreviation": "\u03a7\u03a9",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -586,8 +587,8 @@
   },
   {
     "key": "33",
-    "Name": "John T. Washington Center",
-    "Abbreviation": "JTWC",
+    "name": "John T. Washington Center",
+    "abbreviation": "JTWC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -609,8 +610,8 @@
   },
   {
     "key": "34",
-    "Name": "Chick-fil-A at JTWC",
-    "Abbreviation": "N/A",
+    "name": "Chick-fil-A at JTWC",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -622,8 +623,8 @@
   },
   {
     "key": "35",
-    "Name": "Citrus Hall",
-    "Abbreviation": "CIT",
+    "name": "Citrus Hall",
+    "abbreviation": "CIT",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -645,8 +646,8 @@
   },
   {
     "key": "36",
-    "Name": "Classroom Building I",
-    "Abbreviation": "CB1",
+    "name": "Classroom Building I",
+    "abbreviation": "CB1",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -688,8 +689,8 @@
   },
   {
     "key": "37",
-    "Name": "Classroom Building II",
-    "Abbreviation": "CB2",
+    "name": "Classroom Building II",
+    "abbreviation": "CB2",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -713,8 +714,8 @@
   },
   {
     "key": "38",
-    "Name": "College of Arts & Humanities",
-    "Abbreviation": "CAH",
+    "name": "College of Arts & Humanities",
+    "abbreviation": "CAH",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -741,8 +742,8 @@
   },
   {
     "key": "39",
-    "Name": "College of Sciences",
-    "Abbreviation": "CSB",
+    "name": "College of Sciences",
+    "abbreviation": "CSB",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -759,8 +760,8 @@
   },
   {
     "key": "40",
-    "Name": "Community Counseling & Research Center",
-    "Abbreviation": "N/A",
+    "name": "Community Counseling & Research Center",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -772,8 +773,8 @@
   },
   {
     "key": "41",
-    "Name": "Counseling and Psychological Services",
-    "Abbreviation": "CAPS",
+    "name": "Counseling and Psychological Services",
+    "abbreviation": "CAPS",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -790,8 +791,8 @@
   },
   {
     "key": "42",
-    "Name": "Creative School for Children",
-    "Abbreviation": "CSC",
+    "name": "Creative School for Children",
+    "abbreviation": "CSC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -803,8 +804,8 @@
   },
   {
     "key": "43",
-    "Name": "Delta Delta Delta Sorority",
-    "Abbreviation": "\u0394\u0394\u0394",
+    "name": "Delta Delta Delta Sorority",
+    "abbreviation": "\u0394\u0394\u0394",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -816,8 +817,8 @@
   },
   {
     "key": "44",
-    "Name": "Dining Services",
-    "Abbreviation": "N/A",
+    "name": "Dining Services",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -829,8 +830,8 @@
   },
   {
     "key": "45",
-    "Name": "Disc Golf Course Hole 1",
-    "Abbreviation": "DGC",
+    "name": "Disc Golf Course Hole 1",
+    "abbreviation": "DGC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -842,9 +843,9 @@
   },
   {
     "key": "46",
-    "Name": "Domino's at JTWC",
+    "name": "Domino's at JTWC",
     "selectedEntrance": 1,
-    "Abbreviation": "N/A",
+    "abbreviation": "N/A",
     "Entrances": [
       {
         "id": 3095577371,
@@ -855,9 +856,9 @@
   },
   {
     "key": "47",
-    "Name": "Domino's at Knights Plaza",
+    "name": "Domino's at Knights Plaza",
     "selectedEntrance": 1,
-    "Abbreviation": "N/A",
+    "abbreviation": "N/A",
     "Entrances": [
       {
         "id": 12150621458,
@@ -868,8 +869,8 @@
   },
   {
     "key": "48",
-    "Name": "Duke Energy Welcome Center",
-    "Abbreviation": "UWC",
+    "name": "Duke Energy Welcome Center",
+    "abbreviation": "UWC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -891,9 +892,9 @@
   },
   {
     "key": "49",
-    "Name": "Dunkin' Donuts",
+    "name": "Dunkin' Donuts",
     "selectedEntrance": 1,
-    "Abbreviation": "N/A",
+    "abbreviation": "N/A",
     "Entrances": [
       {
         "id": 12150621457,
@@ -904,8 +905,8 @@
   },
   {
     "key": "50",
-    "Name": "Early Childhood Center",
-    "Abbreviation": "ECC",
+    "name": "Early Childhood Center",
+    "abbreviation": "ECC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -917,8 +918,8 @@
   },
   {
     "key": "51",
-    "Name": "Education Complex And Gym",
-    "Abbreviation": "ED",
+    "name": "Education Complex And Gym",
+    "abbreviation": "ED",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -955,8 +956,8 @@
   },
   {
     "key": "52",
-    "Name": "Einstein Bagels at BA1",
-    "Abbreviation": "N/A",
+    "name": "Einstein Bagels at BA1",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -973,8 +974,8 @@
   },
   {
     "key": "53",
-    "Name": "Einstein Bagels at Education Complex",
-    "Abbreviation": "N/A",
+    "name": "Einstein Bagels at Education Complex",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1011,8 +1012,8 @@
   },
   {
     "key": "54",
-    "Name": "Emergency Operation Center",
-    "Abbreviation": "EOC",
+    "name": "Emergency Operation Center",
+    "abbreviation": "EOC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1024,8 +1025,8 @@
   },
   {
     "key": "55",
-    "Name": "Engineering I",
-    "Abbreviation": "ENG1",
+    "name": "Engineering I",
+    "abbreviation": "ENG1",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1057,8 +1058,8 @@
   },
   {
     "key": "56",
-    "Name": "Engineering II",
-    "Abbreviation": "ENG2",
+    "name": "Engineering II",
+    "abbreviation": "ENG2",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1095,8 +1096,8 @@
   },
   {
     "key": "58",
-    "Name": "Facilities and Safety",
-    "Abbreviation": "FSC",
+    "name": "Facilities and Safety",
+    "abbreviation": "FSC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1113,8 +1114,8 @@
   },
   {
     "key": "59",
-    "Name": "Fairwinds Alumni Center",
-    "Abbreviation": "ALUM",
+    "name": "Fairwinds Alumni Center",
+    "abbreviation": "ALUM",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1136,8 +1137,8 @@
   },
   {
     "key": "60",
-    "Name": "Fairwinds Credit Union",
-    "Abbreviation": "N/A",
+    "name": "Fairwinds Credit Union",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1149,8 +1150,8 @@
   },
   {
     "key": "61",
-    "Name": "Ferrell Commons",
-    "Abbreviation": "N/A",
+    "name": "Ferrell Commons",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1187,8 +1188,8 @@
   },
   {
     "key": "63",
-    "Name": "Flager Hall",
-    "Abbreviation": "N/A",
+    "name": "Flager Hall",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1215,8 +1216,8 @@
   },
   {
     "key": "64",
-    "Name": "Football Practice Field",
-    "Abbreviation": "N/A",
+    "name": "Football Practice Field",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1228,8 +1229,8 @@
   },
   {
     "key": "65",
-    "Name": "Foxtail Coffee Co. at JTWC",
-    "Abbreviation": "N/A",
+    "name": "Foxtail Coffee Co. at JTWC",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1246,8 +1247,8 @@
   },
   {
     "key": "66",
-    "Name": "Foxtail Coffee Co. at Knights Plaza",
-    "Abbreviation": "N/A",
+    "name": "Foxtail Coffee Co. at Knights Plaza",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1259,8 +1260,8 @@
   },
   {
     "key": "67",
-    "Name": "Fraternity and Sorority Life",
-    "Abbreviation": "G415",
+    "name": "Fraternity and Sorority Life",
+    "abbreviation": "G415",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1272,23 +1273,23 @@
   },
   {
     "key": "260",
-    "Name": "Garvy Center for Student-Athlete Nutrition",
-    "Abbreviation": "N/A",
+    "name": "Garvy Center for Student-Athlete Nutrition",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 587, "lat": 28.6070977, "lon": -81.192784 }]
   },
   {
     "key": "193",
-    "Name": "Greek Park Bus Stop (4)",
-    "Abbreviation": "N/A",
+    "name": "Greek Park Bus Stop (4)",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 12150621412, "lat": 28.6052611, "lon": -81.20527 }]
   },
   {
     "key": "68",
-    "Name": "Gringos Locos",
+    "name": "Gringos Locos",
     "selectedEntrance": 1,
-    "Abbreviation": "N/A",
+    "abbreviation": "N/A",
     "Entrances": [
       {
         "id": 12150621459,
@@ -1299,8 +1300,8 @@
   },
   {
     "key": "69",
-    "Name": "Health Center & Pharmacy",
-    "Abbreviation": "HC",
+    "name": "Health Center & Pharmacy",
+    "abbreviation": "HC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1317,8 +1318,8 @@
   },
   {
     "key": "70",
-    "Name": "Health Sciences I",
-    "Abbreviation": "HS1",
+    "name": "Health Sciences I",
+    "abbreviation": "HS1",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1360,8 +1361,8 @@
   },
   {
     "key": "71",
-    "Name": "Health Sciences II",
-    "Abbreviation": "HS2",
+    "name": "Health Sciences II",
+    "abbreviation": "HS2",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1398,8 +1399,8 @@
   },
   {
     "key": "72",
-    "Name": "Hercules 108",
-    "Abbreviation": "N/A",
+    "name": "Hercules 108",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1426,8 +1427,8 @@
   },
   {
     "key": "73",
-    "Name": "Hercules 109",
-    "Abbreviation": "N/A",
+    "name": "Hercules 109",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1454,8 +1455,8 @@
   },
   {
     "key": "74",
-    "Name": "Hercules 110",
-    "Abbreviation": "N/A",
+    "name": "Hercules 110",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1477,8 +1478,8 @@
   },
   {
     "key": "75",
-    "Name": "Hercules 111",
-    "Abbreviation": "N/A",
+    "name": "Hercules 111",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1505,8 +1506,8 @@
   },
   {
     "key": "76",
-    "Name": "Hercules 112",
-    "Abbreviation": "N/A",
+    "name": "Hercules 112",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1518,8 +1519,8 @@
   },
   {
     "key": "77",
-    "Name": "Hercules 113",
-    "Abbreviation": "N/A",
+    "name": "Hercules 113",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1551,8 +1552,8 @@
   },
   {
     "key": "78",
-    "Name": "Hercules 114",
-    "Abbreviation": "N/A",
+    "name": "Hercules 114",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1564,8 +1565,8 @@
   },
   {
     "key": "79",
-    "Name": "Hercules 25",
-    "Abbreviation": "N/A",
+    "name": "Hercules 25",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1587,8 +1588,8 @@
   },
   {
     "key": "80",
-    "Name": "Hercules Basketball Courts",
-    "Abbreviation": "N/A",
+    "name": "Hercules Basketball Courts",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1610,8 +1611,8 @@
   },
   {
     "key": "81",
-    "Name": "Housing Administration",
-    "Abbreviation": "HAB",
+    "name": "Housing Administration",
+    "abbreviation": "HAB",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1633,8 +1634,8 @@
   },
   {
     "key": "82",
-    "Name": "Howard Phillips Hall",
-    "Abbreviation": "HPH",
+    "name": "Howard Phillips Hall",
+    "abbreviation": "HPH",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1661,8 +1662,8 @@
   },
   {
     "key": "83",
-    "Name": "Intramural Fields",
-    "Abbreviation": "N/A",
+    "name": "Intramural Fields",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1674,8 +1675,8 @@
   },
   {
     "key": "84",
-    "Name": "Jimmy John's",
-    "Abbreviation": "N/A",
+    "name": "Jimmy John's",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1687,8 +1688,8 @@
   },
   {
     "key": "85",
-    "Name": "John C. Hitt Library",
-    "Abbreviation": "LIB",
+    "name": "John C. Hitt Library",
+    "abbreviation": "LIB",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1701,8 +1702,8 @@
   },
   {
     "key": "86",
-    "Name": "John Euliano Park",
-    "Abbreviation": "JEP",
+    "name": "John Euliano Park",
+    "abbreviation": "JEP",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1714,8 +1715,8 @@
   },
   {
     "key": "87",
-    "Name": "Kappa Alpha Theta Sorority",
-    "Abbreviation": "\u039a\u0391\u0398",
+    "name": "Kappa Alpha Theta Sorority",
+    "abbreviation": "\u039a\u0391\u0398",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1727,8 +1728,8 @@
   },
   {
     "key": "88",
-    "Name": "Kappa Delta Sorority",
-    "Abbreviation": "\u039a\u0394",
+    "name": "Kappa Delta Sorority",
+    "abbreviation": "\u039a\u0394",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1740,8 +1741,8 @@
   },
   {
     "key": "89",
-    "Name": "Kappa Kappa Gamma Sorority",
-    "Abbreviation": "\u039a\u039a\u0393",
+    "name": "Kappa Kappa Gamma Sorority",
+    "abbreviation": "\u039a\u039a\u0393",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1753,8 +1754,8 @@
   },
   {
     "key": "90",
-    "Name": "Kappa Sigma Fraternity",
-    "Abbreviation": "\u039a\u03a3",
+    "name": "Kappa Sigma Fraternity",
+    "abbreviation": "\u039a\u03a3",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1766,8 +1767,8 @@
   },
   {
     "key": "91",
-    "Name": "Knight's Pantry",
-    "Abbreviation": "NFCG",
+    "name": "Knight's Pantry",
+    "abbreviation": "NFCG",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1784,8 +1785,8 @@
   },
   {
     "key": "92",
-    "Name": "Knightcade",
-    "Abbreviation": "N/A",
+    "name": "Knightcade",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1822,8 +1823,8 @@
   },
   {
     "key": "93",
-    "Name": "Knightro's",
-    "Abbreviation": "N/A",
+    "name": "Knightro's",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1835,9 +1836,9 @@
   },
   {
     "key": "94",
-    "Name": "Knights Plaza Mail Center",
+    "name": "Knights Plaza Mail Center",
     "selectedEntrance": 1,
-    "Abbreviation": "N/A",
+    "abbreviation": "N/A",
     "Entrances": [
       {
         "id": 169,
@@ -1848,9 +1849,9 @@
   },
   {
     "key": "95",
-    "Name": "Knightstop at Knights Plaza",
+    "name": "Knightstop at Knights Plaza",
     "selectedEntrance": 1,
-    "Abbreviation": "N/A",
+    "abbreviation": "N/A",
     "Entrances": [
       {
         "id": 170,
@@ -1861,8 +1862,8 @@
   },
   {
     "key": "96",
-    "Name": "Student Union",
-    "Abbreviation": "STUN",
+    "name": "Student Union",
+    "abbreviation": "STUN",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1899,9 +1900,9 @@
   },
   {
     "key": "97",
-    "Name": "Knightstop at Student Union",
+    "name": "Knightstop at Student Union",
     "selectedEntrance": 1,
-    "Abbreviation": "N/A",
+    "abbreviation": "N/A",
     "Entrances": [
       {
         "lat": 28.6016897,
@@ -1937,8 +1938,8 @@
   },
   {
     "key": "98",
-    "Name": "L3Harris Engineering Center",
-    "Abbreviation": "HEC",
+    "name": "L3Harris Engineering Center",
+    "abbreviation": "HEC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1970,8 +1971,8 @@
   },
   {
     "key": "207",
-    "Name": "Engineering/Business/CREOL/Research 1 Bus Stop (6)",
-    "Abbreviation": "N/A",
+    "name": "Engineering/Business/CREOL/Research 1 Bus Stop (6)",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1983,8 +1984,8 @@
   },
   {
     "key": "99",
-    "Name": "LEAD Scholars Academy",
-    "Abbreviation": "N/A",
+    "name": "LEAD Scholars Academy",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -1996,8 +1997,8 @@
   },
   {
     "key": "100",
-    "Name": "Laboratory & Environmental Support",
-    "Abbreviation": "N/A",
+    "name": "Laboratory & Environmental Support",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2009,8 +2010,8 @@
   },
   {
     "key": "101",
-    "Name": "Lake Claire 55",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 55",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2027,8 +2028,8 @@
   },
   {
     "key": "102",
-    "Name": "Lake Claire 56",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 56",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2045,8 +2046,8 @@
   },
   {
     "key": "103",
-    "Name": "Lake Claire 57",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 57",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2063,8 +2064,8 @@
   },
   {
     "key": "104",
-    "Name": "Lake Claire 58",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 58",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2081,8 +2082,8 @@
   },
   {
     "key": "105",
-    "Name": "Lake Claire 59",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 59",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2099,8 +2100,8 @@
   },
   {
     "key": "106",
-    "Name": "Lake Claire 60",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 60",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2117,8 +2118,8 @@
   },
   {
     "key": "107",
-    "Name": "Lake Claire 61",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 61",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2135,8 +2136,8 @@
   },
   {
     "key": "108",
-    "Name": "Lake Claire 62",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 62",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2153,8 +2154,8 @@
   },
   {
     "key": "109",
-    "Name": "Lake Claire 63",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 63",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2171,8 +2172,8 @@
   },
   {
     "key": "110",
-    "Name": "Lake Claire 64",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 64",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2189,8 +2190,8 @@
   },
   {
     "key": "111",
-    "Name": "Lake Claire 66",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 66",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2207,8 +2208,8 @@
   },
   {
     "key": "112",
-    "Name": "Lake Claire 67",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 67",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2225,8 +2226,8 @@
   },
   {
     "key": "113",
-    "Name": "Lake Claire 68",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 68",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2243,8 +2244,8 @@
   },
   {
     "key": "114",
-    "Name": "Lake Claire 69",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 69",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2261,8 +2262,8 @@
   },
   {
     "key": "115",
-    "Name": "Lake Claire 70",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire 70",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2279,8 +2280,8 @@
   },
   {
     "key": "116",
-    "Name": "Lake Claire Community Center (65)",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire Community Center (65)",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2307,8 +2308,8 @@
   },
   {
     "key": "117",
-    "Name": "Lake Claire Mail Center",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire Mail Center",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2320,9 +2321,9 @@
   },
   {
     "key": "118",
-    "Name": "Lake Claire Recreational Area",
+    "name": "Lake Claire Recreational Area",
     "selectedEntrance": 1,
-    "Abbreviation": "LKCR",
+    "abbreviation": "LKCR",
     "Entrances": [
       {
         "id": 2762462991,
@@ -2333,15 +2334,15 @@
   },
   {
     "key": "119",
-    "Name": "Lake Claire Community Bus Stop (3)",
-    "Abbreviation": "N/A",
+    "name": "Lake Claire Community Bus Stop (3)",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 8921428195, "lat": 28.6034047, "lon": -81.203974 }]
   },
   {
     "key": "120",
-    "Name": "Lake Hall",
-    "Abbreviation": "LAK",
+    "name": "Lake Hall",
+    "abbreviation": "LAK",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2383,8 +2384,8 @@
   },
   {
     "key": "121",
-    "Name": "Leisure Pool",
-    "Abbreviation": "LPS",
+    "name": "Leisure Pool",
+    "abbreviation": "LPS",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2396,8 +2397,8 @@
   },
   {
     "key": "122",
-    "Name": "Libra Garage",
-    "Abbreviation": "LG",
+    "name": "Libra Garage",
+    "abbreviation": "LG",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2419,8 +2420,8 @@
   },
   {
     "key": "123",
-    "Name": "Live Oak Ballroom",
-    "Abbreviation": "N/A",
+    "name": "Live Oak Ballroom",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2432,8 +2433,8 @@
   },
   {
     "key": "124",
-    "Name": "LYNX Transit Center Bus Stop (1)",
-    "Abbreviation": "LYNX",
+    "name": "LYNX Transit Center Bus Stop (1)",
+    "abbreviation": "LYNX",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2445,15 +2446,15 @@
   },
   {
     "key": "254",
-    "Name": "Marching Band Practice Facility",
-    "Abbreviation": "BAND",
+    "name": "Marching Band Practice Facility",
+    "abbreviation": "BAND",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 581, "lat": 28.5916082, "lon": -81.2003273 }]
   },
   {
     "key": "125",
-    "Name": "Mathematical Sciences Building",
-    "Abbreviation": "MSB",
+    "name": "Mathematical Sciences Building",
+    "abbreviation": "MSB",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2485,15 +2486,15 @@
   },
   {
     "key": "255",
-    "Name": "Memory Mall",
-    "Abbreviation": "N/A",
+    "name": "Memory Mall",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 893880952, "lat": 28.6042691, "lon": -81.199059 }]
   },
   {
     "key": "126",
-    "Name": "Millican Hall",
-    "Abbreviation": "MH",
+    "name": "Millican Hall",
+    "abbreviation": "MH",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2520,8 +2521,8 @@
   },
   {
     "key": "127",
-    "Name": "Morgridge International Reading Center",
-    "Abbreviation": "MIRC",
+    "name": "Morgridge International Reading Center",
+    "abbreviation": "MIRC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2533,8 +2534,8 @@
   },
   {
     "key": "128",
-    "Name": "Neptune 156",
-    "Abbreviation": "N/A",
+    "name": "Neptune 156",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2566,8 +2567,8 @@
   },
   {
     "key": "129",
-    "Name": "Neptune 157",
-    "Abbreviation": "N/A",
+    "name": "Neptune 157",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2599,8 +2600,8 @@
   },
   {
     "key": "130",
-    "Name": "Neptune 158",
-    "Abbreviation": "N/A",
+    "name": "Neptune 158",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2632,8 +2633,8 @@
   },
   {
     "key": "131",
-    "Name": "Neptune 159",
-    "Abbreviation": "N/A",
+    "name": "Neptune 159",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2660,8 +2661,8 @@
   },
   {
     "key": "132",
-    "Name": "Nicholson Fieldhouse",
-    "Abbreviation": "NFH",
+    "name": "Nicholson Fieldhouse",
+    "abbreviation": "NFH",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2678,8 +2679,8 @@
   },
   {
     "key": "133",
-    "Name": "Nicholson School of Communication",
-    "Abbreviation": "NSC",
+    "name": "Nicholson School of Communication",
+    "abbreviation": "NSC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2716,8 +2717,8 @@
   },
   {
     "key": "134",
-    "Name": "Nike 101",
-    "Abbreviation": "N/A",
+    "name": "Nike 101",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2734,8 +2735,8 @@
   },
   {
     "key": "135",
-    "Name": "Nike 102",
-    "Abbreviation": "N/A",
+    "name": "Nike 102",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2762,8 +2763,8 @@
   },
   {
     "key": "136",
-    "Name": "Nike 103",
-    "Abbreviation": "N/A",
+    "name": "Nike 103",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2790,8 +2791,8 @@
   },
   {
     "key": "137",
-    "Name": "Nike 104",
-    "Abbreviation": "N/A",
+    "name": "Nike 104",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2823,8 +2824,8 @@
   },
   {
     "key": "138",
-    "Name": "Nike 105",
-    "Abbreviation": "N/A",
+    "name": "Nike 105",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2836,8 +2837,8 @@
   },
   {
     "key": "139",
-    "Name": "Nike 106",
-    "Abbreviation": "N/A",
+    "name": "Nike 106",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2864,8 +2865,8 @@
   },
   {
     "key": "140",
-    "Name": "Nike 107",
-    "Abbreviation": "N/A",
+    "name": "Nike 107",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2877,8 +2878,8 @@
   },
   {
     "key": "4",
-    "Name": "Nike and Neptune Communities Bus Stop (7)",
-    "Abbreviation": "N/A",
+    "name": "Nike and Neptune Communities Bus Stop (7)",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2890,8 +2891,8 @@
   },
   {
     "key": "141",
-    "Name": "Office of Military and Veteran Student Success",
-    "Abbreviation": "N/A",
+    "name": "Office of Military and Veteran Student Success",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2903,8 +2904,8 @@
   },
   {
     "key": "142",
-    "Name": "Orange Hall",
-    "Abbreviation": "ORG",
+    "name": "Orange Hall",
+    "abbreviation": "ORG",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2931,8 +2932,8 @@
   },
   {
     "key": "143",
-    "Name": "Osceola Hall",
-    "Abbreviation": "OSC",
+    "name": "Osceola Hall",
+    "abbreviation": "OSC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2979,8 +2980,8 @@
   },
   {
     "key": "144",
-    "Name": "POD Market",
-    "Abbreviation": "N/A",
+    "name": "POD Market",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -2992,8 +2993,8 @@
   },
   {
     "key": "145",
-    "Name": "Parking Garage A",
-    "Abbreviation": "PGA",
+    "name": "Parking Garage A",
+    "abbreviation": "PGA",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3045,8 +3046,8 @@
   },
   {
     "key": "146",
-    "Name": "Parking Garage B",
-    "Abbreviation": "PGB",
+    "name": "Parking Garage B",
+    "abbreviation": "PGB",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3078,8 +3079,8 @@
   },
   {
     "key": "147",
-    "Name": "Parking Garage C",
-    "Abbreviation": "PGC",
+    "name": "Parking Garage C",
+    "abbreviation": "PGC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3111,8 +3112,8 @@
   },
   {
     "key": "148",
-    "Name": "Parking Garage D",
-    "Abbreviation": "PGD",
+    "name": "Parking Garage D",
+    "abbreviation": "PGD",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3154,8 +3155,8 @@
   },
   {
     "key": "149",
-    "Name": "Parking Garage E",
-    "Abbreviation": "PGE",
+    "name": "Parking Garage E",
+    "abbreviation": "PGE",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3172,8 +3173,8 @@
   },
   {
     "key": "150",
-    "Name": "Parking Garage F",
-    "Abbreviation": "PGF",
+    "name": "Parking Garage F",
+    "abbreviation": "PGF",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3200,8 +3201,8 @@
   },
   {
     "key": "151",
-    "Name": "Parking Garage G",
-    "Abbreviation": "PGG",
+    "name": "Parking Garage G",
+    "abbreviation": "PGG",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3228,8 +3229,8 @@
   },
   {
     "key": "152",
-    "Name": "Parking Garage H",
-    "Abbreviation": "PGH",
+    "name": "Parking Garage H",
+    "abbreviation": "PGH",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3271,8 +3272,8 @@
   },
   {
     "key": "153",
-    "Name": "Parking Garage I",
-    "Abbreviation": "PGI",
+    "name": "Parking Garage I",
+    "abbreviation": "PGI",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3314,8 +3315,8 @@
   },
   {
     "key": "154",
-    "Name": "Parking Lot B1",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B1",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3357,8 +3358,8 @@
   },
   {
     "key": "155",
-    "Name": "Parking Lot B2",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B2",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3380,8 +3381,8 @@
   },
   {
     "key": "156",
-    "Name": "Parking Lot B3",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B3",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3413,8 +3414,8 @@
   },
   {
     "key": "157",
-    "Name": "Parking Lot B4",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B4",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3466,8 +3467,8 @@
   },
   {
     "key": "158",
-    "Name": "Parking Lot B5",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B5",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3484,8 +3485,8 @@
   },
   {
     "key": "159",
-    "Name": "Parking Lot B6",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B6",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3522,8 +3523,8 @@
   },
   {
     "key": "160",
-    "Name": "Parking Lot B7",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B7",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3535,8 +3536,8 @@
   },
   {
     "key": "161",
-    "Name": "Parking Lot B8",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B8",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3573,8 +3574,8 @@
   },
   {
     "key": "162",
-    "Name": "Parking Lot B9",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B9",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3611,8 +3612,8 @@
   },
   {
     "key": "163",
-    "Name": "Parking Lot B10",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B10",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3649,8 +3650,8 @@
   },
   {
     "key": "164",
-    "Name": "Parking Lot B11",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B11",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3682,8 +3683,8 @@
   },
   {
     "key": "165",
-    "Name": "Parking Lot B12",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B12",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3695,8 +3696,8 @@
   },
   {
     "key": "166",
-    "Name": "Parking Lot B15",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B15",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3743,8 +3744,8 @@
   },
   {
     "key": "167",
-    "Name": "Parking Lot B16",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B16",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3761,8 +3762,8 @@
   },
   {
     "key": "168",
-    "Name": "Parking Lot B17",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot B17",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3784,8 +3785,8 @@
   },
   {
     "key": "169",
-    "Name": "Parking Lot C2",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot C2",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3817,8 +3818,8 @@
   },
   {
     "key": "170",
-    "Name": "Parking Lot C3",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot C3",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3850,8 +3851,8 @@
   },
   {
     "key": "171",
-    "Name": "Parking Lot D1",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot D1",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3908,8 +3909,8 @@
   },
   {
     "key": "172",
-    "Name": "Parking Lot D2",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot D2",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3931,8 +3932,8 @@
   },
   {
     "key": "174",
-    "Name": "Parking Lot E1",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot E1",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3949,8 +3950,8 @@
   },
   {
     "key": "173",
-    "Name": "Parking Lot E2",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot E2",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3982,8 +3983,8 @@
   },
   {
     "key": "257",
-    "Name": "Parking Lot E3",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot E3",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       { "id": 6314866284, "lat": 28.6058275, "lon": -81.193536 },
@@ -3992,8 +3993,8 @@
   },
   {
     "key": "175",
-    "Name": "Parking Lot E4",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot E4",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4020,15 +4021,15 @@
   },
   {
     "key": "259",
-    "Name": "Parking Lot E6",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot E6",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 3104858740, "lat": 28.6077436, "lon": -81.1916 }]
   },
   {
     "key": "258",
-    "Name": "Parking Lot F1",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot F1",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       { "id": 11, "lat": 28.6074922, "lon": -81.1962696 },
@@ -4038,8 +4039,8 @@
   },
   {
     "key": "176",
-    "Name": "Parking Lot H2",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot H2",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4081,8 +4082,8 @@
   },
   {
     "key": "177",
-    "Name": "Parking Lot H3",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot H3",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4104,8 +4105,8 @@
   },
   {
     "key": "178",
-    "Name": "Parking Lot H4",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot H4",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4142,8 +4143,8 @@
   },
   {
     "key": "179",
-    "Name": "Parking Lot H4-A",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot H4-A",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4155,8 +4156,8 @@
   },
   {
     "key": "180",
-    "Name": "Parking Lot H5",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot H5",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4188,8 +4189,8 @@
   },
   {
     "key": "181",
-    "Name": "Parking Lot H6",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot H6",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4216,8 +4217,8 @@
   },
   {
     "key": "182",
-    "Name": "Parking Lot H7",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot H7",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4239,8 +4240,8 @@
   },
   {
     "key": "183",
-    "Name": "Parking Lot H8",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot H8",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4267,8 +4268,8 @@
   },
   {
     "key": "184",
-    "Name": "Parking Lot H9",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot H9",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4295,8 +4296,8 @@
   },
   {
     "key": "185",
-    "Name": "Parking Lot H10",
-    "Abbreviation": "N/A",
+    "name": "Parking Lot H10",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4313,8 +4314,8 @@
   },
   {
     "key": "189",
-    "Name": "Pegasus Ballroom",
-    "Abbreviation": "N/A",
+    "name": "Pegasus Ballroom",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4326,8 +4327,8 @@
   },
   {
     "key": "190",
-    "Name": "Performing Arts Center Music",
-    "Abbreviation": "PAC",
+    "name": "Performing Arts Center Music",
+    "abbreviation": "PAC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4354,8 +4355,8 @@
   },
   {
     "key": "191",
-    "Name": "Performing Arts Center Theatre",
-    "Abbreviation": "N/A",
+    "name": "Performing Arts Center Theatre",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4382,8 +4383,8 @@
   },
   {
     "key": "192",
-    "Name": "Physical Sciences Building",
-    "Abbreviation": "PSB",
+    "name": "Physical Sciences Building",
+    "abbreviation": "PSB",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4415,8 +4416,8 @@
   },
   {
     "key": "194",
-    "Name": "Pi Beta Phi Sorority",
-    "Abbreviation": "\u03a0\u0392\u03a6",
+    "name": "Pi Beta Phi Sorority",
+    "abbreviation": "\u03a0\u0392\u03a6",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4428,8 +4429,8 @@
   },
   {
     "key": "195",
-    "Name": "Polk Hall",
-    "Abbreviation": "POL",
+    "name": "Polk Hall",
+    "abbreviation": "POL",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4486,8 +4487,8 @@
   },
   {
     "key": "196",
-    "Name": "Pop Parlour",
-    "Abbreviation": "N/A",
+    "name": "Pop Parlour",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4499,8 +4500,8 @@
   },
   {
     "key": "197",
-    "Name": "Pride Commons",
-    "Abbreviation": "N/A",
+    "name": "Pride Commons",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4517,8 +4518,8 @@
   },
   {
     "key": "198",
-    "Name": "Print Shop",
-    "Abbreviation": "N/A",
+    "name": "Print Shop",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4530,8 +4531,8 @@
   },
   {
     "key": "199",
-    "Name": "Psychology Building",
-    "Abbreviation": "PHY",
+    "name": "Psychology Building",
+    "abbreviation": "PHY",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4563,8 +4564,8 @@
   },
   {
     "key": "200",
-    "Name": "Psychology Clinic",
-    "Abbreviation": "N/A",
+    "name": "Psychology Clinic",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4576,8 +4577,8 @@
   },
   {
     "key": "201",
-    "Name": "Recreation and Wellness Center",
-    "Abbreviation": "RWC",
+    "name": "Recreation and Wellness Center",
+    "abbreviation": "RWC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4594,8 +4595,8 @@
   },
   {
     "key": "202",
-    "Name": "RWC Challenge Course",
-    "Abbreviation": "N/A",
+    "name": "RWC Challenge Course",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4607,8 +4608,8 @@
   },
   {
     "key": "203",
-    "Name": "RWC Park",
-    "Abbreviation": "N/A",
+    "name": "RWC Park",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4620,15 +4621,15 @@
   },
   {
     "key": "62",
-    "Name": "Recreation & Wellness Center (RWC) Bus Stop (8)",
-    "Abbreviation": "N/A",
+    "name": "Recreation & Wellness Center (RWC) Bus Stop (8)",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 4267311889, "lat": 28.5963288, "lon": -81.198528 }]
   },
   {
     "key": "32",
-    "Name": "Chick-fil-A at RWC",
-    "Abbreviation": "N/A",
+    "name": "Chick-fil-A at RWC",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4640,8 +4641,8 @@
   },
   {
     "key": "204",
-    "Name": "Recycling Center",
-    "Abbreviation": "RCS",
+    "name": "Recycling Center",
+    "abbreviation": "RCS",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4653,8 +4654,8 @@
   },
   {
     "key": "252",
-    "Name": "Reflecting Pond",
-    "Abbreviation": "RP",
+    "name": "Reflecting Pond",
+    "abbreviation": "RP",
     "selectedEntrance": 1,
     "Entrances": [
       { "id": 3420273008, "lat": 28.5997986, "lon": -81.201828 },
@@ -4665,8 +4666,8 @@
   },
   {
     "key": "205",
-    "Name": "Rehearsal Hall",
-    "Abbreviation": "RH",
+    "name": "Rehearsal Hall",
+    "abbreviation": "RH",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4683,8 +4684,8 @@
   },
   {
     "key": "206",
-    "Name": "Research I",
-    "Abbreviation": "R1",
+    "name": "Research I",
+    "abbreviation": "R1",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4716,8 +4717,8 @@
   },
   {
     "key": "208",
-    "Name": "Seminole Hall",
-    "Abbreviation": "SEM",
+    "name": "Seminole Hall",
+    "abbreviation": "SEM",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4744,8 +4745,8 @@
   },
   {
     "key": "209",
-    "Name": "Sigma Chi Fraternity",
-    "Abbreviation": "\u03a3\u03a7",
+    "name": "Sigma Chi Fraternity",
+    "abbreviation": "\u03a3\u03a7",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4762,8 +4763,8 @@
   },
   {
     "key": "210",
-    "Name": "Smoothie King at RWC",
-    "Abbreviation": "N/A",
+    "name": "Smoothie King at RWC",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4775,8 +4776,8 @@
   },
   {
     "key": "211",
-    "Name": "Smoothie King at Student Union",
-    "Abbreviation": "N/A",
+    "name": "Smoothie King at Student Union",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4793,8 +4794,8 @@
   },
   {
     "key": "212",
-    "Name": "Soccer Practice Field",
-    "Abbreviation": "N/A",
+    "name": "Soccer Practice Field",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4806,9 +4807,9 @@
   },
   {
     "key": "213",
-    "Name": "Softball Stadium",
+    "name": "Softball Stadium",
     "selectedEntrance": 1,
-    "Abbreviation": "SBS",
+    "abbreviation": "SBS",
     "Entrances": [
       {
         "id": 194,
@@ -4819,8 +4820,8 @@
   },
   {
     "key": "214",
-    "Name": "Starbucks at Memory Mall",
-    "Abbreviation": "N/A",
+    "name": "Starbucks at Memory Mall",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4832,8 +4833,8 @@
   },
   {
     "key": "215",
-    "Name": "Starbucks at Student Union",
-    "Abbreviation": "N/A",
+    "name": "Starbucks at Student Union",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4870,8 +4871,8 @@
   },
   {
     "key": "216",
-    "Name": "Student Accessibility Services",
-    "Abbreviation": "SAS",
+    "name": "Student Accessibility Services",
+    "abbreviation": "SAS",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4883,8 +4884,8 @@
   },
   {
     "key": "217",
-    "Name": "Student Care Services",
-    "Abbreviation": "SCS",
+    "name": "Student Care Services",
+    "abbreviation": "SCS",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4896,8 +4897,8 @@
   },
   {
     "key": "218",
-    "Name": "Student Union Food Court: Halal Shack, Qdoba, Panda Express, Huey Magoo's, Which Which?, Bento Sushi, Purple Ocean Superfood Bar",
-    "Abbreviation": "N/A",
+    "name": "Student Union Food Court: Halal Shack, Qdoba, Panda Express, Huey Magoo's, Which Which?, Bento Sushi, Purple Ocean Superfood Bar",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4934,8 +4935,8 @@
   },
   {
     "key": "219",
-    "Name": "Student Union/John T. Washington Center Bus Stop (2)",
-    "Abbreviation": "N/A",
+    "name": "Student Union/John T. Washington Center Bus Stop (2)",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4947,9 +4948,9 @@
   },
   {
     "key": "220",
-    "Name": "Subway",
+    "name": "Subway",
     "selectedEntrance": 1,
-    "Abbreviation": "N/A",
+    "abbreviation": "N/A",
     "Entrances": [
       {
         "id": 12150621458,
@@ -4960,8 +4961,8 @@
   },
   {
     "key": "221",
-    "Name": "Sumter Hall",
-    "Abbreviation": "SUM",
+    "name": "Sumter Hall",
+    "abbreviation": "SUM",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -4988,8 +4989,8 @@
   },
   {
     "key": "222",
-    "Name": "Teaching Academy",
-    "Abbreviation": "TA",
+    "name": "Teaching Academy",
+    "abbreviation": "TA",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5001,8 +5002,8 @@
   },
   {
     "key": "223",
-    "Name": "Technology Commons I",
-    "Abbreviation": "TC1",
+    "name": "Technology Commons I",
+    "abbreviation": "TC1",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5024,8 +5025,8 @@
   },
   {
     "key": "224",
-    "Name": "Technology Commons II",
-    "Abbreviation": "TC2",
+    "name": "Technology Commons II",
+    "abbreviation": "TC2",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5047,8 +5048,8 @@
   },
   {
     "key": "225",
-    "Name": "Tennis Courts",
-    "Abbreviation": "N/A",
+    "name": "Tennis Courts",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5060,8 +5061,8 @@
   },
   {
     "key": "226",
-    "Name": "The Celeste Hotel",
-    "Abbreviation": "N/A",
+    "name": "The Celeste Hotel",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5073,15 +5074,15 @@
   },
   {
     "key": "186",
-    "Name": "Celeste Hotel Bus Stop (10)",
-    "Abbreviation": "N/A",
+    "name": "Celeste Hotel Bus Stop (10)",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 584, "lat": 28.5995891, "lon": -81.2070012 }]
   },
   {
     "key": "227",
-    "Name": "The SPOT",
-    "Abbreviation": "N/A",
+    "name": "The SPOT",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5093,8 +5094,8 @@
   },
   {
     "key": "228",
-    "Name": "The Skate Shop",
-    "Abbreviation": "N/A",
+    "name": "The Skate Shop",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5106,8 +5107,8 @@
   },
   {
     "key": "229",
-    "Name": "The Venue",
-    "Abbreviation": "N/A",
+    "name": "The Venue",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5119,8 +5120,8 @@
   },
   {
     "key": "230",
-    "Name": "Theatre",
-    "Abbreviation": "TH",
+    "name": "Theatre",
+    "abbreviation": "TH",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5142,8 +5143,8 @@
   },
   {
     "key": "232",
-    "Name": "Timothy R. Newman Nature Pavilion",
-    "Abbreviation": "N/A",
+    "name": "Timothy R. Newman Nature Pavilion",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5160,8 +5161,8 @@
   },
   {
     "key": "233",
-    "Name": "Topper's Creamery",
-    "Abbreviation": "N/A",
+    "name": "Topper's Creamery",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5173,8 +5174,8 @@
   },
   {
     "key": "234",
-    "Name": "Tower 1",
-    "Abbreviation": "T1",
+    "name": "Tower 1",
+    "abbreviation": "T1",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5201,8 +5202,8 @@
   },
   {
     "key": "235",
-    "Name": "Tower 2",
-    "Abbreviation": "T2",
+    "name": "Tower 2",
+    "abbreviation": "T2",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5229,8 +5230,8 @@
   },
   {
     "key": "236",
-    "Name": "Tower 3",
-    "Abbreviation": "T3",
+    "name": "Tower 3",
+    "abbreviation": "T3",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5257,8 +5258,8 @@
   },
   {
     "key": "237",
-    "Name": "Tower 4",
-    "Abbreviation": "T4",
+    "name": "Tower 4",
+    "abbreviation": "T4",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5285,8 +5286,8 @@
   },
   {
     "key": "238",
-    "Name": "The Venue Parking Lot",
-    "Abbreviation": "N/A",
+    "name": "The Venue Parking Lot",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5298,8 +5299,8 @@
   },
   {
     "key": "239",
-    "Name": "Track & Soccer Stadium",
-    "Abbreviation": "TSS",
+    "name": "Track & Soccer Stadium",
+    "abbreviation": "TSS",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5311,8 +5312,8 @@
   },
   {
     "key": "240",
-    "Name": "Trevor Colbourn Hall",
-    "Abbreviation": "TCH",
+    "name": "Trevor Colbourn Hall",
+    "abbreviation": "TCH",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5339,8 +5340,9 @@
   },
   {
     "key": "241",
-    "Name": "UCF SPRK (formerly UCF Global)",
-    "Abbreviation": "GB",
+    "name": "UCF SPRK (formerly UCF Global)",
+    "alternateName": "UCF Global UCF SPARK UCF Institute of Artificial Intelligence UCF Institute of AI",
+    "abbreviation": "GB",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5362,8 +5364,8 @@
   },
   {
     "key": "242",
-    "Name": "UCF Police Department",
-    "Abbreviation": "UPD",
+    "name": "UCF Police Department",
+    "abbreviation": "UPD",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5380,8 +5382,8 @@
   },
   {
     "key": "243",
-    "Name": "UCF Police at Student Union",
-    "Abbreviation": "N/A",
+    "name": "UCF Police at Student Union",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5418,8 +5420,8 @@
   },
   {
     "key": "244",
-    "Name": "USPS Dropbox",
-    "Abbreviation": "N/A",
+    "name": "USPS Dropbox",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5431,8 +5433,8 @@
   },
   {
     "key": "245",
-    "Name": "Visitor and Parking Information Center",
-    "Abbreviation": "VPI",
+    "name": "Visitor and Parking Information Center",
+    "abbreviation": "VPI",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5444,15 +5446,15 @@
   },
   {
     "key": "188",
-    "Name": "Visitor & Parking Information Center (VPI) Bus Stop (9)",
-    "Abbreviation": "N/A",
+    "name": "Visitor & Parking Information Center (VPI) Bus Stop (9)",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 8932946951, "lat": 28.5968998, "lon": -81.203064 }]
   },
   {
     "key": "246",
-    "Name": "Visual Arts Building",
-    "Abbreviation": "VAB",
+    "name": "Visual Arts Building",
+    "abbreviation": "VAB",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5474,8 +5476,8 @@
   },
   {
     "key": "247",
-    "Name": "Volusia Hall",
-    "Abbreviation": "VOL",
+    "name": "Volusia Hall",
+    "abbreviation": "VOL",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5527,8 +5529,8 @@
   },
   {
     "key": "248",
-    "Name": "Wayne Densch Center for Student-Athlete Leadership",
-    "Abbreviation": "CSAL",
+    "name": "Wayne Densch Center for Student-Athlete Leadership",
+    "abbreviation": "CSAL",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5540,8 +5542,8 @@
   },
   {
     "key": "249",
-    "Name": "Wayne Densch Sports Center",
-    "Abbreviation": "WDSC",
+    "name": "Wayne Densch Sports Center",
+    "abbreviation": "WDSC",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5563,8 +5565,8 @@
   },
   {
     "key": "250",
-    "Name": "Wesley at UCF",
-    "Abbreviation": "N/A",
+    "name": "Wesley at UCF",
+    "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -5576,8 +5578,8 @@
   },
   {
     "key": "251",
-    "Name": "Zeta Tau Alpha Sorority",
-    "Abbreviation": "ZTA",
+    "name": "Zeta Tau Alpha Sorority",
+    "abbreviation": "ZTA",
     "selectedEntrance": 1,
     "Entrances": [
       {

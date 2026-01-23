@@ -6,8 +6,9 @@ import { TiLocationArrow } from "react-icons/ti";
 
 interface Item {
   key: string;
-  Name: string;
-  Abbreviation: string;
+  name: string;
+  alternateName?: string;
+  abbreviation: string;
   Entrances?: any[];
   selectedEntrance: number;
 }
@@ -48,10 +49,10 @@ const ItemRenderer: React.FC<ItemProps> = ({
     <div className="h-full w-full max-md:px-1">
       <div className="flex items-center justify-between">
         <span className="text-md max-w-9/10 font-semibold text-neutral-700 dark:text-neutral-200">
-          {item.Name}
+          {item.name}
         </span>
         <span className="text-xs text-[#a48100] dark:text-[#ffca09]">
-          {item.Abbreviation}
+          {item.abbreviation}
         </span>
       </div>
       <div className="my-[1vh] flex items-center justify-between">
@@ -139,8 +140,9 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) => {
 
     var calculatedItem: Item = {
       key: "-1",
-      Name: "Current Location",
-      Abbreviation: "N/A",
+      name: "Current Location",
+      alternateName: "",
+      abbreviation: "N/A",
       Entrances: [closestPoint],
       selectedEntrance: 0,
     };
@@ -192,10 +194,9 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) => {
           {itemsList
             .filter(
               (item) =>
-                item.Name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                item.Abbreviation.toLowerCase().includes(
-                  searchTerm.toLowerCase(),
-                ),
+                item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                item.abbreviation.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                item.alternateName?.toLowerCase().includes(searchTerm.toLowerCase())
             )
             .map((item) => {
               return (

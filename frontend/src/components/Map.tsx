@@ -18,8 +18,9 @@ import { createGraph, dijkstra } from "./Dijkstra.ts";
 
 interface Item {
   key: string;
-  Name: string;
-  Abbreviation: string;
+  name: string;
+  alternateName?: string;
+  abbreviation: string;
   Entrances: any[];
   selectedEntrance: number;
 }

@@ -5,8 +5,9 @@ import { TiLocationArrow } from "react-icons/ti";
 
 interface Item {
   key: string;
-  Name: string;
-  Abbreviation: string;
+  name: string;
+  alternateName?: string;
+  abbreviation: string;
   Entrances: any[];
   selectedEntrance: number;
 }
@@ -33,9 +34,9 @@ const RouteList: React.FC<ChildProps> = ({
         <div className="flex items-center justify-between">
           <div className="flex max-w-7/10 items-center justify-start">
             <span className="text-md font-semibold text-neutral-700 dark:text-neutral-200">
-              {item.Name}
+              {item.name}
             </span>
-            {item.Name == "Current Location" && (
+            {item.name == "Current Location" && (
               <TiLocationArrow
                 size={26}
                 className="text-md ml-2 font-semibold text-[#1975c8] dark:text-[#4899d0]"
@@ -54,12 +55,12 @@ const RouteList: React.FC<ChildProps> = ({
         <div className="mt-2 flex items-center justify-between">
           <div className="flex justify-start">
             <p className="text-sm text-[#a48100] dark:text-[#ffca09]">
-              {item.Abbreviation}
+              {item.abbreviation}
             </p>
             <p className="text-sm text-neutral-700 dark:text-neutral-200">
               &nbsp;| Stop {itemsList.indexOf(item) + 1}
             </p>
-            {item.Name != "Current Location" && (
+            {item.name != "Current Location" && (
               <p className="text-sm text-neutral-700 dark:text-neutral-200">
                 &nbsp;|{" "}
                 {item.selectedEntrance == -1
