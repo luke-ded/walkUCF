@@ -188,7 +188,7 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) => {
           {searchTerm.length == 0 &&
             navigator.geolocation &&
             permissionStatus != false && (
-              <li className="cursor-pointer border-b px-[1vw] py-[1vh] font-bold hover:bg-neutral-100/15 dark:border-[#ffe68c]/50">
+              <li className="border-b px-[1vw] py-[1vh] font-bold hover:bg-neutral-100/15 dark:border-[#ffe68c]/50">
                 <div className="flex items-center justify-between max-md:px-1">
                   <div className="flex items-center">
                     Current Location
@@ -217,7 +217,7 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) => {
               return (
                 <li
                   key={item.key}
-                  className="cursor-pointer border-b px-[1vw] py-[1vh] hover:bg-neutral-100/15 dark:border-[#ffe68c]/50"
+                  className="border-b px-[1vw] py-[1vh] hover:bg-neutral-100/15 dark:border-[#ffe68c]/50"
                 >
                   <ItemRenderer
                     item={item}
