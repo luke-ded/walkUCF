@@ -1294,13 +1294,6 @@
     "Entrances": [{ "id": 587, "lat": 28.6070977, "lon": -81.192784 }]
   },
   {
-    "key": "193",
-    "name": "Greek Park Bus Stop (4)",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [{ "id": 12150621412, "lat": 28.6052611, "lon": -81.20527 }]
-  },
-  {
     "key": "68",
     "name": "Gringos Locos",
     "selectedEntrance": 1,
@@ -2028,19 +2021,6 @@
     ]
   },
   {
-    "key": "207",
-    "name": "Engineering/Business/CREOL/Research 1 Bus Stop (6)",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 485,
-        "lat": 28.6023309,
-        "lon": -81.1967098
-      }
-    ]
-  },
-  {
     "key": "99",
     "name": "LEAD Scholars Academy",
     "abbreviation": "N/A",
@@ -2402,13 +2382,6 @@
     ]
   },
   {
-    "key": "119",
-    "name": "Lake Claire Community Bus Stop (3)",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [{ "id": 8921428195, "lat": 28.6034047, "lon": -81.203974 }]
-  },
-  {
     "key": "120",
     "name": "Lake Hall",
     "abbreviation": "LAK",
@@ -2497,19 +2470,6 @@
         "id": 60,
         "lat": 28.5978578,
         "lon": -81.200446
-      }
-    ]
-  },
-  {
-    "key": "124",
-    "name": "LYNX Transit Center Bus Stop (1)",
-    "abbreviation": "LYNX",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 8951483156,
-        "lat": 28.6005968,
-        "lon": -81.205114
       }
     ]
   },
@@ -2963,19 +2923,6 @@
         "id": 2762673769,
         "lat": 28.594207,
         "lon": -81.197185
-      }
-    ]
-  },
-  {
-    "key": "4",
-    "name": "Nike and Neptune Communities Bus Stop (7)",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 8925265163,
-        "lat": 28.5952613,
-        "lon": -81.196839
       }
     ]
   },
@@ -4755,13 +4702,6 @@
     ]
   },
   {
-    "key": "62",
-    "name": "Recreation & Wellness Center (RWC) Bus Stop (8)",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [{ "id": 4267311889, "lat": 28.5963288, "lon": -81.198528 }]
-  },
-  {
     "key": "32",
     "name": "Chick-fil-A at RWC",
     "abbreviation": "N/A",
@@ -5072,19 +5012,6 @@
     ]
   },
   {
-    "key": "219",
-    "name": "Student Union/John T. Washington Center Bus Stop (2)",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 7746003559,
-        "lat": 28.6028388,
-        "lon": -81.200992
-      }
-    ]
-  },
-  {
     "key": "220",
     "name": "Subway",
     "selectedEntrance": 1,
@@ -5211,13 +5138,6 @@
     ]
   },
   {
-    "key": "186",
-    "name": "Celeste Hotel Bus Stop (10)",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [{ "id": 584, "lat": 28.5995891, "lon": -81.2070012 }]
-  },
-  {
     "key": "227",
     "name": "The SPOT",
     "abbreviation": "N/A",
@@ -5337,17 +5257,6 @@
     ]
   },
   {
-    "key": "266",
-    "name": "Towers Community",
-    "alternateName": "Towers Housing Community",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {"id": 12150621470 , "lat": 28.6086826 , "lon": -81.1973900 },
-      {"id": 2188618375 , "lat": 28.6062180 , "lon": -81.1957770 }
-    ]
-  },
-  {
     "key": "234",
     "name": "Tower 1",
     "abbreviation": "T1",
@@ -5460,17 +5369,14 @@
     ]
   },
   {
-    "key": "13",
-    "name": "Addition Arena/Knights Plaza/Towers Bus Stop (5)",
+    "key": "266",
+    "name": "Towers Community",
+    "alternateName": "Towers Housing Community",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
-      {
-        "id": 12150621438,
-        "lat": 28.6061847,
-        "lon": -81.197935
-      },
-      { "id": 3456757082, "lat": 28.60651, "lon": -81.198235 }
+      {"id": 12150621470 , "lat": 28.6086826 , "lon": -81.1973900 },
+      {"id": 2188618375 , "lat": 28.6062180 , "lon": -81.1957770 }
     ]
   },
   {
@@ -5623,13 +5529,6 @@
     ]
   },
   {
-    "key": "188",
-    "name": "Visitor & Parking Information Center (VPI) Bus Stop (9)",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [{ "id": 8932946951, "lat": 28.5968998, "lon": -81.203064 }]
-  },
-  {
     "key": "246",
     "name": "Visual Arts Building",
     "abbreviation": "VAB",
@@ -5766,5 +5665,106 @@
         "id": 1719808914
       }
     ]
+  },
+  {
+    "key": "124",
+    "name": "LYNX Transit Center Bus Stop (1)",
+    "abbreviation": "LYNX",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 8951483156,
+        "lat": 28.6005968,
+        "lon": -81.205114
+      }
+    ]
+  },
+  {
+    "key": "219",
+    "name": "Student Union/John T. Washington Center Bus Stop (2)",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 7746003559,
+        "lat": 28.6028388,
+        "lon": -81.200992
+      }
+    ]
+  },
+  {
+    "key": "119",
+    "name": "Lake Claire Community Bus Stop (3)",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [{ "id": 8921428195, "lat": 28.6034047, "lon": -81.203974 }]
+  },
+  {
+    "key": "193",
+    "name": "Greek Park Bus Stop (4)",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [{ "id": 12150621412, "lat": 28.6052611, "lon": -81.20527 }]
+  },
+  {
+    "key": "13",
+    "name": "Addition Arena/Knights Plaza/Towers Bus Stop (5)",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 12150621438,
+        "lat": 28.6061847,
+        "lon": -81.197935
+      },
+      { "id": 3456757082, "lat": 28.60651, "lon": -81.198235 }
+    ]
+  },
+  {
+    "key": "207",
+    "name": "Engineering/Business/CREOL/Research 1 Bus Stop (6)",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 485,
+        "lat": 28.6023309,
+        "lon": -81.1967098
+      }
+    ]
+  },
+  {
+    "key": "4",
+    "name": "Nike and Neptune Communities Bus Stop (7)",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 8925265163,
+        "lat": 28.5952613,
+        "lon": -81.196839
+      }
+    ]
+  },
+  {
+    "key": "62",
+    "name": "Recreation & Wellness Center (RWC) Bus Stop (8)",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [{ "id": 4267311889, "lat": 28.5963288, "lon": -81.198528 }]
+  },
+  {
+    "key": "188",
+    "name": "Visitor & Parking Information Center (VPI) Bus Stop (9)",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [{ "id": 8932946951, "lat": 28.5968998, "lon": -81.203064 }]
+  },
+  {
+    "key": "186",
+    "name": "Celeste Hotel Bus Stop (10)",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [{ "id": 584, "lat": 28.5995891, "lon": -81.2070012 }]
   }
 ]
