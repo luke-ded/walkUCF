@@ -265,12 +265,36 @@
   {
     "key": "256",
     "name": "Baseball Stadium",
-    "alternateName": "Jay Bergman Field",
+    "alternateName": "Jay Bergman Field , Baseball Field",
     "selectedEntrance": 1,
     "abbreviation": "N/A",
     "Entrances": [
       { "id": 5001725283, "lat": 28.609331, "lon": -81.196308 },
       { "id": 1701706496, "lat": 28.6091755, "lon": -81.195942 }
+    ]
+  },
+  {
+    "key": "269",
+    "name": "Beach Volleyball Courts at RWC",
+    "alternateName": "Sand Volleyball",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 493,
+        "lat": 28.5961596,
+        "lon": -81.198098
+      }
+    ]
+  },
+  {
+    "key": "270",
+    "name": "Beach Volleyball Courts at Lake Claire",
+    "abbreviation": "N/A",
+    "alternateName": "Sand Volleyball",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 2762462991 , "lat": 28.6073971 , "lon": -81.2030530 }
     ]
   },
   {
@@ -1672,6 +1696,15 @@
         "lat": 28.5918488,
         "lon": -81.202261
       }
+    ]
+  },
+  {
+    "key": "268",
+    "name": "Intramural Baseball Field",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 3104859857 , "lat": 28.5919281 , "lon": -81.1996900 }
     ]
   },
   {
