@@ -3053,6 +3053,7 @@
     "name": "Parking Garage A",
     "abbreviation": "PGA",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "id": 7725843229,
@@ -3106,6 +3107,7 @@
     "name": "Parking Garage B",
     "abbreviation": "PGB",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "lat": 28.5973577,
@@ -3139,6 +3141,7 @@
     "name": "Parking Garage C",
     "abbreviation": "PGC",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "id": 3148137931,
@@ -3172,6 +3175,7 @@
     "name": "Parking Garage D",
     "abbreviation": "PGD",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "id": 2188619552,
@@ -3215,6 +3219,7 @@
     "name": "Parking Garage E",
     "abbreviation": "PGE",
     "selectedEntrance": 1,
+    "permitType": ["Knights Plaza (KP)"],
     "Entrances": [
       {
         "id": 38,
@@ -3233,6 +3238,7 @@
     "name": "Parking Garage F",
     "abbreviation": "PGF",
     "selectedEntrance": 1,
+    "permitType": ["Knights Plaza (KP)"],
     "Entrances": [
       {
         "id": 227,
@@ -3261,6 +3267,7 @@
     "name": "Parking Garage G",
     "abbreviation": "PGG",
     "selectedEntrance": 1,
+    "permitType": ["Knights Plaza (KP)"],
     "Entrances": [
       {
         "id": 240,
@@ -3288,6 +3295,7 @@
     "key": "152",
     "name": "Parking Garage H",
     "abbreviation": "PGH",
+    "permitType": ["Student/General (D)"],
     "selectedEntrance": 1,
     "Entrances": [
       {
@@ -3332,6 +3340,7 @@
     "name": "Parking Garage I",
     "abbreviation": "PGI",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "id": 3411726929,
@@ -3375,6 +3384,7 @@
     "name": "Parking Lot B1",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Employee (E)"],
     "Entrances": [
       {
         "id": 3137213589,
@@ -3418,6 +3428,7 @@
     "name": "Parking Lot B2",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Employee (E)"],
     "Entrances": [
       {
         "id": 3137213535,
@@ -3441,6 +3452,7 @@
     "name": "Parking Lot B3",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Employee (E)"],
     "Entrances": [
       {
         "id": 3137212218,
@@ -3474,6 +3486,7 @@
     "name": "Parking Lot B4",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "id": 3137212221,
@@ -3527,6 +3540,7 @@
     "name": "Parking Lot B5",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "id": 8932946937,
@@ -3545,6 +3559,7 @@
     "name": "Parking Lot B6",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "id": 8932946942,
@@ -3583,6 +3598,7 @@
     "name": "Parking Lot B7",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Resident (R)", "Student/General (D)", "Employee (E)"],
     "Entrances": [
       {
         "id": 208,
@@ -3596,6 +3612,7 @@
     "name": "Parking Lot B8",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Resident (R)"],
     "Entrances": [
       {
         "id": 2762673686,
@@ -3634,6 +3651,7 @@
     "name": "Parking Lot B9",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "id": 2762522365,
@@ -3672,6 +3690,7 @@
     "name": "Parking Lot B10",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Employee (E)"],
     "Entrances": [
       {
         "id": 4267311917,
@@ -3710,6 +3729,7 @@
     "name": "Parking Lot B11",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Employee (E)"],
     "Entrances": [
       {
         "id": 8922111580,
@@ -3743,6 +3763,7 @@
     "name": "Parking Lot B12",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Employee (E)"],
     "Entrances": [
       {
         "id": 8921973652,
@@ -3756,6 +3777,7 @@
     "name": "Parking Lot B15",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Resident (R)"],
     "Entrances": [
       {
         "id": 9273615163,
@@ -3804,6 +3826,7 @@
     "name": "Parking Lot B16",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)", "Employee (E)"],
     "Entrances": [
       {
         "id": 257,
@@ -3822,6 +3845,7 @@
     "name": "Parking Lot B17",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Employee (E)"],
     "Entrances": [
       {
         "id": 8921970690,
@@ -3845,6 +3869,7 @@
     "name": "Parking Lot C2",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Employee (E)"],
     "Entrances": [
       {
         "id": 3104858761,
@@ -3878,6 +3903,7 @@
     "name": "Parking Lot C3",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Employee (E)"],
     "Entrances": [
       {
         "id": 3148137833,
@@ -3911,6 +3937,7 @@
     "name": "Parking Lot D1",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Employee (E)"],
     "Entrances": [
       {
         "id": 7763489453,
@@ -3969,6 +3996,7 @@
     "name": "Parking Lot D2",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "id": 3136978069,
@@ -3992,6 +4020,7 @@
     "name": "Parking Lot E1",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "id": 6314866397,
@@ -4010,6 +4039,7 @@
     "name": "Parking Lot E2",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Employee (E)"],
     "Entrances": [
       {
         "id": 8921236044,
@@ -4043,6 +4073,7 @@
     "name": "Parking Lot E3",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       { "id": 6314866284, "lat": 28.6058275, "lon": -81.193536 },
       { "id": 6314866283, "lat": 28.605822, "lon": -81.193162 }
@@ -4053,6 +4084,7 @@
     "name": "Parking Lot E4",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "id": 192,
@@ -4081,6 +4113,7 @@
     "name": "Parking Lot E6",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [{ "id": 3104858740, "lat": 28.6077436, "lon": -81.1916 }]
   },
   {
@@ -4088,6 +4121,7 @@
     "name": "Parking Lot F1",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["ParkMobile Metered"],
     "Entrances": [
       { "id": 11, "lat": 28.6074922, "lon": -81.1962696 },
       { "id": 31, "lat": 28.6072645, "lon": -81.1964916 },
@@ -4099,6 +4133,7 @@
     "name": "Parking Lot H2",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Employee (E)"],
     "Entrances": [
       {
         "id": 2762463137,
@@ -4142,6 +4177,7 @@
     "name": "Parking Lot H3",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "id": 3420036329,
@@ -4165,6 +4201,7 @@
     "name": "Parking Lot H4",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)", "Employee (E)"],
     "Entrances": [
       {
         "id": 3420036345,
@@ -4203,6 +4240,7 @@
     "name": "Parking Lot H4-A",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)", "Employee (E)", "Resident (R)"],
     "Entrances": [
       {
         "id": 8657513652,
@@ -4216,6 +4254,7 @@
     "name": "Parking Lot H5",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Lake Claire (LC)"],
     "Entrances": [
       {
         "id": 123,
@@ -4249,6 +4288,7 @@
     "name": "Parking Lot H6",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Lake Claire (LC)"],
     "Entrances": [
       {
         "id": 5001725355,
@@ -4277,6 +4317,7 @@
     "name": "Parking Lot H7",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Lake Claire (LC)"],
     "Entrances": [
       {
         "id": 105,
@@ -4300,6 +4341,7 @@
     "name": "Parking Lot H8",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Lake Claire (LC)"],
     "Entrances": [
       {
         "id": 5001725352,
@@ -4328,6 +4370,7 @@
     "name": "Parking Lot H9",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Lake Claire (LC)"],
     "Entrances": [
       {
         "id": 5001725341,
@@ -4356,6 +4399,7 @@
     "name": "Parking Lot H10",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
     "Entrances": [
       {
         "id": 2762462972,
@@ -5394,19 +5438,6 @@
         "lon": -81.197935
       },
       { "id": 3456757082, "lat": 28.60651, "lon": -81.198235 }
-    ]
-  },
-  {
-    "key": "238",
-    "name": "The Venue Parking Lot",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "lat": 28.607492179533793,
-        "lon": -81.19626963150743,
-        "id": 11
-      }
     ]
   },
   {

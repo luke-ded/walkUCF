@@ -11,6 +11,7 @@ interface Item {
   abbreviation: string;
   Entrances?: any[];
   selectedEntrance: number;
+  permitType?: string[];
 }
 
 interface ChildProps {
@@ -47,11 +48,24 @@ const ItemRenderer: React.FC<ItemProps> = ({
 
   return (
     <div className="h-full w-full max-md:px-1">
-      <div className="flex items-center justify-between">
-        <span className="text-md max-w-9/10 font-semibold text-neutral-700 dark:text-neutral-200">
+      <div className="flex justify-between">
+        <div className="flex items-center text-md max-w-9/10 font-semibold text-neutral-700 dark:text-neutral-200 flex-wrap gap-1">
           {item.name}
-        </span>
-        <span className="text-xs text-[#a48100] dark:text-[#ffca09]">
+          {item.permitType && item.permitType.map((permit, index) => {
+          return(
+              <div className={`${index == 0 && "ml-4"} mr-2 text-[8px] font-semibold text-inline rounded-sm p-1 px-2 text-nowrap
+              ${permit == "Student/General (D)" ? "bg-[#00a651]" : 
+                permit == "Employee (E)" ? "bg-[#ed1d24]" :
+                permit == "Resident (R)" ? "bg-[#f47721]" :
+                permit == "Knights Plaza (KP)" ? "bg-[#bd1b8d]" :
+                permit == "Lake Claire (LC)" ? "bg-[#b3874d]" : "bg-gray-500"}`}
+                title={"Permit Type"}
+                key={permit}>
+                {permit}
+              </div>
+          )})}
+        </div>
+        <span className="mt-1 text-xs text-[#a48100] dark:text-[#ffca09]">
           {item.abbreviation}
         </span>
       </div>

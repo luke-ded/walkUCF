@@ -8,6 +8,7 @@ import {
   useMap,
 } from "react-leaflet";
 import { LatLngTuple, LatLngBoundsExpression, LatLngExpression } from "leaflet";
+import { v4 as uuidv4 } from "uuid";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useState, useEffect } from "react";
@@ -23,6 +24,7 @@ interface Item {
   abbreviation: string;
   Entrances: any[];
   selectedEntrance: number;
+  permitType?: string[];
 }
 
 interface PropsType {
@@ -412,10 +414,10 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
               <Marker position={currentLocation} icon={currentIcon} />
             )}
             {props.items.map((point) => {
-              return <div>{props.renderer(point)}</div>;
+              return <div key={uuidv4()}>{props.renderer(point)}</div>;
             })}
             {pathProps.items.map((path, index) => {
-              return <div>{pathProps.renderer(path, index)}</div>;
+              return <div key={index}>{pathProps.renderer(path, index)}</div>;
             })}
             {selectedPoint[0] !== -1 && (
               <MapPanHandler targetPoint={selectedPoint} />

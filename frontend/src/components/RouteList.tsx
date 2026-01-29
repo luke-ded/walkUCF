@@ -10,6 +10,7 @@ interface Item {
   abbreviation: string;
   Entrances: any[];
   selectedEntrance: number;
+  permitType?: string[];
 }
 
 interface ChildProps {
@@ -32,10 +33,23 @@ const RouteList: React.FC<ChildProps> = ({
     return (
       <div className="h-full w-full flex-col max-md:px-1">
         <div className="flex items-center justify-between">
-          <div className="flex max-w-7/10 items-center justify-start">
-            <span className="text-md font-semibold text-neutral-700 dark:text-neutral-200">
+          <div className="flex max-w-7/10 items-center justify-start flex-wrap gap-1">
+            <span className="text-md font-semibold text-neutral-700 dark:text-neutral-200 mr-4">
               {item.name}
             </span>
+            {item.permitType && item.permitType.map((permit) => {
+            return(
+                <div className={`mr-2 text-[8px] font-semibold text-inline rounded-sm p-1 px-2 text-nowrap
+                ${permit == "Student/General (D)" ? "bg-[#00a651]" : 
+                  permit == "Employee (E)" ? "bg-[#ed1d24]" :
+                  permit == "Resident (R)" ? "bg-[#f47721]" :
+                  permit == "Knights Plaza (KP)" ? "bg-[#bd1b8d]" :
+                  permit == "Lake Claire (LC)" ? "bg-[#b3874d]" : "bg-gray-500"}`}
+                  title={"Permit Type"}
+                  key={permit}>
+                  {permit}
+                </div>
+            )})}
             {item.name == "Current Location" && (
               <TiLocationArrow
                 size={26}
