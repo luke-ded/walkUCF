@@ -8,7 +8,6 @@ import {
   useMap,
 } from "react-leaflet";
 import { LatLngTuple, LatLngBoundsExpression, LatLngExpression } from "leaflet";
-import { v4 as uuidv4 } from "uuid";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useState, useEffect } from "react";
@@ -413,8 +412,8 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
             {currentLocation[0] != -1 && settings.showLocation && (
               <Marker position={currentLocation} icon={currentIcon} />
             )}
-            {props.items.map((point) => {
-              return <div key={uuidv4()}>{props.renderer(point)}</div>;
+            {props.items.map((point, index) => {
+              return <div key={index}>{props.renderer(point)}</div>;
             })}
             {pathProps.items.map((path, index) => {
               return <div key={index}>{pathProps.renderer(path, index)}</div>;
