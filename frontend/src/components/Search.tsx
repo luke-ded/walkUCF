@@ -172,6 +172,7 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) => {
         <input
           className="relative h-full w-full rounded-t-md border-2 border-[#a48100] bg-white/70 p-1 pl-2 text-lg text-neutral-700 placeholder-neutral-700/75 shadow-lg focus:ring-1 focus:ring-[#ffca09]/70 focus:outline-none dark:border-[#ffca09] dark:bg-black/25 dark:text-neutral-200 dark:placeholder-neutral-200/75"
           placeholder="Search"
+          name="Search Bar"
           value={searchTerm}
           onChange={(e) => {
             setSearchTerm(e.target.value);
