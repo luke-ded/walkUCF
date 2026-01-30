@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import { FaXmark } from "react-icons/fa6";
 import { TiLocationArrow } from "react-icons/ti";
 
@@ -222,10 +221,10 @@ const RouteList: React.FC<ChildProps> = ({
       </div>
       <div className="h-29/32 w-full overflow-y-auto">
         <ul className="min-h-0 divide-y shadow dark:divide-[#ffe68c]">
-          {itemsList.map((item) => {
+          {itemsList.map((item, index) => {
             return (
               <li
-                key={uuidv4()}
+                key={index}
                 onClick={() => handleItemChange(item)}
                 className="cursor-pointer border-b px-[1vw] py-[1vh] hover:bg-neutral-100/15 dark:border-[#ffe68c]/50"
               >
