@@ -53,7 +53,7 @@ const ItemRenderer: React.FC<ItemProps> = ({
           {item.name}
           {item.permitType && item.permitType.map((permit, index) => {
           return(
-              <div className={`${index == 0 && "ml-4"} mr-2 text-[8px] font-semibold text-inline rounded-sm p-1 px-2 text-nowrap
+              <div className={`${index == 0 && "ml-4"} mr-2 text-[8px] font-semibold text-inline rounded-sm p-[2px] px-[4px] text-nowrap
               ${permit == "Student/General (D)" ? "bg-[#00a651]" : 
                 permit == "Employee (E)" ? "bg-[#ed1d24]" :
                 permit == "Resident (R)" ? "bg-[#f47721]" :
