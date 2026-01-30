@@ -56,6 +56,7 @@
   {
     "key": "5",
     "name": "Addition Financial",
+    "alternateName": "Bank",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -69,7 +70,7 @@
   {
     "key": "6",
     "name": "Addition Financial Arena",
-    "alternateName": "Addition Arena",
+    "alternateName": "Addition Arena , Basketball Arena",
     "abbreviation": "ARNA",
     "selectedEntrance": 1,
     "Entrances": [
@@ -276,7 +277,7 @@
   {
     "key": "269",
     "name": "Beach Volleyball Courts at RWC",
-    "alternateName": "Sand Volleyball",
+    "alternateName": "Sand Volleyball Courts",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -291,7 +292,7 @@
     "key": "270",
     "name": "Beach Volleyball Courts at Lake Claire",
     "abbreviation": "N/A",
-    "alternateName": "Sand Volleyball",
+    "alternateName": "Sand Volleyball Courts",
     "selectedEntrance": 1,
     "Entrances": [
       {"id": 2762462991 , "lat": 28.6073971 , "lon": -81.2030530 }
@@ -1154,6 +1155,7 @@
   {
     "key": "60",
     "name": "Fairwinds Credit Union",
+    "alternateName": "Bank",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -3845,6 +3847,16 @@
     ]
   },
   {
+    "key": "275",
+    "name": "Parking Lot B18",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "permitType": ["Employee (E)"],
+    "Entrances": [
+      {"id": 8921970647 , "lat": 28.5909867 , "lon": -81.1960110 }
+    ]
+  },
+  {
     "key": "169",
     "name": "Parking Lot C2",
     "abbreviation": "N/A",
@@ -4095,6 +4107,39 @@
     "selectedEntrance": 1,
     "permitType": ["Student/General (D)"],
     "Entrances": [{ "id": 3104858740, "lat": 28.6077436, "lon": -81.1916 }]
+  },
+  {
+    "key": "274",
+    "name": "Parking Lot E7",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
+    "Entrances": [
+      {"id": 1701706300 , "lat": 28.6080970 , "lon": -81.1914090 },
+      {"id": 6314866259 , "lat": 28.6081820 , "lon": -81.1908110 },
+      {"id": 6314866258 , "lat": 28.6083893 , "lon": -81.1910080 }
+    ]
+  },
+  {
+    "key": "271",
+    "name": "Parking Lot E8",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
+    "Entrances": [
+      {"id": 1701706562 , "lat": 28.6094801 , "lon": -81.1927630 },
+      {"id": 10088733895 , "lat": 28.6100636 , "lon": -81.1918810 }
+    ]
+  },
+  {
+    "key": "272",
+    "name": "Parking Lot E9",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
+    "Entrances": [
+      {"id": 8922110023 , "lat": 28.6094163 , "lon": -81.1945540 }
+    ]
   },
   {
     "key": "258",
@@ -4391,6 +4436,18 @@
         "lat": 28.6067838,
         "lon": -81.202768
       }
+    ]
+  },
+  {
+    "key": "273",
+    "name": "West Stadium Parking Lot",
+    "alternateName": "West Stadium Lot",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "permitType": ["Student/General (D)"],
+    "Entrances": [
+      {"id": 1701706545 , "lat": 28.6094239 , "lon": -81.1940410 },
+      {"id": 1701706509 , "lat": 28.6092354 , "lon": -81.1933470 }
     ]
   },
   {
@@ -5670,6 +5727,7 @@
   {
     "key": "124",
     "name": "LYNX Transit Center Bus Stop (1)",
+    "alternateName": "Education Complex Bus Stop",
     "abbreviation": "LYNX",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5683,6 +5741,7 @@
   {
     "key": "219",
     "name": "Student Union/John T. Washington Center Bus Stop (2)",
+    "alternateName": "Student Union Bus Stop , JTWC Bus Stop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5696,6 +5755,7 @@
   {
     "key": "119",
     "name": "Lake Claire Community Bus Stop (3)",
+    "alternateName": "Lake Claire Bus Stop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 8921428195, "lat": 28.6034047, "lon": -81.203974 }]
@@ -5710,6 +5770,7 @@
   {
     "key": "13",
     "name": "Addition Arena/Knights Plaza/Towers Bus Stop (5)",
+    "alternateName": "Addition Arena Bus Stop , Addition Financial Arena Bus Stop , Knights Plaza Bus Stop , Towers Bus Stop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5724,6 +5785,7 @@
   {
     "key": "207",
     "name": "Engineering/Business/CREOL/Research 1 Bus Stop (6)",
+    "alternateName": "Engineering Bus Stop , Business Bus Stop , CREOL Bus Stop, College of Optics and Photonics Bus Stop , Research Bus Stop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5737,6 +5799,7 @@
   {
     "key": "4",
     "name": "Nike and Neptune Communities Bus Stop (7)",
+    "alternateName": "Nike Bus Stop , Neptune Bus Stop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5749,14 +5812,16 @@
   },
   {
     "key": "62",
-    "name": "Recreation & Wellness Center (RWC) Bus Stop (8)",
+    "name": "Recreation & Wellness Center Bus Stop (8)",
+    "alternateName": "RWC Bus Stop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 4267311889, "lat": 28.5963288, "lon": -81.198528 }]
   },
   {
     "key": "188",
-    "name": "Visitor & Parking Information Center (VPI) Bus Stop (9)",
+    "name": "Visitor & Parking Information Center Bus Stop (9)",
+    "alternateName": "VPI Bus Stop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [{ "id": 8932946951, "lat": 28.5968998, "lon": -81.203064 }]
