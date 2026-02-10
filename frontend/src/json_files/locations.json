@@ -178,6 +178,7 @@
   {
     "key": "14",
     "name": "Arboretum Office",
+    "alternateName": "UCF Arboretum",
     "abbreviation": "ARB",
     "selectedEntrance": 1,
     "Entrances": [
@@ -186,6 +187,28 @@
         "lon": -81.196831,
         "id": 3137213649
       }
+    ]
+  },
+  {
+    "key": "276",
+    "name": "Inner Arboretum",
+    "alternateName": "UCF Arboretum",
+    "abbreviation": "ARB",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 893880650 , "lat": 28.6003745 , "lon": -81.1970800 },
+      {"id": 3104858769 , "lat": 28.6001354 , "lon": -81.1973200 },
+      {"id": 893880652 , "lat": 28.6009820 , "lon": -81.1967230 }
+    ]
+  },
+  {
+    "key": "277",
+    "name": "Outer Arboretum",
+    "alternateName": "UCF Arboretum",
+    "abbreviation": "ARB",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 548 , "lat": 28.6019105 , "lon": -81.1940954 }
     ]
   },
   {
@@ -474,6 +497,7 @@
   {
     "key": "26",
     "name": "CREOL",
+    "alternateName": "College of Optics and Photonics",
     "abbreviation": "CROL",
     "selectedEntrance": 1,
     "Entrances": [
@@ -4445,6 +4469,17 @@
         "lat": 28.6067838,
         "lon": -81.202768
       }
+    ]
+  },
+  {
+    "key": "278",
+    "name": "Park and Ride",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "permitType": ["Student/General - D"],
+    "Entrances": [
+      {"id": 2762609028 , "lat": 28.6040154 , "lon": -81.1896020 },
+      {"id": 2762609027 , "lat": 28.6047830 , "lon": -81.1885610 }
     ]
   },
   {
