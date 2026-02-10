@@ -411,6 +411,7 @@
   {
     "key": "24",
     "name": "Business Administration I",
+    "alternateName": "Business Administration 1 , Business Administration One",
     "abbreviation": "BA1",
     "selectedEntrance": 1,
     "Entrances": [
@@ -454,6 +455,7 @@
   {
     "key": "25",
     "name": "Business Administration II",
+    "alternateName": "Business Administration 2, Business Administration Two",
     "abbreviation": "BA2",
     "selectedEntrance": 1,
     "Entrances": [
@@ -661,6 +663,7 @@
   {
     "key": "36",
     "name": "Classroom Building I",
+    "alternateName": "Classroom Building 1 , Classroom Building One",
     "abbreviation": "CB1",
     "selectedEntrance": 1,
     "Entrances": [
@@ -704,6 +707,7 @@
   {
     "key": "37",
     "name": "Classroom Building II",
+    "alternateName": "Classroom Building 2 , Classroom Building Two",
     "abbreviation": "CB2",
     "selectedEntrance": 1,
     "Entrances": [
@@ -1043,6 +1047,7 @@
   {
     "key": "55",
     "name": "Engineering I",
+    "alternateName": "Engineering 1 , Engineering One",
     "abbreviation": "ENG1",
     "selectedEntrance": 1,
     "Entrances": [
@@ -1076,6 +1081,7 @@
   {
     "key": "56",
     "name": "Engineering II",
+    "alternateName": "Engineering 2 , Engineering Two",
     "abbreviation": "ENG2",
     "selectedEntrance": 1,
     "Entrances": [
@@ -1329,6 +1335,7 @@
   {
     "key": "70",
     "name": "Health Sciences I",
+    "alternateName": "Health Sciences 1 , Health Sciences One",
     "abbreviation": "HS1",
     "selectedEntrance": 1,
     "Entrances": [
@@ -1372,6 +1379,7 @@
   {
     "key": "71",
     "name": "Health Sciences II",
+    "alternateName": "Health Sciences 2 , Health Sciences Two",
     "abbreviation": "HS2",
     "selectedEntrance": 1,
     "Entrances": [
@@ -1969,6 +1977,7 @@
   {
     "key": "98",
     "name": "L3Harris Engineering Center",
+    "alternateName": "Engineering III , Engineering 3 , Engineering Three",
     "abbreviation": "HEC",
     "selectedEntrance": 1,
     "Entrances": [
@@ -4817,6 +4826,7 @@
   {
     "key": "206",
     "name": "Research I",
+    "alternateName": "Research 1 , Research One",
     "abbreviation": "R1",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5125,6 +5135,7 @@
   {
     "key": "223",
     "name": "Technology Commons I",
+    "alternateName": "Technology Commons 1 , Technology Commons One",
     "abbreviation": "TC1",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5148,6 +5159,7 @@
   {
     "key": "224",
     "name": "Technology Commons II",
+    "alternateName": "Technology Commons 2, Technology Commons Two",
     "abbreviation": "TC2",
     "selectedEntrance": 1,
     "Entrances": [
