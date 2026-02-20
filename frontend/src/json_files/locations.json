@@ -42,7 +42,7 @@
   {
     "key": "57",
     "name": "Acrisure Bounce House",
-    "alternateName": "FBC Mortgage Stadium , Football Stadium , Spectrum Stadium",
+    "alternateName": "FBC Mortgage Stadium , Football Stadium , Spectrum Stadium , Football Field , Bright House Networks Stadium",
     "abbreviation": "SS",
     "selectedEntrance": 1,
     "Entrances": [
@@ -1925,6 +1925,7 @@
   {
     "key": "96",
     "name": "Student Union",
+    "alternateName": "Pegasus Ballroom , Key West Ballroom , Cape Florida Ballroom , Garden Key Meeting Room 221",
     "abbreviation": "STUN",
     "selectedEntrance": 1,
     "Entrances": [
@@ -4497,6 +4498,7 @@
   {
     "key": "189",
     "name": "Pegasus Ballroom",
+    "alternateName": "Pegasus Grand Ballroom",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5271,6 +5273,7 @@
   {
     "key": "229",
     "name": "The Venue",
+    "alternateName": "Volleyball",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5297,6 +5300,19 @@
         "lon": -81.199653,
         "id": 3151833062
       },
+      {
+        "lat": 28.6005323,
+        "lon": -81.199485,
+        "id": 3420273022
+      }
+    ]
+  },
+  {
+    "key": "279",
+    "name": "Black Box Theatre",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
       {
         "lat": 28.6005323,
         "lon": -81.199485,
