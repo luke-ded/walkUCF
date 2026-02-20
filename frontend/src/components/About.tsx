@@ -13,7 +13,7 @@ const About: React.FC<ChildProps> = ({ toggleAbout }) => {
         <div className="flex h-fit w-full flex-col justify-center rounded-sm bg-[#d6d4d4]/80 dark:bg-black/80">
           <div className="flex h-1/8 items-center justify-center border-b-2 border-[#a48100] dark:border-[#ffca09]">
             <h1 className="py-1 text-2xl font-bold text-neutral-700 dark:text-neutral-200">
-              About this Project
+              About This Project
             </h1>
           </div>
           <div className="text-md flex h-5/8 flex-col items-center justify-center p-5 text-center text-neutral-700 max-sm:text-sm dark:text-neutral-200">
