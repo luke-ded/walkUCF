@@ -169,7 +169,7 @@ describe('Error Component', () => {
 
   test('renders error message about inaccessible locations', () => {
     render(<Error toggleError={mockToggleError} />);
-    expect(screen.getByText(/Locations inacessible to each other/i)).toBeInTheDocument();
+    expect(screen.getByText(/Locations inaccessible to each other/i)).toBeInTheDocument();
   });
 
   test('renders issue report link', () => {
