@@ -88,17 +88,17 @@ const Settings: React.FC<ChildProps> = ({
   }
 
   return (
-    <div className="max-lg:20/21 absolute top-1/14 left-0 z-12 flex h-full w-full max-w-full items-center justify-center bg-black/50 max-lg:top-1/21">
-      <div className="absolute top-1/8 z-12 h-9/20 rounded-md border-2 border-[#a48100] bg-[url(./assets/backgroundmap.jpg)] shadow-lg max-lg:top-1/16 max-lg:h-3/10 max-sm:w-9/10 md:w-5/10 lg:w-3/10 dark:border-[#ffca09]">
-        <div className="h-full w-full flex-col justify-center rounded-sm bg-[#d6d4d4]/80 dark:bg-black/80">
+    <div className="fixed inset-0 flex items-start pt-30 z-12 flex h-full w-full max-w-full items-center justify-center bg-black/50">
+      <div className="rounded-md border-2 border-[#a48100] bg-[url(./assets/backgroundmap.jpg)] shadow-lg max-sm:w-9/10 md:w-5/10 lg:w-3/10 dark:border-[#ffca09]">
+        <div className="h-fit w-full flex-col justify-center rounded-sm bg-[#d6d4d4]/80 dark:bg-black/80">
           <div className="flex h-1/8 items-center justify-center border-b-2 border-[#a48100] dark:border-[#ffca09]">
             <h1 className="py-1 text-2xl font-bold text-neutral-700 dark:text-neutral-200">
               Settings
             </h1>
           </div>
-          <div className="h-5/8 flex-col justify-start p-5 text-neutral-700 dark:text-neutral-200">
+          <div className="h-5/8 flex-col justify-start p-5 text-neutral-700 dark:text-neutral-200 mt-2">
             <div className="flex w-full items-center justify-center">
-              <h1 className="mr-2 text-xl">Units:</h1>
+              <h1 className="mr-2 text-xl max-md:text-lg">Units:</h1>
               <div className="flex h-10 w-38 cursor-pointer rounded-xl border-2 border-[#a48100] bg-white/70 dark:border-[#ffe68c] dark:bg-black/40">
                 <div
                   className={`flex h-full w-5/10 items-center justify-center rounded-l-lg border-r-2 border-[#a48100] dark:border-[#ffe68c] ${units == "imperial" ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
@@ -115,15 +115,15 @@ const Settings: React.FC<ChildProps> = ({
               </div>
             </div>
             <div className="mt-5 flex w-full items-center justify-center">
-              <h1 className="mr-2 text-xl">Walking Speed:</h1>
+              <h1 className="mr-2 text-xl max-md:text-lg">Walking Speed:</h1>
               <input
-                className="h-full w-1/10 w-3/20 rounded-md border-2 border-[#a48100] bg-white/70 p-1 text-center text-lg text-neutral-700 placeholder-neutral-700/75 shadow-lg placeholder:text-center focus:ring-1 focus:ring-[#ffca09]/70 focus:outline-none dark:border-[#ffe68c] dark:bg-black/25 dark:text-neutral-200 dark:placeholder-neutral-200/75"
+                className="h-full w-1/10 w-3/20 rounded-md border-2 border-[#a48100] bg-white/70 p-1 text-center text-lg max-md:text-md text-neutral-700 placeholder-neutral-700/75 shadow-lg placeholder:text-center focus:ring-1 focus:ring-[#ffca09]/70 focus:outline-none dark:border-[#ffe68c] dark:bg-black/25 dark:text-neutral-200 dark:placeholder-neutral-200/75"
                 placeholder="3.0"
                 value={newWalkSpeed}
                 onChange={(e) => setWalkSpeedHandler(e.target.value)}
                 onBlur={(e) => setWalkSpeedHandler(e.target.value)}
               ></input>
-              <h1 className="ml-2 text-lg">
+              <h1 className="ml-2 text-lg max-md:text-md">
                 {units == "imperial" ? "mi/hr" : "km/hr"}
               </h1>
               <div className="relative inline-block">
@@ -153,7 +153,7 @@ const Settings: React.FC<ChildProps> = ({
             </div>
             {navigator.geolocation && permissionStatus && (
               <div className="mt-5 flex w-full items-center justify-center">
-                <h1 className="mr-2 text-xl">Show Location:</h1>
+                <h1 className="mr-2 text-xl max-md:text-lg">Show Location:</h1>
                 <div className="flex h-10 w-38 cursor-pointer rounded-xl border-2 border-[#a48100] bg-white/70 dark:border-[#ffe68c] dark:bg-black/40">
                   <div
                     className={`flex h-full w-5/10 items-center justify-center rounded-l-lg border-r-2 border-[#a48100] dark:border-[#ffe68c] ${showLocation ? "bg-[#ffe68c]/35" : "bg-transparent"}`}
@@ -171,7 +171,7 @@ const Settings: React.FC<ChildProps> = ({
               </div>
             )}
           </div>
-          <div className="flex h-2/8 w-full items-center justify-center">
+          <div className="flex h-2/8 w-full items-center justify-center mt-2">
             <button
               className="mr-3 mb-5 h-10 cursor-pointer rounded-xl border-2 border-[#a48100] bg-white/70 px-2 py-1.5 hover:bg-[#ffe68c]/20 active:bg-[#ffe68c]/20 dark:border-[#ffe68c] dark:bg-black/40"
               onClick={save}
