@@ -18,7 +18,7 @@ const About: React.FC<ChildProps> = ({ toggleAbout }) => {
           </div>
           <div className="text-md flex h-5/8 flex-col items-center justify-center p-5 text-center text-neutral-700 max-sm:text-sm dark:text-neutral-200">
             <p> <span className="inline font-bold">walkUCF</span> is a UCF map perfect for finding the fastest way to class. It provides the best routes, 
-              comprehensive building abbreviations, and precise entraces. 
+              comprehensive building abbreviations, and precise entrances. 
             </p>
             <p className="mt-3">
               This project was created by&nbsp;
