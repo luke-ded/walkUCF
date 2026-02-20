@@ -75,8 +75,8 @@ jobs:
             echo "📦 Updating dependencies..."
             npm install
             
-            echo "🔧 Fixing vulnerable dependencies..."
-            npm audit fix
+            #echo "🔧 Fixing vulnerable dependencies..."
+            #npm audit fix
             
             echo "🏗️ Building walkUCF..."
             npm run build
