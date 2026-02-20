@@ -118,7 +118,7 @@ describe('About Component', () => {
 
   test('renders about modal with title', () => {
     render(<About toggleAbout={mockToggleAbout} />);
-    expect(screen.getByText('About this Project')).toBeInTheDocument();
+    expect(screen.getByText('About This Project')).toBeInTheDocument();
   });
 
   test('renders creator information with link', () => {
