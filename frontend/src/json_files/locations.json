@@ -298,20 +298,6 @@
     ]
   },
   {
-    "key": "269",
-    "name": "Beach Volleyball Courts at RWC",
-    "alternateName": "Sand Volleyball Courts",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 493,
-        "lat": 28.5961596,
-        "lon": -81.198098
-      }
-    ]
-  },
-  {
     "key": "270",
     "name": "Beach Volleyball Courts at Lake Claire",
     "abbreviation": "N/A",
@@ -4801,6 +4787,20 @@
         "id": 7830296290,
         "lat": 28.5921765,
         "lon": -81.201701
+      }
+    ]
+  },
+  {
+    "key": "269",
+    "name": "Beach Volleyball Courts at RWC",
+    "alternateName": "Sand Volleyball Courts",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "id": 493,
+        "lat": 28.5961596,
+        "lon": -81.198098
       }
     ]
   },
