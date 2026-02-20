@@ -10,16 +10,16 @@ const Error: React.FC<ChildProps> = ({ toggleError }) => {
   }
 
   return (
-    <div className="max-lg:20/21 absolute top-1/14 left-0 z-12 flex h-full w-full max-w-full items-center justify-center bg-black/50 max-lg:top-1/21">
-      <div className="absolute top-1/8 z-12 h-9/20 rounded-md border-2 border-red-500 bg-[url(./assets/backgroundmap.jpg)] shadow-lg max-lg:top-1/16 max-md:h-3/10 max-sm:w-9/10 md:w-5/10 lg:w-3/10 dark:border-red-400">
-        <div className="colored-marker flex h-full w-full flex-col justify-center rounded-sm bg-[#d6d4d4]/80 dark:bg-black/80">
-          <div className="text-md flex h-6/8 flex-col items-center justify-center p-3 text-center text-neutral-700 max-sm:text-sm dark:text-neutral-200">
+    <div className="fixed inset-0 flex items-start pt-30 justify-center z-12 flex h-full w-full max-w-full items-center justify-center bg-black/50">
+      <div className="rounded-md border-2 border-red-500 bg-[url(./assets/backgroundmap.jpg)] shadow-lg max-lg:top-1/16 max-sm:w-9/10 md:w-5/10 lg:w-3/10 dark:border-red-400">
+        <div className="colored-marker flex h-fit w-full flex-col justify-center rounded-sm bg-[#d6d4d4]/80 dark:bg-black/80">
+          <div className="text-md flex h-fit flex-col items-center justify-center p-3 text-center text-neutral-700 max-sm:text-sm dark:text-neutral-200">
             <p className="mt-3">
-              Locations inacessible to each other. Some entrances could be
-              inacessible depending on your map options.{" "}
+              Locations inaccessible to each other. Some locations or entrances could be
+              inaccessible depending on your map options.{" "}
             </p>
             <p className="mt-3">
-              If this is probably incorrect, please submit a issue report{" "}
+              If this is likely incorrect, please submit a issue report{" "}
               <a
                 href="https://forms.gle/XmwzZMkAw9f15xzs6"
                 target="_blank"
