@@ -638,6 +638,7 @@
   {
     "key": "34",
     "name": "Chick-fil-A at JTWC",
+    "alternateName": "Chickfila , Chick fil a",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -1304,13 +1305,6 @@
         "id": 12653691722
       }
     ]
-  },
-  {
-    "key": "260",
-    "name": "Garvy Center for Student-Athlete Nutrition",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [{ "id": 587, "lat": 28.6070977, "lon": -81.192784 }]
   },
   {
     "key": "68",
@@ -1999,6 +1993,14 @@
         "id": 7745913387
       }
     ]
+  },
+  {
+    "key": "260",
+    "name": "Garvy Center for Student-Athlete Nutrition",
+    "alternateName": "Garvy Center for Student Athlete Nutrition",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [{ "id": 587, "lat": 28.6070977, "lon": -81.192784 }]
   },
   {
     "key": "98",
@@ -4853,6 +4855,7 @@
   {
     "key": "32",
     "name": "Chick-fil-A at RWC",
+    "alternateName": "Chickfila , Chick fil a",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5774,6 +5777,7 @@
   {
     "key": "248",
     "name": "Wayne Densch Center for Student-Athlete Leadership",
+    "alternateName": "Wayne Densch Center for Student Athlete Leadership",
     "abbreviation": "CSAL",
     "selectedEntrance": 1,
     "Entrances": [
