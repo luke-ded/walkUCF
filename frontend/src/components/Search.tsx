@@ -167,6 +167,8 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) => {
     return calculatedItem;
   }
 
+  const term = searchTerm.toLowerCase();
+
   return (
     <div className="h-1/4 w-full">
       <div className="relative flex h-2/8 w-full items-center justify-center">
@@ -211,10 +213,19 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) => {
           {itemsList
             .filter(
               (item) =>
-                item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                item.abbreviation.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                item.alternateName?.toLowerCase().includes(searchTerm.toLowerCase())
+                item.name.toLowerCase().includes(term) ||
+                item.abbreviation.toLowerCase().includes(term) ||
+                item.alternateName?.toLowerCase().includes(term)
             )
+            .sort((a, b) => {
+              const getPriorityScore = (item: Item) => {
+                if (item.name.toLowerCase().includes(term)) return 1;
+                if (item.abbreviation.toLowerCase().includes(term)) return 1;
+                if (item.alternateName?.toLowerCase().includes(term)) return 3;
+                return 4;
+              };
+              return getPriorityScore(a) - getPriorityScore(b);
+            })
             .map((item) => {
               return (
                 <li
