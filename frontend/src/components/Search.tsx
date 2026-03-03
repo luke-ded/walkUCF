@@ -3,6 +3,7 @@ import locations from "../json_files/locations.json";
 import { nearestPoint } from "./Nearest.ts";
 import { IoSearch } from "react-icons/io5";
 import { TiLocationArrow } from "react-icons/ti";
+import { FaPlus } from "react-icons/fa6";
 
 interface Item {
   key: string;
@@ -96,10 +97,10 @@ const ItemRenderer: React.FC<ItemProps> = ({
         </div>
         <div>
           <button
-            className="inline-block h-fit w-fit cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] px-2 text-center text-lg font-bold text-neutral-200 hover:bg-[#ffca09]/60 hover:text-neutral-600 active:bg-[#ffca09]/60 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:text-[#faefc8]"
+            className="flex items-center justify-center h-fit w-fit p-1.5 cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] text-center text-lg font-bold text-neutral-200 hover:bg-[#ffca09]/60 hover:text-neutral-600 active:bg-[#ffca09]/60 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:text-[#faefc8]"
             onClick={() => addItem(item, selectedEntrance)}
           >
-            +
+            <FaPlus />
           </button>
         </div>
       </div>
@@ -199,10 +200,10 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) => {
                     />
                   </div>
                   <button
-                    className="inline-block h-fit w-fit cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] px-2 text-center text-lg font-bold text-neutral-200 hover:bg-[#ffca09]/60 hover:text-neutral-600 active:bg-[#ffca09]/60 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:text-[#faefc8]"
+                    className="flex items-center justify-center h-fit w-fit p-1.5 cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] text-center text-lg font-bold text-neutral-200 hover:bg-[#ffca09]/60 hover:text-neutral-600 active:bg-[#ffca09]/60 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:text-[#faefc8]"
                     onClick={() => addItem(calcNearestPoint(), 1)}
                   >
-                    +
+                    <FaPlus />
                   </button>
                 </div>
               </li>
