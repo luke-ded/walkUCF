@@ -71,7 +71,7 @@ const ItemRenderer: React.FC<ItemProps> = ({
         </span>
       </div>
       <div className="my-[1vh] flex items-center justify-between">
-        <div className="flex max-w-17/20 flex-wrap justify-start">
+        <div className="flex max-w-17/20 flex-wrap justify-start" data-nosnippet>
           <p className="mt-1 text-neutral-600 dark:text-neutral-300">
             Entrance:{" "}
           </p>
