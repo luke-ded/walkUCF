@@ -434,25 +434,25 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
       </div>
       <div className="text-md flex h-3/40 w-full items-center justify-center rounded-b-sm bg-white/50 font-bold max-xl:text-xs max-sm:h-5/40 dark:bg-black/50">
         <button
-          className={`ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!buildings ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700" : "bg-[#ffca09]/60 text-neutral-600 dark:text-neutral-50"} cursor-pointer text-center font-bold hover:bg-[#ffca09]/60 hover:text-neutral-600 dark:hover:text-neutral-50`}
+          className={`ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!buildings ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700 hover:bg-[#ffca09]/80" : "bg-[#ffca09]/50 text-neutral-600 dark:text-neutral-50 hover:bg-[#ffca09]/60"} cursor-pointer text-center font-bold`}
           onClick={() => setBuilding(!buildings)}
         >
           Buildings
         </button>
         <button
-          className={`ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!jaywalking ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700" : "bg-[#ffca09]/60 text-neutral-600 dark:text-neutral-50"} cursor-pointer text-center font-bold hover:bg-[#ffca09]/60 hover:text-neutral-600 dark:hover:text-neutral-50`}
+          className={`ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!jaywalking ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700 hover:bg-[#ffca09]/80" : "bg-[#ffca09]/50 text-neutral-600 dark:text-neutral-50 hover:bg-[#ffca09]/60"} cursor-pointer text-center font-bold`}
           onClick={() => setJaywalking(!jaywalking)}
         >
           Jaywalking
         </button>
         <button
-          className={`ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!parking ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700" : "bg-[#ffca09]/60 text-neutral-600 dark:text-neutral-50"} cursor-pointer text-center font-bold hover:bg-[#ffca09]/60 hover:text-neutral-600 dark:hover:text-neutral-50`}
+          className={`ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!parking ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700 hover:bg-[#ffca09]/80" : "bg-[#ffca09]/50 text-neutral-600 dark:text-neutral-50 hover:bg-[#ffca09]/60"} cursor-pointer text-center font-bold`}
           onClick={() => setParking(!parking)}
         >
           Parking Lots
         </button>
         <button
-          className={`mr-[3%] ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!grass ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700" : "bg-[#ffca09]/60 text-neutral-600 dark:text-neutral-50"} cursor-pointer text-center font-bold hover:bg-[#ffca09]/60 hover:text-neutral-600 dark:hover:text-neutral-50`}
+          className={`mr-[3%] ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!grass ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700 hover:bg-[#ffca09]/80" : "bg-[#ffca09]/50 text-neutral-600 dark:text-neutral-50 hover:bg-[#ffca09]/60"} cursor-pointer text-center font-bold`}
           onClick={() => setGrass(!grass)}
         >
           Grass
