@@ -15,6 +15,7 @@ import deselectImage from "../assets/gold-deselect-marker-icon.png";
 import selectImage from "../assets/gold-select-marker-icon.png";
 import standardImage from "../assets/standard-marker-icon.png";
 import { createGraph, dijkstra } from "./Dijkstra.ts";
+import { RiStackFill } from "react-icons/ri";
 
 interface Item {
   key: string;
@@ -113,6 +114,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
   const [selectedPoint, setSelectedPoint] = useState<LatLngTuple>([-1, -1]);
   const [paths, setPaths] = useState<number[][]>([]);
   const [currentLocation, setCurrentLocation] = useState<LatLngTuple>([-1, -1]);
+  const [tileModal, setTileModal] = useState<boolean>(false);
 
   const selectIcon = createSelectIcon();
   const currentIcon = createCurrentLocIcon();
@@ -369,6 +371,25 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
               ></img>
             </div>
           </div>
+          <div
+            className="absolute z-10 mt-30 ml-[11px] flex h-[33px] w-[33px] cursor-pointer items-center justify-center rounded-[4px] bg-black/20 text-[18px] font-bold text-black"
+            onClick={() => {setTileModal(!tileModal)}}
+          >
+            <div
+              className="flex h-[29px] w-[29px] items-center justify-center rounded-[2px] hover:bg-[#f4f4f4] active:bg-[#b5b5b5] bg-[#ffffff]"
+            >
+              <RiStackFill
+                className="h-14/20 w-auto"
+                title="Show Tiling Options"
+              ></RiStackFill>
+            </div>
+          </div>
+          {tileModal &&
+          <div
+            className="absolute z-10 mt-30 ml-[50px] flex h-[200px] w-[140px] cursor-pointer items-center justify-center rounded-[4px] bg-black/20 text-[18px] font-bold text-black">
+              <div className="flex h-[196px] w-[136px] items-center justify-center rounded-[2px] bg-[#ffffff]">
+              </div>
+          </div>}
           <div className="absolute top-0 right-0 z-10 flex items-center justify-center rounded-[4px] rounded-tl-none rounded-tr-sm rounded-br-none rounded-bl-md border-b-2 border-l-2 border-[#a48100] bg-white/80 p-1 pl-3 text-neutral-700 dark:border-[#ffca09] dark:bg-black/55">
             <div className="text-md mr-2 flex max-sm:text-sm dark:text-neutral-100">
               <h1>
@@ -404,7 +425,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
           >
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OSM</a>'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
             />
             {selectedPoint[0] != -1 && (
               <Marker position={selectedPoint} icon={selectIcon} />
