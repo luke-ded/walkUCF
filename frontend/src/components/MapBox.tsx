@@ -17,8 +17,6 @@ import standardImage from "../assets/standard-marker-icon.png";
 import { createGraph, dijkstra } from "./Dijkstra.ts";
 import { RiStackFill } from "react-icons/ri";
 
-import satellite_preview from "../assets/tile_previews/satellite_preview.png";
-
 interface Item {
   key: string;
   name: string;
@@ -169,6 +167,15 @@ const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) =
         //console.error(_e.message);
       },
     );
+  }
+
+  function tilePreview(url : string) {
+  return url
+    .replace("{z}", "17")
+    .replace("{x}", "35971")
+    .replace("{y}", "54660")
+    .replace("{s}", "a")
+    .replace("{r}", "")
   }
 
   useEffect(() => {
@@ -398,9 +405,9 @@ const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) =
             className="absolute z-10 mt-30 ml-[50px] flex h-[220px] w-[140px] cursor-pointer items-center justify-center rounded-[4px] bg-black/20 text-[18px] font-bold text-black">
               <div className="flex flex-col h-[216px] w-[136px] items-center justify-between rounded-[2px] bg-[#ffffff] p-1 text-sm">
                 {[...tileSelectionOptions.entries()].map(([key]) => (
-                  <div className={`flex w-full items-center h-7/32 rounded-sm p-1 border-2 border-[#a48100] dark:border-[#ffca09] text-neutral-200 dark:text-neutral-700 cursor-pointer ${tileSelection != key ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700 hover:bg-[#ffca09]/80" : "bg-[#ffca09]/50 text-neutral-600 dark:text-neutral-50 hover:bg-[#ffca09]/60"}`}
+                  <div className={`flex w-full items-center h-7/32 rounded-sm p-1 border-2 border-[#a48100] dark:border-[#ffca09] text-neutral-200 dark:text-neutral-700 cursor-pointer ${tileSelection != key ? "bg-[#a48100] hover:bg-[#a48100]/80 text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:bg-[#ffca09]/80" : "bg-[#ffca09]/50 text-neutral-600 dark:text-neutral-50 hover:bg-[#ffca09]/60"}`}
                   onClick={() => {setTileSelection(key)}}>
-                    <img src={satellite_preview} className="rounded-[2px] w-auto h-full border darK:border-neutral-700 border-neutral-200"/>
+                    <img src={tilePreview(tileSelectionOptions.get(key)!)} className="rounded-[2px] w-auto h-full border-1 dark:border-neutral-700 border-neutral-200"/>
                     <span className="ml-4">{key}</span>
                   </div>
                 ))}
@@ -471,7 +478,7 @@ const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) =
       </div>
       <div className="text-md flex h-3/40 w-full items-center justify-center rounded-b-sm bg-white/50 font-bold max-xl:text-xs max-sm:h-5/40 dark:bg-black/50">
         <button
-          className={`ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!buildings ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:bg-[#ffca09]/80" : "bg-[#ffca09]/50 text-neutral-600 dark:text-neutral-50 hover:bg-[#ffca09]/60"} cursor-pointer text-center font-bold`}
+          className={`ml-[3%] flex inline-block h-8/10 w-fit items-center rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${!buildings ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700 hover:bg-[#ffca09]/80" : "bg-[#ffca09]/50 text-neutral-600 dark:text-neutral-50 hover:bg-[#ffca09]/60"} cursor-pointer text-center font-bold`}
           onClick={() => setBuilding(!buildings)}
         >
           Buildings
