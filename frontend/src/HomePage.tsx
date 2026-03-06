@@ -1,5 +1,5 @@
 import NavBar from "./components/NavBar";
-import Map from "./components/Map.tsx";
+import MapBox from "./components/MapBox.tsx";
 import Search from "./components/Search.tsx";
 import About from "./components/About.tsx";
 import Error from "./components/Error.tsx";
@@ -95,7 +95,7 @@ function HomePage() {
           />
         </div>
         <div className="flex h-4/5 w-2/5 flex-col justify-between rounded-md border-2 border-[#a48100] shadow-lg max-lg:order-1 max-lg:mt-5 max-lg:min-h-6/16 max-lg:w-9/10 lg:order-2 dark:border-[#ffca09]">
-          <Map
+          <MapBox
             stops={stops!}
             triggerRerender={triggerRerender}
             toggleError={toggleError}

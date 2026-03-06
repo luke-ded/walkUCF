@@ -15,6 +15,7 @@ import deselectImage from "../assets/gold-deselect-marker-icon.png";
 import selectImage from "../assets/gold-select-marker-icon.png";
 import standardImage from "../assets/standard-marker-icon.png";
 import { createGraph, dijkstra } from "./Dijkstra.ts";
+import { RiStackFill } from "react-icons/ri";
 
 interface Item {
   key: string;
@@ -100,8 +101,14 @@ const createStandardIcon = () => {
 };
 
 const displayAllPaths = false; // Change to true to view all paths
+const tileSelectionOptions = new Map<string, string>([
+  ["OSM Default", "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"],
+  ["ERSI Satellite", "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"],
+  ["Stadia", "https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png"],
+  ["Carto", "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png"]
+]);
 
-const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
+const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
   var initVals = [true, false, false, false];
   var initData = localStorage.getItem("mapOptions");
   if (initData != undefined) initVals = JSON.parse(initData);
@@ -113,6 +120,8 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
   const [selectedPoint, setSelectedPoint] = useState<LatLngTuple>([-1, -1]);
   const [paths, setPaths] = useState<number[][]>([]);
   const [currentLocation, setCurrentLocation] = useState<LatLngTuple>([-1, -1]);
+  const [tileModal, setTileModal] = useState<boolean>(false);
+  const [tileSelection, setTileSelection] = useState<string>("OSM Default");
 
   const selectIcon = createSelectIcon();
   const currentIcon = createCurrentLocIcon();
@@ -158,6 +167,15 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
         //console.error(_e.message);
       },
     );
+  }
+
+  function tilePreview(url : string) {
+  return url
+    .replace("{z}", "17")
+    .replace("{x}", "35971")
+    .replace("{y}", "54660")
+    .replace("{s}", "a")
+    .replace("{r}", "")
   }
 
   useEffect(() => {
@@ -369,6 +387,32 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
               ></img>
             </div>
           </div>
+          <div
+            className="absolute z-10 mt-30 ml-[11px] flex h-[33px] w-[33px] cursor-pointer items-center justify-center rounded-[4px] bg-black/20 text-[18px] font-bold text-black"
+            onClick={() => {setTileModal(!tileModal)}}
+          >
+            <div
+              className="flex h-[29px] w-[29px] items-center justify-center rounded-[2px] hover:bg-[#f4f4f4] active:bg-[#b5b5b5] bg-[#ffffff]"
+            >
+              <RiStackFill
+                className="h-14/20 w-auto"
+                title="Show Tiling Options"
+              ></RiStackFill>
+            </div>
+          </div>
+          {tileModal &&
+          <div
+            className="absolute z-10 mt-30 ml-[50px] flex h-[220px] w-[140px] cursor-pointer items-center justify-center rounded-[4px] bg-black/20 text-[18px] font-bold text-black">
+              <div className="flex flex-col h-[216px] w-[136px] items-center justify-between rounded-[2px] bg-[#ffffff] p-1 text-sm">
+                {[...tileSelectionOptions.entries()].map(([key]) => (
+                  <div className={`flex w-full items-center h-7/32 rounded-sm p-1 border-2 border-[#a48100] dark:border-[#ffca09] text-neutral-200 dark:text-neutral-700 cursor-pointer ${tileSelection != key ? "bg-[#a48100] hover:bg-[#a48100]/80 text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:bg-[#ffca09]/80" : "bg-[#ffca09]/50 text-neutral-600 dark:text-neutral-50 hover:bg-[#ffca09]/60"}`}
+                  onClick={() => {setTileSelection(key)}}>
+                    <img src={tilePreview(tileSelectionOptions.get(key)!)} className="rounded-[2px] w-auto h-full border-1 dark:border-neutral-700 border-neutral-200"/>
+                    <span className="ml-4">{key}</span>
+                  </div>
+                ))}
+              </div>
+          </div>}
           <div className="absolute top-0 right-0 z-10 flex items-center justify-center rounded-[4px] rounded-tl-none rounded-tr-sm rounded-br-none rounded-bl-md border-b-2 border-l-2 border-[#a48100] bg-white/80 p-1 pl-3 text-neutral-700 dark:border-[#ffca09] dark:bg-black/55">
             <div className="text-md mr-2 flex max-sm:text-sm dark:text-neutral-100">
               <h1>
@@ -404,7 +448,7 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
           >
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OSM</a>'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              url={tileSelectionOptions.get(tileSelection)!}
             />
             {selectedPoint[0] != -1 && (
               <Marker position={selectedPoint} icon={selectIcon} />
@@ -462,4 +506,4 @@ const Map: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
   );
 };
 
-export default Map;
+export default MapBox;
