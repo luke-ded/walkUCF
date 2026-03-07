@@ -481,6 +481,15 @@
     ]
   },
   {
+    "key": "280",
+    "name": "UCF Card Services",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 600 , "lat": 28.5972454 , "lon": -81.1997334 }
+    ]
+  },
+  {
     "key": "26",
     "name": "CREOL",
     "alternateName": "College of Optics and Photonics",
