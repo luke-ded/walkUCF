@@ -108,6 +108,13 @@ const tileSelectionOptions = new Map<string, string>([
   ["Carto", "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png"]
 ]);
 
+const tileAttributionOptions = new Map<string, string>([
+  ["OSM Default", ""],
+  ["ERSI Satellite", "| &copy; ERSI"],
+  ["Stadia", '| &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a>'],
+  ["Carto", '| &copy; <a href="https://carto.com/attributions">CARTO</a']
+]);
+
 const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) => {
   var initVals = [true, false, false, false];
   var initData = localStorage.getItem("mapOptions");
@@ -447,7 +454,7 @@ const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) =
             className="z-0 h-full w-full rounded-t-sm"
           >
             <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OSM</a>'
+              attribution={`&copy; <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OSM</a> ${tileAttributionOptions.get(tileSelection)!}`} 
               url={tileSelectionOptions.get(tileSelection)!}
             />
             {selectedPoint[0] != -1 && (
