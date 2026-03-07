@@ -104,14 +104,14 @@ const displayAllPaths = false; // Change to true to view all paths
 const tileSelectionOptions = new Map<string, string>([
   ["OSM Default", "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"],
   ["ERSI Satellite", "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"],
-  //["Stadia", "https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png"],
+  ["Stadia", "https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png"],
   ["Carto", "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png"]
 ]);
 
 const tileAttributionOptions = new Map<string, string>([
   ["OSM Default", ""],
   ["ERSI Satellite", "| &copy; ERSI"],
-  //["Stadia", '| &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a>'],
+  ["Stadia", '| &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a>'],
   ["Carto", '| &copy; <a href="https://carto.com/attributions">CARTO</a']
 ]);
 
