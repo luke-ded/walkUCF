@@ -413,7 +413,7 @@ const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) =
               <div className="flex flex-col h-[216px] w-[136px] items-center justify-between rounded-[2px] bg-[#ffffff] p-1 text-sm">
                 {[...tileSelectionOptions.entries()].map(([key]) => (
                   <div className={`flex w-full items-center h-7/32 rounded-sm p-1 border-2 border-[#a48100] dark:border-[#ffca09] text-neutral-200 dark:text-neutral-700 cursor-pointer ${tileSelection != key ? "bg-[#a48100] hover:bg-[#a48100]/80 text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:bg-[#ffca09]/80" : "bg-[#ffca09]/50 text-neutral-600 dark:text-neutral-50 hover:bg-[#ffca09]/60"}`}
-                  onClick={() => {setTileSelection(key)}}>
+                  onClick={() => {setTileSelection(key); setTileModal(false);}}>
                     <img src={tilePreview(tileSelectionOptions.get(key)!)} className="rounded-[2px] w-auto h-full border-1 dark:border-neutral-700 border-neutral-200"/>
                     <span className="ml-4">{key}</span>
                   </div>
