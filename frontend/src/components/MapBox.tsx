@@ -381,21 +381,6 @@ const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) =
         <div id="map" className="relative h-full w-full flex-col rounded-t-sm">
           <div
             className="absolute z-10 mt-20 ml-[11px] flex h-[33px] w-[33px] cursor-pointer items-center justify-center rounded-[4px] bg-black/20 text-[18px] font-bold text-black"
-            onClick={handleDeselect}
-          >
-            <div
-              className={`flex h-[29px] w-[29px] items-center justify-center rounded-[2px] ${selectedPoint[0] !== -1 ? "bg-[#ffffff] hover:bg-[#f4f4f4] active:bg-[#b5b5b5]" : "bg-[#cccccc]"}`}
-            >
-              <img
-                className="h-17/20 w-auto"
-                src={deselectImage}
-                alt="Deselect marker icon"
-                title="Deselect"
-              ></img>
-            </div>
-          </div>
-          <div
-            className="absolute z-10 mt-30 ml-[11px] flex h-[33px] w-[33px] cursor-pointer items-center justify-center rounded-[4px] bg-black/20 text-[18px] font-bold text-black"
             onClick={() => {setTileModal(!tileModal)}}
           >
             <div
@@ -409,7 +394,7 @@ const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) =
           </div>
           {tileModal &&
           <div
-            className="absolute z-10 mt-30 ml-[50px] flex h-[220px] w-[140px] cursor-pointer items-center justify-center rounded-[4px] bg-black/20 text-[18px] font-bold text-black">
+            className="absolute z-10 mt-20 ml-[50px] flex h-[220px] w-[140px] cursor-pointer items-center justify-center rounded-[4px] bg-black/20 text-[18px] font-bold text-black">
               <div className="flex flex-col h-[216px] w-[136px] items-center justify-between rounded-[2px] bg-[#ffffff] p-1 text-sm">
                 {[...tileSelectionOptions.entries()].map(([key]) => (
                   <div className={`flex w-full items-center h-7/32 rounded-sm p-1 border-2 border-[#a48100] dark:border-[#ffca09] text-neutral-200 dark:text-neutral-700 cursor-pointer ${tileSelection != key ? "bg-[#a48100] hover:bg-[#a48100]/80 text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:bg-[#ffca09]/80" : "bg-[#ffca09]/50 text-neutral-600 dark:text-neutral-50 hover:bg-[#ffca09]/60"}`}
@@ -420,6 +405,21 @@ const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) =
                 ))}
               </div>
           </div>}
+          <div
+            className="absolute z-10 mt-30 ml-[11px] flex h-[33px] w-[33px] cursor-pointer items-center justify-center rounded-[4px] bg-black/20 text-[18px] font-bold text-black"
+            onClick={handleDeselect}
+          >
+            <div
+              className={`flex h-[29px] w-[29px] items-center justify-center rounded-[2px] ${selectedPoint[0] !== -1 ? "bg-[#ffffff] hover:bg-[#f4f4f4] active:bg-[#b5b5b5]" : "bg-[#cccccc]"}`}
+            >
+              <img
+                className="h-17/20 w-auto"
+                src={deselectImage}
+                alt="Deselect marker icon"
+                title="Deselect"
+              ></img>
+            </div>
+          </div>
           <div className="absolute top-0 right-0 z-10 flex items-center justify-center rounded-[4px] rounded-tl-none rounded-tr-sm rounded-br-none rounded-bl-md border-b-2 border-l-2 border-[#a48100] bg-white/80 p-1 pl-3 text-neutral-700 dark:border-[#ffca09] dark:bg-black/55">
             <div className="text-md mr-2 flex max-sm:text-sm dark:text-neutral-100">
               <h1>
