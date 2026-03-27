@@ -377,7 +377,7 @@ const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) =
       [28.59089, -81.20729], // SW
     ],
   ];
-  console.log(loading);
+  
   return (
     <div className="h-full w-full">
       <div className="relative flex h-37/40 w-full self-start border-b-2 border-[#a48100] max-sm:h-35/40 dark:border-[#ffca09]">
