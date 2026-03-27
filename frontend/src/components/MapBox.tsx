@@ -16,6 +16,7 @@ import selectImage from "../assets/gold-select-marker-icon.png";
 import standardImage from "../assets/standard-marker-icon.png";
 import { createGraph, dijkstra } from "./Dijkstra.ts";
 import { RiStackFill } from "react-icons/ri";
+import { PulseLoader } from "react-spinners";
 
 interface Item {
   key: string;
@@ -127,6 +128,8 @@ const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) =
   const [selectedPoint, setSelectedPoint] = useState<LatLngTuple>([-1, -1]);
   const [paths, setPaths] = useState<number[][]>([]);
   const [currentLocation, setCurrentLocation] = useState<LatLngTuple>([-1, -1]);
+  const [loading, setLoading] = useState(true);
+  const [loadingTime, setLoadingTime] = useState(0);
   const [tileModal, setTileModal] = useState<boolean>(false);
   const [tileSelection, setTileSelection] = useState<string>("OSM Default");
 
@@ -374,7 +377,7 @@ const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) =
       [28.59089, -81.20729], // SW
     ],
   ];
-
+  console.log(loading);
   return (
     <div className="h-full w-full">
       <div className="relative flex h-37/40 w-full self-start border-b-2 border-[#a48100] max-sm:h-35/40 dark:border-[#ffca09]">
@@ -420,6 +423,10 @@ const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) =
               ></img>
             </div>
           </div>
+          {loading && (Date.now() - loadingTime) > 1000 &&
+          <div className="absolute z-10 bottom-0 left-0 h-fit font-semibold ml-2">
+            <PulseLoader className="" size={10} color="#ffffff"/>
+          </div>}
           <div className="absolute top-0 right-0 z-10 flex items-center justify-center rounded-[4px] rounded-tl-none rounded-tr-sm rounded-br-none rounded-bl-md border-b-2 border-l-2 border-[#a48100] bg-white/80 p-1 pl-3 text-neutral-700 dark:border-[#ffca09] dark:bg-black/55">
             <div className="text-md mr-2 flex max-sm:text-sm dark:text-neutral-100">
               <h1>
@@ -456,6 +463,10 @@ const MapBox: React.FC<ChildProps> = ({ stops, triggerRerender, toggleError }) =
             <TileLayer
               attribution={`&copy; <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OSM</a> ${tileAttributionOptions.get(tileSelection)!}`} 
               url={tileSelectionOptions.get(tileSelection)!}
+              eventHandlers={{
+                loading: () => {setLoading(true); setLoadingTime(Date.now());},
+                load: () => setLoading(false),
+              }}
             />
             {selectedPoint[0] != -1 && (
               <Marker position={selectedPoint} icon={selectIcon} />
