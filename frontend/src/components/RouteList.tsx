@@ -33,8 +33,14 @@ const RouteList: React.FC<ChildProps> = ({
       <div className="h-full w-full flex-col max-md:px-1">
         <div className="flex items-center justify-between">
           <div className="flex max-w-7/10 items-center justify-start flex-wrap gap-1">
-            <span className="text-md font-semibold text-neutral-700 dark:text-neutral-200 mr-4">
-              {item.name}
+            <span className="text-md font-semibold text-neutral-700 dark:text-neutral-200">
+              {item.name} 
+              {item.name == "Current Location" && (
+                <TiLocationArrow
+                  size={26}
+                  className="text-md ml-2 font-semibold text-[#1975c8] dark:text-[#4899d0] inline"
+                />
+              )}
             </span>
             {item.permitType && item.permitType.map((permit) => {
             return(
@@ -49,12 +55,6 @@ const RouteList: React.FC<ChildProps> = ({
                   {permit}
                 </div>
             )})}
-            {item.name == "Current Location" && (
-              <TiLocationArrow
-                size={26}
-                className="text-md ml-2 font-semibold text-[#1975c8] dark:text-[#4899d0]"
-              />
-            )}
           </div>
           <div>
             <button
