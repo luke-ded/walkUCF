@@ -63,7 +63,6 @@ data in the .osm file as well as programs to add new paths and nodes to the JSON
 of my points displayed on a visual map.
 
 ## Potential Future Enhancements
-- Different map tiling options.
 - Routes saved in page url.
 - Entrance option for "closest," which automatically calculates the entrance closest to the previous stop.
 - Map option for maximizing time indoors/under cover (for rainy days, hot days, etc.).
@@ -71,6 +70,7 @@ of my points displayed on a visual map.
 - Buttons to show notable locations on the map such as bus stops, printers, mailboxes, etc. Possibly also filter location list.
 - Turn-by-turn directions.
 - Mobile app.
+- ~~Different map tiling options.~~ Added as of 05/2026.
 - ~~Location services.~~ Added as of 08/2025.
 
 ## About
