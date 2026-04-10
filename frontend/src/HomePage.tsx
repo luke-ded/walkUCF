@@ -5,7 +5,7 @@ import About from "./components/About.tsx";
 import Error from "./components/Error.tsx";
 import Settings from "./components/Settings.tsx";
 import RouteList from "./components/RouteList.tsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function HomePage() {
   const [count, setCount] = useState(0);
@@ -73,7 +73,14 @@ function HomePage() {
     }
   }
 
-  setInterval(checkGeolocationPermission, 4000);
+  useEffect(() => {
+    const alreadyChecked = localStorage.getItem("permissionChecked");
+
+    if (!alreadyChecked) {
+      checkGeolocationPermission();
+      localStorage.setItem("permissionChecked", "true");
+    }
+  }, []);
 
   return (
     <div
