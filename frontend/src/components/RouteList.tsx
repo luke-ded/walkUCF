@@ -58,7 +58,7 @@ const RouteList: React.FC<ChildProps> = ({
           </div>
           <div>
             <button
-              className="inline-block h-fit w-fit cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] p-1.5 text-center text-lg font-bold text-neutral-200 hover:bg-[#ffca09]/60 hover:text-neutral-600 active:bg-[#ffca09]/60 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:text-[#faefc8]"
+              className="flex items-center justify-center h-fit w-fit p-1.5 cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] text-center text-lg font-bold text-neutral-200 hover:bg-[#a48100]/70 active:bg-[#a48100]/50 dark:hover:bg-[#ffca09]/70 dark:active:bg-[#ffca09]/50 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700"
               onClick={() => removeStop(item)}
             >
               <FaXmark />
@@ -86,13 +86,13 @@ const RouteList: React.FC<ChildProps> = ({
           </div>
           <div>
             <button
-              className="mr-3 inline-block h-fit w-fit cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] px-2 text-center text-lg font-bold text-neutral-200 hover:bg-[#ffca09]/60 hover:text-neutral-600 active:bg-[#ffca09]/60 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:text-[#faefc8]"
+              className="mr-3 inline-block h-fit w-fit px-2 cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] text-center text-lg font-bold text-neutral-200 hover:bg-[#a48100]/70 active:bg-[#a48100]/50 dark:hover:bg-[#ffca09]/70 dark:active:bg-[#ffca09]/50 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700"
               onClick={() => swapDown(item)}
             >
               ▼
             </button>
             <button
-              className="inline-block h-fit w-fit cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] px-2 text-center text-lg font-bold text-neutral-200 hover:bg-[#ffca09]/60 hover:text-neutral-600 active:bg-[#ffca09]/60 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:text-[#faefc8]"
+              className="inline-block h-fit w-fit px-2 cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] text-center text-lg font-bold text-neutral-200 hover:bg-[#a48100]/70 active:bg-[#a48100]/50 dark:hover:bg-[#ffca09]/70 dark:active:bg-[#ffca09]/50 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700"
               onClick={() => swapUp(item)}
             >
               ▲
@@ -212,7 +212,7 @@ const RouteList: React.FC<ChildProps> = ({
               : graphData?.distanceKm.toFixed(2) + " km"}
           </h1>
           <button
-            className="mr-1 ml-3 inline-block h-8/10 w-fit cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] px-1 text-center font-bold text-neutral-200 hover:bg-[#ffca09]/60 hover:text-neutral-600 active:bg-[#ffca09]/60 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:text-neutral-50"
+            className="mr-1 ml-3 inline-block h-8/10 w-fit cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] px-1 text-center font-bold text-neutral-200 dark:active:bg-[#ffca09]/50 hover:bg-[#a48100]/70 dark:hover:bg-[#ffca09]/70 active:bg-[#a48100]/50 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700"
             onClick={() => clearList()}
           >
             Clear

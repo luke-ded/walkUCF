@@ -76,7 +76,7 @@ const ItemRenderer: React.FC<ItemProps> = ({
             Entrance:{" "}
           </p>
           <button
-            className={`mt-1 ml-2 inline-block h-fit w-fit rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${selectedEntrance != 1 ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700" : "bg-[#ffca09]/60 text-neutral-600 dark:text-[#faefc8]"} cursor-pointer text-center text-sm font-bold hover:bg-[#ffca09]/60 hover:text-neutral-600 dark:hover:text-[#faefc8]`}
+              className={`mt-1 ml-2 inline-block h-fit w-fit rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${selectedEntrance != 1 ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700 dark:active:bg-[#ffca09]/50 active:bg-[#a48100]/50" : "bg-[#ffca09]/50 text-neutral-600 dark:text-neutral-50 hover:bg-[#ffca09]/60"} cursor-pointer text-center text-sm font-bold dark:hover:bg-[#ffca09]/70 hover:bg-[#a48100]/70`}
             onClick={() => handleItemChange(1)}
           >
             Main
@@ -87,7 +87,7 @@ const ItemRenderer: React.FC<ItemProps> = ({
             return (
               <button
                 key={entrance.id ?? index}
-                className={`mt-1 ml-2 inline-block h-fit w-fit rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${selectedEntrance != index + 1 ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700" : "bg-[#ffca09]/60 text-neutral-600 dark:text-[#faefc8]"} cursor-pointer text-center text-sm font-bold hover:bg-[#ffca09]/60 hover:text-neutral-600 dark:hover:text-[#faefc8]`}
+                className={`mt-1 ml-2 inline-block h-fit w-fit rounded-sm border-2 border-[#a48100] px-1 text-center dark:border-[#ffca09] ${selectedEntrance != index + 1 ? "bg-[#a48100] text-neutral-200 dark:bg-[#ffca09] dark:text-neutral-700 dark:active:bg-[#ffca09]/50 active:bg-[#a48100]/50" : "bg-[#ffca09]/50 text-neutral-600 dark:text-neutral-50 hover:bg-[#ffca09]/60"} cursor-pointer text-center text-sm font-bold dark:hover:bg-[#ffca09]/70 hover:bg-[#a48100]/70`}
                 onClick={() => handleItemChange(index + 1)}
               >
                 {index + 1}
@@ -97,7 +97,7 @@ const ItemRenderer: React.FC<ItemProps> = ({
         </div>
         <div>
           <button
-            className="flex items-center justify-center h-fit w-fit p-1.5 cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] text-center text-lg font-bold text-neutral-200 hover:bg-[#ffca09]/60 hover:text-neutral-600 active:bg-[#ffca09]/60 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:text-[#faefc8]"
+            className="flex items-center justify-center h-fit w-fit p-1.5 cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] text-center text-lg font-bold text-neutral-200 hover:bg-[#a48100]/70 active:bg-[#a48100]/50 dark:hover:bg-[#ffca09]/70 dark:active:bg-[#ffca09]/50 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700"
             onClick={() => addItem(item, selectedEntrance)}
           >
             <FaPlus />
@@ -202,7 +202,7 @@ const Search: React.FC<ChildProps> = ({ triggerRerender, setStops }) => {
                     />
                   </div>
                   <button
-                    className="flex items-center justify-center h-fit w-fit p-1.5 cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] text-center text-lg font-bold text-neutral-200 hover:bg-[#ffca09]/60 hover:text-neutral-600 active:bg-[#ffca09]/60 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700 dark:hover:text-[#faefc8]"
+                    className="flex items-center justify-center h-fit w-fit p-1.5 cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] text-center text-lg font-bold text-neutral-200 hover:bg-[#a48100]/70 active:bg-[#a48100]/50 dark:hover:bg-[#ffca09]/70 dark:active:bg-[#ffca09]/50 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700"
                     onClick={() => addItem(calcNearestPoint(), 1)}
                   >
                     <FaPlus />
