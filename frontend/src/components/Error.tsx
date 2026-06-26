@@ -15,7 +15,7 @@ const Error: React.FC<ChildProps> = ({ toggleError }) => {
         <div className="colored-marker flex h-fit w-full flex-col justify-center rounded-sm bg-[#d6d4d4]/80 dark:bg-black/80">
           <div className="text-md flex h-fit flex-col items-center justify-center p-3 text-center text-neutral-700 max-sm:text-sm dark:text-neutral-200">
             <p className="mt-3">
-              Locations inaccessible to each other. Some locations or entrances could be
+              The selected locations are inaccessible to each other. Some locations or entrances may be
               inaccessible depending on your map options.{" "}
             </p>
             <p className="mt-3">
@@ -28,7 +28,7 @@ const Error: React.FC<ChildProps> = ({ toggleError }) => {
               >
                 here
               </a>{" "}
-              with the names & entrances of these two locations.
+              with the names & entrances of these two locations. It only takes a moment!
             </p>
           </div>
           <div className="mt-3 mb-5 flex h-2/8 w-full items-center justify-center justify-self-end">
