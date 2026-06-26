@@ -88,7 +88,7 @@ const Settings: React.FC<ChildProps> = ({
   }
 
   return (
-    <div className="fixed inset-0 flex items-start pt-30 z-12 flex h-full w-full max-w-full items-center justify-center bg-black/50">
+    <div className="fixed inset-0 flex items-start pt-30 z-12 h-full w-full max-w-full justify-center bg-black/50">
       <div className="rounded-md border-2 border-[#a48100] bg-[url(./assets/backgroundmap.jpg)] shadow-lg max-sm:w-9/10 md:w-5/10 lg:w-3/10 dark:border-[#ffca09]">
         <div className="h-fit w-full flex-col justify-center rounded-sm bg-[#d6d4d4]/80 dark:bg-black/80">
           <div className="flex h-1/8 items-center justify-center border-b-2 border-[#a48100] dark:border-[#ffca09]">
@@ -117,7 +117,7 @@ const Settings: React.FC<ChildProps> = ({
             <div className="mt-5 flex w-full items-center justify-center">
               <h1 className="mr-2 text-xl max-md:text-lg">Walking Speed:</h1>
               <input
-                className="h-full w-1/10 w-3/20 rounded-md border-2 border-[#a48100] bg-white/70 p-1 text-center text-lg max-md:text-md text-neutral-700 placeholder-neutral-700/75 shadow-lg placeholder:text-center focus:ring-1 focus:ring-[#ffca09]/70 focus:outline-none dark:border-[#ffe68c] dark:bg-black/25 dark:text-neutral-200 dark:placeholder-neutral-200/75"
+                className="h-full w-3/20 rounded-md border-2 border-[#a48100] bg-white/70 p-1 text-center text-lg max-md:text-md text-neutral-700 placeholder-neutral-700/75 shadow-lg placeholder:text-center focus:ring-1 focus:ring-[#ffca09]/70 focus:outline-none dark:border-[#ffe68c] dark:bg-black/25 dark:text-neutral-200 dark:placeholder-neutral-200/75"
                 placeholder="3.0"
                 value={newWalkSpeed}
                 onChange={(e) => setWalkSpeedHandler(e.target.value)}
