@@ -1074,9 +1074,22 @@ describe('Accessibility', () => {
     render(<About toggleAbout={mockToggleAbout} />);
     
     const links = screen.getAllByRole('link');
-    links.forEach(link => {
+    const externalLinks = links.filter(link =>
+      link.getAttribute('href')?.startsWith('http')
+    );
+
+    expect(externalLinks.length).toBeGreaterThan(0);
+    externalLinks.forEach(link => {
       expect(link).toHaveAttribute('target', '_blank');
       expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    });
+
+    // Internal links stay in the same tab
+    const internalLinks = links.filter(
+      link => !link.getAttribute('href')?.startsWith('http')
+    );
+    internalLinks.forEach(link => {
+      expect(link).not.toHaveAttribute('target');
     });
   });
 

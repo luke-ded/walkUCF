@@ -57,6 +57,16 @@ const About: React.FC<ChildProps> = ({ toggleAbout }) => {
               .
             </p>
             <p className="mt-3">
+              Read the&nbsp;
+              <a
+                href="/privacy"
+                className="font-bold text-[#a48100] hover:text-[#ffe68c] dark:text-[#ffca09]"
+              >
+                privacy policy
+              </a>
+              .
+            </p>
+            <p className="mt-3">
               Thanks for using <span className="inline font-bold">walkUCF</span>!
             </p>
           </div>
