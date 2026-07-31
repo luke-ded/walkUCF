@@ -1,6 +1,6 @@
-import src from "../assets/logo.png";
 import About from "./About.tsx";
 import Settings from "./Settings.tsx";
+import { FaWalking } from "react-icons/fa";
 import { useState } from "react";
 
 const Heading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -45,7 +45,7 @@ function PrivacyPage() {
     >
       <div className="flex h-3/42 w-full max-w-full justify-between border-b-2 border-[#ffca09] bg-black/85 px-3 lg:h-1/14">
         <div className="flex items-center">
-          <img className="h-6/10 w-auto" src={src} alt="UCF Logo" />
+          <FaWalking size={20} className="h-6/10 w-auto text-[#ffca09]" />
           <h1 className="ml-3 text-3xl font-semibold text-neutral-200 max-sm:text-2xl">
             walkUCF
           </h1>
@@ -139,7 +139,7 @@ function PrivacyPage() {
               <Text>
                 The Application is not intended for children under 13 years of
                 age, or such higher age as required by applicable law. The
-                Service Provider does not knowingly solicit data from children
+                Service Provider does not solicit data from children
                 or market the Application to them.
               </Text>
               <Text>

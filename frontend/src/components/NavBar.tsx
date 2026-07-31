@@ -1,8 +1,8 @@
-import src from "../assets/logo.png";
 import { CiDark } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { CiSettings } from "react-icons/ci";
 import { CiCircleInfo } from "react-icons/ci";
+import { FaWalking } from "react-icons/fa";
 import { useState } from "react";
 
 interface ChildProps {
@@ -38,7 +38,7 @@ const NavBar: React.FC<ChildProps> = ({
   return (
     <div className="flex h-1/21 w-full max-w-full justify-between border-b-2 border-[#ffca09] bg-black/85 px-3 lg:h-1/14">
       <div className="flex items-center">
-        <img className="h-6/10 w-auto" src={src} alt="UCF Logo" />
+        <FaWalking size={20} className="h-6/10 w-auto text-[#ffca09]" />
         <h1 className="ml-3 text-3xl font-semibold text-neutral-200 max-sm:text-2xl">
           walkUCF
         </h1>
