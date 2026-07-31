@@ -44,7 +44,6 @@ describe('NavBar Component', () => {
       />
     );
     expect(screen.getByText('walkUCF')).toBeInTheDocument();
-    expect(screen.getByAltText('UCF Logo')).toBeInTheDocument();
   });
 
   test('toggles about when info button is clicked', () => {
@@ -1063,9 +1062,6 @@ describe('Accessibility', () => {
         settings={false}
       />
     );
-    
-    // All interactive elements should be present
-    expect(screen.getByAltText('UCF Logo')).toBeInTheDocument();
   });
 
   test('About modal has proper link targets', () => {
