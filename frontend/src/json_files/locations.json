@@ -647,7 +647,7 @@
   },
   {
     "key": "34",
-    "name": "Chick-fil-A at JTWC",
+    "name": "Chick-fil-A",
     "alternateName": "Chickfila , Chick fil a",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -997,7 +997,7 @@
   },
   {
     "key": "52",
-    "name": "Einstein Bagels at BA1",
+    "name": "Einstein Bagels",
     "alternateName": "Coffee Shop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
@@ -1011,45 +1011,6 @@
         "id": 397,
         "lat": 28.6013745,
         "lon": -81.1990244
-      }
-    ]
-  },
-  {
-    "key": "53",
-    "name": "Einstein Bagels at Education Complex",
-    "alternateName": "Coffee Shop",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "id": 111,
-        "lat": 28.6003661,
-        "lon": -81.2039748
-      },
-      {
-        "lat": 28.6001286,
-        "lon": -81.203803,
-        "id": 3137213562
-      },
-      {
-        "lat": 28.5997816,
-        "lon": -81.204068,
-        "id": 5001725274
-      },
-      {
-        "id": 415,
-        "lat": 28.5997834,
-        "lon": -81.204486
-      },
-      {
-        "id": 413,
-        "lat": 28.5999784,
-        "lon": -81.2046058
-      },
-      {
-        "id": 417,
-        "lat": 28.6004382,
-        "lon": -81.2036174
       }
     ]
   },
@@ -1726,19 +1687,6 @@
     ]
   },
   {
-    "key": "84",
-    "name": "Jimmy John's",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "lat": 28.6068857,
-        "lon": -81.1969584,
-        "id": 15
-      }
-    ]
-  },
-  {
     "key": "85",
     "name": "John C. Hitt Library",
     "abbreviation": "LIB",
@@ -1901,19 +1849,6 @@
     ]
   },
   {
-    "key": "95",
-    "name": "Knightstop at Knights Plaza",
-    "selectedEntrance": 1,
-    "abbreviation": "N/A",
-    "Entrances": [
-      {
-        "id": 170,
-        "lat": 28.607249,
-        "lon": -81.1982032
-      }
-    ]
-  },
-  {
     "key": "189",
     "name": "Pegasus Ballroom",
     "alternateName": "Pegasus Grand Ballroom",
@@ -2071,7 +2006,7 @@
   },
   {
     "key": "99",
-    "name": "LEAD Scholars Academy",
+    "name": "Office of Military and Veteran Student Success",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -2972,19 +2907,6 @@
         "id": 2762673769,
         "lat": 28.594207,
         "lon": -81.197185
-      }
-    ]
-  },
-  {
-    "key": "141",
-    "name": "Office of Military and Veteran Student Success",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "lat": 28.6067607,
-        "lon": -81.1970487,
-        "id": 16
       }
     ]
   },
@@ -4724,19 +4646,6 @@
     ]
   },
   {
-    "key": "196",
-    "name": "Pop Parlour",
-    "abbreviation": "N/A",
-    "selectedEntrance": 1,
-    "Entrances": [
-      {
-        "lat": 28.6071831,
-        "lon": -81.1967552,
-        "id": 14
-      }
-    ]
-  },
-  {
     "key": "197",
     "name": "Pride Commons",
     "abbreviation": "N/A",
@@ -4874,8 +4783,7 @@
   },
   {
     "key": "32",
-    "name": "Chick-fil-A at RWC",
-    "alternateName": "Chickfila , Chick fil a",
+    "name": "Smalls Sliders",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5069,8 +4977,8 @@
   },
   {
     "key": "214",
-    "name": "Starbucks at Memory Mall",
-    "alternateName": "Coffee Shop",
+    "name": "Weekday Coffee & Matcha",
+    "alternateName": "Coffee Shop , Matcha Shop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5148,7 +5056,7 @@
   },
   {
     "key": "218",
-    "name": "Student Union Food Court: Halal Shack, Qdoba, Panda Express, Huey Magoo's, Which Which?, Bento Sushi, Purple Ocean Superfood Bar",
+    "name": "Student Union Food Court: Halal Shack, Qdoba, Panda Express, Huey Magoo's, The 407 Stack, Bento Sushi, Purple Ocean Superfood Bar",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
