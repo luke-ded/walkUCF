@@ -32,7 +32,7 @@ select the options you would like enabled for your route.
 8. View your optimized route!
 
 ### Report an Issue
-Please report any issues, including incorrect map data, with the form link [here](https://docs.google.com/forms/d/e/1FAIpQLSc7kSWWmnO68TkJwnQDMlhnf3cZ2gaRdT9crBl4PxXvx3JQGg/viewform) or as provided in the "about" pane. 
+Please report any issues, including incorrect map data, with the form link [here](https://docs.google.com/forms/d/e/1FAIpQLSc7kSWWmnO68TkJwnQDMlhnf3cZ2gaRdT9crBl4PxXvx3JQGg/viewform) or as provided in the "about" pane. Alternatively, reach out to support@walkucf.com.
 
 ## The Code
 - **Dijkstra's Algorithm:** I wrote a customized version of the classic Dijkstra's Algorithm in TypeScript to find the shortest path in this application. It utilizes a priority queue from the "js-priority-queue" npm package.
