@@ -1766,6 +1766,16 @@
     ]
   },
   {
+    "key": "283",
+    "name": "KC Beauty lounge",
+    "alternateName": "Hairstylist , Salon , Nails , Waxing , Lashes",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 168 , "lat": 28.6069866 , "lon": -81.1983617 }
+    ]
+  },
+  {
     "key": "91",
     "name": "Knight's Pantry",
     "abbreviation": "NFCG",
@@ -1785,7 +1795,8 @@
   },
   {
     "key": "92",
-    "name": "Knightcade",
+    "name": "Local Bites",
+    "alternateName": "Local Restaurant Row",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -4720,6 +4731,16 @@
         "lat": 28.6051106,
         "lon": -81.1991992
       }
+    ]
+  },
+  {
+    "key": "282",
+    "name": "Revamp at UCF",
+    "alternateName": "Revamp Barber Shop , Barber Shop",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {"id": 601 , "lat": 28.6010742 , "lon": -81.2015608 }
     ]
   },
   {
