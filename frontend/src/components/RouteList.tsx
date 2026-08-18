@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import { TiLocationArrow } from "react-icons/ti";
+import { TbTriangleFilled, TbTriangleInvertedFilled } from "react-icons/tb";
 
 interface Item {
   key: string;
@@ -86,16 +87,16 @@ const RouteList: React.FC<ChildProps> = ({
           </div>
           <div>
             <button
-              className="mr-3 inline-block h-fit w-fit px-2 cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] text-center text-lg font-bold text-neutral-200 hover:bg-[#a48100]/70 active:bg-[#a48100]/50 dark:hover:bg-[#ffca09]/70 dark:active:bg-[#ffca09]/50 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700"
+              className="mr-3 inline-flex items-center justify-center h-fit w-fit p-2 cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] text-lg text-neutral-200 hover:bg-[#a48100]/70 active:bg-[#a48100]/50 dark:hover:bg-[#ffca09]/70 dark:active:bg-[#ffca09]/50 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700"
               onClick={() => swapDown(item)}
             >
-              ▼
+              <TbTriangleInvertedFilled size={14} />
             </button>
             <button
-              className="inline-block h-fit w-fit px-2 cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] text-center text-lg font-bold text-neutral-200 hover:bg-[#a48100]/70 active:bg-[#a48100]/50 dark:hover:bg-[#ffca09]/70 dark:active:bg-[#ffca09]/50 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700"
+              className="inline-flex items-center justify-center h-fit w-fit p-2 cursor-pointer rounded-sm border-2 border-[#a48100] bg-[#a48100] text-lg text-neutral-200 hover:bg-[#a48100]/70 active:bg-[#a48100]/50 dark:hover:bg-[#ffca09]/70 dark:active:bg-[#ffca09]/50 dark:border-[#ffca09] dark:bg-[#ffca09] dark:text-neutral-700"
               onClick={() => swapUp(item)}
             >
-              ▲
+              <TbTriangleFilled size={14} />
             </button>
           </div>
         </div>
