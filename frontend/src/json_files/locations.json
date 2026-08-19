@@ -3575,7 +3575,7 @@
     "name": "Parking Lot B7",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
-    "permitType": ["Resident - R", "Student/General - D", "Employee - E"],
+    "permitType": ["Resident - R or AV", "Student/General - D", "Employee - E"],
     "alternateName": "Student parking , General parking , Resident parking , Employee parking",
     "Entrances": [
       {
@@ -3590,7 +3590,7 @@
     "name": "Parking Lot B8",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
-    "permitType": ["Resident - R"],
+    "permitType": ["Resident - R or AV"],
     "Entrances": [
       {
         "id": 2762673686,
@@ -3759,7 +3759,7 @@
     "name": "Parking Lot B15",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
-    "permitType": ["Resident - R"],
+    "permitType": ["Resident - R or AV"],
     "Entrances": [
       {
         "id": 9273615163,
@@ -4283,7 +4283,7 @@
     "name": "Parking Lot H4-A",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
-    "permitType": ["Student/General - D", "Employee - E", "Resident - R"],
+    "permitType": ["Student/General - D", "Employee - E", "Resident - R or AV"],
     "alternateName": "Student parking , General parking , Employee parking , Resident parking",
     "Entrances": [
       {

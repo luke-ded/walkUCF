@@ -57,7 +57,7 @@ const ItemRenderer: React.FC<ItemProps> = ({
               <div className={`${index == 0 && "ml-4"} mr-2 text-[8px] font-semibold text-inline text-neutral-200 rounded-sm p-[2px] px-[4px] text-nowrap
               ${permit == "Student/General - D" ? "bg-[#00a651]" : 
                 permit == "Employee - E" ? "bg-[#ed1d24]" :
-                permit == "Resident - R" ? "bg-[#f47721]" :
+                permit == "Resident - R or AV" ? "bg-[#f47721]" :
                 permit == "Knights Plaza - KP" ? "bg-[#bd1b8d]" :
                 permit == "Lake Claire - LC" ? "bg-[#b3874d]" : "bg-gray-500"}`}
                 title={"Permit Type"}
