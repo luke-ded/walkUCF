@@ -1278,19 +1278,6 @@
     ]
   },
   {
-    "key": "68",
-    "name": "Gringos Locos",
-    "selectedEntrance": 1,
-    "abbreviation": "N/A",
-    "Entrances": [
-      {
-        "id": 12150621459,
-        "lat": 28.6070586,
-        "lon": -81.198311
-      }
-    ]
-  },
-  {
     "key": "69",
     "name": "Health Center & Pharmacy",
     "abbreviation": "HC",
