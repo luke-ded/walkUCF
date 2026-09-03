@@ -482,8 +482,8 @@
   },
   {
     "key": "280",
-    "name": "Card Services",
-    "alternateName": "UCF Card Services , Card Office",
+    "name": "Card Services & Parking Services",
+    "alternateName": "UCF Card Services , Card Office , UCF Parkign Services",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5232,6 +5232,7 @@
   {
     "key": "227",
     "name": "The SPOT",
+    "alternateName": "Printing , Passport , Post Office , Mail",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5554,6 +5555,7 @@
   {
     "key": "242",
     "name": "UCF Police Department",
+    "alternateName": "UCFPD",
     "abbreviation": "UPD",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5571,46 +5573,18 @@
   },
   {
     "key": "243",
-    "name": "UCF Police at Student Union",
-    "alternateName": "UCF Police Department",
-    "abbreviation": "N/A",
+    "name": "UCF Police Community Outreach and Crime Prevention",
+    "alternateName": "UCF Police Department , UCFPD , UCF Police Department Community Outreach and Crime Prevention",
+    "abbreviation": "UPD",
     "selectedEntrance": 1,
     "Entrances": [
-      {
-        "lat": 28.6017709,
-        "lon": -81.201074,
-        "id": 3420036606
-      },
-      {
-        "lat": 28.6016897,
-        "lon": -81.200885,
-        "id": 3420036612
-      },
-      {
-        "lat": 28.6022309,
-        "lon": -81.200257,
-        "id": 2188622665
-      },
-      {
-        "lat": 28.6017759,
-        "lon": -81.200537,
-        "id": 3095577369
-      },
-      {
-        "lat": 28.6022783,
-        "lon": -81.200762,
-        "id": 3420036605
-      },
-      {
-        "lat": 28.6017185,
-        "lon": -81.200234,
-        "id": 7745913387
-      }
+      {"id": 267 , "lat": 28.6009061 , "lon": -81.2019532 }
     ]
   },
   {
     "key": "244",
     "name": "USPS Dropbox",
+    "alternateName": "Mail , USPS Collection Box , USPS Blue Box , United States Postal Service",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
