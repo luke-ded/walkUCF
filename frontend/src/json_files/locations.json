@@ -165,6 +165,44 @@
     ]
   },
   {
+    "key": "287",
+    "name": "Amish Pretzel Shop",
+    "abbreviation": "N/A",
+    "selectedEntrance": 1,
+    "Entrances": [
+      {
+        "lat": 28.6017759,
+        "lon": -81.200537,
+        "id": 3095577369
+      },
+      {
+        "lat": 28.6017185,
+        "lon": -81.200234,
+        "id": 7745913387
+      },
+      {
+        "lat": 28.6022309,
+        "lon": -81.200257,
+        "id": 2188622665
+      },
+      {
+        "lat": 28.6022783,
+        "lon": -81.200762,
+        "id": 3420036605
+      },
+      {
+        "lat": 28.6017709,
+        "lon": -81.201074,
+        "id": 3420036606
+      },
+      {
+        "lat": 28.6016897,
+        "lon": -81.200885,
+        "id": 3420036612
+      }
+    ]
+  },
+  {
     "key": "262",
     "name": "Apollo Community",
     "alternateName": "Apollo Housing Community",
@@ -1782,8 +1820,8 @@
   },
   {
     "key": "92",
-    "name": "Local Bites",
-    "alternateName": "Local Restaurant Row",
+    "name": "Local Bites Food Hub",
+    "alternateName": "Local Restaurant Row , Amish Pretzel Shop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5064,7 +5102,7 @@
   },
   {
     "key": "218",
-    "name": "Student Union Food Court: Halal Shack, Qdoba, Panda Express, Huey Magoo's, The 407 Stack, Bento Sushi, Purple Ocean Superfood Bar",
+    "name": "Student Union Food Court: Halal Shack, Qdoba, Panda Express, Huey Magoo's, The 407 Stack, Bento Sushi, Purple Ocean Superfood Bar, Local Bites Food Hub, Amish Pretzel Shop",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
@@ -5231,15 +5269,15 @@
   },
   {
     "key": "227",
-    "name": "The SPOT",
-    "alternateName": "Printing , Passport , Post Office , Mail",
+    "name": "The SPOT (now at VPI)",
+    "alternateName": "Passport , Post Office , Mail , TSA PreCheck",
     "abbreviation": "N/A",
     "selectedEntrance": 1,
     "Entrances": [
       {
-        "id": 7743185634,
-        "lat": 28.600953,
-        "lon": -81.201836
+        "id": 8932946951,
+        "lat": 28.5968998,
+        "lon": -81.203064
       }
     ]
   },
